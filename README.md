@@ -1,5 +1,5 @@
-Privacy Patterns
-----------------
+The Privacy Patterns Project
+----------------------------
 
 Privacy represents a broad variety of concerns — subjective, contextual, hard-to-define — that real people have about the flows of personal information. Location-based services provide a key example: a growing field that uses potentially sensitive data, where adoption has been held back by privacy concerns.
 
@@ -7,7 +7,8 @@ Translating these concerns (as well as corporate and legal liability) into techn
 
 Drawing inspiration from Christopher Alexander and the success of software design patterns in improving communication about tried-and-true practices, we hope privacy patterns will:
 
-standardize language for privacy-preserving technologies
-document common solutions to privacy problems
-help LBS designers identify and address privacy concerns
+ * standardize language for privacy-preserving technologies
+ * document common solutions to privacy problems
+ * help LBS designers identify and address privacy concerns
+
 We're currently compiling a first draft of some patterns to get things started, but our goal is for this to be a living document constructed by the community of engineers, designers, lawyers and regulators involved in this topic.
