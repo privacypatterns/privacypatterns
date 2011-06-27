@@ -240,3 +240,20 @@ footer {
 }
 
 #content .byline a:hover { text-decoration: none; }
+
+#toc {
+  border-left: 1px dotted #666;
+  box-sizing: border-box;
+  display: inline-block;
+  float: right;
+  list-style-position: inside;
+  margin: 0;
+  margin-top: 2em;
+  padding: 1em 0 0 3em;
+  width: 33%;
+  vertical-align: top;
+}
+
+#toc a {
+  color: #666;
+}
