@@ -1,0 +1,16 @@
+<div id="header">
+    <a href="{{site.url}}/index.html">
+        <h1>{{site.name}}</h1>
+    </a>
+</div>
+
+{% block breadcrumbs %}
+{% include "skeleton/_breadcrumbs.html"%}
+{% endblock %}
+
+{% block context_nav %}
+{% endblock %}
+
+{% block sitenav %}
+{% include "skeleton/_site_nav.html" %}
+{% endblock %}

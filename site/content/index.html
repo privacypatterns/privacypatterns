@@ -1,0 +1,22 @@
+{% extends "skeleton/_body.html" %}
+
+{%hyde
+    title: "Home"
+    listing: True
+%}
+
+{% block content_body %}
+
+<h2>Recent Patterns</h2>
+
+	{%recent_posts recents 5 %}
+
+	<ul>
+		{%for post in recents %}
+			<li>
+				<a href='{{post.url}}'>{{post.title}}</a>
+			</li>
+		{%endfor%}
+	</ul>
+
+{%endblock%}

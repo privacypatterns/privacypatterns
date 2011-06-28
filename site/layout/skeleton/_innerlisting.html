@@ -1,0 +1,35 @@
+{% extends "skeleton/_root.html" %}
+
+{% block all %}
+
+{%spaceless%}
+
+{%ifnotequal node page.node %}
+	{% if node.has_listing %}<a href="{{node.listing_url}}">{% endif %}
+	<h2>{{node.name|unslugify}}</h2>
+	{% if node.has_listing %}</a>{% endif %}
+{%endifnotequal%}
+
+<ul>
+    {% for list_page in node.pages %}
+		{% ifnotequal list_page node.listing_page %}
+			{% if list_page.display_in_list %}
+				<li>
+					<span>{{list_page.created|date:"Y-m-d" }}  </span>
+					<a href="{{list_page.url}}">
+					{% with list_page.name_without_extension|remove_date_prefix|unslugify as default_title %}
+						{{list_page.title|default_if_none:default_title }}
+					{%endwith%}</a>
+
+					{% if page.excerpt %}
+						{% render_excerpt list_page %}
+					{%endif%}
+				</li>
+			{%endif%}
+		{% endifnotequal %}
+	{% endfor %}
+</ul>
+
+{%endspaceless%}
+
+{% endblock %}
