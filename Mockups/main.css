@@ -171,7 +171,9 @@ nav a:hover { text-decoration: none; }
 #main { margin-top: 22px; padding-bottom: 22px; }
 
 #content {
+  color: #222;
   display: inline-block;
+  font-family: 'Lora', serif;
   width: 60%;
 }
 
@@ -197,12 +199,17 @@ footer, footer a {
 
 #lib_button {
   background-color: orange;
+  background-image: -webkit-linear-gradient(#70FF75, #4FB252);
+  border: 2px solid #4FB252;
   border-radius: .5em;
-  color: #42599E;
+  color: white;
   font-family: 'Helvetica Neue Light', 'HelveticaNeue-Light', sans-serif;
-  font-size: 36px;
+  font-size: 30px;
   padding: .5em;
+  text-decoration: none;
+  text-shadow: 0 2px 1px black;
 }
+#lib_button:hover { text-shadow: none; }
 
 /* Home page patterns */
 #patterns {
@@ -236,8 +243,6 @@ footer, footer a {
 }
 
 #content p {
-  color: #222;
-  font-family: 'Lora', serif;
   font-size: 14px;
   line-height: 1.5em;
   margin-bottom: 1.2em;
