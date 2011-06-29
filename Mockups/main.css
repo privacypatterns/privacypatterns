@@ -116,7 +116,7 @@ body {
 }
 
 header {
-  border-bottom: 2px solid #2a3d65;
+  border-bottom: 2px solid #42599E; /*  #2a3d65; */
 }
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
@@ -132,6 +132,11 @@ h4 { font-size: 18px; }
 h5 { font-size: 16px; }
 h6 { font-size: 14px; font-weight: bold; }
 
+em { font-weight: bold; }
+
+a { color: #42599E; }
+a:hover { text-decoration: none; }
+
 #logo {
   display: inline-block;
   font-family: 'Cuprum', serif;
@@ -142,7 +147,7 @@ h6 { font-size: 14px; font-weight: bold; }
 #index #logo { font-size: 59px; } /* lessen on every page but home */
 
 .highlight {
-  color: #2a3d65;
+  color: #42599E;
 }
 
 nav {
@@ -163,7 +168,7 @@ nav a {
 }
 nav a:hover { text-decoration: none; }
 
-#main { margin-top: 22px; }
+#main { margin-top: 22px; padding-bottom: 22px; }
 
 #content {
   display: inline-block;
@@ -171,13 +176,19 @@ nav a:hover { text-decoration: none; }
 }
 
 footer {
-  margin: 1em 0;
+  border-top: 1px solid #444;
+  padding: 1em 0;
+  text-align: center;
+}
+
+footer, footer a {
+  color: #444;
 }
 
 /* Home page button */
 #button_holder {
   display: inline-block;
-  margin-top: 60px;
+  margin-top: 36px;
   text-align: center;
   vertical-align: top;
   width: 39%;
@@ -187,7 +198,7 @@ footer {
 #lib_button {
   background-color: orange;
   border-radius: .5em;
-  color: #2a3d65;
+  color: #42599E;
   font-family: 'Helvetica Neue Light', 'HelveticaNeue-Light', sans-serif;
   font-size: 36px;
   padding: .5em;
@@ -196,11 +207,12 @@ footer {
 /* Home page patterns */
 #patterns {
   margin: 0;
+  margin-top: 22px;
   padding: 0;
 }
 
 #patterns li {
-  background-color: #2a3d65;
+  background-color: #42599E;
   background-image: -webkit-linear-gradient(#2A3D65, #395289);
   border-radius: 8px;
   box-sizing: border-box;
@@ -224,7 +236,7 @@ footer {
 }
 
 #content p {
-  color: #444;
+  color: #222;
   font-family: 'Lora', serif;
   font-size: 14px;
   line-height: 1.5em;
@@ -232,7 +244,7 @@ footer {
 }
 
 #content .byline, #content .byline a, #content .byline a:visited {
-  color: #444;
+  color: #222;
   font-variant: small-caps;
   font-family: sans-serif;
   font-size: 14px;
@@ -241,19 +253,39 @@ footer {
 
 #content .byline a:hover { text-decoration: none; }
 
+/* Table of contents */
 #toc {
   border-left: 1px dotted #666;
   box-sizing: border-box;
   display: inline-block;
   float: right;
-  list-style-position: inside;
-  margin: 0;
-  margin-top: 2em;
-  padding: 1em 0 0 3em;
+  margin-top: 100px;
+  padding: 1em 0 1em 2em;
   width: 33%;
   vertical-align: top;
 }
 
-#toc a {
+#toc ol {
+  list-style-position: outside;
+  margin: 0;
+  padding: 0;
+  padding-left: 2em;
+}
+
+#toc li { padding-bottom: .5em; }
+
+#toc, #toc a {
   color: #666;
 }
+
+#toc h2 {
+  color: black;
+  font-family: sans-serif;
+  font-size: 22px;
+  text-indent: 1em;
+}
+
+ol { list-style-type: upper-roman; }
+ol ol { list-style-type: upper-alpha; }
+ol ol ol { list-style-type: lower-roman; }
+ol ol ol ol { list-style-type: lower-alpha; }
