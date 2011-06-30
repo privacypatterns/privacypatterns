@@ -160,8 +160,7 @@ nav {
 
 nav { color: #444; }
 nav li { display: inline-block; }
-/* Following line is causing ascii decoder problems. */
-/*nav li::after { content: "•"; padding: 0 3px 0 5px; } */
+nav li::after { content: "•"; padding: 0 3px 0 5px; }
 nav li:last-child::after { content: ""; padding: 0; }
 nav a {
   color: #444;
