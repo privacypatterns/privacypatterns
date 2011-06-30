@@ -26,31 +26,7 @@ ins { background-color: #ff9; color: #000; text-decoration: none; }
 
 mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
 
-del { text-decoration: line-through; }
 
-abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
-
-table { border-collapse: collapse; border-spacing: 0; }
-
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-
-input, select { vertical-align: middle; }
-
-
-/**
- * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
- */
-
-body { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
-select, input, textarea, button { font:99% sans-serif; }
-
-/* Normalize monospace sizing:
-   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
-pre, code, kbd, samp { font-family: monospace, sans-serif; }
-
-
-/**
- * Minimal base styles.
  */
 
 /* Always force a scrollbar in non-IE */
@@ -160,8 +136,7 @@ nav {
 
 nav { color: #444; }
 nav li { display: inline-block; }
-/* Following line is causing ascii decoder problems. */
-/*nav li::after { content: "•"; padding: 0 3px 0 5px; } */
+nav li::after { content: "•"; padding: 0 3px 0 5px; }
 nav li:last-child::after { content: ""; padding: 0; }
 nav a {
   color: #444;

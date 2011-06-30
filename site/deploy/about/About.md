@@ -1,11 +1,3 @@
-{% extends "_staticpage.html" %}
-
-{%hyde
-    title: "About"
-%}
-
-{% block article %}
-
 ## About the project ##
 
 Privacy represents a broad variety of concerns &mdash; subjective, contextual, hard-to-define &mdash; that real people have about the flows of personal information. Location-based services provide a key example: a growing field that uses potentially sensitive data, where adoption has been held back by privacy concerns.
@@ -31,5 +23,3 @@ We're currently compiling a first draft of some patterns to get things started, 
 ## Contact us ##
 
 *If you're interested in privacy patterns &mdash; because you'd like to contribute your own content, support the project in some way or suggest an improvement &mdash; please contact us.*
-
-{% endblock %}
