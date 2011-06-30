@@ -1,10 +1,5 @@
 # Asynchronous notice (pattern)
 
-{%hyde
-    title: "Asynchronous notice"
-    created: 2011-06-21 12:00:00
-%}
-
 ## Contents
 
   * [1 Intent][2]
