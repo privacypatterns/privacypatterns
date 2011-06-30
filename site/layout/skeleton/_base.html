@@ -32,9 +32,9 @@
     <div id="container">
 
 			{% include "skeleton/_header.html" %}
-
-			{% block content %}{% endblock %}
-
+      <div id="main" role="main">
+			  {% block content %}{% endblock %}
+      </div>
 			{% include "skeleton/_footer.html" %}
 
 		</div>
