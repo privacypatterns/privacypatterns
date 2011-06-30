@@ -160,7 +160,8 @@ nav {
 
 nav { color: #444; }
 nav li { display: inline-block; }
-nav li::after { content: "•"; padding: 0 3px 0 5px; }
+/* Following line has problems with ascii decoding.
+nav li::after { content: "•"; padding: 0 3px 0 5px; } */
 nav li:last-child::after { content: ""; padding: 0; }
 nav a {
   color: #444;
