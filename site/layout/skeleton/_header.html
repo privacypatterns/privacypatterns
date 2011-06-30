@@ -1,16 +1,14 @@
-<div id="header">
-    <a href="{{site.url}}/index.html">
-        <h1>{{site.name}}</h1>
-    </a>
-</div>
-
+<header>
+  <div id="logo">privacy<span class="highlight">patterns</span>.org</div>
+  {% block sitenav %}
+  {% include "skeleton/_site_nav.html" %}
+  {% endblock %}
+  
+<!-- 
 {% block breadcrumbs %}
 {% include "skeleton/_breadcrumbs.html"%}
 {% endblock %}
 
 {% block context_nav %}
-{% endblock %}
+{% endblock %} -->
 
-{% block sitenav %}
-{% include "skeleton/_site_nav.html" %}
-{% endblock %}
