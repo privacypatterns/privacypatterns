@@ -227,9 +227,11 @@ ol ol ol ol { list-style-type: lower-alpha; }
   left: 0;
   position: absolute;
   text-align: center;
-  top: 50px; /* place it below the header */
+  top: 36px; /* place it below the header */
   width: 100%;
 }
+
+#index header { border-bottom: none; }
 
 #index nav {
   display: block;
@@ -242,21 +244,19 @@ ol ol ol ol { list-style-type: lower-alpha; }
   top: 70px;
 }
 
-/* Sample patterns */
-#patterns {
-  margin: 0;
-  margin-top: 22px;
-  padding: 0;
+#index h2 {
+  font-size: 22px;
+  margin: 1.6em 0 1em 0;
 }
 
+/* Sample patterns */
 #patterns li {
   border: 2px solid #efefef;
   border-radius: 8px;
   box-sizing: border-box;
   display: inline-block;
   list-style: none;
-  margin: 14px;
-  margin-left: 0;
+  margin: 0 14px 14px 0;
   width: 30%;
   vertical-align: top;
 }
@@ -285,9 +285,9 @@ ol ol ol ol { list-style-type: lower-alpha; }
       rgb(239,239,239) 100%
   );
 }
-#patterns a:hover h2 { color: #2A3D65; }
+#patterns a:hover h3 { color: #2A3D65; }
 
-#patterns h2 {
+#patterns h3 {
   font-size: 22px;
 }
 
