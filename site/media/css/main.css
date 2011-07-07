@@ -144,10 +144,15 @@ footer, footer a {
   color: #444;
 }
 
-#content p {
+#content p, #content ul {
   font-size: 14px;
   line-height: 1.5em;
   margin-bottom: 1.2em;
+}
+
+#content ul {
+  list-style-position: inside;
+  margin-left: 1.2em;
 }
 
 #content .byline, #content .byline a, #content .byline a:visited {

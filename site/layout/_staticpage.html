@@ -1,7 +1,23 @@
-{% extends "_post.html" %}
+{% extends "skeleton/_body.html" %}
 
-{% block content_header %}
-{% endblock %}
+{% block content_body %}
 
-{% block context_nav %}
+<div id="content">
+  <h1>
+		{% with page.name_without_extension|remove_date_prefix|unslugify as default_title %}
+			{{page.title|default_if_none:default_title }}
+		{%endwith%}
+	</h1>
+	{% filter typogrify %}
+
+	{% markdown %}
+
+	{% block article %}
+	{% endblock %}
+		
+	{% endmarkdown %}
+
+	{% endfilter %}
+</div>
+
 {% endblock %}

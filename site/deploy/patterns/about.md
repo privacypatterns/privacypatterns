@@ -1,5 +1,3 @@
-## About the project ##
-
 Privacy represents a broad variety of concerns &mdash; subjective, contextual, hard-to-define &mdash; that real people have about the flows of personal information. Location-based services provide a key example: a growing field that uses potentially sensitive data, where adoption has been held back by privacy concerns.
 
 Translating these concerns (as well as corporate and legal liability) into technical artifacts &mdash; a process known generally as "privacy-by-design" &mdash; has proven difficult. How can we best convert lawyer speak into engineering speak? How can problems be elegantly anticipated early in the development process?
