@@ -169,7 +169,9 @@ footer, footer a {
  */
 #patterns_listing li {
   border: 2px solid #efefef;
+  -moz-border-radius: 8px;
   border-radius: 8px;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
   list-style: none;
@@ -179,6 +181,7 @@ footer, footer a {
 }
 
 #patterns_listing a {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: black;
   display: block;
@@ -201,6 +204,11 @@ footer, footer a {
       rgb(255,255,255) 92%,
       rgb(239,239,239) 100%
   );
+  background-image: linear-gradient(
+    center bottom,
+    rgb(255,255,255) 92%,
+    rgb(239,239,239) 100%
+  );
 }
 #patterns_listing a:hover h3 { color: #2A3D65; }
 
@@ -213,6 +221,7 @@ footer, footer a {
 /* Pattern table of contents */
 #toc {
   border-left: 1px dotted #666;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
   float: right;
@@ -263,8 +272,11 @@ ol ol ol ol { list-style-type: lower-alpha; }
 
 #lib_button {
   background-color: #2A3D65;
-  /*background-image: -webkit-linear-gradient(#70FF75, #4FB252);*/
   background-image: -webkit-linear-gradient(#395289, #2A3D65);
+  background-image: -moz-linear-gradient(#395289, #2A3D65);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#395289, endColorstr=#2A3D65);
+  zoom: 1;
+  background-image: linear-gradient(#395289, #2A3D65);
   border: 2px solid #395289;
   border-radius: 14px;
   color: white;
@@ -274,7 +286,12 @@ ol ol ol ol { list-style-type: lower-alpha; }
   text-decoration: none;
   text-shadow: 0 2px 1px black;
 }
-#lib_button:hover { background-image: -webkit-linear-gradient(#5675B8, #2A3D65); }
+#lib_button:hover {
+  background-image: -webkit-linear-gradient(#5675B8, #2A3D65);
+  background-image: -moz-linear-gradient(#5675B8, #2A3D65);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#5675B8, endColorstr=#2A3D65);
+  background-image: linear-gradient(#5675B8, #2A3D65);
+}
 
 /* This CSS may be brittle, consider making custom template instead */
 #index #logo {
