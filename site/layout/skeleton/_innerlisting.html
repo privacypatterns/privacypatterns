@@ -15,15 +15,17 @@
 		{% ifnotequal list_page node.listing_page %}
 			{% if list_page.display_in_list %}
 				<li>
-					<span>{{list_page.created|date:"Y-m-d" }}  </span>
-					<a href="{{list_page.url}}">
-					{% with list_page.name_without_extension|remove_date_prefix|unslugify as default_title %}
-						{{list_page.title|default_if_none:default_title }}
-					{%endwith%}</a>
+				  <a href="{{list_page.url}}">
+  				  <h3>
+    		  		{% with list_page.name_without_extension|remove_date_prefix|unslugify as default_title %}
+    						{{list_page.title|default_if_none:default_title }}
+    					{%endwith%}
+  					</h3>
 
-					{% if page.excerpt %}
-						{% render_excerpt list_page %}
-					{%endif%}
+  					{% if list_page.excerpt %}
+  						<p>{{list_page.excerpt}}</p>
+  					{%endif%}
+					</a>
 				</li>
 			{%endif%}
 		{% endifnotequal %}
