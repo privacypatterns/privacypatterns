@@ -1,8 +1,3 @@
-{%hyde
-  title: "Asynchronous notice (pattern)"
-  display_in_list: True
-  excerpt: "How can a service effectively provide notice to a user who gave permission once but whose information is accessed repeatedly (perhaps even continuously) over a long period of time? Proactively notify the user after the time of consent that information is being tracked, stored or re-distributed."
-%}
 ## Contents
 
   * [1 Intent][2]

@@ -10,7 +10,7 @@
 	{% if node.has_listing %}</a>{% endif %}
 {%endifnotequal%}
 
-<ul>
+<ul id="patterns_listing">
     {% for list_page in node.pages %}
 		{% ifnotequal list_page node.listing_page %}
 			{% if list_page.display_in_list %}

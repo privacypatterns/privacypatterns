@@ -17,14 +17,18 @@
 	{%recent_posts recents 3 %}
 
   <h2>Popular Patterns</h2>
-	<ul id="patterns">
-		{%for post in recents %}
-			<li>
-				<a href='{{post.url}}'>
-				  <h3>{{post.title}}</h3>
-				  <p>{% render_excerpt post %}</p>
-				</a>
-			</li>
+	<ul id="patterns_listing">
+		{% for post in recents %}
+		  {% if post.display_in_list %}
+  			<li>
+  				<a href='{{post.url}}'>
+  				  <h3>{{post.title}}</h3>
+  					{% if post.excerpt %}
+  						<p>{{post.excerpt}}</p>
+  					{%endif%}
+  				</a>
+  			</li>
+			{% endif %}
 		{%endfor%}
 	</ul>
 

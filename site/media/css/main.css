@@ -159,6 +159,52 @@ footer, footer a {
 
 #content .byline a:hover { text-decoration: none; }
 
+/*
+ * List of patterns
+ */
+#patterns_listing li {
+  border: 2px solid #efefef;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  list-style: none;
+  margin: 0 14px 14px 0;
+  width: 30%;
+  vertical-align: top;
+}
+
+#patterns_listing a {
+  box-sizing: border-box;
+  color: black;
+  display: block;
+  height: 100%;
+  padding: 14px;
+  text-decoration: none;
+  width: 100%;
+}
+
+#patterns_listing a:hover {
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.92, rgb(255,255,255)),
+      color-stop(1, rgb(239,239,239))
+  );
+  background-image: -moz-linear-gradient(
+      center bottom,
+      rgb(255,255,255) 92%,
+      rgb(239,239,239) 100%
+  );
+}
+#patterns_listing a:hover h3 { color: #2A3D65; }
+
+#patterns_listing h3 {
+  font-size: 22px;
+}
+
+#patterns_listing p { font-family: 'Lora', serif; }
+
 /* Pattern table of contents */
 #toc {
   border-left: 1px dotted #666;
@@ -196,7 +242,10 @@ ol ol { list-style-type: upper-alpha; }
 ol ol ol { list-style-type: lower-roman; }
 ol ol ol ol { list-style-type: lower-alpha; }
 
-/* Homepage specific styles */
+/* 
+ * Homepage specific styles
+ */
+
 /* Button */
 #button_holder {
   display: inline-block;
@@ -248,47 +297,3 @@ ol ol ol ol { list-style-type: lower-alpha; }
   font-size: 22px;
   margin: 1.6em 0 1em 0;
 }
-
-/* Sample patterns */
-#patterns li {
-  border: 2px solid #efefef;
-  border-radius: 8px;
-  box-sizing: border-box;
-  display: inline-block;
-  list-style: none;
-  margin: 0 14px 14px 0;
-  width: 30%;
-  vertical-align: top;
-}
-
-#patterns a {
-  box-sizing: border-box;
-  color: black;
-  display: block;
-  height: 100%;
-  padding: 14px;
-  text-decoration: none;
-  width: 100%;
-}
-
-#patterns a:hover {
-  background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0.92, rgb(255,255,255)),
-      color-stop(1, rgb(239,239,239))
-  );
-  background-image: -moz-linear-gradient(
-      center bottom,
-      rgb(255,255,255) 92%,
-      rgb(239,239,239) 100%
-  );
-}
-#patterns a:hover h3 { color: #2A3D65; }
-
-#patterns h3 {
-  font-size: 22px;
-}
-
-#patterns p { font-family: 'Lora', serif; }
