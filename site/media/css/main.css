@@ -144,6 +144,16 @@ footer, footer a {
   color: #444;
 }
 
+p.berkeley {
+	font-family: 'UC Berkeley OS';
+	font-size: 20px;
+}
+
+#iman {
+	margin-bottom: -8px;
+	padding: 0 3px;
+}
+
 #content p, #content ul {
   font-size: 14px;
   line-height: 1.5em;
