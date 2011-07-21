@@ -7,8 +7,6 @@ import os
 import re
 import string
 
-PROG_ROOT = os.path.dirname(os.path.realpath( __file__ ))
-
 HYDE_RE = re.compile(r'({%hyde.+?%})(.+)', re.DOTALL)
 
 TEMPLATE = string.Template("""{% extends "_post.html" %}
@@ -58,9 +56,11 @@ def ProcessFiles(source_dir, dest_dir):
 def main():
     parser = optparse.OptionParser(usage="%prog [-f] [-q]", version="%prog 0.5.3")
     parser.add_option("-s", "--source",
+                        default = "../privacypatterns.wiki/patterns",
                         dest = "source_dir",
                         help = "Path of the source folder containing markdown files.")
     parser.add_option("-d", "--destination",
+                        default = "site/content/patterns",
                         dest = "dest_dir",
                         help = "Path of the destination folder in which to create html templates.")
 
@@ -69,11 +69,8 @@ def main():
     if len(args):
         parser.error("Unexpected arguments encountered.")
 
-    if not options.source_dir:
-        options.source_dir = os.getcwdu()
-
-    if options.dest_dir:
-        options.dest_dir = os.path.abspath(options.dest_dir)
+    options.source_dir = os.path.abspath(options.source_dir) 
+    options.dest_dir = os.path.abspath(options.dest_dir)
 
     ProcessFiles(options.source_dir, options.dest_dir)
     
