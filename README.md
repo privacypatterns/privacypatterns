@@ -19,12 +19,13 @@ Instructions
 
 1. To sync the contents of the Hyde submodule in your local copy of the repository:
 
-      git submodule init
-      git submodule update
+       git submodule init
+
+       git submodule update
 
 2. To generate the static HTML files using Hyde:
 
-      python hyde.py -g -s path/to/site 
+       python hyde.py -g -s path/to/site 
 
-   The resulting files are located in path/to/site/deploy.
+    The resulting files are located in path/to/site/deploy.
 
