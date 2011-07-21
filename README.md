@@ -12,3 +12,19 @@ Drawing inspiration from Christopher Alexander and the success of software desig
  * help LBS designers identify and address privacy concerns
 
 We're currently compiling a first draft of some patterns to get things started, but our goal is for this to be a living document constructed by the community of engineers, designers, lawyers and regulators involved in this topic.
+
+
+Instructions
+------------
+
+1. To sync the contents of the Hyde submodule in your local copy of the repository:
+
+      git submodule init
+      git submodule update
+
+2. To generate the static HTML files using Hyde:
+
+      python hyde.py -g -s path/to/site 
+
+   The resulting files are located in path/to/site/deploy.
+
