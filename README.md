@@ -19,13 +19,19 @@ Instructions
 
 1. To sync the contents of the Hyde submodule in your local copy of the repository:
 
-       git submodule init
+        git submodule init
 
-       git submodule update
+        git submodule update
+
+3. To create HTML templates from Gollum wiki markdown files:
+
+        python markdown_to_hyde.py -s [path/to/wiki/patterns] -d [path/to/site/contents/patterns]
+
+    Default configuration assumes that the privacypatterns.wiki repository is a sibling to the privacypatterns repo, in which the markdown_to_hyde.py script lives.
 
 2. To generate the static HTML files using Hyde:
 
-       python hyde.py -g -s path/to/site 
+        python hyde.py -g -s path/to/site
 
     The resulting files are located in path/to/site/deploy.
 
