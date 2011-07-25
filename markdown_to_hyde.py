@@ -28,7 +28,7 @@ def ProcessMarkdown(filename):
     """Takes the name of a markdown file and returns a tuple consisting of two
     strings, the initial Hyde tag and the remaining contents of the file."""
     f = open(filename, 'r')
-    contents = f.read()
+    contents = f.read().strip()
     result = HYDE_RE.match(contents)
     if result and result.groups():
         return (result.group(1), result.group(2).strip())
