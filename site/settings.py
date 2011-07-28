@@ -87,6 +87,19 @@ CONTENT_PROCESSORS = {
             }
 }
 
+SITE_PRE_PROCESSORS = {
+    'patterns': {
+        'hydeengine.site_pre_processors.CategoriesManager':
+            {'node':'patterns', 'template': '_archives.html', 'archiving': True, 'listing_template': '_archives_index.html', 'output_folder': 'categories'}
+    },
+    '/': {
+        'hydeengine.site_pre_processors.NodeInjector' : {
+               'variable' : 'patterns_node',
+               'path' : 'content/patterns'
+        }
+    }
+}
+
 SITE_POST_PROCESSORS = {
     # 'media/js': {
     #        'hydeengine.site_post_processors.FolderFlattener' : {

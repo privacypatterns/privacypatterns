@@ -21,6 +21,18 @@
 	{% endfilter %}
 </div>
 
+ <div id="categories">
+    <p>
+      Published under {% for c in page.categories %}
+      {% for category in page.node.categories %}
+      {% ifequal category.name c %}
+      <a href="{{category.archive_url}}">{{category.name}}</a>
+      {% if page.categories|length > 1 and not forloop.parentloop.last %} · {% endif %}
+      {% endifequal %}
+      {% endfor %}{% endfor %}
+     </p>
+ </div>
+
 {% endblock %}
 
 {% block content_header %}

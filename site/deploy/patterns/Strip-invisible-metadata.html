@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>
 		
-		Patterns - Privacy Patterns
+		Strip Invisible Metadata - Privacy Patterns
 		
 	</title>
   <meta name="description" content="Privacy patterns in software design">
@@ -30,7 +30,7 @@
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-	<body id="patterns">
+	<body id="Strip-invisible-metadata">
     <div id="container">
 
 			<header>
@@ -83,38 +83,74 @@
 			  
 
 
-<h1>Patterns</h1>
 
 
 
 
-	
+<div id="content">
+  <p class="byline">Posted on Jan 01, 2000</p>
+  <h1>
 		
+			Strip Invisible Metadata
+		
+	</h1>
+	
 
-<ul id="patterns_listing"><li><a href="/patterns/Asynchronous-notice.html"><h3>
-    		  		
-    						Asynchronous notice
-    					
-  					</h3><p>How can a service effectively provide notice to a user who gave permission once but whose information is accessed repeatedly (perhaps even continuously) over a long period of time? Proactively notify the user after the time of consent that information is being tracked, stored or re-distributed.</p></a></li><li><a href="/patterns/Strip-invisible-metadata.html"><h3>
-    		  		
-    						Strip Invisible Metadata
-    					
-  					</h3></a></li><li><a href="/patterns/Ambient-notice.html"><h3>
-    		  		
-    						Ambient notice
-    					
-  					</h3><p>Provide an ambient notice (unobtrusive, non-modal) when location is being accessed to increase awareness of ongoing tracking.</p></a></li><li><a href="/patterns/Location-granularity.html"><h3>
-    		  		
-    						Location Granularity
-    					
-  					</h3><p>Support minimization of data collection and distribution. Important when a service is collecting location data from or about a user, or transmitting location data about a user to a third-party.</p></a></li><li><a href="/patterns/Privacy-dashboard.html"><h3>
-    		  		
-    						Privacy dashboard
-    					
-  					</h3></a></li></ul>
-
+	<h2>Intent</h2>
+<h2>Context</h2>
+<p>When a service requires a user to import data from external sources (eg.
+pictures, tweets, documents) there might be different types of metadata that
+is transmitted. Users might not be aware of the metadata as it might be
+automatically generated, or not directly visible. Services might be
+inadvertently responsible for exposing private metadata, or going
+against users&nbsp;expectations.</p>
+<h2>Problem</h2>
+<p>Users are not always fully aware of the various kinds of metadata
+attached to files and web resources they share with online services.
+Much of this data is automatically generated, or not directly visible to
+users during their interactions. This can create situations where, even
+though users share information explicitly with services, they might be
+surprised to find this data being revealed. In certain cases where the
+data is legally protected, the service might be held responsible for any
+leakage of sensitive&nbsp;information. </p>
+<p>How should services that need users to share data and upload files
+treat additional metadata attached with files? In case of uploading
+documents and images, which parts of the metadata can be treated as
+explcitly shared&nbsp;information.</p>
+<h2>Solution</h2>
+<p>Stripping all metadata that is not directly visitble during upload time,
+or during the use of the serivce can help protect services from
+leaks and liabilities. Even in cases where the information is not
+legally protected, the service can protect themselves from surprising
+their users and thus alienaing&nbsp;them. </p>
+<p>Additionally when users share data with services, they can be presented
+with a preview of the data obtained by the service, including any
+metadata <code>[[Preview Shared Data]]</code>. This allows users to be more aware
+of information that they are sharing with the services, and in many
+cases with other entities on the&nbsp;Internet.</p>
+<p>To summarize - user metadata that can not be made visible to users
+clearly should be stripped to avoid overstepping the users'&nbsp;expectations. </p>
+<h2>Examples</h2>
+<h4>Uploading images to&nbsp;twitter.com</h4>
+<p>Twitter.com removes EXIF data from images uploaded to their image
+sharing service. Previously there has been many breaches of personal
+location by using EXIF data shared by image sharing&nbsp;services. </p>
+<h4>Hiding EXIF data on&nbsp;Flickr.com</h4>
+<p>In certain cases services might build features based on
+metadata, or the metadata sharing could be an important part of the
+community of users. Flickr.com allows users to hide their EXIF data from
+public display, and also provides an interface for users to easily see
+if they are sharing location as part of uploading their&nbsp;images. </p>
+<TODO: add screenshots>
 
 	
+</div>
+
+ <div id="categories">
+    <p>
+      Published under 
+     </p>
+ </div>
 
 
 

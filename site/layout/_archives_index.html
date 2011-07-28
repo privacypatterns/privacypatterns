@@ -1,0 +1,18 @@
+{% extends "skeleton/_body.html" %}
+
+{%hyde
+    listing: true
+%}
+
+{% block content_header %}
+{% endblock %}
+
+{% block content_body %}
+
+<h1>List of categories</h1>
+<ul>
+  {% for c in categories %}
+  <li><a href="{{c.archive_url}}">{{c.name}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}

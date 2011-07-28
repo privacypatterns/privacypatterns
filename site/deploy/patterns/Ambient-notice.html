@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>
 		
-		Patterns - Privacy Patterns
+		Ambient notice - Privacy Patterns
 		
 	</title>
   <meta name="description" content="Privacy patterns in software design">
@@ -30,7 +30,7 @@
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-	<body id="patterns">
+	<body id="Ambient-notice">
     <div id="container">
 
 			<header>
@@ -83,38 +83,95 @@
 			  
 
 
-<h1>Patterns</h1>
 
 
 
 
-	
+<div id="content">
+  <p class="byline">Posted on Jan 01, 2000</p>
+  <h1>
 		
+			Ambient notice
+		
+	</h1>
+	
 
-<ul id="patterns_listing"><li><a href="/patterns/Asynchronous-notice.html"><h3>
-    		  		
-    						Asynchronous notice
-    					
-  					</h3><p>How can a service effectively provide notice to a user who gave permission once but whose information is accessed repeatedly (perhaps even continuously) over a long period of time? Proactively notify the user after the time of consent that information is being tracked, stored or re-distributed.</p></a></li><li><a href="/patterns/Strip-invisible-metadata.html"><h3>
-    		  		
-    						Strip Invisible Metadata
-    					
-  					</h3></a></li><li><a href="/patterns/Ambient-notice.html"><h3>
-    		  		
-    						Ambient notice
-    					
-  					</h3><p>Provide an ambient notice (unobtrusive, non-modal) when location is being accessed to increase awareness of ongoing tracking.</p></a></li><li><a href="/patterns/Location-granularity.html"><h3>
-    		  		
-    						Location Granularity
-    					
-  					</h3><p>Support minimization of data collection and distribution. Important when a service is collecting location data from or about a user, or transmitting location data about a user to a third-party.</p></a></li><li><a href="/patterns/Privacy-dashboard.html"><h3>
-    		  		
-    						Privacy dashboard
-    					
-  					</h3></a></li></ul>
-
+	<h2>Intent</h2>
+<p>Provide unobtrusive, ongoing notice of real-time location&nbsp;tracking.</p>
+<p>Supports <a href="Notice_principle">notice</a>, <a href="Transparency_principle">transparency</a> and <a href="User control_principle">user control</a>.</p>
+<h2>Context</h2>
+<p>When a service is tracking a user's location in an ongoing fashion, or accessing the user's location on each repeated use of a service. (See also, <a href="Asynchronous-notice">asynchronous notice</a>.)</p>
+<h2>Problem</h2>
+<p>How can a service effectively provide notice to a user that location tracking is continuing, or happening again, without being as obtrusive as a repeated modal dialog? A user may not realize that an application given permission to access location is doing so continuously or repeatedly, or may not remember that explicit permissions given in the past allow a service to access data again later. In some cases, past explicit permission may not have been provided by the current user of the device (but instead by a spouse, parent or even an ex-spouse or stalker who temporarily had control of the device or the account). If notice is provided only at the time of consent, a user may
+inadvertently distribute personal information over a long period of time after
+having lost control of their device only&nbsp;momentarily.</p>
+<h2>Solution</h2>
+<p>Provide an <em>ambient</em> notice &mdash; unobtrusive, non-modal, but available at a glance or from a simple action &mdash; when location data is being accessed. The notice should provide opportunities for interaction: to learn more about the use of data or to revoke&nbsp;permissions.</p>
+<h3>Examples</h3>
+<h4>Location services icon (Android, iOS,&nbsp;Chrome)</h4>
+<p><em>Include screenshots and comparisons of&nbsp;each.</em></p>
+<h4>???</h4>
+<p><em>Does Location Labs have good examples of ambient notice in their&nbsp;software?</em></p>
+<h2>Forces/Concerns</h2>
+<p>A tray full of ambient notices may annoy or confuse users and inure them to ongoing practices. Take measures to avoid unnecessary notice. This must be balanced against the
+concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
 
 	
+</div>
+
+ <div id="categories">
+    <p>
+      Published under 
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="/categories/location.html">location</a>
+       · 
+      
+      
+      
+      
+      <a href="/categories/notice.html">notice</a>
+       · 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="/categories/smartphone.html">smartphone</a>
+       · 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="/categories/ui.html">ui</a>
+      
+      
+      
+      
+      
+     </p>
+ </div>
 
 
 
