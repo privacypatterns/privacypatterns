@@ -1,13 +1,15 @@
+[TOC]
+
 ## Intent
 
 ## Context
 
 When a service requires a user to import data from external sources (eg.
-pictures, tweets, documents) there might be different types of metadata that
-is transmitted. Users might not be aware of the metadata as it might be
-automatically generated, or not directly visible. Services might be
+pictures, tweets, documents) different types of metadata may be 
+transmitted. Users may not be aware of the metadata as it can be
+automatically generated or not directly visible. Services might be
 inadvertently responsible for exposing private metadata, or going
-against users expectations.
+against users' expectations.
 
 ## Problem
 
@@ -15,9 +17,9 @@ Users are not always fully aware of the various kinds of metadata
 attached to files and web resources they share with online services.
 Much of this data is automatically generated, or not directly visible to
 users during their interactions. This can create situations where, even
-though users share information explicitly with services, they might be
+though users share information explicitly with services, they may be
 surprised to find this data being revealed. In certain cases where the
-data is legally protected, the service might be held responsible for any
+data is legally protected, the service could be held responsible for any
 leakage of sensitive information. 
 
 How should services that need users to share data and upload files

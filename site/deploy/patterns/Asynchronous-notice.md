@@ -1,3 +1,5 @@
+[TOC]
+
 ##   Intent
 
 Support notice of ongoing location tracking.

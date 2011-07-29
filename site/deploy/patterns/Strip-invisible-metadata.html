@@ -10,19 +10,14 @@
 		
 	</title>
   <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-
+  <meta name="author" content="Nick Doty and Mohit Gupta">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
 	
   <!-- CSS: implied media="all" -->
   <link href="http://fonts.googleapis.com/css?family=Lora:regular&v1" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
-  <link href='http://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/media/css/main.css?v=2">
 	
 	
@@ -97,28 +92,45 @@
 	</h1>
 	
 
-	<h2>Intent</h2>
-<h2>Context</h2>
+	<div class="toc">
+<ul>
+<li><a href="#intent">Intent</a><ul>
+<li><a href="#context">Context</a></li>
+<li><a href="#problem">Problem</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#uploading-images-to-twittercom">Uploading images to twitter.com</a><ul>
+<li><a href="#hiding-exif-data-on-flickrcom">Hiding EXIF data on&nbsp;Flickr.com</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="intent">Intent</h2>
+<h2 id="context">Context</h2>
 <p>When a service requires a user to import data from external sources (eg.
-pictures, tweets, documents) there might be different types of metadata that
-is transmitted. Users might not be aware of the metadata as it might be
-automatically generated, or not directly visible. Services might be
+pictures, tweets, documents) different types of metadata may be 
+transmitted. Users may not be aware of the metadata as it can be
+automatically generated or not directly visible. Services might be
 inadvertently responsible for exposing private metadata, or going
-against users&nbsp;expectations.</p>
-<h2>Problem</h2>
+against users'&nbsp;expectations.</p>
+<h2 id="problem">Problem</h2>
 <p>Users are not always fully aware of the various kinds of metadata
 attached to files and web resources they share with online services.
 Much of this data is automatically generated, or not directly visible to
 users during their interactions. This can create situations where, even
-though users share information explicitly with services, they might be
+though users share information explicitly with services, they may be
 surprised to find this data being revealed. In certain cases where the
-data is legally protected, the service might be held responsible for any
+data is legally protected, the service could be held responsible for any
 leakage of sensitive&nbsp;information. </p>
 <p>How should services that need users to share data and upload files
 treat additional metadata attached with files? In case of uploading
 documents and images, which parts of the metadata can be treated as
 explcitly shared&nbsp;information.</p>
-<h2>Solution</h2>
+<h2 id="solution">Solution</h2>
 <p>Stripping all metadata that is not directly visitble during upload time,
 or during the use of the serivce can help protect services from
 leaks and liabilities. Even in cases where the information is not
@@ -131,12 +143,12 @@ of information that they are sharing with the services, and in many
 cases with other entities on the&nbsp;Internet.</p>
 <p>To summarize - user metadata that can not be made visible to users
 clearly should be stripped to avoid overstepping the users'&nbsp;expectations. </p>
-<h2>Examples</h2>
-<h4>Uploading images to&nbsp;twitter.com</h4>
+<h2 id="examples">Examples</h2>
+<h4 id="uploading-images-to-twittercom">Uploading images to&nbsp;twitter.com</h4>
 <p>Twitter.com removes EXIF data from images uploaded to their image
 sharing service. Previously there has been many breaches of personal
 location by using EXIF data shared by image sharing&nbsp;services. </p>
-<h4>Hiding EXIF data on&nbsp;Flickr.com</h4>
+<h4 id="hiding-exif-data-on-flickrcom">Hiding EXIF data on&nbsp;Flickr.com</h4>
 <p>In certain cases services might build features based on
 metadata, or the metadata sharing could be an important part of the
 community of users. Flickr.com allows users to hide their EXIF data from

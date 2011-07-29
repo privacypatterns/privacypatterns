@@ -10,19 +10,14 @@
 		
 	</title>
   <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-
+  <meta name="author" content="Nick Doty and Mohit Gupta">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
 	
   <!-- CSS: implied media="all" -->
   <link href="http://fonts.googleapis.com/css?family=Lora:regular&v1" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
-  <link href='http://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/media/css/main.css?v=2">
 	
 	
@@ -97,23 +92,41 @@
 	</h1>
 	
 
-	<h2>Intent</h2>
+	<div class="toc">
+<ul>
+<li><a href="#intent">Intent</a><ul>
+<li><a href="#context">Context</a></li>
+<li><a href="#problem">Problem</a></li>
+<li><a href="#solution">Solution</a><ul>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#location-services-icon-android-ios-chrome">Location services icon (Android, iOS,&nbsp;Chrome)</a></li>
+<li><a href="#">???</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#forcesconcerns">Forces/Concerns</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="intent">Intent</h2>
 <p>Provide unobtrusive, ongoing notice of real-time location&nbsp;tracking.</p>
 <p>Supports <a href="Notice_principle">notice</a>, <a href="Transparency_principle">transparency</a> and <a href="User control_principle">user control</a>.</p>
-<h2>Context</h2>
+<h2 id="context">Context</h2>
 <p>When a service is tracking a user's location in an ongoing fashion, or accessing the user's location on each repeated use of a service. (See also, <a href="Asynchronous-notice">asynchronous notice</a>.)</p>
-<h2>Problem</h2>
+<h2 id="problem">Problem</h2>
 <p>How can a service effectively provide notice to a user that location tracking is continuing, or happening again, without being as obtrusive as a repeated modal dialog? A user may not realize that an application given permission to access location is doing so continuously or repeatedly, or may not remember that explicit permissions given in the past allow a service to access data again later. In some cases, past explicit permission may not have been provided by the current user of the device (but instead by a spouse, parent or even an ex-spouse or stalker who temporarily had control of the device or the account). If notice is provided only at the time of consent, a user may
 inadvertently distribute personal information over a long period of time after
 having lost control of their device only&nbsp;momentarily.</p>
-<h2>Solution</h2>
+<h2 id="solution">Solution</h2>
 <p>Provide an <em>ambient</em> notice &mdash; unobtrusive, non-modal, but available at a glance or from a simple action &mdash; when location data is being accessed. The notice should provide opportunities for interaction: to learn more about the use of data or to revoke&nbsp;permissions.</p>
-<h3>Examples</h3>
-<h4>Location services icon (Android, iOS,&nbsp;Chrome)</h4>
+<h3 id="examples">Examples</h3>
+<h4 id="location-services-icon-android-ios-chrome">Location services icon (Android, iOS,&nbsp;Chrome)</h4>
 <p><em>Include screenshots and comparisons of&nbsp;each.</em></p>
-<h4>???</h4>
+<h4 id="">???</h4>
 <p><em>Does Location Labs have good examples of ambient notice in their&nbsp;software?</em></p>
-<h2>Forces/Concerns</h2>
+<h2 id="forcesconcerns">Forces/Concerns</h2>
 <p>A tray full of ambient notices may annoy or confuse users and inure them to ongoing practices. Take measures to avoid unnecessary notice. This must be balanced against the
 concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
 

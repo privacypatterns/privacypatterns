@@ -1,3 +1,5 @@
+[TOC]
+
 ##Intent##
 Support [minimization](Minimization) of data collection and distribution.
 

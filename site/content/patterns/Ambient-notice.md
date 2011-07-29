@@ -1,3 +1,5 @@
+[TOC]
+
 ##Intent##
 Provide unobtrusive, ongoing notice of real-time location tracking.
 

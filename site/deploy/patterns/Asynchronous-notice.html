@@ -10,19 +10,14 @@
 		
 	</title>
   <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-
+  <meta name="author" content="Nick Doty and Mohit Gupta">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
 	
   <!-- CSS: implied media="all" -->
   <link href="http://fonts.googleapis.com/css?family=Lora:regular&v1" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
-  <link href='http://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/media/css/main.css?v=2">
 	
 	
@@ -97,16 +92,34 @@
 	</h1>
 	
 
-	<h2>Intent</h2>
+	<div class="toc">
+<ul>
+<li><a href="#intent">Intent</a><ul>
+<li><a href="#context">Context</a></li>
+<li><a href="#problem">Problem</a></li>
+<li><a href="#solution">Solution</a><ul>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#google-latitude-reminder-email">Google Latitude reminder&nbsp;email</a></li>
+<li><a href="#fire-eagle-my-alerts">Fire Eagle My&nbsp;Alerts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#forcesconcerns">Forces/Concerns</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="intent">Intent</h2>
 <p>Support notice of ongoing location&nbsp;tracking.</p>
 <p>Supports [Notice (principle)], [User Control (principle)],
 [Transparency and feedback&nbsp;(principle)]</p>
-<h2>Context</h2>
+<h2 id="context">Context</h2>
 <p>Tracking a person's location over time in an invisible fashion, with or
 without prior explicit consent. (Particularly useful for background tracking,
 tracking through devices with limited or no screen space, or tracking
 repeatedly over long periods of time. For devices with sufficient screen space or other notification affordances, see also <a href="Ambient-notice">ambient notice</a>.)</p>
-<h2>Problem</h2>
+<h2 id="problem">Problem</h2>
 <p>How can a service effectively provide notice to a user who gave permission
 once but whose information is accessed repeatedly (perhaps even continuously)
 over a long period of time? If a user forgets that they gave access (or who
@@ -116,7 +129,7 @@ attacker or have been provided by another user of a shared device -- if
 synchronous notice is only provided at the time of consent, a user may
 inadvertently distribute personal information over a long period of time after
 having lost control of their device only&nbsp;momentarily.</p>
-<h2>Solution</h2>
+<h2 id="solution">Solution</h2>
 <p>Proactively notify the user after the time of consent that information is
 being tracked, stored or re-distributed. This asynchronous notice could be
 achieved through an email, text message, on-screen notice or even through non-
@@ -130,8 +143,8 @@ the user about the extent of collection. See also, [Privacy dashboard
 (pattern)][19] and [Access&nbsp;(principle)][17].</p>
 <p>By ensuring that users aren't surprised, asynchronous notice may increase
 trust in the service and comfort with continued disclosure of&nbsp;information.</p>
-<h3>Examples</h3>
-<h4>Google Latitude reminder&nbsp;email</h4>
+<h3 id="examples">Examples</h3>
+<h4 id="google-latitude-reminder-email">Google Latitude reminder&nbsp;email</h4>
 <p>Google Latitude users can configure a reminder email (see below) when their
 location is being shared with any application, including internal applications
 like the Location History&nbsp;service.</p>
@@ -152,10 +165,10 @@ like the Location History&nbsp;service.</p>
  [https://www.google.com/latitude/apps?hl=en&amp;tab=privacyreminders]
 </code></pre>
 <hr />
-<h4>Fire Eagle My&nbsp;Alerts</h4>
+<h4 id="fire-eagle-my-alerts">Fire Eagle My&nbsp;Alerts</h4>
 <p>![5642647032_e74e815f6a.jpg]</p>
 <p>[Fire Eagle My Alerts configuration by nickdoty, on&nbsp;Flickr]</p>
-<h2>Forces/Concerns</h2>
+<h2 id="forcesconcerns">Forces/Concerns</h2>
 <p>Providing an asynchronous notice requires a reliable mechanism to contact the
 user (a verified email address or telephone number, for example). Care should
 be taken to ensure that the mechanism can actually reach the person using the
@@ -193,11 +206,11 @@ concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
       
       
       
+      <a href="/categories/notice.html">notice</a>
       
       
       
       
-      <a href="/categories/ui.html">ui</a>
       
       
       

@@ -1,3 +1,5 @@
+[TOC]
+
 ##Intent##
 Help users see an overview of the personal information collected about them, particularly when the data or services in question are numerous.
 
