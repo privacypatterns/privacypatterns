@@ -5,6 +5,7 @@ import glob
 import optparse
 import os
 import re
+import shutil
 import string
 
 HYDE_RE = re.compile(r'({%hyde.+?%})(.+)', re.DOTALL)
@@ -52,6 +53,16 @@ def ProcessFiles(source_dir, dest_dir):
             md_file.close()
             print "Successfully processed file: %s" % filename
 
+def CopyImages(source_dir, dest_dir):
+    # patterns and media dirs are siblings in privacypatterns.wiki
+    source_dir = os.path.dirname(source_dir) + "/media/images"
+    # from site/content/patterns, go up two directories to find media dir
+    dest_dir = os.path.dirname(os.path.dirname(dest_dir)) + "/media/images"
+    for filename in glob.glob(os.path.join(source_dir, "*.*")):
+        basename = os.path.basename(filename)
+        shutil.copyfile(filename, os.path.join(dest_dir, basename))
+        print "Successfully copied image: %s" % filename
+    
             
 def main():
     parser = optparse.OptionParser(usage="%prog [-f] [-q]", version="%prog 0.5.3")
@@ -63,6 +74,10 @@ def main():
                         default = "site/content/patterns",
                         dest = "dest_dir",
                         help = "Path of the destination folder in which to create html templates.")
+    parser.add_option("-i", "--copy_images",
+                        default = True,
+                        dest = "copy_images",
+                        help = "Whether or not to copy images.  Relative paths to image directories only work for default options.")
 
     (options, args) = parser.parse_args()
 
@@ -73,6 +88,9 @@ def main():
     options.dest_dir = os.path.abspath(options.dest_dir)
 
     ProcessFiles(options.source_dir, options.dest_dir)
+
+    if options.copy_images:
+        CopyImages(options.source_dir, options.dest_dir)
     
 
 if __name__ == "__main__":
