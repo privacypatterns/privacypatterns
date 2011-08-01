@@ -3,7 +3,16 @@
 {% block content_body %}
 
 <div id="content">
-  <p class="byline">Posted on {{ page.created|date:"M d, Y"}}</p>
+  <p id="categories">
+    Categories: {% for c in page.categories %}
+      {% for category in page.node.categories %}
+        {% ifequal category.name c %}
+          <a href="{{category.archive_url}}">{{category.name}}</a>
+          {% if page.categories|length > 1 and not forloop.parentloop.last %} · {% endif %}
+        {% endifequal %}
+      {% endfor %}
+    {% endfor %}
+  </p>
   <h1>
 		{% with page.name_without_extension|remove_date_prefix|unslugify as default_title %}
 			{{page.title|default_if_none:default_title }}
@@ -22,18 +31,6 @@
 	
   <p id="comments_link">Questions or comments? Email Nock Doty at <a href="mailto:npdoty@ischool.berkeley.edu" title="Email Nick Doty">npdoty@ischool.berkeley.edu</a></p>
 </div>
-
- <div id="categories">
-    <p>
-      Published under {% for c in page.categories %}
-      {% for category in page.node.categories %}
-      {% ifequal category.name c %}
-      <a href="{{category.archive_url}}">{{category.name}}</a>
-      {% if page.categories|length > 1 and not forloop.parentloop.last %} · {% endif %}
-      {% endifequal %}
-      {% endfor %}{% endfor %}
-     </p>
- </div>
 
 {% endblock %}
 

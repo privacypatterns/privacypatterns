@@ -172,15 +172,6 @@ p.berkeley {
   margin-left: 1.2em;
 }
 
-#content .byline, #content .byline a, #content .byline a:visited {
-  color: #666;
-  font-family: sans-serif;
-  font-size: 11px;
-  text-transform: uppercase;
-}
-
-#content .byline a:hover { text-decoration: none; }
-
 #sidebar {
   display: inline-block;
   vertical-align: top;
@@ -191,18 +182,28 @@ p.berkeley {
   font-size: 22px;
 }
 
-#categories {
+ul#categories {
   list-style-position: inside;
   margin: 0;
   padding: 0;
 }
 
-#categories li {
+ul#categories li {
   line-height: 1.6em;
   text-transform: capitalize;
 }
 
 .category { text-transform: capitalize; }
+
+/* Categories list on individual pattern pages */
+p#categories, p#categories a, p#categories a:visited {
+  color: #666;
+  font-family: sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+p#categories a:hover { text-decoration: none; }
 
 /*
  * List of patterns
