@@ -8,23 +8,22 @@
 {% endblock %}
 
 {% block content_body %}
-<h2>{{ category }}</h2>
-<ul id="patterns_listing">
-{% for post in posts %}
-				<li>
-				  <a href="{{post.url}}">
-  				  <h3>
-    		  		{% with post.name_without_extension|remove_date_prefix|unslugify as default_title %}
-    						{{post.title|default_if_none:default_title }}
-    					{%endwith%}
-  					</h3>
+<h1><a href="/patterns/patterns.html" title="Patterns">Patterns</a> &mdash; <span class="category">{{ category }}</span></h1>
+  <ul id="patterns_listing">
+  {% for post in posts %}
+		<li>
+		  <a href="{{post.url}}">
+			  <h3>
+		  		{% with post.name_without_extension|remove_date_prefix|unslugify as default_title %}
+						{{post.title|default_if_none:default_title }}
+					{%endwith%}
+				</h3>
 
-  					{% if post.excerpt %}
-  						<p>{{post.excerpt}}</p>
-  					{%endif%}
-					</a>
-				</li>
-
-{% endfor %}
-</ul>
+				{% if post.excerpt %}
+					<p>{{post.excerpt}}</p>
+				{%endif%}
+			</a>
+		</li>
+  {% endfor %}
+  </ul>
 {% endblock %}
