@@ -14,7 +14,7 @@ We're currently compiling a first draft of some patterns to get things started, 
 
 [Nick Doty](http://npdoty.name) is a PhD student at the [UC Berkeley, School of Information](http://ischool.berkeley.edu) and works on privacy at the [World Wide Web Consortium](http://www.w3.org).
 
-[Mohit Gupta](http://m0hit.name) develops mobile software at [Location Labs](http://location-labs.com) with a focus on building privacy into products.
+[Mohit Gupta](https://github.com/m0hit) develops mobile software at [Location Labs](http://location-labs.com) with a focus on building privacy into products.
 
 [Jeff Zych](http://jlzych.com) and [Rowyn McDonald](http://www.rowyn.com) are Master's students at the [School of Information](http://ischool.berkeley.edu) and built this site!
 
