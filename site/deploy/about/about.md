@@ -20,4 +20,4 @@ We're currently compiling a first draft of some patterns to get things started, 
 
 ## Contact us ##
 
-*If you're interested in privacy patterns &mdash; because you'd like to contribute your own content, support the project in some way or suggest an improvement &mdash; please contact us.*
+If you're interested in privacy patterns &mdash; because you'd like to contribute your own content, support the project in some way or suggest an improvement &mdash; please contact Nick Doty at [npdoty@ischool.berkeley.edu](mailto:npdoty@ischool.berkeley.edu).
