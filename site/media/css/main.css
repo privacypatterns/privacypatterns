@@ -328,27 +328,7 @@ ol ol ol ol { list-style-type: lower-alpha; }
   background-image: linear-gradient(#5675B8, #2A3D65);
 }
 
-/* This CSS may be brittle, consider making custom template instead */
-#index #logo {
-  left: 0;
-  position: absolute;
-  text-align: center;
-  top: 36px; /* place it below the header */
-  width: 100%;
-}
-
 #index header { border-bottom: none; }
-
-#index nav {
-  display: block;
-  padding-top: 0;
-  width: auto;
-}
-
-#index #main, #index footer {
-  position: relative;
-  top: 70px;
-}
 
 #index h2 {
   font-size: 22px;
