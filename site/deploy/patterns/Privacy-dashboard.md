@@ -3,8 +3,7 @@
 ##Intent##
 Help users see an overview of the personal information collected about them, particularly when the data or services in question are numerous.
 
-Supports [[Access (principle)]], [[Transparency and feedback
-(principle)]].
+Supports [Access](Access), [Transparency and feedback](Transparency-and-feedback).
 
 ##Context##
 
@@ -32,15 +31,15 @@ In short, a dashboard answers the common user question "what do you know about m
 
 ####Google Privacy Dashboard####
 
-[[File:Google Dashboard Latitude.png]]
+![Google Dashboard Latitude](/media/images/Google_Dashboard_Latitude.png)
 
-The Google Dashboard [https://google.com/dashboard] shows a summary of the content stored and/or shared by many (but not all) of Google's services (Latitude, Google's location sharing service, is shown above). For each service, a summary (with counts) of each type of data is listed, and in some cases an example of the most recent such item is described. An icon signifies which pieces of data are public. Links are also provided in two categories: to actions that can be taken to change or delete data, and to privacy policy / help pages.
+The [Google Dashboard](https://google.com/dashboard) shows a summary of the content stored and/or shared by many (but not all) of Google's services (Latitude, Google's location sharing service, is shown above). For each service, a summary (with counts) of each type of data is listed, and in some cases an example of the most recent such item is described. An icon signifies which pieces of data are public. Links are also provided in two categories: to actions that can be taken to change or delete data, and to privacy policy / help pages.
 
-[http://www.google.com/support/accounts/bin/answer.py?answer#162744 Google Accounts: About the Dashboard]
+[Google Accounts: About the Dashboard](http://www.google.com/support/accounts/bin/answer.py?answer#162744)
 
 ##Forces/Concerns##
 
-As in other access mechanisms, showing a user's data back to them can create new privacy problems. Implementers should be careful not to provide access to sensitive data on the dashboard to people other than the subject. For example, showing the search history associated with a particular cookie to any user browsing with that cookie can reveal the browsing history of one family member to another that uses the same computer. Also, associating all usage information with a particular account or identity (in order to show a complete dashboard) may encourage designers to associate data that would otherwise not be attached to the user account at all. Designers should balance the access value against the potential advantages of [[Deidentification (pattern)|deidentification]].
+As in other access mechanisms, showing a user's data back to them can create new privacy problems. Implementers should be careful not to provide access to sensitive data on the dashboard to people other than the subject. For example, showing the search history associated with a particular cookie to any user browsing with that cookie can reveal the browsing history of one family member to another that uses the same computer. Also, associating all usage information with a particular account or identity (in order to show a complete dashboard) may encourage designers to associate data that would otherwise not be attached to the user account at all. Designers should balance the access value against the potential advantages of [Deidentification](Deidentification).
 
 ## See Also ##
 
