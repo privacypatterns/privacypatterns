@@ -64,6 +64,7 @@ button, input, select, textarea { margin: 0; }
  * Lora, 14px * 1.618
  * http://modularscale.com/scale/?px1=14&px2=&ra1=1.618&ra2=0
  */
+@font-face { font-family: 'UC Berkeley OS', src: url('/media/fonts/UC_Berkeley_OS.otf'); }
 
 body {
   margin: 22px 155px 22px 95px;
