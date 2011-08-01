@@ -143,17 +143,22 @@ nav a:hover { text-decoration: none; }
 
 footer {
   border-top: 1px solid #444;
+  color: #666;
+  font-family: 'Lora', sans-serif;
+  font-style: italic;
   padding: 1em 0;
   text-align: center;
 }
+footer p { margin-bottom: 1em;}
 
-footer, footer a {
+footer a {
   color: #444;
 }
 
 p.berkeley {
 	font-family: 'UC Berkeley OS';
 	font-size: 20px;
+	font-style: normal;
 }
 
 #iman {
