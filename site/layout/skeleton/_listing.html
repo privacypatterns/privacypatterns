@@ -4,9 +4,18 @@
 {% endblock %}
 
 {% block content_body %}
-
+<div id="content">
 	{% for node in page.node.walk %}
 		{% include "skeleton/_innerlisting.html" %}
 	{% endfor %}
+</div>
 
+<div id="sidebar">
+	<h2>Categories</h2>
+  <ul id="categories">
+    {% for c in categories %}
+    <li><a href="{{c.archive_url}}">{{c.name}}</a></li>
+    {% endfor %}
+  </ul>
+</div>
 {% endblock %}
