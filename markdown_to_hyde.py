@@ -30,6 +30,7 @@ def ProcessMarkdown(filename):
     strings, the initial Hyde tag and the remaining contents of the file."""
     f = open(filename, 'r')
     contents = f.read().strip()
+    contents = string.replace(contents, 'media/images/', '/media/images/')
     result = HYDE_RE.match(contents)
     if result and result.groups():
         return (result.group(1), result.group(2).strip())

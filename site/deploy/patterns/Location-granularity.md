@@ -22,7 +22,7 @@ In some cases, less granular data may also better capture the intent of a user (
 
 ####Fire Eagle location hierarchy####
 
-![Fire Eagle granularity screenshot](Fire Eagle granularity.png)
+![Fire Eagle granularity screenshot](/media/images/Fire_Eagle_granularity.png)
 
 Yahoo! Fire Eagle allows user to provide location information to applications using eight different "levels" of granularity in their [hierarchy](http://fireeagle.yahoo.net/developer/documentation/location): 
 
