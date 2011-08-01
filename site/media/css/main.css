@@ -136,6 +136,11 @@ nav a:hover { text-decoration: none; }
   width: 80%;
 }
 
+#comments_link {
+  font-style: italic;
+  color: #666;
+}
+
 footer {
   border-top: 1px solid #444;
   padding: 1em 0;
