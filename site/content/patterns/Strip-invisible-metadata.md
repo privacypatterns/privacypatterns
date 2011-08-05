@@ -25,15 +25,15 @@ leakage of sensitive information.
 How should services that need users to share data and upload files
 treat additional metadata attached with files? In case of uploading
 documents and images, which parts of the metadata can be treated as
-explcitly shared information.
+explicitly shared information.
 
 ## Solution
 
-Stripping all metadata that is not directly visitble during upload time,
-or during the use of the serivce can help protect services from
+Stripping all metadata that is not directly visible during upload time,
+or during the use of the service can help protect services from
 leaks and liabilities. Even in cases where the information is not
 legally protected, the service can protect themselves from surprising
-their users and thus alienaing them. 
+their users and thus alienating them. 
 
 Additionally when users share data with services, they can be presented
 with a preview of the data obtained by the service, including any
@@ -41,7 +41,7 @@ metadata ``[[Preview Shared Data]]``. This allows users to be more aware
 of information that they are sharing with the services, and in many
 cases with other entities on the Internet.
 
-To summarize - user metadata that can not be made visible to users
+To summarize: user metadata that can not be made visible to users
 clearly should be stripped to avoid overstepping the users' expectations. 
 
 ## Examples
@@ -60,4 +60,4 @@ community of users. Flickr.com allows users to hide their EXIF data from
 public display, and also provides an interface for users to easily see
 if they are sharing location as part of uploading their images. 
 
-<TODO: add screenshots>
+_TODO: add screenshots_
