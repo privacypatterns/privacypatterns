@@ -35,3 +35,8 @@ Instructions
 
     The resulting files are located in path/to/site/deploy.
 
+4. To deploy to the live site:
+
+        git remote add deploy git@privacypatterns.org:~/privacypatternsweb.git
+
+        git push deploy master
