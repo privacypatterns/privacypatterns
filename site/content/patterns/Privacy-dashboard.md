@@ -13,12 +13,6 @@ When your service collects, aggregates or processes personal information from us
 
 How can a service succinctly and effectively communicate the kind and extent of potentially disparate data that has been collected or aggregated by a service? Users may not remember or realize what data a particular service or company has collected, and thus can't be confident that a service isn't collecting too much data. Users who aren't regularly and consistently made aware of what data a service has collected may be surprised or upset when they hear about the service's data collection practices in some other context. Without visibility into the actual data collected, users may not fully understand the abstract description of what types of data are collected; simultaneously, users may easily be overwhelmed by access to raw data without a good understanding of what that data means.
 
- `{#
-this is a sample comment. I wonder if this shows up. 
-
-and here is the second line
- #}`
-
 ##Solution##
 
 An informational privacy dashboard can provide collected summaries of the collected or processed personal data for a particular user. While access to raw data may be useful for some purposes, a dashboard provides a summary or highlight of important personal data. Seek to make the data meaningful to the user with examples, visualizations and statistics.
@@ -43,4 +37,4 @@ As in other access mechanisms, showing a user's data back to them can create new
 
 ## See Also ##
 
-Dashboards are a widely-used pattern in other data-intensive activities for providing a summary of key or actionable metrics. See: <external references needed here>
+Dashboards are a widely-used pattern in other data-intensive activities for providing a summary of key or actionable metrics. See: _external references needed here_
