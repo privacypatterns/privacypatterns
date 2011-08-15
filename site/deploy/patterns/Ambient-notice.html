@@ -51,7 +51,7 @@
 <ul class="breadcrumbs">
 	
 		<li>
-			<a href="/index.html">Privacy Patterns</a>
+			<a href="/">Privacy Patterns</a>
 
 			
 				
@@ -61,7 +61,7 @@
 		</li>
 	
 		<li>
-			<a href="/patterns/patterns.html">Patterns</a>
+			<a href="/patterns">Patterns</a>
 
 			
 		</li>
@@ -94,16 +94,6 @@
         
       
         
-          <a href="/categories/location.html">location</a>
-           · 
-        
-      
-    
-      
-        
-          <a href="/categories/notice.html">notice</a>
-           · 
-        
       
         
       
@@ -111,12 +101,8 @@
       
         
       
-    
-      
         
-      
-        
-          <a href="/categories/smartphone.html">smartphone</a>
+          <a href="/categories/location">location</a>
            · 
         
       
@@ -127,12 +113,74 @@
     
       
         
+          <a href="/categories/notice">notice</a>
+           · 
+        
+      
+        
       
         
       
         
-          <a href="/categories/ui.html">ui</a>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="/categories/mobile">mobile</a>
+           · 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="/categories/ui">ui</a>
           
+        
+      
+        
+      
         
       
         
@@ -153,8 +201,7 @@
 <li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a><ul>
 <li><a href="#examples">Examples</a><ul>
-<li><a href="#location-services-icon-android-ios-chrome">Location services icon (Android, iOS,&nbsp;Chrome)</a></li>
-<li><a href="#">???</a></li>
+<li><a href="#location-services-icons-mac-os-x-google-chrome-et-al">Location services icons: Mac OS X, Google Chrome, et&nbsp;al.</a></li>
 </ul>
 </li>
 </ul>
@@ -166,20 +213,20 @@
 </div>
 <h2 id="intent">Intent</h2>
 <p>Provide unobtrusive, ongoing notice of real-time location&nbsp;tracking.</p>
-<p>Supports <a href="Notice_principle">notice</a>, <a href="Transparency_principle">transparency</a> and <a href="User control_principle">user control</a>.</p>
+<p>Supports <a href="Notice">notice</a>, <a href="Transparency-and-feedback">transparency</a> and <a href="User-control">user control</a>.</p>
 <h2 id="context">Context</h2>
 <p>When a service is tracking a user's location in an ongoing fashion, or accessing the user's location on each repeated use of a service. (See also, <a href="Asynchronous-notice">asynchronous notice</a>.)</p>
 <h2 id="problem">Problem</h2>
-<p>How can a service effectively provide notice to a user that location tracking is continuing, or happening again, without being as obtrusive as a repeated modal dialog? A user may not realize that an application given permission to access location is doing so continuously or repeatedly, or may not remember that explicit permissions given in the past allow a service to access data again later. In some cases, past explicit permission may not have been provided by the current user of the device (but instead by a spouse, parent or even an ex-spouse or stalker who temporarily had control of the device or the account). If notice is provided only at the time of consent, a user may
-inadvertently distribute personal information over a long period of time after
-having lost control of their device only&nbsp;momentarily.</p>
+<p>How can a service effectively provide notice to a user that location tracking is continuing, or happening again, without being as obtrusive as a repeated modal dialog? A user may not realize that an application given permission to access location is doing so continuously or repeatedly, or may not remember that explicit permissions given in the past allow a service to access data again later. In some cases, past explicit permission may not have been provided by the current user of the device (but instead by a spouse, parent or even an ex-spouse or stalker who temporarily had control of the device or the account). If notice is provided only at the time of consent, a user may inadvertently distribute personal information over a long period of time after having lost control of their device only&nbsp;momentarily.</p>
 <h2 id="solution">Solution</h2>
 <p>Provide an <em>ambient</em> notice &mdash; unobtrusive, non-modal, but available at a glance or from a simple action &mdash; when location data is being accessed. The notice should provide opportunities for interaction: to learn more about the use of data or to revoke&nbsp;permissions.</p>
 <h3 id="examples">Examples</h3>
-<h4 id="location-services-icon-android-ios-chrome">Location services icon (Android, iOS,&nbsp;Chrome)</h4>
-<p><em>Include screenshots and comparisons of&nbsp;each.</em></p>
-<h4 id="">???</h4>
-<p><em>Does Location Labs have good examples of ambient notice in their&nbsp;software?</em></p>
+<h4 id="location-services-icons-mac-os-x-google-chrome-et-al">Location services icons: Mac OS X, Google Chrome, et&nbsp;al.</h4>
+<p><img alt="Lion Location Icon" src="/media/images/lion_location_icon.png" /></p>
+<p>Mac OS X Lion adds an ambient location services icon (a compass arrow) which appears in the task bar momentarily when an application is accessing the device's&nbsp;location.</p>
+<p><img alt="Chrome Location Icon" src="/media/images/chrome_location_icon.png" /></p>
+<p>Chrome adds a cross-hair icon to the location bar when a web site accesses the device location via the W3C Geolocation API. Clicking on the icon provides potential actions: clearing the saved consent for this site and accessing&nbsp;settings.</p>
+<p><em>Similar examples exist in at least Android, iOS and&nbsp;Win7.</em></p>
 <h2 id="forcesconcerns">Forces/Concerns</h2>
 <p>A tray full of ambient notices may annoy or confuse users and inure them to ongoing practices. Take measures to avoid unnecessary notice. This must be balanced against the
 concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
