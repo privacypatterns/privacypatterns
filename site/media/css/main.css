@@ -134,7 +134,7 @@ nav a:hover { text-decoration: none; }
   color: #222;
   display: inline-block;
   font-family: 'Lora', serif;
-  width: 80%;
+  width: 70%;
 }
 
 #comments_link {
@@ -181,7 +181,7 @@ p.berkeley {
 #sidebar {
   display: inline-block;
   vertical-align: top;
-  width: 18%;
+  width: 28%;
 }
 
 #sidebar h2 {
@@ -214,6 +214,7 @@ p#categories a:hover { text-decoration: none; }
 /*
  * List of patterns
  */
+#content #patterns_listing { margin: 0; padding: 0; }
 #patterns_listing li {
   border: 2px solid #efefef;
   -moz-border-radius: 8px;
@@ -277,7 +278,8 @@ p#categories a:hover { text-decoration: none; }
   float: right;
   padding: 1em;
   margin-bottom: 1em;
-  width: 33%;
+  margin-right: -43%;
+  width: 40%;
   vertical-align: top;
 }
 
