@@ -43,20 +43,17 @@ Instructions
 
         git push deploy master
 
-Contributing
-------------
+Contributing via GitHub
+-----------------------
 
-1. Clone the repository on GitHub.
+1. Fork the repository on GitHub.
 
 2. Click on the Wiki link after cloning (This may take a minute for GitHub to create. They'll email you when it's done).
 
-3. Click patterns. Then click on the pattern you want to edit.
+3. Click on Patterns. Then click on the pattern you want to edit.
 
 4. Click the Edit button.
 
 5. Make your changes. Click Save.
 
 6. Submit a pull request.
-
-
-        
