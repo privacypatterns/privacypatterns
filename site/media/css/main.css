@@ -295,6 +295,7 @@ p#categories a:hover { text-decoration: none; }
   line-height: 1.6em;
 }
 
+/* TODO: remove this, change toc markdown options */
 .toc > ul::before {
   content: "Contents";
   color: black;
@@ -308,6 +309,16 @@ ol { list-style-type: upper-roman; }
 ol ol { list-style-type: upper-alpha; }
 ol ol ol { list-style-type: lower-roman; }
 ol ol ol ol { list-style-type: lower-alpha; }
+
+/* Header links */
+.toclink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toclink:hover {
+  text-decoration: none;
+}
 
 /* 
  * Homepage specific styles
