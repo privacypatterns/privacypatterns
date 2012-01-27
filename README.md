@@ -35,8 +35,25 @@ Instructions
 
     The resulting files are located in path/to/site/deploy.
 
-4. To deploy to the live site:
+4. To deploy to the live site (must be merged with the privacypatterns.org repo first, which is what the second command does):
 
         git remote add deploy git@privacypatterns.org:~/privacypatternsweb.git
+        
+        git pull deploy master
 
         git push deploy master
+
+Contributing via GitHub
+-----------------------
+
+1. Fork the repository on GitHub.
+
+2. Click on the Wiki link after cloning (This may take a minute for GitHub to create. They'll email you when it's done).
+
+3. Click on Patterns. Then click on the pattern you want to edit.
+
+4. Click the Edit button.
+
+5. Make your changes. Click Save.
+
+6. Submit a pull request.
