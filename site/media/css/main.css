@@ -296,13 +296,11 @@ p#categories a:hover { text-decoration: none; }
 }
 
 /* TODO: remove this, change toc markdown options */
-.toc > ul::before {
-  content: "Contents";
+.toctitle {
   color: black;
   font-family: sans-serif;
   font-size: 22px;
   line-height: 1.6em;
-  text-indent: 1em;
 }
 
 ol { list-style-type: upper-roman; }

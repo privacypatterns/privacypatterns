@@ -1,7 +1,7 @@
 import os
 here = lambda *x: os.path.join(os.path.abspath(os.path.dirname(__file__)), *x)
 
-MD_EXTENSIONS = ['footnotes','toc(anchorlink=True)']
+MD_EXTENSIONS = ['footnotes','toc(anchorlink=True, title=Contents)']
 
 #Directories
 LAYOUT_DIR = here('layout')

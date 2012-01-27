@@ -169,9 +169,8 @@
 	</h1>
 	
 
-	<div class="toc">
-<ul>
-<li><a href="#intent">Intent</a><ul>
+	<div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#intent">Intent</a></li>
 <li><a href="#context">Context</a></li>
 <li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a><ul>
@@ -184,18 +183,16 @@
 </li>
 <li><a href="#forcesconcerns">Forces/Concerns</a></li>
 </ul>
-</li>
-</ul>
 </div>
-<h2 id="intent">Intent</h2>
+<h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
 <p>Support notice of ongoing location&nbsp;tracking.</p>
 <p>Supports <a href="Notice">Notice</a>, <a href="User-control">User Control</a>, <a href="Transparency-feedback">Transparency and&nbsp;feedback</a></p>
-<h2 id="context">Context</h2>
+<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
 <p>Tracking a person's location over time in an invisible fashion, with or
 without prior explicit consent. (Particularly useful for background tracking,
 tracking through devices with limited or no screen space, or tracking
 repeatedly over long periods of time. For devices with sufficient screen space or other notification affordances, see also <a href="Ambient-notice">ambient notice</a>.)</p>
-<h2 id="problem">Problem</h2>
+<h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
 <p>How can a service effectively provide notice to a user who gave permission
 once but whose information is accessed repeatedly (perhaps even continuously)
 over a long period of time? If a user forgets that they gave access (or who
@@ -205,7 +202,7 @@ attacker or have been provided by another user of a shared device -- if
 synchronous notice is only provided at the time of consent, a user may
 inadvertently distribute personal information over a long period of time after
 having lost control of their device only&nbsp;momentarily.</p>
-<h2 id="solution">Solution</h2>
+<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
 <p>Proactively notify the user after the time of consent that information is
 being tracked, stored or re-distributed. This asynchronous notice could be
 achieved through an email, text message, on-screen notice or even through non-
@@ -219,8 +216,8 @@ the user about the extent of collection. See also, [Privacy dashboard]
 (Privacy-dashboard) and <a href="Access">Access</a>.</p>
 <p>By ensuring that users aren't surprised, asynchronous notice may increase
 trust in the service and comfort with continued disclosure of&nbsp;information.</p>
-<h3 id="examples">Examples</h3>
-<h4 id="google-latitude-reminder-email">Google Latitude reminder&nbsp;email</h4>
+<h3 id="examples"><a class="toclink" href="#examples">Examples</a></h3>
+<h4 id="google-latitude-reminder-email"><a class="toclink" href="#google-latitude-reminder-email">Google Latitude reminder&nbsp;email</a></h4>
 <p>Google Latitude users can configure a reminder email (see below) when their
 location is being shared with any application, including internal applications
 like the Location History&nbsp;service.</p>
@@ -241,10 +238,10 @@ like the Location History&nbsp;service.</p>
  &lt;https://www.google.com/latitude/apps?hl=en&amp;tab=privacyreminders&gt;
 </code></pre>
 <hr />
-<h4 id="fire-eagle-my-alerts">Fire Eagle My&nbsp;Alerts</h4>
+<h4 id="fire-eagle-my-alerts"><a class="toclink" href="#fire-eagle-my-alerts">Fire Eagle My&nbsp;Alerts</a></h4>
 <p><img alt="Fire Eagle My Alerts configuration by npdoty, on Flickr" src="http://farm6.static.flickr.com/5001/5642647032_e74e815f6a.jpg" /><br />
 <a href="http://www.flickr.com/photos/npdoty/5642647032]">Fire Eagle My Alerts configuration by npdoty, on&nbsp;Flickr</a></p>
-<h2 id="forcesconcerns">Forces/Concerns</h2>
+<h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
 <p>Providing an asynchronous notice requires a reliable mechanism to contact the
 user (a verified email address or telephone number, for example). Care should
 be taken to ensure that the mechanism can actually reach the person using the
