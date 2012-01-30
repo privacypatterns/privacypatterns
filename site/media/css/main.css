@@ -189,14 +189,33 @@ p.berkeley {
 }
 
 ul#categories {
-  list-style-position: inside;
+  list-style: none;
   margin: 0;
   padding: 0;
+  padding-left: .5em;
 }
 
 ul#categories li {
   line-height: 1.6em;
+  margin: .25em 0;
   text-transform: capitalize;
+}
+
+ul#categories a {
+  border-radius: 3px;
+  display: block;
+  padding: 0.25em;
+  text-decoration: none;
+}
+
+ul#categories a:hover {
+  background-color: #efefef;
+}
+
+ul#categories img {
+  margin-right: 1em;
+  vertical-align: middle;
+  width: 24px;
 }
 
 .category { text-transform: capitalize; }
@@ -295,7 +314,6 @@ p#categories a:hover { text-decoration: none; }
   line-height: 1.6em;
 }
 
-/* TODO: remove this, change toc markdown options */
 .toctitle {
   color: black;
   font-family: sans-serif;
