@@ -14,7 +14,7 @@
 	<h2>Categories</h2>
   <ul id="categories">
     {% for c in categories %}
-    <li><a href="{{c.archive_url}}"><img src="/media/images/categories/{{c.name}}.png" />{{c.name}}</a></li>
+    <li><a href="{{c.archive_url}}" class="{{c.name}}">{{c.name}}</a></li>
     {% endfor %}
   </ul>
 </div>

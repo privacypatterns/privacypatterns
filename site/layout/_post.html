@@ -7,7 +7,7 @@
     Categories: {% for c in page.categories %}
       {% for category in page.node.categories %}
         {% ifequal category.name c %}
-          <a href="{{category.archive_url}}">{{category.name}}</a>
+          <a href="{{category.archive_url}}" class="{{category.name}}">{{category.name}}</a>
           {% if page.categories|length > 1 and not forloop.parentloop.last %} &bull; {% endif %}
         {% endifequal %}
       {% endfor %}

@@ -204,7 +204,6 @@ ul#categories li {
 ul#categories a {
   border-radius: 3px;
   display: block;
-  padding: 0.25em;
   text-decoration: none;
 }
 
@@ -212,11 +211,21 @@ ul#categories a:hover {
   background-color: #efefef;
 }
 
-ul#categories img {
-  margin-right: 1em;
-  vertical-align: middle;
-  width: 24px;
+/* Category icons */
+#categories a {
+  background: url('/media/images/categories/notice.png') no-repeat;
+  background-position: 8px center;
+  background-size: 24px;
+  padding: .5em;
+  padding-left: 40px;
 }
+#categories .notice { background-image: url('/media/images/categories/notice.png'); }
+#categories .minimization { background-image: url('/media/images/categories/minimization.png'); }
+#categories .mobile { background-image: url('/media/images/categories/mobile.png'); }
+#categories .media { background-image: url('/media/images/categories/media.png'); }
+#categories .access { background-image: url('/media/images/categories/access.png'); }
+#categories .location { background-image: url('/media/images/categories/location.png'); }
+#categories .transparency { background-image: url('/media/images/categories/transparency.png'); }
 
 .category { text-transform: capitalize; }
 
