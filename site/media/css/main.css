@@ -114,17 +114,18 @@ h1 a { color: black; }
 
 nav {
   display: inline-block;
-  padding-top: 10px;
+  font-family: 'Helvetica Neue', 'HelveticaNeue', 'News Cycle', sans-serif;
   text-align: right;
-  vertical-align: top;
+  vertical-align: baseline;
   width: 37%;
 }
 
 nav { color: #444; }
-nav li { display: inline-block; }
+nav li { display: inline-block; padding-right: .25em; }
 nav a {
   color: #444;
   font-size: 15px;
+  padding-right: .25em;
 }
 nav a:hover { text-decoration: none; }
 
@@ -178,16 +179,17 @@ p.berkeley {
   margin-left: 1.2em;
 }
 
-#sidebar {
+aside {
   display: inline-block;
   vertical-align: top;
   width: 28%;
 }
 
-#sidebar h2 {
+aside h2 {
   font-size: 22px;
 }
 
+/* Categories list is on the patterns listing page */
 ul#categories {
   list-style: none;
   margin: 0;
@@ -213,14 +215,14 @@ ul#categories a:hover {
 
 /* Category icons */
 #categories a {
-  background: url('/media/images/categories/notice.png') no-repeat;
+  background: url('/media/images/categories/default.png') no-repeat;
   background-position: 8px center;
   background-size: 24px;
   padding: .5em;
   padding-left: 40px;
 }
 #categories .notice { background-image: url('/media/images/categories/notice.png'); }
-#categories .minimization { background-image: url('/media/images/categories/minimization.png'); }
+#categories .minimization { background-image: url('/media/images/categories/default.png'); }
 #categories .mobile { background-image: url('/media/images/categories/mobile.png'); }
 #categories .media { background-image: url('/media/images/categories/media.png'); }
 #categories .access { background-image: url('/media/images/categories/access.png'); }
@@ -230,6 +232,7 @@ ul#categories a:hover {
 .category { text-transform: capitalize; }
 
 /* Categories list on individual pattern pages */
+p#categories a { background-size: 18px; }
 p#categories, p#categories a, p#categories a:visited {
   color: #666;
   font-family: sans-serif;
