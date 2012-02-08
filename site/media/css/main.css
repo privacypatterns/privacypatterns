@@ -354,8 +354,10 @@ ol ol ol ol { list-style-type: lower-alpha; }
 #index #content { width: 60%; }
 /* Button */
 #index #sidebar {
+  display: inline-block;
   margin-top: 36px;
   text-align: center;
+  vertical-align: top;
   width: 39%;
   white-space: nowrap;
 }
