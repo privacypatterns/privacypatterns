@@ -35,7 +35,7 @@ Instructions
 
     The resulting files are located in path/to/site/deploy.
 
-4. To deploy to the live site (must be merged with the privacypatterns.org repo first, which is what the second command does):
+4. To deploy to the live site (must be merged with the repo on the privacypatterns.org server first, which is what the "pull" command does. There is no need to generate the site before pushing to the server, the server will regenerate it):
 
         git remote add deploy git@privacypatterns.org:~/privacypatternsweb.git
         
