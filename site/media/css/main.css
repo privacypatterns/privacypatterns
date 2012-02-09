@@ -129,32 +129,32 @@ nav a {
 }
 nav a:hover { text-decoration: none; }
 
-#main { margin-top: 22px; padding-bottom: 22px; }
+#main {
+  margin-top: 22px;
+  padding-bottom: 22px;
+}
+
+p, #content {
+  font-family: 'Lora', serif;
+}
+
+p, ul {
+  font-size: 14px;
+  line-height: 1.5em;
+  margin-bottom: 1.2em;
+}
+
+.definition p { font-style: italic; }
 
 #content {
   color: #222;
   display: inline-block;
-  font-family: 'Lora', serif;
   width: 70%;
 }
 
 #comments_link {
   font-style: italic;
   color: #666;
-}
-
-footer {
-  border-top: 1px solid #444;
-  color: #666;
-  font-family: 'Lora', sans-serif;
-  font-style: italic;
-  padding: 1em 0;
-  text-align: center;
-}
-footer p { margin-bottom: 1em;}
-
-footer a {
-  color: #444;
 }
 
 p.berkeley {
@@ -166,12 +166,6 @@ p.berkeley {
 #iman {
 	margin-bottom: -8px;
 	padding: 0 3px;
-}
-
-#content p, #content ul, #patterns_listing p {
-  font-size: 14px;
-  line-height: 1.5em;
-  margin-bottom: 1.2em;
 }
 
 #content ul {
@@ -348,6 +342,20 @@ ol ol ol ol { list-style-type: lower-alpha; }
   text-decoration: none;
 }
 
+footer {
+  border-top: 1px solid #444;
+  color: #666;
+  font-family: 'Lora', sans-serif;
+  font-style: italic;
+  padding: 1em 0;
+  text-align: center;
+}
+footer p { margin-bottom: 1em;}
+
+footer a {
+  color: #444;
+}
+
 /* 
  * Homepage specific styles
  */
@@ -385,6 +393,8 @@ ol ol ol ol { list-style-type: lower-alpha; }
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#5675B8, endColorstr=#2A3D65);
   background-image: linear-gradient(#5675B8, #2A3D65);
 }
+
+a[title="About"] { font-size: 1.3em; }
 
 #index header { border-bottom: none; }
 

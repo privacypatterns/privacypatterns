@@ -8,7 +8,16 @@
 {% endblock %}
 
 {% block content_body %}
-<h1><a href="/patterns/patterns.html" title="Patterns">Patterns</a> &mdash; <span class="category">{{ category }}</span></h1>
+<h1><a href="/patterns/patterns" title="Patterns">Patterns</a> &mdash; <span class="category">{{ category }}</span></h1>
+  
+  <div class="definition">
+  {% with "principles/"|add:category|add:".md" as cat_def_url %}
+    {% markdown %}
+      {% include cat_def_url %}
+    {% endmarkdown %}
+  {% endwith %}
+  </div>
+  
   <ul id="patterns_listing">
   {% for post in posts %}
 		<li>
