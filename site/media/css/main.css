@@ -379,6 +379,7 @@ ol ol ol ol { list-style-type: lower-alpha; }
   text-shadow: 0 2px 1px black;
 }
 #lib_button:hover {
+  background-color: #5675B8;
   background-image: -webkit-linear-gradient(#5675B8, #2A3D65);
   background-image: -moz-linear-gradient(#5675B8, #2A3D65);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#5675B8, endColorstr=#2A3D65);
