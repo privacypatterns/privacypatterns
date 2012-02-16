@@ -40,19 +40,36 @@ def ProcessMarkdown(filename):
 
 
 def ProcessFiles(source_dir, dest_dir):
-    for filename in glob.glob(os.path.join(source_dir, '*.md')):
+    patterns_source = os.path.join(source_dir, 'patterns')
+    patterns_dest = os.path.join(dest_dir, 'patterns')
+    
+    for filename in glob.glob(os.path.join(patterns_source, '*.md')):
         basename = os.path.basename(filename)
         hyde_tag, contents = ProcessMarkdown(filename)
         if hyde_tag and contents:
-            hyde_file = open(os.path.join(dest_dir, HtmlFilename(basename)), 'w')
+            hyde_file = open(os.path.join(patterns_dest, HtmlFilename(basename)), 'w')
             hyde_file.write(
                 TEMPLATE.safe_substitute(hyde_tag=hyde_tag, filename=basename))
             hyde_file.close()
 
-            md_file = open(os.path.join(dest_dir, basename), 'w')
+            md_file = open(os.path.join(patterns_dest, basename), 'w')
             md_file.write(contents)
             md_file.close()
             print "Successfully processed file: %s" % filename
+    
+    # Process principles
+    principles_source = os.path.join(source_dir, 'principles')
+    principles_temp_dest = os.path.join(dest_dir, 'principles.new')
+    principles_dest = os.path.join(dest_dir, 'principles')
+    try:
+        # Copy princples to new directory, then remove old one and rename new one
+        shutil.copytree(principles_source, principles_temp_dest)
+        shutil.rmtree(principles_dest)
+        os.rename(principles_temp_dest, principles_dest)
+    except:
+        print "Could not copy principles:", sys.exc_info()[0]
+    else:
+        print "Successfully copied %s to %s" % (principles_source, principles_dest)
 
 def CopyImages(source_dir, dest_dir):
     # patterns and media dirs are siblings in privacypatterns.wiki
@@ -68,13 +85,13 @@ def CopyImages(source_dir, dest_dir):
 def main():
     parser = optparse.OptionParser(usage="%prog [-f] [-q]", version="%prog 0.5.3")
     parser.add_option("-s", "--source",
-                        default = "../privacypatterns.wiki/patterns",
+                        default = "../privacypatterns.wiki",
                         dest = "source_dir",
-                        help = "Path of the source folder containing markdown files.")
+                        help = "Path of the source wiki directory, where the patterns and principles live.")
     parser.add_option("-d", "--destination",
-                        default = "site/content/patterns",
+                        default = "site/content",
                         dest = "dest_dir",
-                        help = "Path of the destination folder in which to create html templates.")
+                        help = "Path of the site content directory, into which patterns and principles will be copied.")
     parser.add_option("-i", "--copy_images",
                         default = True,
                         dest = "copy_images",
