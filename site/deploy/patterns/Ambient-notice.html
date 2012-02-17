@@ -26,18 +26,18 @@
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-	<body id="Ambient-notice">
+	<body id="Ambient notice">
     <div id="container">
 
 			<header>
-  <div id="logo"><a href="/index.html" title="Home">privacy<span class="highlight">patterns</span>.org</a></div>
+  <div id="logo"><a href="/" title="Home">privacy<span class="highlight">patterns</span>.org</a></div>
   
   
 <nav>
   <ul>
-    <li><a href="/index.html">Home</a> &bull; </li>
-    <li><a href="/about/about.html">About</a> &bull; </li>
-    <li><a href="/patterns/patterns.html">Patterns</a></li>
+    <li><a href="/">Home</a> &bull; </li>
+    <li><a href="/about/">About</a> &bull; </li>
+    <li><a href="/patterns/">Patterns</a></li>
   </ul>
 </nav>
 
@@ -51,7 +51,7 @@
 <ul class="breadcrumbs">
 	
 		<li>
-			<a href="/index.html">Privacy Patterns</a>
+			<a href="/">Privacy Patterns</a>
 
 			
 				
@@ -61,7 +61,7 @@
 		</li>
 	
 		<li>
-			<a href="/patterns/patterns.html">Patterns</a>
+			<a href="/patterns">Patterns</a>
 
 			
 		</li>
@@ -94,16 +94,6 @@
         
       
         
-          <a href="/categories/location.html">location</a>
-           · 
-        
-      
-    
-      
-        
-          <a href="/categories/notice.html">notice</a>
-           · 
-        
       
         
       
@@ -111,28 +101,90 @@
       
         
       
-    
-      
         
-      
-        
-          <a href="/categories/smartphone.html">smartphone</a>
-           · 
-        
-      
-        
-      
-        
-      
-    
-      
-        
-      
-        
-      
-        
-          <a href="/categories/ui.html">ui</a>
           
+<a href="/categories/location" class="location">location</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+    
+      
+        
+          
+<a href="/categories/notice" class="notice">notice</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/mobile" class="mobile">mobile</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/ui" class="ui">ui</a>
+          
+        
+      
+        
+      
         
       
         
@@ -146,49 +198,60 @@
 	</h1>
 	
 
-	<div class="toc">
-<ul>
-<li><a href="#intent">Intent</a><ul>
+	<div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#intent">Intent</a></li>
 <li><a href="#context">Context</a></li>
 <li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a><ul>
 <li><a href="#examples">Examples</a><ul>
-<li><a href="#location-services-icon-android-ios-chrome">Location services icon (Android, iOS,&nbsp;Chrome)</a></li>
-<li><a href="#">???</a></li>
+<li><a href="#location-services-icons-mac-os-x-google-chrome-et-al">Location services icons: Mac OS X, Google Chrome, et&nbsp;al.</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#forcesconcerns">Forces/Concerns</a></li>
 </ul>
-</li>
-</ul>
 </div>
-<h2 id="intent">Intent</h2>
+<h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
 <p>Provide unobtrusive, ongoing notice of real-time location&nbsp;tracking.</p>
-<p>Supports <a href="Notice_principle">notice</a>, <a href="Transparency_principle">transparency</a> and <a href="User control_principle">user control</a>.</p>
-<h2 id="context">Context</h2>
+<p>Supports <a href="Notice">notice</a>, <a href="Transparency-and-feedback">transparency</a> and <a href="User-control">user control</a>.</p>
+<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
 <p>When a service is tracking a user's location in an ongoing fashion, or accessing the user's location on each repeated use of a service. (See also, <a href="Asynchronous-notice">asynchronous notice</a>.)</p>
-<h2 id="problem">Problem</h2>
-<p>How can a service effectively provide notice to a user that location tracking is continuing, or happening again, without being as obtrusive as a repeated modal dialog? A user may not realize that an application given permission to access location is doing so continuously or repeatedly, or may not remember that explicit permissions given in the past allow a service to access data again later. In some cases, past explicit permission may not have been provided by the current user of the device (but instead by a spouse, parent or even an ex-spouse or stalker who temporarily had control of the device or the account). If notice is provided only at the time of consent, a user may
-inadvertently distribute personal information over a long period of time after
-having lost control of their device only&nbsp;momentarily.</p>
-<h2 id="solution">Solution</h2>
+<h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<p>How can a service effectively provide notice to a user that location tracking is continuing, or happening again, without being as obtrusive as a repeated modal dialog? A user may not realize that an application given permission to access location is doing so continuously or repeatedly, or may not remember that explicit permissions given in the past allow a service to access data again later. In some cases, past explicit permission may not have been provided by the current user of the device (but instead by a spouse, parent or even an ex-spouse or stalker who temporarily had control of the device or the account). If notice is provided only at the time of consent, a user may inadvertently distribute personal information over a long period of time after having lost control of their device only&nbsp;momentarily.</p>
+<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
 <p>Provide an <em>ambient</em> notice &mdash; unobtrusive, non-modal, but available at a glance or from a simple action &mdash; when location data is being accessed. The notice should provide opportunities for interaction: to learn more about the use of data or to revoke&nbsp;permissions.</p>
-<h3 id="examples">Examples</h3>
-<h4 id="location-services-icon-android-ios-chrome">Location services icon (Android, iOS,&nbsp;Chrome)</h4>
-<p><em>Include screenshots and comparisons of&nbsp;each.</em></p>
-<h4 id="">???</h4>
-<p><em>Does Location Labs have good examples of ambient notice in their&nbsp;software?</em></p>
-<h2 id="forcesconcerns">Forces/Concerns</h2>
+<h3 id="examples"><a class="toclink" href="#examples">Examples</a></h3>
+<h4 id="location-services-icons-mac-os-x-google-chrome-et-al"><a class="toclink" href="#location-services-icons-mac-os-x-google-chrome-et-al">Location services icons: Mac OS X, Google Chrome, et&nbsp;al.</a></h4>
+<p><img alt="Lion Location Icon" src="/media/images/lion_location_icon.png" /></p>
+<p>Mac OS X Lion adds an ambient location services icon (a compass arrow) which appears in the task bar momentarily when an application is accessing the device's&nbsp;location.</p>
+<p><img alt="Chrome Location Icon" src="/media/images/chrome_location_icon.png" /></p>
+<p>Chrome adds a cross-hair icon to the location bar when a web site accesses the device location via the W3C Geolocation API. Clicking on the icon provides potential actions: clearing the saved consent for this site and accessing&nbsp;settings.</p>
+<p><em>Similar examples exist in at least Android, iOS and&nbsp;Win7.</em></p>
+<h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
 <p>A tray full of ambient notices may annoy or confuse users and inure them to ongoing practices. Take measures to avoid unnecessary notice. This must be balanced against the
 concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
 
 	
 	
-  <p id="comments_link">Questions or comments? Email Nock Doty at <a href="mailto:npdoty@ischool.berkeley.edu" title="Email Nick Doty">npdoty@ischool.berkeley.edu</a></p>
-</div>
+  <p id="comments_link">Questions or comments? Email Nick Doty at <a href="mailto:npdoty@ischool.berkeley.edu" title="Email Nick Doty">npdoty@ischool.berkeley.edu</a></p>
 
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'privacypatterns';
+      var disqus_developer = 1; // Remove this when going live
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
 
 
 

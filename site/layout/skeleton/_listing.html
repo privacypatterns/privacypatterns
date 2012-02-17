@@ -10,12 +10,12 @@
 	{% endfor %}
 </div>
 
-<div id="sidebar">
+<aside id="sidebar">
 	<h2>Categories</h2>
   <ul id="categories">
-    {% for c in categories %}
-    <li><a href="{{c.archive_url}}">{{c.name}}</a></li>
+    {% for category in categories %}
+      <li>{% include "skeleton/_category.html" %}</li>
     {% endfor %}
   </ul>
-</div>
+</aside>
 {% endblock %}

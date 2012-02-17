@@ -26,18 +26,18 @@
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-	<body id="Location-granularity">
+	<body id="Location Granularity">
     <div id="container">
 
 			<header>
-  <div id="logo"><a href="/index.html" title="Home">privacy<span class="highlight">patterns</span>.org</a></div>
+  <div id="logo"><a href="/" title="Home">privacy<span class="highlight">patterns</span>.org</a></div>
   
   
 <nav>
   <ul>
-    <li><a href="/index.html">Home</a> &bull; </li>
-    <li><a href="/about/about.html">About</a> &bull; </li>
-    <li><a href="/patterns/patterns.html">Patterns</a></li>
+    <li><a href="/">Home</a> &bull; </li>
+    <li><a href="/about/">About</a> &bull; </li>
+    <li><a href="/patterns/">Patterns</a></li>
   </ul>
 </nav>
 
@@ -51,7 +51,7 @@
 <ul class="breadcrumbs">
 	
 		<li>
-			<a href="/index.html">Privacy Patterns</a>
+			<a href="/">Privacy Patterns</a>
 
 			
 				
@@ -61,7 +61,7 @@
 		</li>
 	
 		<li>
-			<a href="/patterns/patterns.html">Patterns</a>
+			<a href="/patterns">Patterns</a>
 
 			
 		</li>
@@ -94,8 +94,47 @@
         
       
         
-          <a href="/categories/location.html">location</a>
+      
+        
+      
+        
+      
+        
+      
+        
           
+<a href="/categories/location" class="location">location</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/minimization" class="minimization">minimization</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
     
@@ -107,9 +146,8 @@
 	</h1>
 	
 
-	<div class="toc">
-<ul>
-<li><a href="#intent">Intent</a><ul>
+	<div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#intent">Intent</a></li>
 <li><a href="#context">Context</a></li>
 <li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a><ul>
@@ -123,21 +161,19 @@
 </li>
 <li><a href="#forcesconcerns">Forces/Concerns</a></li>
 </ul>
-</li>
-</ul>
 </div>
-<h2 id="intent">Intent</h2>
+<h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
 <p>Support <a href="Minimization">minimization</a> of data collection and&nbsp;distribution.</p>
-<h2 id="context">Context</h2>
+<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
 <p>When a service is collecting location data from or about a user, or transmitting location data about a user to a&nbsp;third-party.</p>
-<h2 id="problem">Problem</h2>
+<h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
 <p>Many location-based services collect current or ongoing location information from a user in order to provide some contextual service (nearest coffee shop; local weather; etc.). Collecting more information than is necessary can harm the user's privacy and increase the risk for the service (in the case of a security breach, for example), but location data may still need to be collected to provide the service. Similarly, users may want the advantages of sharing their location from your service to friends or to some other service, but sharing very precise information provides a much greater risk to users (of re-identification, stalking, physical intrusion,&nbsp;etc.).</p>
-<h2 id="solution">Solution</h2>
+<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
 <p>Since much geographic data inherently has different levels of precision (see <a href="Geographic ontologies">geographic ontologies</a>, for example) -- like street, city, county, state, country -- there may be natural divisions in the precision of location data. By collecting or distributing only the necessary level of granularity, a service may be able to maintain the same functionality without requesting or distributing potentially sensitive data. A local weather site can access only the user's zip code to provide relevant weather without ever accessing precise (and therefore sensitive) location&nbsp;information.</p>
 <p>A similar pattern is <a href="Fuzzing">location fuzzing</a> which uses an algorithm to decrease the accuracy of location data without changing its lat/lon precision. This may be useful if the application only functions on latitude/longitude data, but can be vulnerable to&nbsp;attack.</p>
 <p>In some cases, less granular data may also better capture the intent of a user (that tweet was about Sproul Plaza in general, not that particular corner) or be more meaningful to a recipient ("Nick is in Berkeley, CA" means more to my DC relatives than the particular intersection). For more along these lines, see, for example, <a href="http://www.meloproject.com/team">the Meaningful Location Project</a>.</p>
-<h3 id="examples">Examples</h3>
-<h4 id="fire-eagle-location-hierarchy">Fire Eagle location&nbsp;hierarchy</h4>
+<h3 id="examples"><a class="toclink" href="#examples">Examples</a></h3>
+<h4 id="fire-eagle-location-hierarchy"><a class="toclink" href="#fire-eagle-location-hierarchy">Fire Eagle location&nbsp;hierarchy</a></h4>
 <p><img alt="Fire Eagle granularity screenshot" src="/media/images/Fire_Eagle_granularity.png" /></p>
 <p>Yahoo! Fire Eagle allows user to provide location information to applications using eight different "levels" of granularity in their <a href="http://fireeagle.yahoo.net/developer/documentation/location">hierarchy</a>: </p>
 <ul>
@@ -151,20 +187,35 @@
 <li>Country</li>
 </ul>
 <p>Fire Eagle specifically requires that recipient applications be written to handle data at any of the levels, and allows updating the user's location at any level of&nbsp;granularity.</p>
-<h4 id="twitter-place-vs-exact-location">Twitter "place" vs. "exact&nbsp;location"</h4>
+<h4 id="twitter-place-vs-exact-location"><a class="toclink" href="#twitter-place-vs-exact-location">Twitter "place" vs. "exact&nbsp;location"</a></h4>
 <p><a href="https://support.twitter.com/articles/78525-about-the-tweet-location-feature">Twitter</a> allows users to tag a tweet with either exact coordinates, a Twitter "place" (a town, neighborhood or venue) or&nbsp;both.</p>
-<h4 id="geode">Geode</h4>
+<h4 id="geode"><a class="toclink" href="#geode">Geode</a></h4>
 <p>One of the fore-runners to the W3C Geolocation API, Firefox's experimental Geode feature allowed JavaScript access to the current location at four different levels of&nbsp;granularity.</p>
-<h2 id="forcesconcerns">Forces/Concerns</h2>
+<h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
 <p>Accepting or transmitting location data at different levels of granularity generally requires a location hierarchy or geographic ontology agreed upon by both services and a more complex data storage model than simple digital coordinates.<br />
 </p>
 <p>Truncating latitude and longitude coordinates to a certain number of decimal places may decrease precision, but is generally not considered a good fuzzing algorithm. (For example, if a user is moving in a straight line and regularly updating their location, truncated location information will occasionally reveal precise location when the user crosses a lat/lon boundary.) Similarly, using "town" rather than lat/lon may occasionally reveal more precise data than expected when the user crosses a border between two&nbsp;towns.</p>
 
 	
 	
-  <p id="comments_link">Questions or comments? Email Nock Doty at <a href="mailto:npdoty@ischool.berkeley.edu" title="Email Nick Doty">npdoty@ischool.berkeley.edu</a></p>
-</div>
+  <p id="comments_link">Questions or comments? Email Nick Doty at <a href="mailto:npdoty@ischool.berkeley.edu" title="Email Nick Doty">npdoty@ischool.berkeley.edu</a></p>
 
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'privacypatterns';
+      var disqus_developer = 1; // Remove this when going live
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
 
 
 

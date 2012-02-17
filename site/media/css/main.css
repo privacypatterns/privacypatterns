@@ -114,46 +114,47 @@ h1 a { color: black; }
 
 nav {
   display: inline-block;
-  padding-top: 10px;
+  font-family: 'Helvetica Neue', 'HelveticaNeue', 'News Cycle', sans-serif;
   text-align: right;
-  vertical-align: top;
+  vertical-align: baseline;
   width: 37%;
 }
 
 nav { color: #444; }
-nav li { display: inline-block; }
+nav li { display: inline-block; padding-right: .25em; }
 nav a {
   color: #444;
   font-size: 15px;
+  padding-right: .25em;
 }
 nav a:hover { text-decoration: none; }
 
-#main { margin-top: 22px; padding-bottom: 22px; }
+#main {
+  margin-top: 22px;
+  padding-bottom: 22px;
+}
+
+p, #content {
+  font-family: 'Lora', serif;
+}
+
+p, ul {
+  font-size: 14px;
+  line-height: 1.5em;
+  margin-bottom: 1.2em;
+}
+
+.definition p { font-style: italic; }
 
 #content {
   color: #222;
   display: inline-block;
-  font-family: 'Lora', serif;
-  width: 80%;
+  width: 70%;
 }
 
 #comments_link {
   font-style: italic;
   color: #666;
-}
-
-footer {
-  border-top: 1px solid #444;
-  color: #666;
-  font-family: 'Lora', sans-serif;
-  font-style: italic;
-  padding: 1em 0;
-  text-align: center;
-}
-footer p { margin-bottom: 1em;}
-
-footer a {
-  color: #444;
 }
 
 p.berkeley {
@@ -167,41 +168,65 @@ p.berkeley {
 	padding: 0 3px;
 }
 
-#content p, #content ul {
-  font-size: 14px;
-  line-height: 1.5em;
-  margin-bottom: 1.2em;
-}
-
 #content ul {
   list-style-position: inside;
   margin-left: 1.2em;
 }
 
-#sidebar {
+aside {
   display: inline-block;
   vertical-align: top;
-  width: 18%;
+  width: 28%;
 }
 
-#sidebar h2 {
+aside h2 {
   font-size: 22px;
 }
 
+/* Categories list is on the patterns listing page */
 ul#categories {
-  list-style-position: inside;
+  list-style: none;
   margin: 0;
   padding: 0;
+  padding-left: .5em;
 }
 
 ul#categories li {
   line-height: 1.6em;
+  margin: .25em 0;
   text-transform: capitalize;
 }
+
+ul#categories a {
+  border-radius: 3px;
+  display: block;
+  text-decoration: none;
+}
+
+ul#categories a:hover {
+  background-color: #efefef;
+}
+
+/* Category icons */
+#categories a {
+  background: url('/media/images/categories/default.png') no-repeat;
+  background-position: 8px center;
+  background-size: 24px;
+  padding: .5em;
+  padding-left: 40px;
+}
+#categories .notice { background-image: url('/media/images/categories/notice.png'); }
+#categories .minimization { background-image: url('/media/images/categories/default.png'); }
+#categories .mobile { background-image: url('/media/images/categories/mobile.png'); }
+#categories .media { background-image: url('/media/images/categories/media.png'); }
+#categories .access { background-image: url('/media/images/categories/access.png'); }
+#categories .location { background-image: url('/media/images/categories/location.png'); }
+#categories .transparency { background-image: url('/media/images/categories/transparency.png'); }
 
 .category { text-transform: capitalize; }
 
 /* Categories list on individual pattern pages */
+p#categories a { background-size: 18px; }
 p#categories, p#categories a, p#categories a:visited {
   color: #666;
   font-family: sans-serif;
@@ -214,6 +239,7 @@ p#categories a:hover { text-decoration: none; }
 /*
  * List of patterns
  */
+#content #patterns_listing { margin: 0; padding: 0; }
 #patterns_listing li {
   border: 2px solid #efefef;
   -moz-border-radius: 8px;
@@ -235,6 +261,7 @@ p#categories a:hover { text-decoration: none; }
   color: black;
   display: block;
   height: 100%;
+  min-height: 155px;
   padding: 14px;
   text-decoration: none;
   width: 100%;
@@ -276,7 +303,8 @@ p#categories a:hover { text-decoration: none; }
   float: right;
   padding: 1em;
   margin-bottom: 1em;
-  width: 33%;
+  margin-right: -43%;
+  width: 40%;
   vertical-align: top;
 }
 
@@ -292,13 +320,11 @@ p#categories a:hover { text-decoration: none; }
   line-height: 1.6em;
 }
 
-.toc > ul::before {
-  content: "Contents";
+.toctitle {
   color: black;
   font-family: sans-serif;
   font-size: 22px;
   line-height: 1.6em;
-  text-indent: 1em;
 }
 
 ol { list-style-type: upper-roman; }
@@ -306,14 +332,40 @@ ol ol { list-style-type: upper-alpha; }
 ol ol ol { list-style-type: lower-roman; }
 ol ol ol ol { list-style-type: lower-alpha; }
 
+/* Header links */
+.toclink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toclink:hover {
+  text-decoration: none;
+}
+
+footer {
+  border-top: 1px solid #444;
+  color: #666;
+  font-family: 'Lora', sans-serif;
+  font-style: italic;
+  padding: 1em 0;
+  text-align: center;
+}
+footer p { margin-bottom: 1em;}
+
+footer a {
+  color: #444;
+}
+
 /* 
  * Homepage specific styles
  */
 #index #content { width: 60%; }
 /* Button */
 #index #sidebar {
+  display: inline-block;
   margin-top: 36px;
   text-align: center;
+  vertical-align: top;
   width: 39%;
   white-space: nowrap;
 }
@@ -335,11 +387,14 @@ ol ol ol ol { list-style-type: lower-alpha; }
   text-shadow: 0 2px 1px black;
 }
 #lib_button:hover {
+  background-color: #5675B8;
   background-image: -webkit-linear-gradient(#5675B8, #2A3D65);
   background-image: -moz-linear-gradient(#5675B8, #2A3D65);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#5675B8, endColorstr=#2A3D65);
   background-image: linear-gradient(#5675B8, #2A3D65);
 }
+
+a[title="About"] { font-size: 1.3em; }
 
 #index header { border-bottom: none; }
 

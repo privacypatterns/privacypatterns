@@ -26,18 +26,18 @@
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-	<body id="Strip-invisible-metadata">
+	<body id="Strip Invisible Metadata">
     <div id="container">
 
 			<header>
-  <div id="logo"><a href="/index.html" title="Home">privacy<span class="highlight">patterns</span>.org</a></div>
+  <div id="logo"><a href="/" title="Home">privacy<span class="highlight">patterns</span>.org</a></div>
   
   
 <nav>
   <ul>
-    <li><a href="/index.html">Home</a> &bull; </li>
-    <li><a href="/about/about.html">About</a> &bull; </li>
-    <li><a href="/patterns/patterns.html">Patterns</a></li>
+    <li><a href="/">Home</a> &bull; </li>
+    <li><a href="/about/">About</a> &bull; </li>
+    <li><a href="/patterns/">Patterns</a></li>
   </ul>
 </nav>
 
@@ -51,7 +51,7 @@
 <ul class="breadcrumbs">
 	
 		<li>
-			<a href="/index.html">Privacy Patterns</a>
+			<a href="/">Privacy Patterns</a>
 
 			
 				
@@ -61,7 +61,7 @@
 		</li>
 	
 		<li>
-			<a href="/patterns/patterns.html">Patterns</a>
+			<a href="/patterns">Patterns</a>
 
 			
 		</li>
@@ -86,6 +86,136 @@
 <div id="content">
   <p id="categories">
     Categories: 
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/metadata" class="metadata">metadata</a>
+           &bull; 
+        
+      
+    
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/minimization" class="minimization">minimization</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+          
+<a href="/categories/exif" class="exif">exif</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/location" class="location">location</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/media" class="media">media</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
   </p>
   <h1>
 		
@@ -94,9 +224,8 @@
 	</h1>
 	
 
-	<div class="toc">
-<ul>
-<li><a href="#intent">Intent</a><ul>
+	<div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#intent">Intent</a></li>
 <li><a href="#context">Context</a></li>
 <li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a></li>
@@ -108,18 +237,16 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 </div>
-<h2 id="intent">Intent</h2>
-<h2 id="context">Context</h2>
+<h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
+<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
 <p>When a service requires a user to import data from external sources (eg.
 pictures, tweets, documents) different types of metadata may be 
 transmitted. Users may not be aware of the metadata as it can be
 automatically generated or not directly visible. Services might be
 inadvertently responsible for exposing private metadata, or going
 against users'&nbsp;expectations.</p>
-<h2 id="problem">Problem</h2>
+<h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
 <p>Users are not always fully aware of the various kinds of metadata
 attached to files and web resources they share with online services.
 Much of this data is automatically generated, or not directly visible to
@@ -131,38 +258,53 @@ leakage of sensitive&nbsp;information. </p>
 <p>How should services that need users to share data and upload files
 treat additional metadata attached with files? In case of uploading
 documents and images, which parts of the metadata can be treated as
-explcitly shared&nbsp;information.</p>
-<h2 id="solution">Solution</h2>
-<p>Stripping all metadata that is not directly visitble during upload time,
-or during the use of the serivce can help protect services from
+explicitly shared&nbsp;information.</p>
+<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<p>Stripping all metadata that is not directly visible during upload time,
+or during the use of the service can help protect services from
 leaks and liabilities. Even in cases where the information is not
 legally protected, the service can protect themselves from surprising
-their users and thus alienaing&nbsp;them. </p>
+their users and thus alienating&nbsp;them. </p>
 <p>Additionally when users share data with services, they can be presented
 with a preview of the data obtained by the service, including any
 metadata <code>[[Preview Shared Data]]</code>. This allows users to be more aware
 of information that they are sharing with the services, and in many
 cases with other entities on the&nbsp;Internet.</p>
-<p>To summarize - user metadata that can not be made visible to users
+<p>To summarize: user metadata that can not be made visible to users
 clearly should be stripped to avoid overstepping the users'&nbsp;expectations. </p>
-<h2 id="examples">Examples</h2>
-<h4 id="uploading-images-to-twittercom">Uploading images to&nbsp;twitter.com</h4>
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<h4 id="uploading-images-to-twittercom"><a class="toclink" href="#uploading-images-to-twittercom">Uploading images to&nbsp;twitter.com</a></h4>
 <p>Twitter.com removes EXIF data from images uploaded to their image
 sharing service. Previously there has been many breaches of personal
 location by using EXIF data shared by image sharing&nbsp;services. </p>
-<h4 id="hiding-exif-data-on-flickrcom">Hiding EXIF data on&nbsp;Flickr.com</h4>
+<h4 id="hiding-exif-data-on-flickrcom"><a class="toclink" href="#hiding-exif-data-on-flickrcom">Hiding EXIF data on&nbsp;Flickr.com</a></h4>
 <p>In certain cases services might build features based on
 metadata, or the metadata sharing could be an important part of the
 community of users. Flickr.com allows users to hide their EXIF data from
 public display, and also provides an interface for users to easily see
 if they are sharing location as part of uploading their&nbsp;images. </p>
-<TODO: add screenshots>
+<p><em>TODO: add&nbsp;screenshots</em></p>
 
 	
 	
-  <p id="comments_link">Questions or comments? Email Nock Doty at <a href="mailto:npdoty@ischool.berkeley.edu" title="Email Nick Doty">npdoty@ischool.berkeley.edu</a></p>
+  <p id="comments_link">Questions or comments? Email Nick Doty at <a href="mailto:npdoty@ischool.berkeley.edu" title="Email Nick Doty">npdoty@ischool.berkeley.edu</a></p>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'privacypatterns';
+      var disqus_developer = 1; // Remove this when going live
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 </div>
-
 
 
 

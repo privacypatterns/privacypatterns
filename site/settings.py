@@ -1,7 +1,7 @@
 import os
 here = lambda *x: os.path.join(os.path.abspath(os.path.dirname(__file__)), *x)
 
-MD_EXTENSIONS = ['footnotes','toc']
+MD_EXTENSIONS = ['footnotes','toc(anchorlink=True, title=Contents)']
 
 #Directories
 LAYOUT_DIR = here('layout')
@@ -30,7 +30,7 @@ GENERATE_ABSOLUTE_FS_URLS = False
 # to map the clean urls to the actual html files.  The HtaccessGenerator site
 # post processor is capable of automatically generating the necessary
 # RewriteRules for use with Apache.
-GENERATE_CLEAN_URLS = False
+GENERATE_CLEAN_URLS = True
 
 # A list of filenames (without extensions) that will be considered listing
 # pages for their enclosing folders.
@@ -91,13 +91,12 @@ CONTENT_PROCESSORS = {
 
 SITE_PRE_PROCESSORS = {
     'patterns': {
-        'hydeengine.site_pre_processors.CategoriesManager':
-            {'node':'patterns', 'template': '_archives.html', 'archiving': True, 'listing_template': '_archives_index.html', 'output_folder': 'categories'}
-    },
-    '/': {
-        'hydeengine.site_pre_processors.NodeInjector' : {
-               'variable' : 'patterns_node',
-               'path' : 'content/patterns'
+        'hydeengine.site_pre_processors.CategoriesManager': {
+            'node':'patterns',
+            'template': '_archives.html',
+            'archiving': True,
+            'listing_template': '_archives_index.html',
+            'output_folder': 'categories'
         }
     }
 }

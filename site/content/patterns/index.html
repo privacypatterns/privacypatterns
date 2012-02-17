@@ -7,10 +7,3 @@
 {% block content_header %}
 <h1>Patterns</h1>
 {% endblock %}
-
-<h1>List of categories</h1>
-<ul>
-  {% for c in categories %}
-  <li><a href="{{c.archive_url}}">{{c.name}}</a></li>
-  {% endfor %}
-</ul>
