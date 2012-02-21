@@ -28,7 +28,7 @@
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-	<body id="{{page.title}}">
+	<body id="{{page.title|slugify}}">
     <div id="container">
 
 			{% include "skeleton/_header.html" %}

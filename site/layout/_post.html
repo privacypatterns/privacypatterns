@@ -3,7 +3,7 @@
 {% block content_body %}
 
 <div id="content">
-  <p id="categories">
+  <p id="cats">
     Categories: {% for c in page.categories %}
       {% for category in page.node.categories %}
         {% ifequal category.name c %}

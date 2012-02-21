@@ -184,57 +184,57 @@ aside h2 {
 }
 
 /* Categories list is on the patterns listing page */
-ul#categories {
+ul#cats {
   list-style: none;
   margin: 0;
   padding: 0;
   padding-left: .5em;
 }
 
-ul#categories li {
+ul#cats li {
   line-height: 1.6em;
   margin: .25em 0;
   text-transform: capitalize;
 }
 
-ul#categories a {
+ul#cats a {
   border-radius: 3px;
   display: block;
   text-decoration: none;
 }
 
-ul#categories a:hover {
+ul#cats a:hover {
   background-color: #efefef;
 }
 
 /* Category icons */
-#categories a {
+#cats a {
   background: url('/media/images/categories/default.png') no-repeat;
   background-position: 8px center;
   background-size: 24px;
   padding: .5em;
   padding-left: 40px;
 }
-#categories .notice { background-image: url('/media/images/categories/notice.png'); }
-#categories .minimization { background-image: url('/media/images/categories/default.png'); }
-#categories .mobile { background-image: url('/media/images/categories/mobile.png'); }
-#categories .media { background-image: url('/media/images/categories/media.png'); }
-#categories .access { background-image: url('/media/images/categories/access.png'); }
-#categories .location { background-image: url('/media/images/categories/location.png'); }
-#categories .transparency { background-image: url('/media/images/categories/transparency.png'); }
+#cats .notice { background-image: url('/media/images/categories/notice.png'); }
+#cats .minimization { background-image: url('/media/images/categories/default.png'); }
+#cats .mobile { background-image: url('/media/images/categories/mobile.png'); }
+#cats .media { background-image: url('/media/images/categories/media.png'); }
+#cats .access { background-image: url('/media/images/categories/access.png'); }
+#cats .location { background-image: url('/media/images/categories/location.png'); }
+#cats .transparency { background-image: url('/media/images/categories/transparency.png'); }
 
 .category { text-transform: capitalize; }
 
 /* Categories list on individual pattern pages */
-p#categories a { background-size: 18px; }
-p#categories, p#categories a, p#categories a:visited {
+p#cats a { background-size: 18px; }
+p#cats, p#cats a, p#cats a:visited {
   color: #666;
   font-family: sans-serif;
   font-size: 11px;
   text-transform: uppercase;
 }
 
-p#categories a:hover { text-decoration: none; }
+p#cats a:hover { text-decoration: none; }
 
 /*
  * List of patterns
