@@ -402,3 +402,16 @@ a[title="About"] { font-size: 1.3em; }
   font-size: 22px;
   margin: 1.6em 0 1em 0;
 }
+
+/* Disqus customizations */
+
+#disqus_thread {
+  background-color: #efefef;
+  padding: 0 2em;
+  padding-top: 1px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+#dsq-subscribe { display: none; } /* Hide subscribe and RSS links */
+#dsq-global-toolbar { display: none; } /* Hide Disqus logo thing */
