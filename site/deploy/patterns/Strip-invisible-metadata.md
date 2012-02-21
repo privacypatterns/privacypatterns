@@ -49,7 +49,7 @@ clearly should be stripped to avoid overstepping the users' expectations.
 #### Uploading images to twitter.com
 
 Twitter.com removes EXIF data from images uploaded to their image
-sharing service. Previously there has been many breaches of personal
+sharing service. Previously there have been many breaches of personal
 location by using EXIF data shared by image sharing services. 
 
 #### Hiding EXIF data on Flickr.com
@@ -58,6 +58,6 @@ In certain cases services might build features based on
 metadata, or the metadata sharing could be an important part of the
 community of users. Flickr.com allows users to hide their EXIF data from
 public display, and also provides an interface for users to easily see
-if they are sharing location as part of uploading their images. 
+whether they are sharing location as part of uploading their images. 
 
 _TODO: add screenshots_

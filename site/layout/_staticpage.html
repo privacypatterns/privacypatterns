@@ -3,20 +3,13 @@
 {% block content_body %}
 
 <div id="content">
-  <h1>
-		{% with page.name_without_extension|remove_date_prefix|unslugify as default_title %}
-			{{page.title|default_if_none:default_title }}
-		{%endwith%}
-	</h1>
 	{% filter typogrify %}
+  	{% markdown %}
 
-	{% markdown %}
-
-	{% block article %}
-	{% endblock %}
+    	{% block article %}
+    	{% endblock %}
 		
-	{% endmarkdown %}
-
+  	{% endmarkdown %}
 	{% endfilter %}
 </div>
 
