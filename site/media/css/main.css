@@ -268,23 +268,23 @@ p#cats a:hover { text-decoration: none; }
 }
 
 #patterns_listing a:hover {
-  background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0.92, rgb(255,255,255)),
-      color-stop(1, rgb(239,239,239))
+  background-image: -webkit-linear-gradient(
+      top,
+      #efefef,
+      rgba(255,255,255,1) 15px
   );
   background-image: -moz-linear-gradient(
-      center bottom,
-      rgb(255,255,255) 92%,
-      rgb(239,239,239) 100%
+      top,
+      #efefef,
+      rgba(255,255,255,1) 15px
   );
   background-image: linear-gradient(
-    center bottom,
-    rgb(255,255,255) 92%,
-    rgb(239,239,239) 100%
+      top,
+      #efefef,
+      rgba(255,255,255,1) 15px
   );
+  -moz-border-radius: 8px;
+  border-radius: 8px;
 }
 #patterns_listing a:hover h3 { color: #2A3D65; }
 
