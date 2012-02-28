@@ -46,14 +46,18 @@ Instructions
 Contributing via GitHub
 -----------------------
 
-1. Fork the repository on GitHub.
+All of the patterns and principle definitions live in the [Wiki section](https://github.com/m0hit/privacypatterns/wiki) of the code repository. To make any changes or additions to the content of privacypatterns.org, you must modify the files in the Wiki.
 
-2. Click on the Wiki link after cloning (This may take a minute for GitHub to create. They'll email you when it's done).
+Prereqs: You will need a Github account. [Sign up for one here.](https://github.com/signup/free)
 
-3. Click on Patterns. Then click on the pattern you want to edit.
+1. Fork the repository on GitHub: [https://github.com/m0hit/privacypatterns/fork](https://github.com/m0hit/privacypatterns/fork)
 
-4. Click the Edit button.
+2. Click on the Wiki link after cloning. Initially, it will appear empty. Github must fork the Wiki repo from the main branch, which may take a minute to create. Github will email you when it's done. After it's cloned click on the "Wiki" link again.
 
-5. Make your changes. Click Save.
+3. Click on the "Patterns" or "Principles" link on the root wiki page (depending on what you want to change). Then click on the name of the pattern or principle you want to edit.
 
-6. Submit a pull request.
+4. Click the "Edit" button at the top of the page.
+
+5. Make your changes, then click Save (and enter a message documenting what you changed and why).
+
+6. Submit a pull request. If you require assistance, [read this Github help page.](http://help.github.com/send-pull-requests/)
