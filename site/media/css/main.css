@@ -80,14 +80,14 @@ header {
 }
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .toctitle {
   font-family: 'Helvetica Neue Light', 'HelveticaNeue-Light', 'News Cycle', sans-serif;
   margin-bottom: .3em;
 }
 
 h1 { font-size: 50px; }
 h2 { font-size: 36px; }
-h3 { font-size: 22px; }
+h3, .toctitle { font-size: 22px; }
 h4 { font-size: 18px; font-style: italic; }
 h5 { font-size: 16px; }
 h6 { font-size: 14px; font-weight: bold; }
@@ -317,13 +317,6 @@ p#cats a:hover { text-decoration: none; }
 
 .toc a {
   color: #666;
-  line-height: 1.6em;
-}
-
-.toctitle {
-  color: black;
-  font-family: sans-serif;
-  font-size: 22px;
   line-height: 1.6em;
 }
 
