@@ -13,9 +13,25 @@ Drawing inspiration from Christopher Alexander and the success of software desig
 
 We're currently compiling a first draft of some patterns to get things started, but our goal is for this to be a living document constructed by the community of engineers, designers, lawyers and regulators involved in this topic.
 
+Contribution Instructions
+-------------------------
 
-Instructions
-------------
+All of the patterns and principle definitions live in the [Wiki section](https://github.com/m0hit/privacypatterns/wiki) of the code repository. To make any changes or additions to the content of privacypatterns.org, you must modify the files in the Wiki.
+
+Prereqs: You will need a Github account. [Sign up for one here.](https://github.com/signup/free)
+
+1. Go to the list of [Patterns](https://github.com/m0hit/privacypatterns/wiki/Patterns) or [Principles](https://github.com/m0hit/privacypatterns/wiki/Principles), which live in the [privacypatterns Wiki](https://github.com/m0hit/privacypatterns/wiki).
+
+2. Click the name of the Pattern or Principle you would like to edit.
+
+3. Click the "Edit Page" button at the top of the page.
+
+4. Make your modifications.
+
+5. When you are done, write a short message explaining the changes you made and why. Then, click "Save".
+
+Developer Instructions
+----------------------
 
 1. To sync the contents of the Hyde submodule in your local copy of the repository:
 
@@ -42,22 +58,3 @@ Instructions
         git pull deploy master
 
         git push deploy master
-
-Contributing via GitHub
------------------------
-
-All of the patterns and principle definitions live in the [Wiki section](https://github.com/m0hit/privacypatterns/wiki) of the code repository. To make any changes or additions to the content of privacypatterns.org, you must modify the files in the Wiki.
-
-Prereqs: You will need a Github account. [Sign up for one here.](https://github.com/signup/free)
-
-1. Fork the repository on GitHub: [https://github.com/m0hit/privacypatterns/fork](https://github.com/m0hit/privacypatterns/fork)
-
-2. Click on the Wiki link after cloning. Initially, it will appear empty. Github must fork the Wiki repo from the main branch, which may take a minute to create. Github will email you when it's done. After it's cloned click on the "Wiki" link again.
-
-3. Click on the "Patterns" or "Principles" link on the root wiki page (depending on what you want to change). Then click on the name of the pattern or principle you want to edit.
-
-4. Click the "Edit" button at the top of the page.
-
-5. Make your changes, then click Save (and enter a message documenting what you changed and why).
-
-6. Submit a pull request. If you require assistance, [read this Github help page.](http://help.github.com/send-pull-requests/)
