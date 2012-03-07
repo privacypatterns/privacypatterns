@@ -18,7 +18,7 @@ Contribution Instructions
 
 All of the patterns and principle definitions live in the [Wiki section](https://github.com/m0hit/privacypatterns/wiki) of the code repository. To make any changes or additions to the content of privacypatterns.org, you must modify the files in the Wiki.
 
-Prereqs: You will need a Github account. [Sign up for one here.](https://github.com/signup/free)
+Prereqs: You will need to be signed in to Github. If you need a Github account, [sign up for one here.](https://github.com/signup/free)
 
 1. Go to the list of [Patterns](https://github.com/m0hit/privacypatterns/wiki/Patterns) or [Principles](https://github.com/m0hit/privacypatterns/wiki/Principles), which live in the [privacypatterns Wiki](https://github.com/m0hit/privacypatterns/wiki).
 
