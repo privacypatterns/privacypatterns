@@ -24,7 +24,7 @@ Prereqs: You will need to be signed in to Github. If you need a Github account, 
 
 2. Click the name of the Pattern or Principle you would like to edit.
 
-3. Click the "Edit Page" button at the top of the page.
+3. Click the "Edit Page" button at the top of the page (note: pages must be Markdown format).
 
 4. Make your modifications.
 
