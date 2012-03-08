@@ -10,15 +10,17 @@ Drawing inspiration from Christopher Alexander and the success of software desig
 * document common solutions to privacy problems
 * help LBS designers identify and address privacy concerns
 
-We're currently compiling a first draft of some patterns to get things started, but our goal is for this to be a living document constructed by the community of engineers, designers, lawyers and regulators involved in this topic. 
+We're currently compiling some patterns to get started, but our goal is for this to be a living document constructed by the community of engineers, designers, lawyers and regulators involved in this topic. 
 
-## Contributors ##
+## Team ##
 
 [Nick Doty](http://npdoty.name) is a PhD student at the [UC Berkeley, School of Information](http://ischool.berkeley.edu) and works on privacy at the [World Wide Web Consortium](http://www.w3.org).
 
 [Mohit Gupta](https://github.com/m0hit) develops mobile software at [Location Labs](http://location-labs.com) with a focus on building privacy into products.
 
 [Jeff Zych](http://jlzych.com) and [Rowyn McDonald](http://www.rowyn.com) are Master's students at the [School of Information](http://ischool.berkeley.edu) and built this site!
+
+This projected was supported in part by a grant from the [Institute for Information Infrastructure Protection](http://www.thei3p.org/).
 
 ## Contact us ##
 
