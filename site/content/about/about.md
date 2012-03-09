@@ -20,7 +20,9 @@ We're currently compiling some patterns to get started, but our goal is for this
 
 [Jeff Zych](http://jlzych.com) and [Rowyn McDonald](http://www.rowyn.com) are Master's students at the [School of Information](http://ischool.berkeley.edu) and built this site!
 
-This projected was supported in part by a grant from the [Institute for Information Infrastructure Protection](http://www.thei3p.org/).
+This material is based in part upon work supported by the U.S. Department of Homeland Security under grant award #2006-CS-001-000001 and the National Institute of Standards and Technology, under grant award #60NANB1D0127, under the auspices of the Institute for Information Infrastructure Protection (I3P) research program. The I3P is managed by Dartmouth College. The views and conclusions contained in this document are those of the authors and should not be interpreted as necessarily representing the official policies, either expressed or implied, of the U.S. Department of Homeland Security, the I3P, or Dartmouth College.
+
+The Berkeley Center for Law and Technology supported this research in part in conjunction with a research gift from Nokia.
 
 ## Contact us ##
 
