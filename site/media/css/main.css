@@ -396,6 +396,11 @@ a[title="About"] { font-size: 1.3em; }
   margin: 1.6em 0 1em 0;
 }
 
+a.license {
+  border-width: 0;
+  vertical-align: middle;
+}
+
 /* Disqus customizations */
 
 #disqus_thread {
