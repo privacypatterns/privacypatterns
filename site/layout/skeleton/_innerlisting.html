@@ -21,10 +21,7 @@
     						{{list_page.title|default_if_none:default_title }}
     					{%endwith%}
   					</h3>
-
-  					{% if list_page.excerpt %}
-  						<p>{{list_page.excerpt}}</p>
-  					{%endif%}
+						<p class="{% if not list_page.excerpt %}empty{% endif %}">{{list_page.excerpt|default:"No excerpt"}}</p>
 					</a>
 				</li>
 			{%endif%}

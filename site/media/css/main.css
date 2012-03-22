@@ -293,6 +293,10 @@ p#cats a:hover { text-decoration: none; }
 }
 
 #patterns_listing p { font-family: 'Lora', serif; }
+#patterns_listing .empty {
+  color: #666;
+  font-style: italic;
+}
 
 /* Pattern table of contents */
 .toc {
