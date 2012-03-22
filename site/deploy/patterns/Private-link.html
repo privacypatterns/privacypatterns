@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>
 		
-		Strip Invisible Metadata - Privacy Patterns
+		Private link - Privacy Patterns
 		
 	</title>
   <meta name="description" content="Privacy patterns in software design">
@@ -26,7 +26,7 @@
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-	<body id="strip-invisible-metadata">
+	<body id="private-link">
     <div id="container">
 
 			<header>
@@ -88,73 +88,13 @@
     Categories: 
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
           
-<a href="/categories/metadata" class="metadata">metadata</a>
-           &bull; 
-        
-      
-    
-      
-        
-      
-        
-      
-        
-      
-        
-          
-<a href="/categories/minimization" class="minimization">minimization</a>
+<a href="/categories/control" class="control">control</a>
            &bull; 
         
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-      
-        
-      
-        
-      
-        
-          
-<a href="/categories/exif" class="exif">exif</a>
-           &bull; 
         
       
         
@@ -194,13 +134,13 @@
         
       
         
+      
+        
+      
+        
           
-<a href="/categories/location" class="location">location</a>
+<a href="/categories/distribution" class="distribution">distribution</a>
            &bull; 
-        
-      
-        
-      
         
       
         
@@ -220,9 +160,39 @@
         
           
 <a href="/categories/media" class="media">media</a>
-          
+           &bull; 
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/access" class="access">access</a>
+          
         
       
         
@@ -239,7 +209,7 @@
   </p>
   <h1>
 		
-			Strip Invisible Metadata
+			Private link
 		
 	</h1>
 	
@@ -248,68 +218,40 @@
 <li><a href="#intent">Intent</a></li>
 <li><a href="#context">Context</a></li>
 <li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a></li>
+<li><a href="#solution">Solution</a><ul>
 <li><a href="#examples">Examples</a><ul>
-<li><a href="#uploading-images-to-twittercom">Uploading images to twitter.com</a><ul>
-<li><a href="#hiding-exif-data-on-flickrcom">Hiding EXIF data on&nbsp;Flickr.com</a></li>
+<li><a href="#flickr-guest-pass">Flickr "Guest&nbsp;Pass"</a></li>
+<li><a href="#google-anyone-with-the-link-sharing">Google "anyone with the link"&nbsp;sharing</a></li>
+<li><a href="#tripit-get-a-link">Tripit "Get a&nbsp;link"</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a href="#forcesconcerns">Forces/Concerns</a></li>
 </ul>
 </div>
 <h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
+<p>Enable sharing and re-sharing without wide public visibility or cumbersome authenticated access&nbsp;control.</p>
+<p>Supports <a href="User-control">user control</a> and <a href="Distribution">distribution</a>.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<p>When a service requires a user to import data from external sources (eg.
-pictures, tweets, documents) different types of metadata may be 
-transmitted. Users may not be aware of the metadata as it can be
-automatically generated or not directly visible. Services might be
-inadvertently responsible for exposing private metadata, or going
-against users'&nbsp;expectations.</p>
+<p>When private content is accessible online, especially granular resources, and users want to share (and enable re-sharing) using existing communication mechanisms. Also particularly relevant when users are sharing with contacts who can't easily&nbsp;authenticate.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
-<p>Users are not always fully aware of the various kinds of metadata
-attached to files and web resources they share with online services.
-Much of this data is automatically generated, or not directly visible to
-users during their interactions. This can create situations where, even
-though users share information explicitly with services, they may be
-surprised to find this data being revealed. In certain cases where the
-data is legally protected, the service could be held responsible for any
-leakage of sensitive&nbsp;information. </p>
-<p>How should services that need users to share data and upload files
-treat additional metadata attached with files? In case of uploading
-documents and images, which parts of the metadata can be treated as
-explicitly shared&nbsp;information.</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
-<p>Stripping all metadata that is not directly visible during upload time,
-or during the use of the service can help protect services from
-leaks and liabilities. Even in cases where the information is not
-legally protected, the service can protect themselves from surprising
-their users and thus alienating&nbsp;them. </p>
-<p>Additionally when users share data with services, they can be presented
-with a preview of the data obtained by the service, including any
-metadata <code>[[Preview Shared Data]]</code>. This allows users to be more aware
-of information that they are sharing with the services, and in many
-cases with other entities on the&nbsp;Internet.</p>
-<p>To summarize: user metadata that can not be made visible to users
-clearly should be stripped to avoid overstepping the users'&nbsp;expectations. </p>
-<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
-<h4 id="uploading-images-to-twittercom"><a class="toclink" href="#uploading-images-to-twittercom">Uploading images to&nbsp;twitter.com</a></h4>
-<p>Twitter.com removes EXIF data from images uploaded to their image
-sharing service. Previously there have been many breaches of personal
-location by using EXIF data shared by image sharing&nbsp;services. </p>
-<h4 id="hiding-exif-data-on-flickrcom"><a class="toclink" href="#hiding-exif-data-on-flickrcom">Hiding EXIF data on&nbsp;Flickr.com</a></h4>
-<p>In certain cases services might build features based on
-metadata, or the metadata sharing could be an important part of the
-community of users. Flickr.com allows users to hide their EXIF data from
-public display, and also provides an interface for users to easily see
-whether they are sharing location as part of uploading their&nbsp;images. </p>
-<p><em>TODO: add&nbsp;screenshots</em></p>
+<p>Provide the user a <em>private link</em> or <em>unguessable URL</em> for a particular set of their personal information (their current location, an album of photos). Anyone who has the link may access the information, but the link is not posted publicly or easily guessable by an outsider, so the information is not shared with all. The user can share the private link with friends, family or other trusted contacts who can in turn forward the link to others who will be able to access it, without any account authentication or access control&nbsp;lists.</p>
+<p>Services may also allow users to revoke existing private links or change the URL to effectively re-set who can access the&nbsp;resource.</p>
+<h3 id="examples"><a class="toclink" href="#examples">Examples</a></h3>
+<h4 id="flickr-guest-pass"><a class="toclink" href="#flickr-guest-pass">Flickr "Guest&nbsp;Pass"</a></h4>
+<h4 id="google-anyone-with-the-link-sharing"><a class="toclink" href="#google-anyone-with-the-link-sharing">Google "anyone with the link"&nbsp;sharing</a></h4>
+<h4 id="tripit-get-a-link"><a class="toclink" href="#tripit-get-a-link">Tripit "Get a&nbsp;link"</a></h4>
+<h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
+<p>Be sure the link is unguessable (within some bounds) so that an outsider can't easily find all (or any) of the unlisted links either by brute force or by knowing when information was stored or what its name might&nbsp;be.</p>
+<p>Note that the URL will be retained in recipients' browser history and could easily be inadvertently shared with others. Services should help users understand these&nbsp;limitations.</p>
 
 	
 	
   <p id="comments_link">
     Questions or comments? Email Nick Doty at <a href="mailto:npdoty@ischool.berkeley.edu" title="Email Nick Doty">npdoty@ischool.berkeley.edu</a>.
-    <br />Corrections or additions? <a href="https://github.com/m0hit/privacypatterns/wiki/Strip-invisible-metadata" target="_blank">Contribute via Github!</a>
+    <br />Corrections or additions? <a href="https://github.com/m0hit/privacypatterns/wiki/Private-link" target="_blank">Contribute via Github!</a>
   </p>
   
 

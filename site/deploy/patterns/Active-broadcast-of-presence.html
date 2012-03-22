@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>
 		
-		Asynchronous notice - Privacy Patterns
+		Active broadcast of presence - Privacy Patterns
 		
 	</title>
   <meta name="description" content="Privacy patterns in software design">
@@ -26,7 +26,7 @@
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-	<body id="asynchronous-notice">
+	<body id="active-broadcast-of-presence">
     <div id="container">
 
 			<header>
@@ -118,11 +118,11 @@
     
       
         
-      
-        
           
-<a href="/categories/notice" class="notice">notice</a>
+<a href="/categories/control" class="control">control</a>
            &bull; 
+        
+      
         
       
         
@@ -179,7 +179,7 @@
   </p>
   <h1>
 		
-			Asynchronous notice
+			Active broadcast of presence
 		
 	</h1>
 	
@@ -190,8 +190,7 @@
 <li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a><ul>
 <li><a href="#examples">Examples</a><ul>
-<li><a href="#google-latitude-reminder-email">Google Latitude reminder&nbsp;email</a></li>
-<li><a href="#fire-eagle-my-alerts">Fire Eagle My&nbsp;Alerts</a></li>
+<li><a href="#foursquare-check-in-model">Foursquare check-in&nbsp;model</a></li>
 </ul>
 </li>
 </ul>
@@ -200,84 +199,24 @@
 </ul>
 </div>
 <h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
-<p>Support notice of ongoing location&nbsp;tracking.</p>
-<p>Supports <a href="Notice">Notice</a>, <a href="User-control">User Control</a>, <a href="Transparency-feedback">Transparency and&nbsp;feedback</a></p>
+<p>Enable sharing of location or presence data where the user controls the timing and&nbsp;context.</p>
+<p>Supports <a href="User-control">user control</a> and <a href="Appropriateness">appropriateness</a>.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<p>Tracking a person's location over time in an invisible fashion, with or
-without prior explicit consent. (Particularly useful for background tracking,
-tracking through devices with limited or no screen space, or tracking
-repeatedly over long periods of time. For devices with sufficient screen space or other notification affordances, see also <a href="Ambient-notice">ambient notice</a>.)</p>
+<p>When a user wants to share or broadcast location or other presence data that is contextually relevant and a full stream of data may be either noisy or&nbsp;intrusive.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
-<p>How can a service effectively provide notice to a user who gave permission
-once but whose information is accessed repeatedly (perhaps even continuously)
-over a long period of time? If a user forgets that they gave access (or who
-has access) they may later be surprised or upset by the continued flow of
-personal information. Also, initial consent may have been forged by an
-attacker or have been provided by another user of a shared device -- if
-synchronous notice is only provided at the time of consent, a user may
-inadvertently distribute personal information over a long period of time after
-having lost control of their device only&nbsp;momentarily.</p>
+<p>How can a system broadcast a user's presence or location information to a social network without revealing sensitive locations or location histories or overwhelming recipients with noisy&nbsp;data?</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
-<p>Proactively notify the user after the time of consent that information is
-being tracked, stored or re-distributed. This asynchronous notice could be
-achieved through an email, text message, on-screen notice or even through non-
-digital means (by telephone or postal mail, say). The message should inform
-the user about the ongoing practice, including background context (since the
-user may well have forgotten) about the service and any opportunities for
-<a href="Access">access</a> and <a href="User-control">control</a>.</p>
-<p>Asynchronous notices may also include a summary of the data recently collected
-(since the last notice, say) in order to provide clarity (and reminders) to
-the user about the extent of collection. See also, [Privacy dashboard]
-(Privacy-dashboard) and <a href="Access">Access</a>.</p>
-<p>By ensuring that users aren't surprised, asynchronous notice may increase
-trust in the service and comfort with continued disclosure of&nbsp;information.</p>
+<p>While sharing access controls may allow constant access, only <em>broadcast</em> presence information at the active choice of the&nbsp;user. </p>
 <h3 id="examples"><a class="toclink" href="#examples">Examples</a></h3>
-<h4 id="google-latitude-reminder-email"><a class="toclink" href="#google-latitude-reminder-email">Google Latitude reminder&nbsp;email</a></h4>
-<p>Google Latitude users can configure a reminder email (see below) when their
-location is being shared with any application, including internal applications
-like the Location History&nbsp;service.</p>
-<hr />
-<pre><code> This is a reminder that you are sharing your Latitude location with the following application(s):
-
- Google Location History 
- You may disable these applications at any time by going to &lt;https://www.google.com/latitude/apps?hl=en]&gt;
-
- **Do more with Latitude**
- Go to &lt;https://www.google.com/latitude/apps&gt; on your computer and try the following:
-
- Google Location History lets you store your history and see a dashboard of interesting information such as frequently visited places and recent trips. 
- Google Talk Location Status lets you post your location in your chat status. 
- Google Public Location Badge lets you publish your location on your blog or site.
-
- You are receiving this reminder once a week. To change your reminder settings, go to: 
- &lt;https://www.google.com/latitude/apps?hl=en&amp;tab=privacyreminders&gt;
-</code></pre>
-<hr />
-<h4 id="fire-eagle-my-alerts"><a class="toclink" href="#fire-eagle-my-alerts">Fire Eagle My&nbsp;Alerts</a></h4>
-<p><img alt="Fire Eagle My Alerts configuration by npdoty, on Flickr" src="http://farm6.static.flickr.com/5001/5642647032_e74e815f6a.jpg" /><br />
-<a href="http://www.flickr.com/photos/npdoty/5642647032]">Fire Eagle My Alerts configuration by npdoty, on&nbsp;Flickr</a></p>
+<h4 id="foursquare-check-in-model"><a class="toclink" href="#foursquare-check-in-model">Foursquare check-in&nbsp;model</a></h4>
 <h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
-<p>Providing an asynchronous notice requires a reliable mechanism to contact the
-user (a verified email address or telephone number, for example). Care should
-be taken to ensure that the mechanism can actually reach the person using the
-device being tracked. (For example, notifying the owner of the billing credit
-card may not help the spouse whose location is being surreptitiously&nbsp;tracked.)</p>
-<p>In contrast to the common privacy practice of providing consistent and
-reliable systems, you may wish to provide <em>random</em> asynchronous notice. If
-there is a concern that a malicious user may have opted-in the user without
-their knowledge, a notice that is sent once a week at the same time each week
-may allow the attacker to borrow the device at the appointed time and clear
-the&nbsp;notice.</p>
-<p>Many repeated notices may annoy users and eventually inure them to the
-practice altogether. Take measures to avoid unnecessary notices and some level
-of configuration for frequency of notices. This must be balanced against the
-concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
+<p>Always requiring active decision-making can burden the user with&nbsp;choices.</p>
 
 	
 	
   <p id="comments_link">
     Questions or comments? Email Nick Doty at <a href="mailto:npdoty@ischool.berkeley.edu" title="Email Nick Doty">npdoty@ischool.berkeley.edu</a>.
-    <br />Corrections or additions? <a href="https://github.com/m0hit/privacypatterns/wiki/Asynchronous-notice" target="_blank">Contribute via Github!</a>
+    <br />Corrections or additions? <a href="https://github.com/m0hit/privacypatterns/wiki/Active-broadcast-of-presence" target="_blank">Contribute via Github!</a>
   </p>
   
 

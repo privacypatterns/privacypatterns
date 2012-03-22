@@ -4,7 +4,9 @@
     title: "index"
     listing: True
 %}
-
+{% block title %}
+  {{site.name}}
+{% endblock %}
 {% block content_body %}
   <div id="content">
     <p>Privacy patterns are design solutions to common privacy problems &mdash; a way to translate "privacy-by-design" into practical advice for software engineering. We believe design patterns can help <em>document common practices</em> and <em>standardize terminology</em> and while we're starting with a set of patterns for location-based services, we hope to build <em>a living, community space</em> where all can contribute their own patterns.</p>
