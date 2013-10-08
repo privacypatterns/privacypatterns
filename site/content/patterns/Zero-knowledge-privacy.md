@@ -16,9 +16,9 @@ Encryption of the personal information of the user prior to storing it with, or 
 
 ###Examples###
 
-####[Spider Oak](https://spideroak.com/) – online backup, sync, sharing enabling user managed personal information in zero knowledge privacy environment.####
-####[Least Authority](https://leastauthority.com/) – secure offsite backup system with client side encryption.####
-####[LastPass](https://lastpass.com/) – encrypted credentials and personal information database with user managed encryption keys.####
+* [Spider Oak](https://spideroak.com/): online backup, sync, sharing enabling user managed personal information in zero knowledge privacy environment.
+* [Least Authority](https://leastauthority.com/): secure offsite backup system with client side encryption.
+* [LastPass](https://lastpass.com/): encrypted credentials and personal information database with user managed encryption keys.
 
 ##Forces/Concerns##
 
