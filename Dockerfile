@@ -1,6 +1,6 @@
 FROM python:alpine
 
-COPY ./deploy /html
+COPY ./site/deploy /html
 WORKDIR /html
 
 CMD ["python", "-m", "http.server", "80"]
