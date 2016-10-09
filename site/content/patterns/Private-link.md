@@ -10,6 +10,9 @@ When private content is accessible online, especially granular resources, and us
 
 ##Problem##
 
+How do you share a private resource with unauthenticated users in a way that respects its sensitivity?
+The solution must not allow unauthenticated users to access resources that weren't intended to be shared. 
+
 ##Solution##
 
 Provide the user a _private link_ or _unguessable URL_ for a particular set of their personal information (their current location, an album of photos). Anyone who has the link may access the information, but the link is not posted publicly or easily guessable by an outsider, so the information is not shared with all. The user can share the private link with friends, family or other trusted contacts who can in turn forward the link to others who will be able to access it, without any account authentication or access control lists.
@@ -23,6 +26,8 @@ Services may also allow users to revoke existing private links or change the URL
 #### Google "anyone with the link" sharing ####
 
 #### Tripit "Get a link" ####
+
+#### Dropbox "Share Link" ####
 
 ##Forces/Concerns##
 
