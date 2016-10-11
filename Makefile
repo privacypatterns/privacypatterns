@@ -20,7 +20,7 @@ docker:
 	@echo "Getting hyde"
 	@git submodule init
 	@git submodule update
-	# check if python dependencies are installed
+	@pip install hyde/.
 
-./site/deploy: ./site/content/patterns ./hyde/hyde.py
+./site/deploy: ./hyde/hyde.py $(shell find ./site/content/patterns)
 	@python ./hyde/hyde.py -g -s ./site
