@@ -1,6 +1,6 @@
-FROM python:alpine
+FROM httpd:2-alpine
 
-COPY ./site/deploy /html
-WORKDIR /html
+RUN apk add --no-cache sed
+RUN sed -i '/Options Indexes FollowSymLinks/c Options Indexes MultiViews' /usr/local/apache2/conf/httpd.conf
+COPY ./site/deploy /usr/local/apache2/htdocs/
 
-CMD ["python", "-m", "http.server", "80"]
