@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-.PHONY: build wiki-clone docker static
+.PHONY: build docker static
 
 build: ./site/content/patterns
 static: ./site/deploy
@@ -7,14 +7,14 @@ static: ./site/deploy
 docker:
 	@docker build .
 
-./privacypatterns.wiki: wiki-clone
+./patterns:
 	@echo "Updating content from wiki"
 	@[ -d $@ ] || git clone https://github.com/privacypatterns/$@.git
 	@cd $@ && git checkout master && git pull
 
-./site/content/patterns: ./privacypatterns.wiki
+./site/content/patterns: ./patterns
 	@echo "Generating static files"
-	@python markdown_to_hyde.py -s ./privacypatterns.wiki -d ./site/content/
+	@python markdown_to_hyde.py -s ./patterns -d ./site/content/
 
 ./hyde/hyde.py:
 	@echo "Getting hyde"
