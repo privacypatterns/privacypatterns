@@ -16,45 +16,44 @@ We're currently compiling a first draft of some patterns to get things started, 
 Contribution Instructions
 -------------------------
 
-All of the patterns and principle definitions live in the [Wiki section](https://github.com/m0hit/privacypatterns/wiki) of the code repository. To make any changes or additions to the content of privacypatterns.org, you must modify the files in the Wiki.
+All of the patterns and principle definitions live in the [patterns repository](https://github.com/privacypatterns/patterns). To make any changes or additions to the patterns on privacypatterns.org, you must modify the files there.
 
 Prereqs: You will need to be signed in to Github. If you need a Github account, [sign up for one here.](https://github.com/signup/free)
 
-1. Go to the list of [Patterns](https://github.com/m0hit/privacypatterns/wiki/Patterns) or [Principles](https://github.com/m0hit/privacypatterns/wiki/Principles), which live in the [privacypatterns Wiki](https://github.com/m0hit/privacypatterns/wiki).
+* You can use github to fork and edit Patterns and Principles and create a PR on this repo. 
 
-2. Click the name of the Pattern or Principle you would like to edit.
+* OR you could use the visual editing steps below:
 
-3. Click the "Edit Page" button at the top of the page (note: pages must be Markdown format).
+1. Go to the list of [Patterns](https://github.com/privacypatterns/patterns/tree/master/patterns) or [Principles](https://github.com/privacypatterns/patterns/tree/master/principles)
+
+2. To create a new Pattern or Principle click "Create new file".
+
+3. To edit Pattern or Principle, click on the name of the file you would like to edit.  Click the "Edit Page" button at the top right the page (note: pages must be Markdown format).
 
 4. Make your modifications.
 
-5. When you are done, write a short message explaining the changes you made and why. Then, click "Save".
+5. When you are done, write a short message explaining the changes you made and why. Then select "Create new branch..." and click "Propose new change"
 
-Developer Instructions
+Development Instructions
 ----------------------
 
-1. To sync the contents of the Hyde submodule in your local copy of the repository:
+1. To setup locally. This will clone [patterns](https://github.com/privacypatterns/patterns) and render the latest files locally.
 
-        git submodule init
+        make build
 
-        git submodule update
+3. To test changes
 
-3. To create HTML templates from Gollum wiki markdown files:
+    Edit files in `./patterns`. You can cd `./patterns` and use `git` commands to update the [patterns](https://github.com/privacypatterns/patterns) repo.
 
-        python markdown_to_hyde.py -s [path/to/wiki/patterns] -d [path/to/site/contents/patterns]
+        make static
 
-    Default configuration assumes that the privacypatterns.wiki repository is a sibling to the privacypatterns repo, in which the markdown_to_hyde.py script lives.
+    The resulting files are located in ./site/deploy.
 
-2. To generate the static HTML files using Hyde:
+2. To view the changes on the site locally. This requires a [docker installation](https://docs.docker.com/engine/installation/)
 
-        python hyde.py -g -s path/to/site
+        make run
 
-    The resulting files are located in path/to/site/deploy.
+Updating privacypatterns.org
+----------------------------
 
-4. To deploy to the live site (must be merged with the repo on the privacypatterns.org server first, which is what the "pull" command does. There is no need to generate the site before pushing to the server, the server will regenerate it):
-
-        git remote add deploy git@privacypatterns.org:~/privacypatternsweb.git
-        
-        git pull deploy master
-
-        git push deploy master
+For now the process for this is maintained by [@mohit](https://github.com/mohit). Please create a PR with your changes and the site will be deployed after the review.
