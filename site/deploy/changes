@@ -1,0 +1,17 @@
+commit befcb1332a9ddf7732e9546e0af3c243da825472
+Merge: 8026bd1 6664dec
+Author: Nick Doty <npdoty@ischool.berkeley.edu>
+
+    Merge pull request #66 from privacypatterns/update-npdoty-about
+
+commit 8026bd1b5637d95e221fce111a8155d2444d7c7d
+Merge: d06063b 6af69e0
+Author: Nick Doty <npdoty@ischool.berkeley.edu>
+
+    Merge pull request #68 from privacypatterns/update-readme
+
+commit 6af69e0616ce7231c1b6b4b3ff2a767d2a23e1bb
+Author: mohit <mohit.gupta@clever.com>
+
+    Update the readme and makefile for development
+===================

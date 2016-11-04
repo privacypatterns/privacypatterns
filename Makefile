@@ -7,7 +7,7 @@ PP_PORT ?= 8080
 build: ./site/content/patterns
 static: ./site/deploy
 
-docker: ./site/deploy
+docker: ./site/deploy ./site/deploy/changes
 	@docker build . -t tmp/privacypatterns:local
 
 sync: ./patterns
@@ -30,6 +30,10 @@ sync: ./patterns
 
 ./site/deploy: ./hyde/hyde.py $(shell find ./site/content/patterns)
 	@python ./hyde/hyde.py -g -s ./site
+
+./site/deploy/changes: ./site/deploy
+	@git log --pretty=short -n3 > $@
+	@echo "===================" >> $@
 
 run: docker
 	@echo "Running privacypatterns on port $(PP_PORT)"
