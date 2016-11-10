@@ -1,17 +1,16 @@
-commit befcb1332a9ddf7732e9546e0af3c243da825472
-Merge: 8026bd1 6664dec
+commit 28a2fc022425541cd0a9369f074fe7c6bc70e56b
 Author: Nick Doty <npdoty@ischool.berkeley.edu>
 
-    Merge pull request #66 from privacypatterns/update-npdoty-about
+    remove npdoty email address, and fix github links/capitalization
 
-commit 8026bd1b5637d95e221fce111a8155d2444d7c7d
-Merge: d06063b 6af69e0
-Author: Nick Doty <npdoty@ischool.berkeley.edu>
+commit 2416de5ee07551bb759a35ebfa8cf4802c64df14
+Merge: befcb13 f2518d4
+Author: mohit <mohit.ed@ischool.berkeley.edu>
 
-    Merge pull request #68 from privacypatterns/update-readme
+    Merge pull request #69 from privacypatterns/publish-date-changelog
 
-commit 6af69e0616ce7231c1b6b4b3ff2a767d2a23e1bb
-Author: mohit <mohit.gupta@clever.com>
+commit f2518d4ae951193ed348eff31d9c4ed94af13b02
+Author: Mohit Gupta <mohit.ed@ischool.berkeley.edu>
 
-    Update the readme and makefile for development
+    add commit logs and change log
 ===================
