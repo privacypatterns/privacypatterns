@@ -179,7 +179,47 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -273,7 +313,37 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -310,7 +380,255 @@
         
           
 <a href="/categories/authentication" class="authentication">authentication</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
+<a href="/categories/inform" class="inform">inform</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/notify" class="notify">notify</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -377,39 +695,43 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#intent">Intent</a></li>
+<li><a href="#name">Name</a></li>
+<li><a href="#summary">Summary</a></li>
 <li><a href="#context">Context</a></li>
 <li><a href="#problem">Problem</a></li>
-<li><a href="#solutions">Solutions</a><ul>
-<li><a href="#identify-unusual-activities">Identify Unusual Activities</a><ul>
-<li><a href="#a-website">A&nbsp;Website</a></li>
-<li><a href="#an-application">An&nbsp;Application</a></li>
-</ul>
-</li>
-<li><a href="#require-multi-factor-authentication">Require Multi-factor&nbsp;Authentication</a></li>
-<li><a href="#notify-account-holders-of-unusual-activities">Notify Account Holders of Unusual&nbsp;Activities</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#consequences">Consequences</a><ul>
+<li><a href="#constraints">[Constraints]</a></li>
 </ul>
 </li>
 <li><a href="#examples">Examples</a><ul>
-<li><a href="#gmail">Gmail</a></li>
-<li><a href="#facebook">Facebook</a></li>
-<li><a href="#dropbox">Dropbox</a></li>
+<li><a href="#sources">[Sources]</a></li>
 </ul>
 </li>
-<li><a href="#forcesconcerns">Forces/Concerns</a></li>
-<li><a href="#reflection-on-the-process">Reflection on the Process</a><ul>
-<li><a href="#determining-the-scope">Determining the&nbsp;Scope</a></li>
-<li><a href="#relevant-information">Relevant&nbsp;Information</a></li>
-<li><a href="#limitations-and-discussion">Limitations and&nbsp;Discussion</a></li>
-</ul>
-</li>
-<li><a href="#references">References</a></li>
+<li><a href="#general-comments">General&nbsp;Comments</a></li>
+<li><a href="#categories">Categories</a></li>
 </ul>
 </div>
-<h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
-<p>For Internet services, prevent suspicious access to the account, and/or
+<h2 id="name"><a class="toclink" href="#name">Name</a></h2>
+<!--Primary name the pattern is known by.-->
+
+<p>Handling unusual account activities with multiple&nbsp;factors</p>
+<!--###[Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
+<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
+<p>Use additional factors to notify users of unusual activities and authenticate 
+when accounts may have been&nbsp;compromised.</p>
+<!--intent-->
+
+<p>For Internet services, prevent suspicious access to the account, and/or 
 make the account owner aware of unusual&nbsp;activities.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
 <p>Many Internet services are using password-based authentication which is
 really convenient (compared to strong authentication) but has apparent&nbsp;drawbacks:</p>
 <ul>
@@ -452,22 +774,53 @@ determine if an activity is unusual. In case of such unusual activities,
 a service needs to prevent suspicious access to an account, and/or
 inform the account owner of the unusual&nbsp;activities.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>How can a service that uses username-password authentication and
 involves a lot of privacy identify unusual sign-ins, confirm the
 identify of the user, and inform the account owner of such unusual&nbsp;activities?</p>
-<h2 id="solutions"><a class="toclink" href="#solutions">Solutions</a></h2>
-<p>First, the service should be able to identify unusual sign-ins Then the
+<!--forces/concerns-->
+
+<p>The pattern described here is a tradeoff between pure password
+authentication which is insecure, and pure multi-factor authentication
+which is inconvenient. It increases privacy at the cost of&nbsp;usability.</p>
+<p>The fallback multi-factor authentication should be picked carefully with
+the understanding of the&nbsp;service.</p>
+<ul>
+<li>In the above example, Facebook makes use of its resource of
+    friendship and photos. Their decision is based on the assumption
+    that it is very unlikely for a hacker to recognize the friends.
+    Actually the assumption may not hold true in some scenarios, because
+    many of the photos are public and can be viewed under another
+    account, or can be identified with the help from a large-scale
+    tagged photo collection and machine&nbsp;learning.</li>
+<li>Persuading the user into carrying a hardware token everywhere only
+    for occasional multi-factor authentication may be difficult, but it
+    might worth the effort for financial&nbsp;services.</li>
+</ul>
+<p>The strategy to identify unusual activities should also be considered
+seriously. It should be also to identify most of the activities, with a
+false positive rate that is not too high. It should balance the cost of
+multi-factor&nbsp;authentication.</p>
+<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
+<p>First, the service should be able to identify unusual sign-ins. Then the
 service may use multi-factor authentication to confirm the identity of
 the&nbsp;user.</p>
-<p>The user should be informed of unusual activites, or have some ways to
+<p>The user should be informed of unusual activities, or have some ways to
 see recent events, and even do&nbsp;something.</p>
-<h3 id="identify-unusual-activities"><a class="toclink" href="#identify-unusual-activities">Identify Unusual&nbsp;Activities</a></h3>
+<ul>
+<li>Identify Unusual&nbsp;Activities</li>
+</ul>
 <p>Today, a web service may appear as a website or an application on the
 user's devices (including mobile devices and the PCs). The service can
 use meta information to determine if a sign-in with the correct
 username-password combination is&nbsp;suspicious.</p>
 <p>The strategies described here has both false positives and false&nbsp;negatives.</p>
-<h4 id="a-website"><a class="toclink" href="#a-website">A&nbsp;Website</a></h4>
+<ul>
+<li>A&nbsp;Website</li>
+</ul>
 <p>Typically, a sign-in to a website is in the form of an HTTP request,
 which contains many customized settings of the browser, including the
 type of the browser and operating system as well as the architecture
@@ -479,7 +832,9 @@ country/area through&nbsp;GeoIP.</p>
 the website. The website can have its rules to determine if an access is
 <em>suspicious</em>, for example, an access from a new country / browser /
 operating system is considered&nbsp;suspicious.</p>
-<h4 id="an-application"><a class="toclink" href="#an-application">An&nbsp;Application</a></h4>
+<ul>
+<li>An&nbsp;Application</li>
+</ul>
 <p>By running native code, the application can collect some identifiers of
 the machine, including the operating system environment settings (e.g.
 the list of running processes), the hardware parameters (such as the ID
@@ -490,7 +845,9 @@ address of the&nbsp;machine.</p>
 the service. The service can have its rules to determine if a sign-in is
 <em>suspicious</em>, for example, an access from a new country / machine /
 operating system is considered&nbsp;suspicious.</p>
-<h3 id="require-multi-factor-authentication"><a class="toclink" href="#require-multi-factor-authentication">Require Multi-factor&nbsp;Authentication</a></h3>
+<ul>
+<li>Require Multi-factor&nbsp;Authentication</li>
+</ul>
 <p>In case of a suspicious sign-in, multi-factor authentication may be a
 way to let the legitimate user in. The service can request one more
 authentication except password, such&nbsp;as:</p>
@@ -524,7 +881,9 @@ and the service runs on the mobile&nbsp;phone.</p>
 </ul>
 <p>Using multi-factor authentication only in case of suspicious sign-ins is
 more convenient to using it all the time, but is less&nbsp;secure.</p>
-<h3 id="notify-account-holders-of-unusual-activities"><a class="toclink" href="#notify-account-holders-of-unusual-activities">Notify Account Holders of Unusual&nbsp;Activities</a></h3>
+<ul>
+<li>Notify Account Holders of Unusual&nbsp;Activities</li>
+</ul>
 <p>When an suspicious sign-in is detected, it may be a sign that the
 password has already been leaked. Depending on the type of the service,
 it can notify the user about the suspicious sign-in through E-mail,
@@ -533,8 +892,33 @@ telephone, or other&nbsp;means.</p>
 <p>For services that can be logged on from multiple devices at the same
 time, the user should be able to check the existence of other sessions,
 and review recent sign-in&nbsp;events.</p>
+<!--###[Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--###[Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<h3 id="constraints"><a class="toclink" href="#constraints">[Constraints]</a></h3>
+<!-- limitations as a consequence of applying the pattern.-->
+
+<p>This pattern has some limitations. For example, it relies on accurate
+identification of suspicious sign-ins based on meta information, where
+the meta information including the IP address can be spoofed by an
+experienced&nbsp;attacker.</p>
+<p>If the fallback multi-factor authentication only happens occasionally to
+the legitimate account owner, they may be unprepared to such
+authentication, leading to a decreased&nbsp;usability.</p>
 <h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
-<h3 id="gmail"><a class="toclink" href="#gmail">Gmail</a></h3>
+<!--Motivational example to see how the pattern is applied.-->
+
+<ol>
+<li>Gmail</li>
+</ol>
 <p>Gmail displays information about other sessions (if any) in the footer,
 linking to a page named "Activity on this account" which lists other
 sessions and recent activities to the Gmail account. The user has the
@@ -542,11 +926,15 @@ option to sign out other&nbsp;sessions.</p>
 <p>In case of annoying false positives, the user may choose to disable the
 alert for unusual activity. The disable takes about a week, "to make
 sure the bad guys aren't the ones who turned off your&nbsp;alerts."</p>
-<h3 id="facebook"><a class="toclink" href="#facebook">Facebook</a></h3>
+<ol>
+<li>Facebook</li>
+</ol>
 <p>When Facebook detects an unusual sign-in, it shows <em>social
 authentication</em> that displays a few pictures of the user's friends and
 asks the user to name the person in those&nbsp;photos.</p>
-<h3 id="dropbox"><a class="toclink" href="#dropbox">Dropbox</a></h3>
+<ol>
+<li>Dropbox</li>
+</ol>
 <p>The <em>Security</em> tab of the <em>Settings</em> of the Dropbox website displays all
 web browser sessions logged in to the account, and enables the user to
 log out one or more of them. The name of the browser, operating system,
@@ -554,48 +942,21 @@ and the IP address and corresponding country are displayed to help the
 user make a&nbsp;choice.</p>
 <p>It also displays all devices that are linked to the account, and allows
 the user to unlink one or more of&nbsp;them.</p>
-<h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
-<p>The pattern described here is a tradeoff between pure password
-authentication which is insecure, and pure multi-factor authentication
-which is inconvenient. It increases privacy at the cost of&nbsp;usability.</p>
-<p>The fallback multi-factor authentication should be picked carefully with
-the understanding of the&nbsp;service.</p>
-<ul>
-<li>In the above example, Facebook makes use of its resource of
-    friendship and photos. Their decision is based on the assumption
-    that it is very unlikely for a hacker to recognize the friends.
-    Actually the assumption may not hold true in some scenarios, because
-    many of the photos are public and can be viewed under another
-    account, or can be identified with the help from a large-scale
-    tagged photo collection and machine&nbsp;learning.</li>
-<li>Persuading the user into carrying a hardware token everywhere only
-    for occasional multi-factor authentication may be difficult, but it
-    might worth the effort for financial&nbsp;services.</li>
-</ul>
-<p>The strategy to identify unusual activities should also be considered
-seriously. It should be also to identify most of the activities, with a
-false positive rate that is not too high. It should balance the cost of
-multi-factor&nbsp;authentication.</p>
-<h2 id="reflection-on-the-process"><a class="toclink" href="#reflection-on-the-process">Reflection on the&nbsp;Process</a></h2>
-<h3 id="determining-the-scope"><a class="toclink" href="#determining-the-scope">Determining the&nbsp;Scope</a></h3>
-<p>I started with Gmail's display of account activities. It displays
-unusual activities regarding an account, which involves identifying
-unusual activities where the password entered is correct. For some other
-services, correct passwords can be rejected from a new device /&nbsp;location.</p>
-<p>So, the scope of this pattern is to handle unusual activities (including&nbsp;sign-ins).</p>
-<h3 id="relevant-information"><a class="toclink" href="#relevant-information">Relevant&nbsp;Information</a></h3>
-<p>This pattern includes multi-factor authentication and two-step
-authentication, which are well studied. But the general topic about
-informing the user of unusual activites seems to be lack of&nbsp;literature.</p>
-<h3 id="limitations-and-discussion"><a class="toclink" href="#limitations-and-discussion">Limitations and&nbsp;Discussion</a></h3>
-<p>This pattern has some limitations. For example, it relies on accurate
-identification of suspicious sign-ins based on meta information, where
-the meta information including the IP address can be spoofed by an
-experienced&nbsp;attacker.</p>
-<p>If the fallback multi-factor authentication only happens occationally to
-the legitimate account owner, they may be unprepared to such
-authentication, leading to a decreased&nbsp;usability.</p>
-<h2 id="references"><a class="toclink" href="#references">References</a></h2>
+<!--###[Known Uses]-->
+
+<!-- Pointers to various applications of the pattern.-->
+
+<!--##See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--###[Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
+<!-- References to the original source of the pattern.-->
+
 <ul>
 <li>Polakis, I., Lancini, M., Kontaxis, G., Maggi, F., Ioannidis, S.,
     Keromytis, A. D., <span class="amp">&amp;</span> Zanero, S. (2012, December). <strong>All Your Face are
@@ -603,6 +964,30 @@ authentication, leading to a decreased&nbsp;usability.</p>
     <em>Proceedings of the 28th Annual Computer Security Applications
     Conference</em> (pp. 399-408).&nbsp;ACM.</li>
 </ul>
+<h2 id="general-comments"><a class="toclink" href="#general-comments">General&nbsp;Comments</a></h2>
+<!-- Separate discussion on the pattern.-->
+
+<ul>
+<li>Determining the&nbsp;Scope</li>
+</ul>
+<p>I started with Gmail's display of account activities. It displays
+unusual activities regarding an account, which involves identifying
+unusual activities where the password entered is correct. For some other
+services, correct passwords can be rejected from a new device /&nbsp;location.</p>
+<p>So, the scope of this pattern is to handle unusual activities (including&nbsp;sign-ins).</p>
+<ul>
+<li>Relevant&nbsp;Information</li>
+</ul>
+<p>This pattern includes multi-factor authentication and two-step
+authentication, which are well studied. But the general topic about
+informing the user of unusual activities seems to be lack of&nbsp;literature.</p>
+<h2 id="categories"><a class="toclink" href="#categories">Categories</a></h2>
+<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
+
+<p>Inform&nbsp;Notify</p>
+<!--##Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	

@@ -179,7 +179,55 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -273,7 +321,23 @@
       
         
       
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -367,7 +431,37 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -402,7 +496,257 @@
         
           
 <a href="/categories/access" class="access">access</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
           
+<a href="/categories/control" class="control">control</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/choose" class="choose">choose</a>
+          
+        
+      
+        
+      
         
       
         
@@ -471,41 +815,108 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#intent">Intent</a></li>
+<li><a href="#name">Name</a></li>
+<li><a href="#summary">Summary</a></li>
 <li><a href="#context">Context</a></li>
 <li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a><ul>
-<li><a href="#examples">Examples</a><ul>
-<li><a href="#flickr-guest-pass">Flickr "Guest&nbsp;Pass"</a></li>
-<li><a href="#google-anyone-with-the-link-sharing">Google "anyone with the link"&nbsp;sharing</a></li>
-<li><a href="#tripit-get-a-link">Tripit "Get a&nbsp;link"</a></li>
-<li><a href="#dropbox-share-link">Dropbox "Share&nbsp;Link"</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#forcesconcerns">Forces/Concerns</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#categories">Categories</a></li>
 </ul>
 </div>
-<h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
+<h2 id="name"><a class="toclink" href="#name">Name</a></h2>
+<!--Primary name the pattern is known by.-->
+
+<p>Private&nbsp;link</p>
+<!--###[Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
+<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
+<!--intent-->
+
 <p>Enable sharing and re-sharing without wide public visibility or cumbersome authenticated access&nbsp;control.</p>
 <p>Supports <a href="User-control">user control</a> and <a href="Distribution">distribution</a>.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
 <p>When private content is accessible online, especially granular resources, and users want to share (and enable re-sharing) using existing communication mechanisms. Also particularly relevant when users are sharing with contacts who can't easily&nbsp;authenticate.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>How do you share a private resource with unauthenticated users in a way that respects its sensitivity?
 The solution must not allow unauthenticated users to access resources that weren't intended to be&nbsp;shared. </p>
-<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
-<p>Provide the user a <em>private link</em> or <em>unguessable URL</em> for a particular set of their personal information (their current location, an album of photos). Anyone who has the link may access the information, but the link is not posted publicly or easily guessable by an outsider, so the information is not shared with all. The user can share the private link with friends, family or other trusted contacts who can in turn forward the link to others who will be able to access it, without any account authentication or access control&nbsp;lists.</p>
-<p>Services may also allow users to revoke existing private links or change the URL to effectively re-set who can access the&nbsp;resource.</p>
-<h3 id="examples"><a class="toclink" href="#examples">Examples</a></h3>
-<h4 id="flickr-guest-pass"><a class="toclink" href="#flickr-guest-pass">Flickr "Guest&nbsp;Pass"</a></h4>
-<h4 id="google-anyone-with-the-link-sharing"><a class="toclink" href="#google-anyone-with-the-link-sharing">Google "anyone with the link"&nbsp;sharing</a></h4>
-<h4 id="tripit-get-a-link"><a class="toclink" href="#tripit-get-a-link">Tripit "Get a&nbsp;link"</a></h4>
-<h4 id="dropbox-share-link"><a class="toclink" href="#dropbox-share-link">Dropbox "Share&nbsp;Link"</a></h4>
-<h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
+<!--forces/concerns-->
+
 <p>Be sure the link is unguessable (within some bounds) so that an outsider can't easily find all (or any) of the unlisted links either by brute force or by knowing when information was stored or what its name might&nbsp;be.</p>
 <p>Note that the URL will be retained in recipients' browser history and could easily be inadvertently shared with others. Services should help users understand these&nbsp;limitations.</p>
+<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
+<p>Provide the user a <em>private link</em> or <em>unguessable URL</em> for a particular set of their personal information (their current location, an album of photos). Anyone who has the link may access the information, but the link is not posted publicly or easily guessable by an outsider, so the information is not shared with all. The user can share the private link with friends, family or other trusted contacts who can in turn forward the link to others who will be able to access it, without any account authentication or access control&nbsp;lists.</p>
+<p>Services may also allow users to revoke existing private links or change the URL to effectively re-set who can access the&nbsp;resource.</p>
+<!--###[Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--###[Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<!--##Consequences-->
+
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--###[Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<ol>
+<li>
+<p>Flickr "Guest&nbsp;Pass"</p>
+</li>
+<li>
+<p>Google "anyone with the link"&nbsp;sharing</p>
+</li>
+<li>
+<p>Tripit "Get a&nbsp;link"</p>
+</li>
+<li>
+<p>Dropbox "Share&nbsp;Link"</p>
+</li>
+</ol>
+<!--###[Known Uses]-->
+
+<!-- Pointers to various applications of the pattern.-->
+
+<!--##See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--###[Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--###[Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--##General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<h2 id="categories"><a class="toclink" href="#categories">Categories</a></h2>
+<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
+
+<p>Control&nbsp;Choose</p>
+<!--##Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	

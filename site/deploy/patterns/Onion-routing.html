@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>
 		
-		Ontion Routing - Privacy Patterns
+		Onion Routing - Privacy Patterns
 		
 	</title>
   <meta name="description" content="Privacy patterns in software design">
@@ -26,7 +26,7 @@
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-	<body id="ontion-routing">
+	<body id="onion-routing">
     <div id="container">
 
 			<header>
@@ -116,15 +116,41 @@
         
       
         
-      
-        
-      
-        
-      
-        
           
 <a href="/categories/routing" class="routing">routing</a>
            &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -273,7 +299,91 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -300,6 +410,94 @@
         
           
 <a href="/categories/hide" class="hide">hide</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/mix" class="mix">mix</a>
           
         
       
@@ -371,60 +569,123 @@
   </p>
   <h1>
 		
-			Ontion Routing
+			Onion Routing
 		
 	</h1>
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#name">Name</a></li>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#problem">Problem</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#goals">Goals</a></li>
-<li><a href="#motivating-example">Motivating&nbsp;Example</a></li>
+<li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a></li>
-<li><a href="#constraints-and-consequences">Constraints and&nbsp;Consequences</a></li>
-<li><a href="#known-uses">Known&nbsp;Uses</a></li>
+<li><a href="#consequences">Consequences</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+</ul>
+</li>
+<li><a href="#categories">Categories</a></li>
 </ul>
 </div>
+<h2 id="name"><a class="toclink" href="#name">Name</a></h2>
+<!--Primary name the pattern is known by.-->
+
+<p>Onion&nbsp;Routing</p>
+<!--###[Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
 <h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
 <p>This pattern provides unlinkability between senders and receivers by
 encapsulating the data in different layers of encryption, limiting the
 knowledge of each node along the delivery&nbsp;path.</p>
+<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
+<p>A system in which data is routed between different&nbsp;nodes.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>When delivering data, the receiver has to be known. If the system
 provides the functionality that the receiver of data should be able to
 answer, than the receiver should also know the address of the sender.
 When forwarding information over multiple stations then, in a naive
 implementation, each station on the delivery path knows the sender and
 the final&nbsp;destination.</p>
-<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<p>A system in which data is routed between different&nbsp;nodes.</p>
-<h2 id="goals"><a class="toclink" href="#goals">Goals</a></h2>
-<p>The goal of this pattern is to achieve unlinkability between senders
-and&nbsp;receivers.</p>
-<h2 id="motivating-example"><a class="toclink" href="#motivating-example">Motivating&nbsp;Example</a></h2>
-<p>Alice is a whistleblower and tries to forward data to Bob who works at
-the press. She sends the corresponding documents as an
-e-mail-attachment. Eve monitors the traffic and can see who sent this
-mail to whom. The next day, police raids Alices apartment and sends
-her to jail. Bobs mailaccount gets&nbsp;seized.</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
 <p>The solution is to encrypt the data in layers such that every station
 on the way can remove one layer of encryption and thus get to know the
 immediate next station. This way, every party on the path from the
 sender to the receiver only gets to know the immediate successor and
 predecessor on the delivery&nbsp;path.</p>
-<h2 id="constraints-and-consequences"><a class="toclink" href="#constraints-and-consequences">Constraints and&nbsp;Consequences</a></h2>
+<!--goals-->
+
+<p>The goal of this pattern is to achieve unlinkability between senders
+and&nbsp;receivers.</p>
+<!--###[Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--###[Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--constraints and consequences-->
+
 <p>If there are too few hops, the anonymity set is not big enough and the
 unlinkability between sender and receiver is at risk. The same problem
 occurs when there is too few communication going on in the network.
 The multiple layers of encryption will bloat up the data and consume
 bandwidth. If all nodes on the delivery path collaborate in deducing
 the sender and the receiver, the pattern becomes&nbsp;useless.</p>
-<h2 id="known-uses"><a class="toclink" href="#known-uses">Known&nbsp;Uses</a></h2>
+<!--###[Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<p>Alice is a whistle-blower and tries to forward data to Bob who works at
+the press. She sends the corresponding documents as an
+e-mail-attachment. Eve monitors the traffic and can see who sent this
+mail to whom. The next day, police raids Alice's apartment and sends
+her to jail. Bobs mail account gets&nbsp;seized.</p>
+<h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
+<!-- Pointers to various applications of the pattern.-->
+
 <p>The TOR-browser, a web-browser specifically designed to ensure
 anonymity makes heavy use of onion&nbsp;routing.</p>
+<!--##See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--###[Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--###[Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--##General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<h2 id="categories"><a class="toclink" href="#categories">Categories</a></h2>
+<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
+
+<p>Hide&nbsp;Mix</p>
+<!--##Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	

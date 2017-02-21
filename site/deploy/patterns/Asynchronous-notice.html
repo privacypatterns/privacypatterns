@@ -128,6 +128,22 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
 <a href="/categories/location" class="location">location</a>
            &bull; 
@@ -179,7 +195,31 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -273,7 +313,41 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -348,7 +422,251 @@
         
           
 <a href="/categories/mobile" class="mobile">mobile</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
+<a href="/categories/inform" class="inform">inform</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/notify" class="notify">notify</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -377,29 +695,41 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#intent">Intent</a></li>
+<li><a href="#name">Name</a></li>
+<li><a href="#summary">Summary</a></li>
 <li><a href="#context">Context</a></li>
 <li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a><ul>
-<li><a href="#examples">Examples</a><ul>
-<li><a href="#google-latitude-reminder-email">Google Latitude reminder&nbsp;email</a></li>
-<li><a href="#fire-eagle-my-alerts">Fire Eagle My&nbsp;Alerts</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#forcesconcerns">Forces/Concerns</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#categories">Categories</a></li>
 </ul>
 </div>
-<h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
+<h2 id="name"><a class="toclink" href="#name">Name</a></h2>
+<!--Primary name the pattern is known by.-->
+
+<p>Asynchronous&nbsp;notice</p>
+<!--###[Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
+<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
+<p>How can a service effectively provide notice to a user who gave permission once but whose information is accessed repeatedly (perhaps even continuously) over a long period of time? Proactively notify the user after the time of consent that information is being tracked, stored or&nbsp;re-distributed.</p>
+<!--intent-->
+
 <p>Support notice of ongoing location&nbsp;tracking.</p>
 <p>Supports <a href="Notice">Notice</a>, <a href="User-control">User Control</a>, <a href="Transparency-feedback">Transparency and&nbsp;feedback</a></p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
 <p>Tracking a person's location over time in an invisible fashion, with or
 without prior explicit consent. (Particularly useful for background tracking,
 tracking through devices with limited or no screen space, or tracking
 repeatedly over long periods of time. For devices with sufficient screen space or other notification affordances, see also <a href="Ambient-notice">ambient notice</a>.)</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>How can a service effectively provide notice to a user who gave permission
 once but whose information is accessed repeatedly (perhaps even continuously)
 over a long period of time? If a user forgets that they gave access (or who
@@ -409,7 +739,26 @@ attacker or have been provided by another user of a shared device -- if
 synchronous notice is only provided at the time of consent, a user may
 inadvertently distribute personal information over a long period of time after
 having lost control of their device only&nbsp;momentarily.</p>
+<!--forces/concerns-->
+
+<p>Providing an asynchronous notice requires a reliable mechanism to contact the
+user (a verified email address or telephone number, for example). Care should
+be taken to ensure that the mechanism can actually reach the person using the
+device being tracked. (For example, notifying the owner of the billing credit
+card may not help the spouse whose location is being surreptitiously&nbsp;tracked.)</p>
+<p>In contrast to the common privacy practice of providing consistent and
+reliable systems, you may wish to provide <em>random</em> asynchronous notice. If
+there is a concern that a malicious user may have opted-in the user without
+their knowledge, a notice that is sent once a week at the same time each week
+may allow the attacker to borrow the device at the appointed time and clear
+the&nbsp;notice.</p>
+<p>Many repeated notices may annoy users and eventually inure them to the
+practice altogether. Take measures to avoid unnecessary notices and some level
+of configuration for frequency of notices. This must be balanced against the
+concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
 <p>Proactively notify the user after the time of consent that information is
 being tracked, stored or re-distributed. This asynchronous notice could be
 achieved through an email, text message, on-screen notice or even through non-
@@ -423,8 +772,28 @@ the user about the extent of collection. See also, [Privacy dashboard]
 (Privacy-dashboard) and <a href="Access">Access</a>.</p>
 <p>By ensuring that users aren't surprised, asynchronous notice may increase
 trust in the service and comfort with continued disclosure of&nbsp;information.</p>
-<h3 id="examples"><a class="toclink" href="#examples">Examples</a></h3>
-<h4 id="google-latitude-reminder-email"><a class="toclink" href="#google-latitude-reminder-email">Google Latitude reminder&nbsp;email</a></h4>
+<!--###[Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--###[Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<!--##Consequences-->
+
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--###[Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<ol>
+<li><em>Google Latitude reminder&nbsp;email</em></li>
+</ol>
 <p>Google Latitude users can configure a reminder email (see below) when their
 location is being shared with any application, including internal applications
 like the Location History&nbsp;service.</p>
@@ -449,25 +818,38 @@ like the Location History&nbsp;service.</p>
  &lt;https://www.google.com/latitude/apps?hl=en&amp;tab=privacyreminders&gt;
 </code></pre>
 <hr />
-<h4 id="fire-eagle-my-alerts"><a class="toclink" href="#fire-eagle-my-alerts">Fire Eagle My&nbsp;Alerts</a></h4>
+<ol>
+<li><em>Fire Eagle My&nbsp;Alerts</em></li>
+</ol>
 <p><img alt="Fire Eagle My Alerts configuration by npdoty, on Flickr" src="http://farm6.static.flickr.com/5001/5642647032_e74e815f6a.jpg" /><br />
 <a href="http://www.flickr.com/photos/npdoty/5642647032]">Fire Eagle My Alerts configuration by npdoty, on&nbsp;Flickr</a></p>
-<h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
-<p>Providing an asynchronous notice requires a reliable mechanism to contact the
-user (a verified email address or telephone number, for example). Care should
-be taken to ensure that the mechanism can actually reach the person using the
-device being tracked. (For example, notifying the owner of the billing credit
-card may not help the spouse whose location is being surreptitiously&nbsp;tracked.)</p>
-<p>In contrast to the common privacy practice of providing consistent and
-reliable systems, you may wish to provide <em>random</em> asynchronous notice. If
-there is a concern that a malicious user may have opted-in the user without
-their knowledge, a notice that is sent once a week at the same time each week
-may allow the attacker to borrow the device at the appointed time and clear
-the&nbsp;notice.</p>
-<p>Many repeated notices may annoy users and eventually inure them to the
-practice altogether. Take measures to avoid unnecessary notices and some level
-of configuration for frequency of notices. This must be balanced against the
-concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
+<!--###[Known Uses]-->
+
+<!-- Pointers to various applications of the pattern.-->
+
+<!--##See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--###[Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--###[Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--##General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<h2 id="categories"><a class="toclink" href="#categories">Categories</a></h2>
+<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
+
+<p>Inform&nbsp;Notify</p>
+<!--##Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	

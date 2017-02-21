@@ -102,6 +102,12 @@
         
       
         
+      
+        
+      
+        
+      
+        
           
 <a href="/categories/anonymity" class="anonymity">anonymity</a>
            &bull; 
@@ -179,55 +185,27 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
       
         
       
@@ -273,7 +251,101 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -345,6 +417,12 @@
           
 <a href="/categories/tracking" class="tracking">tracking</a>
            &bull; 
+        
+      
+        
+      
+        
+      
         
       
         
@@ -461,6 +539,32 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
       
         
@@ -486,8 +590,20 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
-<a href="/categories/hide" class="hide">hide</a>
+<a href="/categories/minimize" class="minimize">minimize</a>
            &bull; 
         
       
@@ -555,6 +671,20 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
       
         
@@ -576,51 +706,77 @@
         
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
           
-<a href="/categories/aggregate" class="aggregate">aggregate</a>
+<a href="/categories/exclude" class="exclude">exclude</a>
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -659,41 +815,51 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#name">Name</a></li>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#problem">Problem</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#goals">Goals</a></li>
-<li><a href="#motivating-example">Motivating&nbsp;Example</a></li>
+<li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a></li>
-<li><a href="#constraints-and-consequences">Constraints and&nbsp;Consequences</a></li>
-<li><a href="#known-uses">Known&nbsp;Uses</a></li>
+<li><a href="#consequences">Consequences</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+</ul>
+</li>
+<li><a href="#categories">Categories</a></li>
 </ul>
 </div>
+<h2 id="name"><a class="toclink" href="#name">Name</a></h2>
+<!--Primary name the pattern is known by.-->
+
+<p>Protection against&nbsp;Tracking</p>
+<!--###[Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
 <h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
 <p>This pattern avoids the tracking of visitors of websites via cookies.
 It does this by deleting them at regular intervals or by disabling
 cookies&nbsp;completely.</p>
+<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
+<p>This pattern is applicable when personal identifiable information is
+tracked through software tools, protocols or mechanisms such as
+cookies and the&nbsp;like.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>With every single interaction in the web you leave footmarks and clues
 about yourself. Cookies for example enable webservers to gather
 information about web users which therefore affects their privacy and
 anonymity. Web service providers trace user behavior, which can lead
 to user profiling. Also providers can sell the gathered data about
 users visiting their pages to other&nbsp;companies.</p>
-<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<p>This pattern is applicable when personal identifiable information is
-tracked through software tools, protocols or mechanisms such as
-cookies and the&nbsp;like.</p>
-<h2 id="goals"><a class="toclink" href="#goals">Goals</a></h2>
-<p>Restricting a website to not be able to track any of the user's
-personal identifiable&nbsp;informations.</p>
-<h2 id="motivating-example"><a class="toclink" href="#motivating-example">Motivating&nbsp;Example</a></h2>
-<p>Alice wants to buy shoes and she wants to shop online. She heads to an
-online shop and searches for shoes but can’t decide which ones she
-wants, so she buys neither of them. The next day she finds a couple of
-emails in her inbox, giving her suggestions for other shoes and
-alerting her that the viewed shoes are now on&nbsp;sale.</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
 <p>Restricting usage of cookies on the client side by deleting cookies on
 a regular basis e.g. at every start-up of the operating system or
 enabling them case-by-case by deciding if the visited website is
@@ -702,11 +868,41 @@ session. At the highest level of privacy protection cookies are
 disabled, but as a consequence web services are restricted. Another
 solution could be that cookies are exchanged between clients, so that
 sophisticated user profiles&nbsp;emerge.</p>
-<h2 id="constraints-and-consequences"><a class="toclink" href="#constraints-and-consequences">Constraints and&nbsp;Consequences</a></h2>
+<!--goals-->
+
+<p>Restricting a website to not be able to track any of the user's
+personal identifiable&nbsp;informations.</p>
+<!--###[Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--###[Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--constraints and consequences-->
+
 <p>With cookies disabled there is no access to sites that require enabled
 cookies for logging in. Other tracking mechanisms for user
 fingerprinting may still work even when cookies are&nbsp;disabled.</p>
-<h2 id="known-uses"><a class="toclink" href="#known-uses">Known&nbsp;Uses</a></h2>
+<!--###[Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<p>Alice wants to buy shoes and she wants to shop online. She heads to an
+online shop and searches for shoes but can’t decide which ones she
+wants, so she buys neither of them. The next day she finds a couple of
+emails in her inbox, giving her suggestions for other shoes and
+alerting her that the viewed shoes are now on&nbsp;sale.</p>
+<h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
+<!-- Pointers to various applications of the pattern.-->
+
 <p>Junkbuster is an old proxy filtering between web server and browser to
 block ads and cookies, but it is no longer maintained. A program named
 CookieCooker (http://www.cookiecooker.de/) provides protection for
@@ -715,6 +911,29 @@ other users or using a random selection of identities. Unfortunately
 this project also seems to be not maintained anymore. There is also
 the Firefox Add-on Self-Destructing Cookies which deletes cookies of
 tabs as soon as they are&nbsp;closed.</p>
+<!--##See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--###[Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--###[Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--##General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<h2 id="categories"><a class="toclink" href="#categories">Categories</a></h2>
+<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
+
+<p>Minimize&nbsp;Exclude</p>
+<!--##Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	

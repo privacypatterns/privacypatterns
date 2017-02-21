@@ -166,9 +166,35 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
 <a href="/categories/encryption" class="encryption">encryption</a>
            &bull; 
+        
+      
+        
+      
         
       
         
@@ -273,7 +299,55 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -367,7 +441,19 @@
       
         
       
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -390,7 +476,265 @@
         
           
 <a href="/categories/cloud" class="cloud">cloud</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
+<a href="/categories/hide" class="hide">hide</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/restrict" class="restrict">restrict</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -471,36 +815,100 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#intent">Intent</a></li>
+<li><a href="#name">Name</a></li>
+<li><a href="#summary">Summary</a></li>
 <li><a href="#context">Context</a></li>
 <li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a><ul>
+<li><a href="#solution">Solution</a></li>
 <li><a href="#examples">Examples</a></li>
-</ul>
-</li>
-<li><a href="#forcesconcerns">Forces/Concerns</a></li>
+<li><a href="#categories">Categories</a></li>
 </ul>
 </div>
-<h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
+<h2 id="name"><a class="toclink" href="#name">Name</a></h2>
+<!--Primary name the pattern is known by.-->
+
+<p>Encryption with user-managed&nbsp;keys</p>
+<!--###[Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
+<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
+<p>Use encryption in such a way that the service provider cannot decrypt the user's information because the user manages the&nbsp;keys.</p>
+<!--intent-->
+
 <p>Enable encryption, with user-managed encryption keys, to protect the confidentiality of personal information that may be transferred or stored by an untrusted 3rd&nbsp;party.</p>
 <p>Supports <a href="User-control">user control</a>, <a href="Cloud Computing">cloud computing</a> and <a href="Mobile">mobile</a>.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
 <p>User wants to store or transfer their personal data through an online service and they want to protect their privacy, and specifically the confidentiality of their personal information. Risks of unauthorized access may include the online service provider itself, or third parties such as its partners for example for backup, or government surveillance depending on the geographies the data is stored in or transferred&nbsp;through. </p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>How can a user store or transfer their personal information through an online service while ensuring their privacy and specifically preventing unauthorized access to their personal&nbsp;information?</p>
-<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
-<p>Encryption of the personal information of the user prior to storing it with, or transferring it through an online service. In this solution the user shall generate a strong encryption key and manage it themselves, specifically keeping it private and unknown to the untrusted online service or 3rd&nbsp;parties.</p>
-<h3 id="examples"><a class="toclink" href="#examples">Examples</a></h3>
-<ul>
-<li><a href="https://spideroak.com/">Spider Oak</a>: online backup, sync, sharing enabling user managed personal information in zero knowledge privacy&nbsp;environment.</li>
-<li><a href="https://leastauthority.com/">Least Authority</a>: secure offsite backup system with client side&nbsp;encryption.</li>
-<li><a href="https://lastpass.com/">LastPass</a>: encrypted credentials and personal information database with user managed encryption&nbsp;keys.</li>
-</ul>
-<p><a href="http://zeroknowledgeprivacy.org/">Some</a> have used the term "zero-knowledge" to describe this pattern; however, "zero-knowledge proof" is a cryptographic term with a <a href="https://en.wikipedia.org/wiki/Zero-knowledge_proof">distinct meaning</a>.</p>
-<h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
+<!--forces/concerns-->
+
 <p>Requiring the user to do encryption key management may annoy or confuse them and they may revert to either no encryption, or encryption with the online service provider managing the encryption key (affording no protection from the specific online service provider managing the key), picking an encryption key that is weak, reused, written down and so&nbsp;forth. </p>
 <p>Some metadata may need to remain unencrypted to support the online service provider or 3rd party functions, for example file names for cloud storage, or routing information for transfer applications, exposing the metadata to risks of unauthorized access, server side indexing for searching, or&nbsp;de-duplication. </p>
 <p>If the service provider has written the client side software that does the client side encryption with a user-managed encryption key, there can be additional concerns regarding whether the client software is secure or tampered with in ways that can compromise&nbsp;privacy.</p>
+<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
+<p>Encryption of the personal information of the user prior to storing it with, or transferring it through an online service. In this solution the user shall generate a strong encryption key and manage it themselves, specifically keeping it private and unknown to the untrusted online service or 3rd&nbsp;parties.</p>
+<!--###[Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--###[Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<!--##Consequences-->
+
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--###[Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<ul>
+<li><a href="https://spideroak.com/">Spider Oak</a>: online backup, sync, sharing enabling user managed personal information in zero knowledge privacy&nbsp;environment.</li>
+<li><a href="https://leastauthority.com/">Least Authority</a>: secure off-site backup system with client side&nbsp;encryption.</li>
+<li><a href="https://lastpass.com/">LastPass</a>: encrypted credentials and personal information database with user managed encryption&nbsp;keys.</li>
+</ul>
+<p><a href="http://zeroknowledgeprivacy.org/">Some</a> have used the term "zero-knowledge" to describe this pattern; however, "zero-knowledge proof" is a cryptographic term with a <a href="https://en.wikipedia.org/wiki/Zero-knowledge_proof">distinct meaning</a>.</p>
+<!--###[Known Uses]-->
+
+<!-- Pointers to various applications of the pattern.-->
+
+<!--##See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--###[Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--###[Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--##General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<h2 id="categories"><a class="toclink" href="#categories">Categories</a></h2>
+<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
+
+<p>Hide&nbsp;Restrict</p>
+<!--##Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	
