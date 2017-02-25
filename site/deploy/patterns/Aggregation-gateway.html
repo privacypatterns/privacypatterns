@@ -148,6 +148,24 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
 <a href="/categories/aggregate" class="aggregate">aggregate</a>
            &bull; 
@@ -179,7 +197,73 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -241,38 +325,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
       
         
@@ -288,45 +340,71 @@
         
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
           
-<a href="/categories/separate" class="separate">separate</a>
+<a href="/categories/restrict" class="restrict">restrict</a>
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -378,40 +456,93 @@
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#problem">Problem</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#goals">Goals</a></li>
-<li><a href="#motivating-example">Motivating&nbsp;Example</a></li>
+<li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a></li>
-<li><a href="#constraints-and-consequences">Constraints And&nbsp;Consequences</a></li>
-<li><a href="#known-uses">Known&nbsp;Uses</a></li>
+<li><a href="#consequences">Consequences</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+</ul>
+</li>
 </ul>
 </div>
+<!--###[Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
 <h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
 <p>Encrypt, aggregate and decrypt at different&nbsp;places.</p>
-<h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
-<p>The provision of a service may require detailed measurements of a service attribute linked to a data subject to adapt the service operation at each moment according to the demand load. However, these measurements may reveal further information (e.g. personal habits, etc.) when repeated over&nbsp;time.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
 <p>A service provider gets continuous measurements of a service attribute linked to a set of individual service&nbsp;users.</p>
-<h2 id="goals"><a class="toclink" href="#goals">Goals</a></h2>
-<p>Let the service provider have reliable access to the aggregated load at every moment, so as to fulfil its operating requirements, without letting it access the individual load required from each specific service&nbsp;user.</p>
-<h2 id="motivating-example"><a class="toclink" href="#motivating-example">Motivating&nbsp;Example</a></h2>
-<p>An electric utility operates a smart grid network with smart meters that provide measurements of the instantaneous power consumption of each user. The utility employs that information to adapt the power distribution in a dynamic fashion, according to the user demand at each&nbsp;moment.</p>
+<h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
+<p>The provision of a service may require detailed measurements of a service attribute linked to a data subject to adapt the service operation at each moment according to the demand load. However, these measurements may reveal further information (e.g. personal habits, etc.) when repeated over&nbsp;time.</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
 <pre><code>A homomorphic encryption (e.g. Paillier) is applied at the metering system, using a secret shared with the service provider (generated by applying e.g. Shamir’s Secret Sharing Scheme)
 The encrypted measurements from a group of users are transmitted to an independent yet trusted third party. This third-party cannot know about the content of each measurement (as it is encrypted), but it can still operate on that data in an encrypted form (as the encryption system is homomorphic). There are different trusted third parties for each group of users. In order to improve the privacy resilience, each user may belong to several groups at the same time.
 The trusted third-party aggregates the measurements from all the users in the same group, without accessing the data in the clear at any time.
 The service provider receives the encrypted, aggregated measurement and decrypts it with the shared secret.
 </code></pre>
 <p>A feeder metering system can be added as a measuring rod which introduces a comparison for each group of&nbsp;meters.</p>
-<h2 id="constraints-and-consequences"><a class="toclink" href="#constraints-and-consequences">Constraints And&nbsp;Consequences</a></h2>
+<!--goals-->
+
+<p>Let the service provider have reliable access to the aggregated load at every moment, so as to fulfil its operating requirements, without letting it access the individual load required from each specific service&nbsp;user.</p>
+<!--###[Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--###[Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--constraints and consequences-->
+
 <p>There is a need to deploy trusted third parties that compute the aggregations over each group of users. Note that they need to be honest (i.e., they cannot collude with the other parties involved), but they need not respect confidentiality (as they only have access to encrypted contents). Smart meters are needed that have computation resources to apply secret generation and homomorphic encryption procedures (note that this is trivial when dealing with the use of computational resources, but it does not have to be always available in the case of e.g. smart grid systems). The potential range of measured values must be large enough to avoid brute force attacks. Robust homomorphic encryption schemes introduce a large computational&nbsp;load.</p>
-<h2 id="known-uses"><a class="toclink" href="#known-uses">Known&nbsp;Uses</a></h2>
+<!--###[Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<p>An electric utility operates a smart grid network with smart meters that provide measurements of the instantaneous power consumption of each user. The utility employs that information to adapt the power distribution in a dynamic fashion, according to the user demand at each&nbsp;moment.</p>
+<h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
+<!-- Pointers to various applications of the pattern.-->
+
 <ul>
 <li>Lu, R., Liang, X., Li, X., Lin, X., <span class="amp">&amp;</span> Shen, X. (2012). Eppa: An efficient and privacy-preserving aggregation scheme for secure smart grid communications.Parallel and Distributed Systems, IEEE Transactions on, 23(9),&nbsp;1621-1631.</li>
 <li>Rottondi, C., Verticale, G., <span class="amp">&amp;</span> Capone, A. (2013). Privacy-preserving smart metering with multiple data consumers. Computer Networks, 57(7),&nbsp;1699-1713.</li>
 <li>Kursawe, K., Danezis, G., <span class="amp">&amp;</span> Kohlweiss, M. (2011, January). Privacy-friendly aggregation for the smart-grid. In Privacy Enhancing Technologies (pp. 175-191). Springer Berlin&nbsp;Heidelberg.</li>
 </ul>
+<!--##See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--###[Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--###[Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--##General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--##Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	

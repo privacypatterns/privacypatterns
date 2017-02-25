@@ -86,6 +86,246 @@
 <div id="content">
   <p id="cats">
     Categories: 
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/hide" class="hide">hide</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/obfuscate" class="obfuscate">obfuscate</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
   </p>
   <h1>
 		
@@ -96,41 +336,62 @@
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#problem">Problem</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#goals">Goals</a></li>
-<li><a href="#motivating-example">Motivating&nbsp;Example</a></li>
+<li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a></li>
-<li><a href="#constraints-and-consequences">Constraints And&nbsp;Consequences</a></li>
-<li><a href="#known-uses">Known&nbsp;Uses</a></li>
+<li><a href="#consequences">Consequences</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+</ul>
+</li>
 </ul>
 </div>
+<!--###[Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
 <h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
 <p>This pattern hides the actions taken by a user by adding fake actions
-that are undistinguishable from&nbsp;real.</p>
+that are indistinguishable from&nbsp;real.</p>
+<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
+<p>This pattern is applicable when it is not possible to avoid executing,
+delaying or obfuscating the content of an&nbsp;action.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>When users interact with ICT systems their actions reveal a lot of
 information about themselves. An option would be for users to not
 perform such actions to protect their privacy. However, this is not
 possible since users cannot completely avoid executing these actions
 because they need to perform them to achieve a goal (e.g., search for
-a word on the internet, send an email, search for a&nbsp;location).</p>
-<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<p>This pattern is applicable when it is not possible to avoid executing,
-delaying or obfuscating the content of an&nbsp;action.</p>
-<h2 id="goals"><a class="toclink" href="#goals">Goals</a></h2>
-<p>To hinder the adversary’s ability to infer the user behavior, as well
-as her&nbsp;preferences.</p>
-<h2 id="motivating-example"><a class="toclink" href="#motivating-example">Motivating&nbsp;Example</a></h2>
-<p>Alice wants to search for an abortion clinic on Google, but she does
-not want to reveal her intentions of abort to an adversary that may be
-eavesdropping this search (e.g., ISP provider, system administrator of
-her workplace,&nbsp;etc).</p>
+a word on the Internet, send an email, search for a&nbsp;location).</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
 <p>Since the action must be accurately performed, an option to provide
 privacy is to simultaneously perform other actions in such a way that
 the adversary cannot distinguish real and fake (often called dummy)&nbsp;actions.</p>
-<h2 id="constraints-and-consequences"><a class="toclink" href="#constraints-and-consequences">Constraints And&nbsp;Consequences</a></h2>
+<!--goals-->
+
+<p>To hinder the adversary’s ability to infer the user behavior, as well
+as her&nbsp;preferences.</p>
+<!--###[Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--###[Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--constraints and consequences-->
+
 <p>This pattern entails the need for extra resources to perform the dummy
 actions, both at the side of the user that must repeat the action, and
 at the server side that must process several actions. Sometimes it may
@@ -138,13 +399,45 @@ degrade the quality of service since the service provider cannot
 personalize services. It has been demonstrated that generating dummies
 that are perfectly indistinguishable from real actions (in terms of
 content, timing, size, etc...) is very&nbsp;difficult.</p>
-<h2 id="known-uses"><a class="toclink" href="#known-uses">Known&nbsp;Uses</a></h2>
+<!--###[Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<p>Alice wants to search for an abortion clinic on Google, but she does
+not want to reveal her intentions of abort to an adversary that may be
+eavesdropping this search (e.g., ISP provider, system administrator of
+her workplace,&nbsp;etc).</p>
+<h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
+<!-- Pointers to various applications of the pattern.-->
+
 <p>The use of this pattern has been proposed to protect privacy in
 location based services (the user reveals several locations to the
 service provider so that her real location is hidden), anonymous
 communications (the user sends fake messages to fake recipients to
 hide her profile), web searches (the user searches for fake terms to
 hide her real&nbsp;preferences).</p>
+<!--##See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--###[Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--###[Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--##General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--##Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	
