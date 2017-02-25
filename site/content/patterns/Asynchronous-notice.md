@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Asynchronous notice
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -107,11 +102,11 @@ trust in the service and comfort with continued disclosure of information.
 
 1. _Google Latitude reminder email_
 
-Google Latitude users can configure a reminder email (see below) when their
-location is being shared with any application, including internal applications
-like the Location History service.
+ Google Latitude users can configure a reminder email (see below) when their
+ location is being shared with any application, including internal applications
+ like the Location History service.
 
-* * *
+ * * *
 
      This is a reminder that you are sharing your Latitude location with the following application(s): 
 
@@ -132,12 +127,12 @@ like the Location History service.
      You are receiving this reminder once a week. To change your reminder settings, go to: 
      <https://www.google.com/latitude/apps?hl=en&tab=privacyreminders>
 
-* * *
+ * * *
 
 2. _Fire Eagle My Alerts_
 
-![Fire Eagle My Alerts configuration by npdoty, on Flickr](http://farm6.static.flickr.com/5001/5642647032_e74e815f6a.jpg)  
-[Fire Eagle My Alerts configuration by npdoty, on Flickr](http://www.flickr.com/photos/npdoty/5642647032])
+ ![Fire Eagle My Alerts configuration by npdoty, on Flickr](http://farm6.static.flickr.com/5001/5642647032_e74e815f6a.jpg)  
+ [Fire Eagle My Alerts configuration by npdoty, on Flickr](http://www.flickr.com/photos/npdoty/5642647032])
 
 <!--###[Known Uses]-->
 <!-- Pointers to various applications of the pattern.-->
@@ -163,12 +158,6 @@ like the Location History service.
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Inform
-Notify
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

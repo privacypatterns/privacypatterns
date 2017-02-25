@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Private link
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -98,12 +93,6 @@ Services may also allow users to revoke existing private links or change the URL
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Control
-Choose
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

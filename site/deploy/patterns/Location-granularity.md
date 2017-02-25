@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Location Granularity
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -67,28 +62,28 @@ In some cases, less granular data may also better capture the intent of a user (
 
 1. _Fire Eagle location hierarchy_
 
-![Fire Eagle granularity screenshot](/media/images/Fire_Eagle_granularity.png)
+ ![Fire Eagle granularity screenshot](/media/images/Fire_Eagle_granularity.png)
 
-Yahoo! Fire Eagle allows user to provide location information to applications using eight different "levels" of granularity in their [hierarchy](http://fireeagle.yahoo.net/developer/documentation/location): 
+ Yahoo! Fire Eagle allows user to provide location information to applications using eight different "levels" of granularity in their [hierarchy](http://fireeagle.yahoo.net/developer/documentation/location): 
 
-* No information
-* As precise as possible
-* Postal code
-* Neighborhood
-* Town
-* Region
-* State
-* Country
+ * No information
+ * As precise as possible
+ * Postal code
+ * Neighborhood
+ * Town
+ * Region
+ * State
+ * Country
 
-Fire Eagle specifically requires that recipient applications be written to handle data at any of the levels, and allows updating the user's location at any level of granularity.
+ Fire Eagle specifically requires that recipient applications be written to handle data at any of the levels, and allows updating the user's location at any level of granularity.
 
 2. _Twitter "place" vs. "exact location"_
 
-[Twitter](https://support.twitter.com/articles/78525-about-the-tweet-location-feature) allows users to tag a tweet with either exact coordinates, a Twitter "place" (a town, neighborhood or venue) or both.
+ [Twitter](https://support.twitter.com/articles/78525-about-the-tweet-location-feature) allows users to tag a tweet with either exact coordinates, a Twitter "place" (a town, neighborhood or venue) or both.
 
 3. _Geode_
 
-One of the fore-runners to the W3C Geolocation API, Firefox's experimental Geode feature allowed JavaScript access to the current location at four different levels of granularity.
+ One of the fore-runners to the W3C Geolocation API, Firefox's experimental Geode feature allowed JavaScript access to the current location at four different levels of granularity.
 
 <!--###[Known Uses]-->
 <!-- Pointers to various applications of the pattern.-->
@@ -114,12 +109,6 @@ One of the fore-runners to the W3C Geolocation API, Firefox's experimental Geode
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Abstract
-Group
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

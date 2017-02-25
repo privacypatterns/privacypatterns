@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Anonymous Reputation-based Blacklisting
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -98,12 +93,6 @@ A wiki allows any visitor to modify its contents, even without having been authe
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Hide
-Restrict
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

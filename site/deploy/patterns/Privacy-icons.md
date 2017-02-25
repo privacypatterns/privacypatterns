@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Privacy icons
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -100,12 +95,6 @@ See also the Privacy Icons entry at Ideas for a Better Internet (kind of a patte
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Inform
-Explain
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

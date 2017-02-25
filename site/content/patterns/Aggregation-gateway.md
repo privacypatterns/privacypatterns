@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Aggregation Gateway
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -92,12 +87,6 @@ An electric utility operates a smart grid network with smart meters that provide
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Hide
-Restrict
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

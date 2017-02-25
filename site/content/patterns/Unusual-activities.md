@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Handling unusual account activities with multiple factors
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -228,31 +223,31 @@ authentication, leading to a decreased usability.
 
 1. Gmail
 
-Gmail displays information about other sessions (if any) in the footer,
-linking to a page named "Activity on this account" which lists other
-sessions and recent activities to the Gmail account. The user has the
-option to sign out other sessions.
+ Gmail displays information about other sessions (if any) in the footer,
+ linking to a page named "Activity on this account" which lists other
+ sessions and recent activities to the Gmail account. The user has the
+ option to sign out other sessions.
 
-In case of annoying false positives, the user may choose to disable the
-alert for unusual activity. The disable takes about a week, "to make
-sure the bad guys aren't the ones who turned off your alerts."
+ In case of annoying false positives, the user may choose to disable the
+ alert for unusual activity. The disable takes about a week, "to make
+ sure the bad guys aren't the ones who turned off your alerts."
 
 2. Facebook
 
-When Facebook detects an unusual sign-in, it shows *social
-authentication* that displays a few pictures of the user's friends and
-asks the user to name the person in those photos.
+ When Facebook detects an unusual sign-in, it shows *social
+ authentication* that displays a few pictures of the user's friends and
+ asks the user to name the person in those photos.
 
 3. Dropbox
 
-The *Security* tab of the *Settings* of the Dropbox website displays all
-web browser sessions logged in to the account, and enables the user to
-log out one or more of them. The name of the browser, operating system,
-and the IP address and corresponding country are displayed to help the
-user make a choice.
+ The *Security* tab of the *Settings* of the Dropbox website displays all
+ web browser sessions logged in to the account, and enables the user to
+ log out one or more of them. The name of the browser, operating system,
+ and the IP address and corresponding country are displayed to help the
+ user make a choice.
 
-It also displays all devices that are linked to the account, and allows
-the user to unlink one or more of them.
+ It also displays all devices that are linked to the account, and allows
+ the user to unlink one or more of them.
 
 <!--###[Known Uses]-->
 <!-- Pointers to various applications of the pattern.-->
@@ -298,12 +293,6 @@ This pattern includes multi-factor authentication and two-step
 authentication, which are well studied. But the general topic about
 informing the user of unusual activities seems to be lack of literature.
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Inform
-Notify
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

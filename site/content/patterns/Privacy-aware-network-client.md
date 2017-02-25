@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Privacy-Aware Network Client
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -114,12 +109,6 @@ individual privacy preferences.
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Inform
-Explain
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

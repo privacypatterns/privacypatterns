@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Active broadcast of presence
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -87,12 +82,6 @@ While sharing access controls may allow constant access, only _broadcast_ presen
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Control
-Choose
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

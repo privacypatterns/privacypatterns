@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Encryption with user-managed keys
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -95,12 +90,6 @@ Encryption of the personal information of the user prior to storing it with, or 
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Hide
-Restrict
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

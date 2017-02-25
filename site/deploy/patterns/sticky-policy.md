@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Sticky Policies
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -120,12 +115,6 @@ Technologies, pp. 69-84, Springer Berlin Heidelberg, 2003
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Enforce
-Uphold
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

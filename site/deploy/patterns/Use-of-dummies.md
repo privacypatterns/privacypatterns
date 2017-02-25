@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-use of dummies
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -110,12 +105,6 @@ hide her real preferences).
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Hide
-Obfuscate
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

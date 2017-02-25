@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Obligation Management
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -109,12 +104,6 @@ Technical Approaches, TrustBus, 2004
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Enforce
-Uphold
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Data Breach Notification Pattern
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -87,12 +82,6 @@ This pattern is based on the privacy principle "Accountability" specified in ISO
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Inform
-Notify
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

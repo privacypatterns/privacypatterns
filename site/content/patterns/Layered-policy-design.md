@@ -2,11 +2,6 @@
 
 Split privacy policies into nested, successively refined versions. Leave the legalese to the lawyers.
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Layered Policy Design
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -95,12 +90,6 @@ See examples at Terms of Service Didn't Read. The average user would take 76 wor
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Inform
-Explain
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

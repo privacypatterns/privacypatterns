@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Privacy dashboard
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -97,12 +92,6 @@ Dashboards are a widely-used pattern in other data-intensive activities for prov
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Inform
-Provide
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Strip Invisible Metadata
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -88,19 +83,19 @@ clearly should be stripped to avoid overstepping the users' expectations.
 
 1. Uploading images to twitter.com
 
-Twitter.com removes EXIF data from images uploaded to their image
-sharing service. Previously there have been many breaches of personal
-location by using EXIF data shared by image sharing services. 
+ Twitter.com removes EXIF data from images uploaded to their image
+ sharing service. Previously there have been many breaches of personal
+ location by using EXIF data shared by image sharing services. 
 
 2. Hiding EXIF data on Flickr.com
 
-In certain cases services might build features based on
-metadata, or the metadata sharing could be an important part of the
-community of users. Flickr.com allows users to hide their EXIF data from
-public display, and also provides an interface for users to easily see
-whether they are sharing location as part of uploading their images. 
+ In certain cases services might build features based on
+ metadata, or the metadata sharing could be an important part of the
+ community of users. Flickr.com allows users to hide their EXIF data from
+ public display, and also provides an interface for users to easily see
+ whether they are sharing location as part of uploading their images. 
 
-_TODO: add screenshots_
+ _TODO: add screenshots_
 
 <!--###[Known Uses]-->
 <!-- Pointers to various applications of the pattern.-->
@@ -126,12 +121,6 @@ _TODO: add screenshots_
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Minimize
-Strip
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

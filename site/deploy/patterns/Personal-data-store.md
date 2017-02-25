@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Personal Data Store
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -99,12 +94,6 @@ particular, in the health sector.
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Separate
-Isolate
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->

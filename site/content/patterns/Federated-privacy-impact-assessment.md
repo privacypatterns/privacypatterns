@@ -1,10 +1,5 @@
 [TOC]
 
-##Name
-<!--Primary name the pattern is known by.-->
-
-Federated Privacy Impact Assessment
-
 <!--###[Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
@@ -110,12 +105,6 @@ Ontario & Liberty Alliance Project, January 2009
 <!-- Separate discussion on the pattern.-->
 
 
-
-##Categories
-<!-- Placeholder for future agreed upon categories as per collaboration's evaluation.-->
-
-Enforce
-Create
 
 <!--##Tags-->
 <!-- User definable descriptors for additional correlation.-->
