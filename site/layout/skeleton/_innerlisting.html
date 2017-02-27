@@ -13,7 +13,7 @@
 <ul id="patterns_listing">
     {% for list_page in node.pages %}
 		{% ifnotequal list_page node.listing_page %}
-			{% if list_page.display_in_list %}
+			{% if list_page.display_in_list and list_page.status != "stub" %}
 				<li>
 				  <a href="{{list_page.url}}">
   				  <h3>

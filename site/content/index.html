@@ -21,7 +21,7 @@
   <h2>Popular Patterns</h2>
 	<ul id="patterns_listing">
 		{% for post in recents %}
-		  {% if post.display_in_list %}
+		  {% if post.display_in_list and post.status != "stub" %}
   			<li>
   				<a href='{{post.url}}'>
   				  <h3>{{post.title}}</h3>

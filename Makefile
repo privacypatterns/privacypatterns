@@ -18,7 +18,7 @@ sync: ./patterns
 	@echo "Cloning content from $(SOURCE_PATTERNS_REPO)"
 	@[ -d ./patterns ] || git clone $(SOURCE_PATTERNS_REPO)
 
-./site/content/patterns: ./patterns
+./site/content/patterns: ./patterns ./site/content/patterns/index.html ./site/layout/*
 	@echo "Generating static files"
 	@python markdown_to_hyde.py -s ./patterns -d ./site/content/
 
