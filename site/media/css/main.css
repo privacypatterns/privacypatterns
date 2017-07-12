@@ -103,6 +103,9 @@ body {
   img {
     max-width: 100%;
   }
+  a#lib_button {
+    font-size: 5vw;
+  }
 }
 
 header {
@@ -282,6 +285,7 @@ p#cats a:hover { text-decoration: none; }
   margin: 0 14px 14px 0;
   width: 30%;
   vertical-align: top;
+  min-width: 150px;
 }
 /* #content is only 60% of the page, so lists should be 2 wide */
 #content #patterns_listing li { width: 45%; }
