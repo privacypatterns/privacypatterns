@@ -250,6 +250,16 @@ ul#cats a:hover {
 #cats .location { background-image: url('/media/images/categories/location.png'); }
 #cats .transparency { background-image: url('/media/images/categories/transparency.png'); }
 
+#cats .inform { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220194/73889002-f921-11e6-9e14-4434382b93a0.png'); }
+#cats .control { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23222374/f04d17d8-f927-11e6-8271-e69ad60ddfce.png'); }
+#cats .demonstrate { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220192/73860df0-f921-11e6-92f6-a13217b69cab.png'); }
+#cats .enforce { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220191/73851350-f921-11e6-9e67-a3e6dffacb39.png'); }
+#cats .abstract { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220190/7384f9a6-f921-11e6-911c-6138506350de.png'); }
+#cats .minimize { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220193/7387c032-f921-11e6-8f89-2341d62fd029.png'); }
+#cats .separate { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220196/739792dc-f921-11e6-84fe-90610e40bb3a.png'); }
+#cats .hide { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220189/7384ebfa-f921-11e6-9e16-0f07254c7c84.png'); }
+
+
 .category { text-transform: capitalize; }
 
 /* Categories list on individual pattern pages */
