@@ -67,12 +67,38 @@ button, input, select, textarea { margin: 0; }
 @font-face { font-family: 'Sorts Mill Goudy'; src:url('/media/fonts/OFLGoudyStMTT.ttf') format("truetype"); }
 
 body {
-  margin: 22px 155px 22px 95px;
+  margin: 22px 95px 22px 95px;
 }
 
 #container {
   max-width: 1064px;
   min-width: 658px;
+  margin: auto;
+}
+
+@media screen and (max-width:855px){
+  body {
+    margin: 2% 8% 2% 8%;
+  }
+  #container {
+    min-width: unset;
+  }
+  #logo {
+    font-size: 5vw !important;
+  }
+  nav {
+    width: auto !important;
+  }
+  h1,h2,h3,.toctitle {
+    font-size: 5vw !important;
+  }
+  #content {
+    width: 100% !important;
+  }
+  .toc {
+    float: none !important;
+    position: inherit !important;
+  }
 }
 
 header {
@@ -104,6 +130,7 @@ h1 a { color: black; }
   font-family: 'Cuprum', serif;
   font-size: 42px;
   width: 62%;
+  min-width: 300px;
 }
 #logo a { color: inherit; text-decoration: none; }
 #logo a:hover { text-decoration: none; }
@@ -308,8 +335,10 @@ p#cats a:hover { text-decoration: none; }
   padding: 1em;
   margin-bottom: 1em;
   margin-right: -43%;
-  width: 40%;
   vertical-align: top;
+  top: 0px;
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 #content .toc ol, #content .toc ul {
