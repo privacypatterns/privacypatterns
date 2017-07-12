@@ -337,6 +337,7 @@ p#cats a:hover { text-decoration: none; }
   margin-right: -43%;
   vertical-align: top;
   top: 0px;
+  position: -webkit-sticky;
   position: sticky;
 }
 
