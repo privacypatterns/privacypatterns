@@ -91,6 +91,7 @@ body {
   }
   h1,h2,h3,.toctitle {
     font-size: 5vw !important;
+    line-height: 5vw !important;
   }
   #content {
     width: 100% !important;
@@ -98,6 +99,9 @@ body {
   .toc {
     float: none !important;
     position: inherit !important;
+  }	
+  img {
+    max-width: 100%;
   }
 }
 
