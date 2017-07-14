@@ -252,12 +252,12 @@ ul#cats a:hover {
 
 #cats .inform { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220194/73889002-f921-11e6-9e14-4434382b93a0.png'); }
 #cats .control { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23222374/f04d17d8-f927-11e6-8271-e69ad60ddfce.png'); }
-#cats .demonstrate { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220192/73860df0-f921-11e6-92f6-a13217b69cab.png'); }
-#cats .enforce { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220191/73851350-f921-11e6-9e67-a3e6dffacb39.png'); }
+#cats .demonstrate { background-image: url('https://user-images.githubusercontent.com/22982361/28215180-5b0a9826-68ad-11e7-941c-732b90e4cf4b.png'); }
+#cats .enforce { background-image: url('https://user-images.githubusercontent.com/22982361/28215208-795bd34e-68ad-11e7-9dc8-8758703a6533.png'); }
 #cats .abstract { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220190/7384f9a6-f921-11e6-911c-6138506350de.png'); }
-#cats .minimize { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220193/7387c032-f921-11e6-8f89-2341d62fd029.png'); }
+#cats .minimize { background-image: url('https://user-images.githubusercontent.com/22982361/28215269-a7357446-68ad-11e7-9ca3-9dac4731bf88.png'); }
 #cats .separate { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220196/739792dc-f921-11e6-84fe-90610e40bb3a.png'); }
-#cats .hide { background-image: url('https://cloud.githubusercontent.com/assets/22982361/23220189/7384ebfa-f921-11e6-9e16-0f07254c7c84.png'); }
+#cats .hide { background-image: url('https://user-images.githubusercontent.com/22982361/28215369-132b43ec-68ae-11e7-89fb-27ef65c66a8a.png'); }
 
 
 .category { text-transform: capitalize; }
