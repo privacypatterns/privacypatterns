@@ -317,6 +317,9 @@ ul#cats a:hover {
 #cats .mix { background-image: url('/media/images/categories/defaultb.png'),
   linear-gradient(0deg, #FFD1DC, #FFD1DC); }
 
+td > a > img { /* Make sure that linked images in a cell do not make the cell bigger*/
+  max-width: 100%;
+}
 
 .category { text-transform: capitalize; }
 
