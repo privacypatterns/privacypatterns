@@ -265,7 +265,7 @@ ul#cats a:hover {
 #cats .choose { background-image: url('/media/images/categories/defaultb.png'),
   linear-gradient(0deg, #FFFFFF, #FFFFFF); }
 #cats .update { background-image: url('/media/images/categories/defaultb.png'),
-  linear-gradient(0deg, #FFFCDE, #FFFCDE); }
+  linear-gradient(0deg, #FFFFCC, #FFFFCC); }
 #cats .retract { background-image: url('/media/images/categories/defaultb.png'),
   linear-gradient(0deg, #FFFBEB, #FFFBEB); }
 
