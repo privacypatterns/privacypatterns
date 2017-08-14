@@ -1,31 +1,31 @@
 [TOC]
 
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
 
 
-##Summary
+## Summary
 <!-- One short paragraph summarising the pattern.-->
 
 This pattern aggregates multiple entities into a set, such that they
 cannot be distinguished anymore.
 
-##Context
+## Context
 <!-- The situations in which the pattern may apply.-->
 
 This pattern is applicable in a messaging scenario, where an attacker
 can track routing information. Another possible scenario would be the
 storage of personal information in a database.
 
-##Problem
+## Problem
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
 In a system with different users we have the problem that we can often
 distinguish between them. This enables location tracking, analyzing
 the behaviour of the users or other privacy-infringing practices.
 
-##Solution
+## Solution
 <!-- A concise description of how the pattern addresses the problem.-->
 
 There are multiple ways to apply this pattern. One possibility is, to
@@ -37,17 +37,17 @@ then we could even insert fake identities.
 The goal of this pattern is to aggregate different entities into a
 set, such that distinguishing between them becomes infeasible.
 
-<!--###[Structure]-->
+<!--### [Structure]-->
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
 
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 
 
-##Consequences
+## Consequences
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
 
@@ -58,12 +58,12 @@ are not many entities, such that the set of probable suspects is too
 small. What "too small" means depends on the exact scenario. Another
 factor is a possible loss of functionality.
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 <!-- limitations as a consequence of applying the pattern.-->
 
 
 
-##Examples
+## Examples
 <!--Motivational example to see how the pattern is applied.-->
 
 Assuming that there are two companies, one is a treatment clinic for
@@ -79,7 +79,7 @@ them. The two lists are matched for age, sex and location. The worker
 finds the name and address information from the voter registration
 data and the health information from the patient health data.
 
-###[Known Uses]
+### [Known Uses]
 <!-- Pointers to various applications of the pattern.-->
 
 Anonymity sets are in use in various routing obfuscation mechanisms
@@ -89,25 +89,25 @@ anonymity is provided. Mix Zone is a location-aware application that
 anonymizes user identity by limiting the positions where users can be
 located.
 
-<!--##See Also-->
+<!--## See Also-->
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
 
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 <!-- Supporting and conflicting patterns-->
 
 
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 <!-- References to the original source of the pattern.-->
 
 
 
-<!--##General Comments-->
+<!--## General Comments-->
 <!-- Separate discussion on the pattern.-->
 
 
 
-<!--##Tags-->
+<!--## Tags-->
 <!-- User definable descriptors for additional correlation.-->

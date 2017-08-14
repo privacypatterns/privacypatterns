@@ -1,11 +1,11 @@
 [TOC]
 
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
 
 
-##Summary
+## Summary
 <!-- One short paragraph summarising the pattern.-->
 
 
@@ -15,12 +15,12 @@ Enable sharing and re-sharing without wide public visibility or cumbersome authe
 
 Supports [user control](User-control) and [distribution](Distribution).
 
-##Context
+## Context
 <!-- The situations in which the pattern may apply.-->
 
 When private content is accessible online, especially granular resources, and users want to share (and enable re-sharing) using existing communication mechanisms. Also particularly relevant when users are sharing with contacts who can't easily authenticate.
 
-##Problem
+## Problem
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
 How do you share a private resource with unauthenticated users in a way that respects its sensitivity?
@@ -31,34 +31,34 @@ Be sure the link is unguessable (within some bounds) so that an outsider can't e
 
 Note that the URL will be retained in recipients' browser history and could easily be inadvertently shared with others. Services should help users understand these limitations.
 
-##Solution
+## Solution
 <!-- A concise description of how the pattern addresses the problem.-->
 
 Provide the user a _private link_ or _unguessable URL_ for a particular set of their personal information (their current location, an album of photos). Anyone who has the link may access the information, but the link is not posted publicly or easily guessable by an outsider, so the information is not shared with all. The user can share the private link with friends, family or other trusted contacts who can in turn forward the link to others who will be able to access it, without any account authentication or access control lists.
 
 Services may also allow users to revoke existing private links or change the URL to effectively re-set who can access the resource.
 
-<!--###[Structure]-->
+<!--### [Structure]-->
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
 
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 
 
-<!--##Consequences-->
+<!--## Consequences-->
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
 
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 <!-- limitations as a consequence of applying the pattern.-->
 
 
 
-##Examples
+## Examples
 <!--Motivational example to see how the pattern is applied.-->
 
 1. Flickr "Guest Pass"
@@ -69,30 +69,30 @@ Services may also allow users to revoke existing private links or change the URL
 
 4. Dropbox "Share Link"
 
-<!--###[Known Uses]-->
+<!--### [Known Uses]-->
 <!-- Pointers to various applications of the pattern.-->
 
 
 
-<!--##See Also-->
+<!--## See Also-->
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
 
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 <!-- Supporting and conflicting patterns-->
 
 
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 <!-- References to the original source of the pattern.-->
 
 
 
-<!--##General Comments-->
+<!--## General Comments-->
 <!-- Separate discussion on the pattern.-->
 
 
 
-<!--##Tags-->
+<!--## Tags-->
 <!-- User definable descriptors for additional correlation.-->

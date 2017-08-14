@@ -1,11 +1,11 @@
 [TOC]
 
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
 
 
-##Summary
+## Summary
 <!-- One short paragraph summarising the pattern.-->
 
 How can a service effectively provide notice to a user who gave permission once but whose information is accessed repeatedly (perhaps even continuously) over a long period of time? Proactively notify the user after the time of consent that information is being tracked, stored or re-distributed.
@@ -15,7 +15,7 @@ Support notice of ongoing location tracking.
 
 Supports [Notice](Notice), [User Control][2], [Transparency and feedback](Transparency-feedback)
 
-##Context
+## Context
 <!-- The situations in which the pattern may apply.-->
 
 Tracking a person's location over time in an invisible fashion, with or
@@ -23,7 +23,7 @@ without prior explicit consent. (Particularly useful for background tracking,
 tracking through devices with limited or no screen space, or tracking
 repeatedly over long periods of time. For devices with sufficient screen space or other notification affordances, see also [ambient notice](Ambient-notice).)
 
-##Problem
+## Problem
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
 How can a service effectively provide notice to a user who gave permission
@@ -58,7 +58,7 @@ concerns of an attacker's opting the user in without their knowledge.
 [1]: Access
 [2]: User-control
 
-##Solution
+## Solution
 <!-- A concise description of how the pattern addresses the problem.-->
 
 Proactively notify the user after the time of consent that information is
@@ -77,27 +77,27 @@ the user about the extent of collection. See also, [Privacy dashboard]
 By ensuring that users aren't surprised, asynchronous notice may increase
 trust in the service and comfort with continued disclosure of information.
 
-<!--###[Structure]-->
+<!--### [Structure]-->
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
 
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 
 
-<!--##Consequences-->
+<!--## Consequences-->
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
 
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 <!-- limitations as a consequence of applying the pattern.-->
 
 
 
-##Examples
+## Examples
 <!--Motivational example to see how the pattern is applied.-->
 
 1. _Google Latitude reminder email_
@@ -134,30 +134,30 @@ trust in the service and comfort with continued disclosure of information.
  ![Fire Eagle My Alerts configuration by npdoty, on Flickr](http://farm6.static.flickr.com/5001/5642647032_e74e815f6a.jpg)  
  [Fire Eagle My Alerts configuration by npdoty, on Flickr](http://www.flickr.com/photos/npdoty/5642647032])
 
-<!--###[Known Uses]-->
+<!--### [Known Uses]-->
 <!-- Pointers to various applications of the pattern.-->
 
 
 
-<!--##See Also-->
+<!--## See Also-->
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
 
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 <!-- Supporting and conflicting patterns-->
 
 
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 <!-- References to the original source of the pattern.-->
 
 
 
-<!--##General Comments-->
+<!--## General Comments-->
 <!-- Separate discussion on the pattern.-->
 
 
 
-<!--##Tags-->
+<!--## Tags-->
 <!-- User definable descriptors for additional correlation.-->

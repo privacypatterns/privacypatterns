@@ -25,6 +25,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="aggregation-gateway">
     <div id="container">
@@ -37,7 +45,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -466,7 +475,7 @@
 </li>
 </ul>
 </div>
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 
 <!-- All other names the pattern is known by.-->
 
@@ -494,11 +503,11 @@ The service provider receives the encrypted, aggregated measurement and decrypts
 <!--goals-->
 
 <p>Let the service provider have reliable access to the aggregated load at every moment, so as to fulfil its operating requirements, without letting it access the individual load required from each specific service&nbsp;user.</p>
-<!--###[Structure]-->
+<!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
@@ -508,7 +517,7 @@ The service provider receives the encrypted, aggregated measurement and decrypts
 <!--constraints and consequences-->
 
 <p>There is a need to deploy trusted third parties that compute the aggregations over each group of users. Note that they need to be honest (i.e., they cannot collude with the other parties involved), but they need not respect confidentiality (as they only have access to encrypted contents). Smart meters are needed that have computation resources to apply secret generation and homomorphic encryption procedures (note that this is trivial when dealing with the use of computational resources, but it does not have to be always available in the case of e.g. smart grid systems). The potential range of measured values must be large enough to avoid brute force attacks. Robust homomorphic encryption schemes introduce a large computational&nbsp;load.</p>
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 
 <!-- limitations as a consequence of applying the pattern.-->
 
@@ -524,23 +533,23 @@ The service provider receives the encrypted, aggregated measurement and decrypts
 <li>Rottondi, C., Verticale, G., <span class="amp">&amp;</span> Capone, A. (2013). Privacy-preserving smart metering with multiple data consumers. Computer Networks, 57(7),&nbsp;1699-1713.</li>
 <li>Kursawe, K., Danezis, G., <span class="amp">&amp;</span> Kohlweiss, M. (2011, January). Privacy-friendly aggregation for the smart-grid. In Privacy Enhancing Technologies (pp. 175-191). Springer Berlin&nbsp;Heidelberg.</li>
 </ul>
-<!--##See Also-->
+<!--## See Also-->
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 
 <!-- Supporting and conflicting patterns-->
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 
 <!-- References to the original source of the pattern.-->
 
-<!--##General Comments-->
+<!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->
 
-<!--##Tags-->
+<!--## Tags-->
 
 <!-- User definable descriptors for additional correlation.-->
 
@@ -596,6 +605,7 @@ The service provider receives the encrypted, aggregated measurement and decrypts
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

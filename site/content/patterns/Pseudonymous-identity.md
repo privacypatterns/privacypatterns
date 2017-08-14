@@ -1,24 +1,24 @@
 [TOC]
 
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
 
 
-##Summary
+## Summary
 <!-- One short paragraph summarising the pattern.-->
 
 Hide the identity by using a pseudonym and ensure a pseudonymous
 identity that can not be linked with a real identity during online
 interactions.
 
-##Context
+## Context
 <!-- The situations in which the pattern may apply.-->
 
 This pattern can be used for systems in which users are identified by
 public identities.
 
-##Problem
+## Problem
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
 Many kinds of sensitive informations are released through web
@@ -29,7 +29,7 @@ interaction in a forum with an anonymous identity can be dangerous in
 the sense that the relation between original identity and a
 pseudonymous identity can be exposed.
 
-##Solution
+## Solution
 <!-- A concise description of how the pattern addresses the problem.-->
 
 Initiate a random pseudonym, that can not be related to the original,
@@ -39,17 +39,17 @@ concealment, so the pseudonym allocation needs protection.
 <!--goals-->
 Hide the identity of the participants.
 
-<!--###[Structure]-->
+<!--### [Structure]-->
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
 
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 
 
-##Consequences
+## Consequences
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
 
@@ -59,12 +59,12 @@ The real identity of a user is hidden. In certain scenarios there is a
 need for additional space to store the pseudonym-identity mapping.
 Extensive Usage of the same pseudonym can weaken it.
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 <!-- limitations as a consequence of applying the pattern.-->
 
 
 
-##Examples
+## Examples
 <!--Motivational example to see how the pattern is applied.-->
 
 Assuming some students are writing an exam and they have to fill out a
@@ -75,7 +75,7 @@ observant, some students might be able to figure out which identity
 belongs to which pseudonym and so the confidentiality of the identity
 is compromised.
 
-###[Known Uses]
+### [Known Uses]
 <!-- Pointers to various applications of the pattern.-->
 
 Anonymizer are well-known tools for anonymous web interactions. They
@@ -89,25 +89,25 @@ so that identifying information such as names and social security
 numbers are hidden. For example various electronic healthcare systems
 are using pseudonyms for the storage of e-health records.
 
-<!--##See Also-->
+<!--## See Also-->
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
 
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 <!-- Supporting and conflicting patterns-->
 
 
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 <!-- References to the original source of the pattern.-->
 
 
 
-<!--##General Comments-->
+<!--## General Comments-->
 <!-- Separate discussion on the pattern.-->
 
 
 
-<!--##Tags-->
+<!--## Tags-->
 <!-- User definable descriptors for additional correlation.-->
