@@ -4,7 +4,3 @@
 site.log
 /patterns
 .idea/
-site/deploy/media/js/tipuesearch/
-site/deploy/media/css/tipuesearch/
-site/deploy/media/images/tipuesearch/
-site/deploy/search/
