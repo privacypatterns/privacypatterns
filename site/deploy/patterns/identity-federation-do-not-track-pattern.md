@@ -1,11 +1,11 @@
 [TOC]
 
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
 
 
-##Summary
+## Summary
 <!-- One short paragraph summarising the pattern.-->
 
 All information has been extracted from
@@ -15,19 +15,19 @@ The Do Not Track Pattern makes sure that neither the Identity Provider
 nor the Identity Broker can learn the relationship between the user
 and the Service Providers the user us.
 
-##Context
+## Context
 <!-- The situations in which the pattern may apply.-->
 
 This pattern is focused on identity federation models
 
-##Problem
+## Problem
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
 When an identity system provides identifying information about a user
 and passes this to a third party service, different parties can do
 correlation and derive additional information.
 
-##Solution
+## Solution
 <!-- A concise description of how the pattern addresses the problem.-->
 
 Include an orchestrator component, that must act in behalf and be
@@ -41,17 +41,17 @@ of the user.
 <!--goals-->
 Avoid the correlation of end user and service provider data
 
-<!--###[Structure]-->
+<!--### [Structure]-->
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
 
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 
 
-##Consequences
+## Consequences
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
 
@@ -60,40 +60,40 @@ Avoid the correlation of end user and service provider data
 In practice, the orchestrator could run in the browser of the user as
 a javascript program or as an App on his device
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 <!-- limitations as a consequence of applying the pattern.-->
 
 
 
-<!--##Examples-->
+<!--## Examples-->
 <!--Motivational example to see how the pattern is applied.-->
 
 
 
-###[Known Uses]
+### [Known Uses]
 <!-- Pointers to various applications of the pattern.-->
 
 Identity federations and ecosystems
 
-<!--##See Also-->
+<!--## See Also-->
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
 
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 <!-- Supporting and conflicting patterns-->
 
 
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 <!-- References to the original source of the pattern.-->
 
 
 
-<!--##General Comments-->
+<!--## General Comments-->
 <!-- Separate discussion on the pattern.-->
 
 
 
-<!--##Tags-->
+<!--## Tags-->
 <!-- User definable descriptors for additional correlation.-->

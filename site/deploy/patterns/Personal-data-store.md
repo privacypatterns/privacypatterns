@@ -1,30 +1,30 @@
 [TOC]
 
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
 
 
-##Summary
+## Summary
 <!-- One short paragraph summarising the pattern.-->
 
 Subjects keep control on their personal data that are stored on a
 personal device.
 
-##Context
+## Context
 <!-- The situations in which the pattern may apply.-->
 
 The pattern is applicable to any data produced by the data subject (or
 originally under his control) as opposed to data about him produced by
 third parties.
 
-##Problem
+## Problem
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
 Data subjects actually lose control over their data when they are
 stored on a server operated by a third party.
 
-##Solution
+## Solution
 <!-- A concise description of how the pattern addresses the problem.-->
 
 A solution consists in combining a central server and secure personal
@@ -40,17 +40,17 @@ third parties (e.g. health professionals) to get access to the data.
 <!--goals-->
 Enhance the control of the subjects on their personal data.
 
-<!--###[Structure]-->
+<!--### [Structure]-->
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
 
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 
 
-##Consequences
+## Consequences
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
 
@@ -58,42 +58,42 @@ Enhance the control of the subjects on their personal data.
 <!--constraints and consequences-->
 Data subjects need to be equipped with a personal data store.
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 <!-- limitations as a consequence of applying the pattern.-->
 
 
 
-##Examples
+## Examples
 <!--Motivational example to see how the pattern is applied.-->
 
 Patients want to keep control over their health data but also to grant
 specific access to some health professionals.
 
-###[Known Uses]
+### [Known Uses]
 <!-- Pointers to various applications of the pattern.-->
 
 It has even been deployed for certain types of services, in
 particular, in the health sector.
 
-<!--##See Also-->
+<!--## See Also-->
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
 
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 <!-- Supporting and conflicting patterns-->
 
 
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 <!-- References to the original source of the pattern.-->
 
 
 
-<!--##General Comments-->
+<!--## General Comments-->
 <!-- Separate discussion on the pattern.-->
 
 
 
-<!--##Tags-->
+<!--## Tags-->
 <!-- User definable descriptors for additional correlation.-->

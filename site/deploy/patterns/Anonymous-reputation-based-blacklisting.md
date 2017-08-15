@@ -1,21 +1,21 @@
 [TOC]
 
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
 
 
-##Summary
+## Summary
 <!-- One short paragraph summarising the pattern.-->
 
 Get rid of troublemakers without even knowing who they are.
 
-##Context
+## Context
 <!-- The situations in which the pattern may apply.-->
 
 A service provider provides a service to users who access anonymously, and who may make bad use of the service.
 
-##Problem
+## Problem
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
 Anonymity is a desirable property from the perspective of privacy. However, anonymity may foster misbehaviour, as users lack any fear of retribution.
@@ -26,7 +26,7 @@ A Trusted Third Party (TTP) might be introduced in between the user and the serv
 
 How can we make users accountable for their actions while keeping them anonymous?
 
-##Solution
+## Solution
 <!-- A concise description of how the pattern addresses the problem.-->
 
 First, the service provider provides their users with credentials for anonymous authentication.
@@ -40,17 +40,17 @@ In practice, more complex blacklisting rules can be applied as well. For instanc
 <!--goals-->
 A service provider wants to prevent users who misbehave from accessing the service anymore, without gaining access to their identity.
 
-<!--###[Structure]-->
+<!--### [Structure]-->
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
 
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 
 
-##Consequences
+## Consequences
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
 
@@ -58,41 +58,41 @@ A service provider wants to prevent users who misbehave from accessing the servi
 <!--constraints and consequences-->
 Different implementations may only be practical for services with a reduce number of users, require intense computations, limit the scope of the reputation to a constrained time frame, be vulnerable to Sybil attacks, etc. Nonetheless, protocols are being improved to overcome these and other issues. See the cited sources below for the specific discussion.
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 <!-- limitations as a consequence of applying the pattern.-->
 
 
 
-##Examples
+## Examples
 <!--Motivational example to see how the pattern is applied.-->
 
 A wiki allows any visitor to modify its contents, even without having been authenticated. Some malicious visitors may vandalize the contents. This fact is signalled by the wiki administrators. If a visitor coming from the same IP address keeps vandalizing the site, they will earn a bad reputation, and their IP will be banned from modifying the contents anymore. However, users accessing through a Tor anonymity network proxy cannot be identified from their IPs, and thus their reputation cannot be tracked.
 
-###[Known Uses]
+### [Known Uses]
 <!-- Pointers to various applications of the pattern.-->
 
 - Au, M. H., Kapadia, A., & Susilo, W. (2012). BLACR: TTP-free blacklistable anonymous credentials with reputation.
 - Au, M. H., & Kapadia, A. (2012, October). PERM: Practical reputation-based blacklisting without TTPs. In Proceedings of the 2012 ACM conference on Computer and communications security (pp. 929-940). ACM.
 
-<!--##See Also-->
+<!--## See Also-->
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
 
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 <!-- Supporting and conflicting patterns-->
 
 
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 <!-- References to the original source of the pattern.-->
 
 
 
-<!--##General Comments-->
+<!--## General Comments-->
 <!-- Separate discussion on the pattern.-->
 
 
 
-<!--##Tags-->
+<!--## Tags-->
 <!-- User definable descriptors for additional correlation.-->

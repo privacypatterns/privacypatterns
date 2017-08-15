@@ -1,23 +1,23 @@
 [TOC]
 
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
 
 
-##Summary
+## Summary
 <!-- One short paragraph summarising the pattern.-->
 
 This pattern hides the actions taken by a user by adding fake actions
 that are indistinguishable from real.
 
-##Context
+## Context
 <!-- The situations in which the pattern may apply.-->
 
 This pattern is applicable when it is not possible to avoid executing,
 delaying or obfuscating the content of an action.
 
-##Problem
+## Problem
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
 When users interact with ICT systems their actions reveal a lot of
@@ -27,7 +27,7 @@ possible since users cannot completely avoid executing these actions
 because they need to perform them to achieve a goal (e.g., search for
 a word on the Internet, send an email, search for a location).
 
-##Solution
+## Solution
 <!-- A concise description of how the pattern addresses the problem.-->
 
 Since the action must be accurately performed, an option to provide
@@ -39,17 +39,17 @@ actions.
 To hinder the adversary’s ability to infer the user behavior, as well
 as her preferences.
 
-<!--###[Structure]-->
+<!--### [Structure]-->
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
 
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 
 
-##Consequences
+## Consequences
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
 
@@ -63,12 +63,12 @@ personalize services. It has been demonstrated that generating dummies
 that are perfectly indistinguishable from real actions (in terms of
 content, timing, size, etc...) is very difficult.
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 <!-- limitations as a consequence of applying the pattern.-->
 
 
 
-##Examples
+## Examples
 <!--Motivational example to see how the pattern is applied.-->
 
 Alice wants to search for an abortion clinic on Google, but she does
@@ -76,7 +76,7 @@ not want to reveal her intentions of abort to an adversary that may be
 eavesdropping this search (e.g., ISP provider, system administrator of
 her workplace, etc).
 
-###[Known Uses]
+### [Known Uses]
 <!-- Pointers to various applications of the pattern.-->
 
 The use of this pattern has been proposed to protect privacy in
@@ -86,25 +86,25 @@ communications (the user sends fake messages to fake recipients to
 hide her profile), web searches (the user searches for fake terms to
 hide her real preferences).
 
-<!--##See Also-->
+<!--## See Also-->
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
 
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 <!-- Supporting and conflicting patterns-->
 
 
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 <!-- References to the original source of the pattern.-->
 
 
 
-<!--##General Comments-->
+<!--## General Comments-->
 <!-- Separate discussion on the pattern.-->
 
 
 
-<!--##Tags-->
+<!--## Tags-->
 <!-- User definable descriptors for additional correlation.-->

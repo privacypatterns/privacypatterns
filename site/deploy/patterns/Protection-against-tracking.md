@@ -1,25 +1,25 @@
 [TOC]
 
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
 
 
-##Summary
+## Summary
 <!-- One short paragraph summarising the pattern.-->
 
 This pattern avoids the tracking of visitors of websites via cookies.
 It does this by deleting them at regular intervals or by disabling
 cookies completely.
 
-##Context
+## Context
 <!-- The situations in which the pattern may apply.-->
 
 This pattern is applicable when personal identifiable information is
 tracked through software tools, protocols or mechanisms such as
 cookies and the like.
 
-##Problem
+## Problem
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
 With every single interaction in the web you leave footmarks and clues
@@ -29,7 +29,7 @@ anonymity. Web service providers trace user behavior, which can lead
 to user profiling. Also providers can sell the gathered data about
 users visiting their pages to other companies.
 
-##Solution
+## Solution
 <!-- A concise description of how the pattern addresses the problem.-->
 
 Restricting usage of cookies on the client side by deleting cookies on
@@ -45,17 +45,17 @@ sophisticated user profiles emerge.
 Restricting a website to not be able to track any of the user's
 personal identifiable informations.
 
-<!--###[Structure]-->
+<!--### [Structure]-->
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
 
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 
 
-##Consequences
+## Consequences
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
 
@@ -65,12 +65,12 @@ With cookies disabled there is no access to sites that require enabled
 cookies for logging in. Other tracking mechanisms for user
 fingerprinting may still work even when cookies are disabled.
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 <!-- limitations as a consequence of applying the pattern.-->
 
 
 
-##Examples
+## Examples
 <!--Motivational example to see how the pattern is applied.-->
 
 Alice wants to buy shoes and she wants to shop online. She heads to an
@@ -79,7 +79,7 @@ wants, so she buys neither of them. The next day she finds a couple of
 emails in her inbox, giving her suggestions for other shoes and
 alerting her that the viewed shoes are now on sale.
 
-###[Known Uses]
+### [Known Uses]
 <!-- Pointers to various applications of the pattern.-->
 
 Junkbuster is an old proxy filtering between web server and browser to
@@ -91,25 +91,25 @@ this project also seems to be not maintained anymore. There is also
 the Firefox Add-on Self-Destructing Cookies which deletes cookies of
 tabs as soon as they are closed.
 
-<!--##See Also-->
+<!--## See Also-->
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
 
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 <!-- Supporting and conflicting patterns-->
 
 
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 <!-- References to the original source of the pattern.-->
 
 
 
-<!--##General Comments-->
+<!--## General Comments-->
 <!-- Separate discussion on the pattern.-->
 
 
 
-<!--##Tags-->
+<!--## Tags-->
 <!-- User definable descriptors for additional correlation.-->

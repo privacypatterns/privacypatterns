@@ -25,6 +25,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="handling-unusual-account-activities-with-multiple-factors">
     <div id="container">
@@ -37,7 +45,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -710,7 +719,7 @@
 <li><a href="#general-comments">General&nbsp;Comments</a></li>
 </ul>
 </div>
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 
 <!-- All other names the pattern is known by.-->
 
@@ -886,11 +895,11 @@ telephone, or other&nbsp;means.</p>
 <p>For services that can be logged on from multiple devices at the same
 time, the user should be able to check the existence of other sessions,
 and review recent sign-in&nbsp;events.</p>
-<!--###[Structure]-->
+<!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
@@ -936,15 +945,15 @@ authentication, leading to a decreased&nbsp;usability.</p>
  user make a&nbsp;choice.</p>
 <p>It also displays all devices that are linked to the account, and allows
  the user to unlink one or more of&nbsp;them.</p>
-<!--###[Known Uses]-->
+<!--### [Known Uses]-->
 
 <!-- Pointers to various applications of the pattern.-->
 
-<!--##See Also-->
+<!--## See Also-->
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 
 <!-- Supporting and conflicting patterns-->
 
@@ -975,7 +984,7 @@ services, correct passwords can be rejected from a new device /&nbsp;location.</
 <p>This pattern includes multi-factor authentication and two-step
 authentication, which are well studied. But the general topic about
 informing the user of unusual activities seems to be lack of&nbsp;literature.</p>
-<!--##Tags-->
+<!--## Tags-->
 
 <!-- User definable descriptors for additional correlation.-->
 
@@ -1031,6 +1040,7 @@ informing the user of unusual activities seems to be lack of&nbsp;literature.</p
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

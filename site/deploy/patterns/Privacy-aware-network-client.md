@@ -1,22 +1,22 @@
 [TOC]
 
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
 
 
-##Summary
+## Summary
 <!-- One short paragraph summarising the pattern.-->
 
 A privacy policy which is hard to understand is in an automated way
 converted into a more easy to read format.
 
-##Context
+## Context
 <!-- The situations in which the pattern may apply.-->
 
 This pattern is limited to the web browsing domain.
 
-##Problem
+## Problem
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
 Many websites have privacy policies which are hard to understand for
@@ -28,7 +28,7 @@ release information about a user by explaining it through statements
 called privacy policies. These privacy policies are not easy to read
 and to understand.
 
-##Solution
+## Solution
 <!-- A concise description of how the pattern addresses the problem.-->
 
 The problem can be solved by designing and implementing a privacy
@@ -40,17 +40,17 @@ user-friendly way.
 Expand the awareness of the user towards privacy policies of a
 website.
 
-<!--###[Structure]-->
+<!--### [Structure]-->
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
 
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 
 
-##Consequences
+## Consequences
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
 
@@ -66,12 +66,12 @@ which he would otherwise not do. If there are any breaches of
 privacy it can be blamed on the client if he did use a
 privacy-aware client for a particular access.
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 <!-- limitations as a consequence of applying the pattern.-->
 
 
 
-##Examples
+## Examples
 <!--Motivational example to see how the pattern is applied.-->
 
 Alice uses several web services but is not aware of the their privacy
@@ -80,7 +80,7 @@ the actual implications of the legal description. In the absence of
 other solutions, she does not read the policies and does not
 understand the ramifications.
 
-###[Known Uses]
+### [Known Uses]
 <!-- Pointers to various applications of the pattern.-->
 
 JRC P3P Proxy Version 2.0 is a P3P user agent acting like an
@@ -90,25 +90,25 @@ agent is AT&T Privacy Bird. Privacy Bird is a tool warning users if
 privacy policies of visited websites are not matching with their
 individual privacy preferences.
 
-<!--##See Also-->
+<!--## See Also-->
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
 
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 <!-- Supporting and conflicting patterns-->
 
 
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 <!-- References to the original source of the pattern.-->
 
 
 
-<!--##General Comments-->
+<!--## General Comments-->
 <!-- Separate discussion on the pattern.-->
 
 
 
-<!--##Tags-->
+<!--## Tags-->
 <!-- User definable descriptors for additional correlation.-->
