@@ -1,17 +1,17 @@
-commit 098b5d50379aa2f3faa5d5c18614668c789102cf
-Merge: fa6fc07 75e319d
-Author: mohit <mohit.ed@ischool.berkeley.edu>
-
-    Merge pull request #77 from privacypatterns/npdoty-about-63
-
-commit fa6fc074932f53f667ac1407980312c0b49e9333
-Merge: 03201be 0d8756a
-Author: mohit <mohit.ed@ischool.berkeley.edu>
-
-    Merge pull request #76 from privacypatterns/allow-stub-patterns
-
-commit 75e319d2d69bdd825bd055c95c85ed8ae58f041a
+commit e18f0eed663711c0dd30b8f39f372f3f34e3dbd4
+Merge: 2f0fc1e 8c2c431
 Author: Nick Doty <npdoty@ischool.berkeley.edu>
 
-    update list of collaborators and support
+    Merge pull request #80 from olhadrozd/master
+
+commit 2f0fc1ede3c7db2cee04b5c5278b33c7ae6d9676
+Merge: 3611229 dd5c53c
+Author: Nick Doty <npdoty@ischool.berkeley.edu>
+
+    Merge pull request #83 from HecticSeptic/patch-3
+
+commit dd5c53c1028d3877aca5150c8c06b5ecedc2df58
+Author: HecticSeptic <nand@null.net>
+
+    Add attribution to updated About.md
 ===================

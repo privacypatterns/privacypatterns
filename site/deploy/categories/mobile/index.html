@@ -9,8 +9,7 @@
 		categories - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="categories">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -96,38 +104,6 @@
   
   
 		<li>
-		  <a href="/patterns/Asynchronous-notice">
-			  <h3>
-		  		
-						Asynchronous notice
-					
-				</h3>
-
-				
-					<p>How can a service effectively provide notice to a user who gave permission once but whose information is accessed repeatedly (perhaps even continuously) over a long period of time? Proactively notify the user after the time of consent that information is being tracked, stored or re-distributed.</p>
-				
-			</a>
-		</li>
-  
-  
-  
-		<li>
-		  <a href="/patterns/Encryption-user-managed-keys">
-			  <h3>
-		  		
-						Encryption with user-managed keys
-					
-				</h3>
-
-				
-					<p>Use encryption in such a way that the service provider cannot decrypt the user&#39;s information because the user manages the keys.</p>
-				
-			</a>
-		</li>
-  
-  
-  
-		<li>
 		  <a href="/patterns/Active-broadcast-of-presence">
 			  <h3>
 		  		
@@ -153,6 +129,38 @@
 
 				
 					<p>Provide an ambient notice (unobtrusive, non-modal) when location is being accessed to increase awareness of ongoing tracking.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Asynchronous-notice">
+			  <h3>
+		  		
+						Asynchronous notice
+					
+				</h3>
+
+				
+					<p>How can a service effectively provide notice to a user who gave permission once but whose information is accessed repeatedly (perhaps even continuously) over a long period of time? Proactively notify the user after the time of consent that information is being tracked, stored or re-distributed.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Encryption-user-managed-keys">
+			  <h3>
+		  		
+						Encryption with user-managed keys
+					
+				</h3>
+
+				
+					<p>Use encryption in such a way that the service provider cannot decrypt the user&#39;s information because the user manages the keys.</p>
 				
 			</a>
 		</li>
@@ -188,6 +196,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

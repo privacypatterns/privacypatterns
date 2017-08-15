@@ -9,8 +9,7 @@
 		categories - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="categories">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -96,79 +104,15 @@
   
   
 		<li>
-		  <a href="/patterns/Privacy-aware-network-client">
+		  <a href="/patterns/Ambient-notice">
 			  <h3>
 		  		
-						Privacy-Aware Network Client
+						Ambient notice
 					
 				</h3>
 
 				
-					<p>A privacy policy which is hard to understand is in an automated way converted into a more easy to read format.</p>
-				
-			</a>
-		</li>
-  
-  
-  
-		<li>
-		  <a href="/patterns/Data-breach-notification-pattern">
-			  <h3>
-		  		
-						Data Breach Notification Pattern
-					
-				</h3>
-
-				
-					<p>This pattern assures that a certain minimum data breach notification delay is not exceeded.</p>
-				
-			</a>
-		</li>
-  
-  
-  
-		<li>
-		  <a href="/patterns/Privacy-dashboard">
-			  <h3>
-		  		
-						Privacy dashboard
-					
-				</h3>
-
-				
-					<p>An informational privacy dashboard can provide collected summaries of the collected or processed personal data for a particular user.</p>
-				
-			</a>
-		</li>
-  
-  
-  
-		<li>
-		  <a href="/patterns/Layered-policy-design">
-			  <h3>
-		  		
-						Layered Policy Design
-					
-				</h3>
-
-				
-					<p>Split privacy policies into nested, successively refined versions. Leave the legalese to the lawyers.</p>
-				
-			</a>
-		</li>
-  
-  
-  
-		<li>
-		  <a href="/patterns/Unusual-activities">
-			  <h3>
-		  		
-						Handling unusual account activities with multiple factors
-					
-				</h3>
-
-				
-					<p>Use additional factors to notify users of unusual activities and authenticate when accounts may have been compromised.</p>
+					<p>Provide an ambient notice (unobtrusive, non-modal) when location is being accessed to increase awareness of ongoing tracking.</p>
 				
 			</a>
 		</li>
@@ -192,15 +136,31 @@
   
   
 		<li>
-		  <a href="/patterns/Privacy-icons">
+		  <a href="/patterns/Data-breach-notification-pattern">
 			  <h3>
 		  		
-						Privacy icons
+						Data Breach Notification Pattern
 					
 				</h3>
 
 				
-					<p>A privacy policy which is hard to understand by general audience is summarized and translated into commonly agreed visual icons. A privacy icon is worth a thousand-word policy.</p>
+					<p>This pattern assures that a certain minimum data breach notification delay is not exceeded.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Layered-policy-design">
+			  <h3>
+		  		
+						Layered Policy Design
+					
+				</h3>
+
+				
+					<p>Split privacy policies into nested, successively refined versions. Leave the legalese to the lawyers.</p>
 				
 			</a>
 		</li>
@@ -224,6 +184,22 @@
   
   
 		<li>
+		  <a href="/patterns/Privacy-aware-network-client">
+			  <h3>
+		  		
+						Privacy-Aware Network Client
+					
+				</h3>
+
+				
+					<p>A privacy policy which is hard to understand is in an automated way converted into a more easy to read format.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
 		  <a href="/patterns/Privacy-color-coding">
 			  <h3>
 		  		
@@ -240,15 +216,47 @@
   
   
 		<li>
-		  <a href="/patterns/Ambient-notice">
+		  <a href="/patterns/Privacy-dashboard">
 			  <h3>
 		  		
-						Ambient notice
+						Privacy dashboard
 					
 				</h3>
 
 				
-					<p>Provide an ambient notice (unobtrusive, non-modal) when location is being accessed to increase awareness of ongoing tracking.</p>
+					<p>An informational privacy dashboard can provide collected summaries of the collected or processed personal data for a particular user.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Privacy-icons">
+			  <h3>
+		  		
+						Privacy icons
+					
+				</h3>
+
+				
+					<p>A privacy policy which is hard to understand by general audience is summarized and translated into commonly agreed visual icons. A privacy icon is worth a thousand-word policy.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Unusual-activities">
+			  <h3>
+		  		
+						Handling unusual account activities with multiple factors
+					
+				</h3>
+
+				
+					<p>Use additional factors to notify users of unusual activities and authenticate when accounts may have been compromised.</p>
 				
 			</a>
 		</li>
@@ -284,6 +292,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

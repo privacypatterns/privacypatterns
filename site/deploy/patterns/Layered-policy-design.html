@@ -9,8 +9,7 @@
 		Layered Policy Design - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="layered-policy-design">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -222,37 +230,37 @@
         
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
           
 <a href="/categories/explain" class="explain">explain</a>
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -347,7 +355,7 @@
 </ul>
 </div>
 <p>Split privacy policies into nested, successively refined versions. Leave the legalese to the&nbsp;lawyers.</p>
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 
 <!-- All other names the pattern is known by.-->
 
@@ -372,11 +380,11 @@
 <!--goals-->
 
 <p>Make users really understand what they can expect about their personal data from a data controller (in terms of which data is managed, for which purposes,&nbsp;etc.)</p>
-<!--###[Structure]-->
+<!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
@@ -387,7 +395,7 @@
 
 <p>The use of this pattern fosters simplicity, transparency and&nbsp;choice.</p>
 <p>However, two versions of the privacy policies coexist, which may introduce potential contradictions; in particular, the data controller must ensure that updates are performed in parallel and&nbsp;coherently.</p>
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 
 <!-- limitations as a consequence of applying the pattern.-->
 
@@ -404,23 +412,23 @@
 <li>It is recommended by British Information's Commissioner Office in its Privacy Notices Code of Practice&nbsp;(p.55)</li>
 <li>This concept is quite similar to the Creative Commons license layers in the field of copyright&nbsp;management.</li>
 </ul>
-<!--##See Also-->
+<!--## See Also-->
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 
 <!-- Supporting and conflicting patterns-->
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 
 <!-- References to the original source of the pattern.-->
 
-<!--##General Comments-->
+<!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->
 
-<!--##Tags-->
+<!--## Tags-->
 
 <!-- User definable descriptors for additional correlation.-->
 
@@ -476,6 +484,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

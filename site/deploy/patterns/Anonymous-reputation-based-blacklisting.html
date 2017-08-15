@@ -9,8 +9,7 @@
 		Anonymous Reputation-based Blacklisting - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="anonymous-reputation-based-blacklisting">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -86,8 +94,6 @@
 <div id="content">
   <p id="cats">
     Categories: 
-      
-        
       
         
       
@@ -205,57 +211,9 @@
       
         
       
+        
+      
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
       
         
       
@@ -291,6 +249,56 @@
           
 <a href="/categories/hide" class="hide">hide</a>
            &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -466,7 +474,7 @@
 </li>
 </ul>
 </div>
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 
 <!-- All other names the pattern is known by.-->
 
@@ -495,11 +503,11 @@
 <!--goals-->
 
 <p>A service provider wants to prevent users who misbehave from accessing the service anymore, without gaining access to their&nbsp;identity.</p>
-<!--###[Structure]-->
+<!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
@@ -509,7 +517,7 @@
 <!--constraints and consequences-->
 
 <p>Different implementations may only be practical for services with a reduce number of users, require intense computations, limit the scope of the reputation to a constrained time frame, be vulnerable to Sybil attacks, etc. Nonetheless, protocols are being improved to overcome these and other issues. See the cited sources below for the specific&nbsp;discussion.</p>
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 
 <!-- limitations as a consequence of applying the pattern.-->
 
@@ -524,23 +532,23 @@
 <li>Au, M. H., Kapadia, A., <span class="amp">&amp;</span> Susilo, W. (2012). BLACR: TTP-free blacklistable anonymous credentials with&nbsp;reputation.</li>
 <li>Au, M. H., <span class="amp">&amp;</span> Kapadia, A. (2012, October). PERM: Practical reputation-based blacklisting without TTPs. In Proceedings of the 2012 ACM conference on Computer and communications security (pp. 929-940).&nbsp;ACM.</li>
 </ul>
-<!--##See Also-->
+<!--## See Also-->
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 
 <!-- Supporting and conflicting patterns-->
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 
 <!-- References to the original source of the pattern.-->
 
-<!--##General Comments-->
+<!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->
 
-<!--##Tags-->
+<!--## Tags-->
 
 <!-- User definable descriptors for additional correlation.-->
 
@@ -596,6 +604,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

@@ -9,8 +9,7 @@
 		Privacy dashboard - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="privacy-dashboard">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -252,11 +260,11 @@
         
       
         
-      
-        
           
 <a href="/categories/access" class="access">access</a>
            &bull; 
+        
+      
         
       
         
@@ -378,15 +386,15 @@
         
       
         
-      
-        
-      
-        
-      
-        
           
 <a href="/categories/location" class="location">location</a>
            &bull; 
+        
+      
+        
+      
+        
+      
         
       
         
@@ -604,11 +612,11 @@
         
       
         
-      
-        
           
 <a href="/categories/provide" class="provide">provide</a>
           
+        
+      
         
       
         
@@ -703,7 +711,7 @@
 <li><a href="#see-also">See&nbsp;Also</a></li>
 </ul>
 </div>
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 
 <!-- All other names the pattern is known by.-->
 
@@ -732,19 +740,19 @@
 <p>An informational privacy dashboard can provide collected summaries of the collected or processed personal data for a particular user. While access to raw data may be useful for some purposes, a dashboard provides a summary or highlight of important personal data. Seek to make the data meaningful to the user with examples, visualizations and&nbsp;statistics.</p>
 <p>Where users have choices for deletion or correction of stored data, a dashboard view of collected data is an appropriate place for these controls (which users may be inspired to use on realizing the extent of their collected&nbsp;data).</p>
 <p>In short, a dashboard answers the common user question "what do you know about me?" and does so in a way that the user can understand and take appropriate action if&nbsp;necessary.</p>
-<!--###[Structure]-->
+<!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
-<!--##Consequences-->
+<!--## Consequences-->
 
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 
 <!-- limitations as a consequence of applying the pattern.-->
 
@@ -757,7 +765,7 @@
 <p><img alt="Google Dashboard Latitude" src="/media/images/Google_Dashboard_Latitude.png" /></p>
 <p>The <a href="https://google.com/dashboard">Google Dashboard</a> shows a summary of the content stored and/or shared by many (but not all) of Google's services (Latitude, Google's location sharing service, is shown above). For each service, a summary (with counts) of each type of data is listed, and in some cases an example of the most recent such item is described. An icon signifies which pieces of data are public. Links are also provided in two categories: to actions that can be taken to change or delete data, and to privacy policy / help&nbsp;pages.</p>
 <p><a href="http://www.google.com/support/accounts/bin/answer.py?answer#162744">Google Accounts: About the&nbsp;Dashboard</a></p>
-<!--###[Known Uses]-->
+<!--### [Known Uses]-->
 
 <!-- Pointers to various applications of the pattern.-->
 
@@ -765,19 +773,19 @@
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
 <p>Dashboards are a widely-used pattern in other data-intensive activities for providing a summary of key or actionable metrics. See: <em>external references needed&nbsp;here</em></p>
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 
 <!-- Supporting and conflicting patterns-->
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 
 <!-- References to the original source of the pattern.-->
 
-<!--##General Comments-->
+<!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->
 
-<!--##Tags-->
+<!--## Tags-->
 
 <!-- User definable descriptors for additional correlation.-->
 
@@ -833,6 +841,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

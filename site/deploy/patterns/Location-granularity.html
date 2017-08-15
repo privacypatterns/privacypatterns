@@ -9,8 +9,7 @@
 		Location Granularity - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="location-granularity">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -86,12 +94,6 @@
 <div id="content">
   <p id="cats">
     Categories: 
-      
-        
-      
-        
-      
-        
       
         
       
@@ -205,9 +207,13 @@
       
         
       
-    
+        
       
         
+      
+        
+      
+    
       
         
       
@@ -325,7 +331,55 @@
       
         
       
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -399,53 +453,51 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -521,50 +573,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
   </p>
   <h1>
@@ -582,7 +590,7 @@
 <li><a href="#examples">Examples</a></li>
 </ul>
 </div>
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 
 <!-- All other names the pattern is known by.-->
 
@@ -611,19 +619,19 @@
 <p>Since much geographic data inherently has different levels of precision (see <a href="Geographic ontologies">geographic ontologies</a>, for example) -- like street, city, county, state, country -- there may be natural divisions in the precision of location data. By collecting or distributing only the necessary level of granularity, a service may be able to maintain the same functionality without requesting or distributing potentially sensitive data. A local weather site can access only the user's zip code to provide relevant weather without ever accessing precise (and therefore sensitive) location&nbsp;information.</p>
 <p>A similar pattern is <a href="Fuzzing">location fuzzing</a> which uses an algorithm to decrease the accuracy of location data without changing its lat/lon precision. This may be useful if the application only functions on latitude/longitude data, but can be vulnerable to&nbsp;attack.</p>
 <p>In some cases, less granular data may also better capture the intent of a user (that tweet was about Sproul Plaza in general, not that particular corner) or be more meaningful to a recipient ("Nick is in Berkeley, CA" means more to my DC relatives than the particular intersection). For more along these lines, see, for example, <a href="http://www.meloproject.com/team">the Meaningful Location Project</a>.</p>
-<!--###[Structure]-->
+<!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
-<!--##Consequences-->
+<!--## Consequences-->
 
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 
 <!-- limitations as a consequence of applying the pattern.-->
 
@@ -654,27 +662,27 @@
 <li><em>Geode</em></li>
 </ol>
 <p>One of the fore-runners to the W3C Geolocation API, Firefox's experimental Geode feature allowed JavaScript access to the current location at four different levels of&nbsp;granularity.</p>
-<!--###[Known Uses]-->
+<!--### [Known Uses]-->
 
 <!-- Pointers to various applications of the pattern.-->
 
-<!--##See Also-->
+<!--## See Also-->
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 
 <!-- Supporting and conflicting patterns-->
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 
 <!-- References to the original source of the pattern.-->
 
-<!--##General Comments-->
+<!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->
 
-<!--##Tags-->
+<!--## Tags-->
 
 <!-- User definable descriptors for additional correlation.-->
 
@@ -730,6 +738,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

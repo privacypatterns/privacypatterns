@@ -9,8 +9,7 @@
 		Data Breach Notification Pattern - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="data-breach-notification-pattern">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -466,7 +474,7 @@
 </li>
 </ul>
 </div>
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 
 <!-- All other names the pattern is known by.-->
 
@@ -490,11 +498,11 @@
 <!--goals-->
 
 <p>The pattern goal is to constantly ensure a minimum delay of notification, should a data breach have occurred, and in case a notification exceeds the allowed delay, to indicate this by appropriate&nbsp;means.</p>
-<!--###[Structure]-->
+<!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
@@ -504,7 +512,7 @@
 <!--constraints and consequences-->
 
 <p>In order to use the pattern, the personal data processor must have in place an access control mechanism and a monitoring mechanism that allows to monitor every PII access. The pattern cannot ensure that a PII Incident Manager will take adequate actions, hence this process has to be established and controlled by other&nbsp;means.</p>
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 
 <!-- limitations as a consequence of applying the pattern.-->
 
@@ -516,23 +524,23 @@
 <!-- Pointers to various applications of the pattern.-->
 
 <p>This pattern is based on the privacy principle "Accountability" specified in ISO/IEC 29100 that is also used in Annex A of ISO/IEC 27018. More specifically, it addresses A.9.1 Notification of a data breach involving Personally Identifiable Information (PII). Uses of the pattern as a concrete instantiation of A.9.1 are not&nbsp;known.</p>
-<!--##See Also-->
+<!--## See Also-->
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 
 <!-- Supporting and conflicting patterns-->
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 
 <!-- References to the original source of the pattern.-->
 
-<!--##General Comments-->
+<!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->
 
-<!--##Tags-->
+<!--## Tags-->
 
 <!-- User definable descriptors for additional correlation.-->
 
@@ -588,6 +596,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

@@ -9,8 +9,7 @@
 		categories - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="categories">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -96,22 +104,6 @@
   
   
 		<li>
-		  <a href="/patterns/Trustworthy-privacy-plugin">
-			  <h3>
-		  		
-						Trustworthy Privacy Plug-in
-					
-				</h3>
-
-				
-					<p>Aggregate usage records at the user side in a trustworthy manner.</p>
-				
-			</a>
-		</li>
-  
-  
-  
-		<li>
 		  <a href="/patterns/Aggregation-gateway">
 			  <h3>
 		  		
@@ -121,6 +113,22 @@
 
 				
 					<p>Encrypt, aggregate and decrypt at different places.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Trustworthy-privacy-plugin">
+			  <h3>
+		  		
+						Trustworthy Privacy Plug-in
+					
+				</h3>
+
+				
+					<p>Aggregate usage records at the user side in a trustworthy manner.</p>
 				
 			</a>
 		</li>
@@ -156,6 +164,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

@@ -9,8 +9,7 @@
 		Policy Matching Display - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="policy-matching-display">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -364,11 +372,11 @@
         
       
         
-      
-        
           
 <a href="/categories/provide" class="provide">provide</a>
           
+        
+      
         
       
         
@@ -465,7 +473,7 @@
 </li>
 </ul>
 </div>
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 
 <!-- All other names the pattern is known by.-->
 
@@ -488,11 +496,11 @@
 <!--goals-->
 
 <p>Allow users to provide a consistent privacy-related behaviour, while reducing their cognitive workload every time they enrol in a new&nbsp;service.</p>
-<!--###[Structure]-->
+<!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
@@ -502,11 +510,11 @@
 <!--constraints and consequences-->
 
 <p>This pattern requires sharing a machine-readable format to express and exchange definitions of privacy policies between the user agent and the service providers. Several such formats exist, yet they are not always supported by either user agents or by service providers. Besides, not all the privacy policy nuances can be expressed in existing privacy policy&nbsp;languages.</p>
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 
 <!-- limitations as a consequence of applying the pattern.-->
 
-<!--##Examples-->
+<!--## Examples-->
 
 <!--Motivational example to see how the pattern is applied.-->
 
@@ -520,23 +528,23 @@
 <li>A more recent example is available at S4P: A generic language for specifying privacy preferences and policies. Microsoft&nbsp;Research.</li>
 <li>... and Sacco, O., <span class="amp">&amp;</span> Passant, A. (2011, March). A Privacy Preference Ontology (PPO) for Linked Data. In&nbsp;LDOW.</li>
 </ul>
-<!--##See Also-->
+<!--## See Also-->
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 
 <!-- Supporting and conflicting patterns-->
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 
 <!-- References to the original source of the pattern.-->
 
-<!--##General Comments-->
+<!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->
 
-<!--##Tags-->
+<!--## Tags-->
 
 <!-- User definable descriptors for additional correlation.-->
 
@@ -592,6 +600,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

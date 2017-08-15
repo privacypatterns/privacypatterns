@@ -1,11 +1,11 @@
 [TOC]
 
-<!--###[Also Known As]-->
+<!--### [Also Known As]-->
 <!-- All other names the pattern is known by.-->
 
 
 
-##Summary
+## Summary
 <!-- One short paragraph summarising the pattern.-->
 
 Strip potentially sensitive metadata that isn't directly visible to the end user.
@@ -13,7 +13,7 @@ Strip potentially sensitive metadata that isn't directly visible to the end user
 <!--intent-->
 
 
-##Context
+## Context
 <!-- The situations in which the pattern may apply.-->
 
 When a service requires a user to import data from external sources (eg.
@@ -23,7 +23,7 @@ automatically generated or not directly visible. Services might be
 inadvertently responsible for exposing private metadata, or going
 against users' expectations.
 
-##Problem
+## Problem
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
 Users are not always fully aware of the various kinds of metadata
@@ -40,7 +40,7 @@ treat additional metadata attached with files? In case of uploading
 documents and images, which parts of the metadata can be treated as
 explicitly shared information.
 
-##Solution
+## Solution
 <!-- A concise description of how the pattern addresses the problem.-->
 
 Stripping all metadata that is not directly visible during upload time,
@@ -58,27 +58,27 @@ cases with other entities on the Internet.
 To summarize: user metadata that can not be made visible to users
 clearly should be stripped to avoid overstepping the users' expectations. 
 
-<!--###[Structure]-->
+<!--### [Structure]-->
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
 
 
-<!--###[Implementation]-->
+<!--### [Implementation]-->
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 
 
-<!--##Consequences-->
+<!--## Consequences-->
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
 
 
-<!--###[Constraints]-->
+<!--### [Constraints]-->
 <!-- limitations as a consequence of applying the pattern.-->
 
 
 
-##Examples
+## Examples
 <!--Motivational example to see how the pattern is applied.-->
 
 1. Uploading images to twitter.com
@@ -97,30 +97,30 @@ clearly should be stripped to avoid overstepping the users' expectations.
 
  _TODO: add screenshots_
 
-<!--###[Known Uses]-->
+<!--### [Known Uses]-->
 <!-- Pointers to various applications of the pattern.-->
 
 
 
-<!--##See Also-->
+<!--## See Also-->
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
 
 
-<!--###[Related Patterns]-->
+<!--### [Related Patterns]-->
 <!-- Supporting and conflicting patterns-->
 
 
 
-<!--###[Sources]-->
+<!--### [Sources]-->
 <!-- References to the original source of the pattern.-->
 
 
 
-<!--##General Comments-->
+<!--## General Comments-->
 <!-- Separate discussion on the pattern.-->
 
 
 
-<!--##Tags-->
+<!--## Tags-->
 <!-- User definable descriptors for additional correlation.-->
