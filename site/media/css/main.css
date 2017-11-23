@@ -125,7 +125,7 @@ h4 { font-size: 18px; font-style: italic; }
 h5 { font-size: 16px; }
 h6 { font-size: 14px; font-weight: bold; }
 
-em { font-weight: bold; }
+em { font-style: italic; }
 
 a { color: #42599E; }
 a:hover { text-decoration: none; }
