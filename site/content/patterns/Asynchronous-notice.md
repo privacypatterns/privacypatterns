@@ -102,37 +102,28 @@ trust in the service and comfort with continued disclosure of information.
 
 1. _Google Latitude reminder email_
 
- Google Latitude users can configure a reminder email (see below) when their
- location is being shared with any application, including internal applications
- like the Location History service.
+   Google Latitude users can configure a reminder email (see below) when their
+   location is being shared with any application, including internal applications
+   like the Location History service.
 
- * * *
+   <hr>This is a reminder that you are sharing your Latitude location with the following application(s):
 
-     This is a reminder that you are sharing your Latitude location with the following application(s): 
+   **Google Location History**  
+   You may disable these applications at any time by going to <https://www.google.com/latitude/apps?hl=en]>
 
-    
+   **Do more with Latitude**  
+   Go to <https://www.google.com/latitude/apps> on your computer and try the following:
 
-     Google Location History 
-     You may disable these applications at any time by going to <https://www.google.com/latitude/apps?hl=en]>
+   Google Location History lets you store your history and see a dashboard of interesting information such as frequently visited places and recent trips. 
+   Google Talk Location Status lets you post your location in your chat status. 
+   Google Public Location Badge lets you publish your location on your blog or site. 
 
-     **Do more with Latitude**
-     Go to <https://www.google.com/latitude/apps> on your computer and try the following: 
-
-    
-
-     Google Location History lets you store your history and see a dashboard of interesting information such as frequently visited places and recent trips. 
-     Google Talk Location Status lets you post your location in your chat status. 
-     Google Public Location Badge lets you publish your location on your blog or site. 
-
-     You are receiving this reminder once a week. To change your reminder settings, go to: 
-     <https://www.google.com/latitude/apps?hl=en&tab=privacyreminders>
-
- * * *
+   You are receiving this reminder once a week. To change your reminder settings, go to: <https://www.google.com/latitude/apps?hl=en&tab=privacyreminders><hr>
 
 2. _Fire Eagle My Alerts_
 
- ![Fire Eagle My Alerts configuration by npdoty, on Flickr](http://farm6.static.flickr.com/5001/5642647032_e74e815f6a.jpg)  
- [Fire Eagle My Alerts configuration by npdoty, on Flickr](http://www.flickr.com/photos/npdoty/5642647032])
+   ![Fire Eagle My Alerts configuration by npdoty, on Flickr](http://farm6.static.flickr.com/5001/5642647032_e74e815f6a.jpg)  
+   [Fire Eagle My Alerts configuration by npdoty, on Flickr](http://www.flickr.com/photos/npdoty/5642647032])
 
 <!--### [Known Uses]-->
 <!-- Pointers to various applications of the pattern.-->
