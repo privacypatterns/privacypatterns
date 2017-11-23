@@ -1,0 +1,50 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
+      - image: circleci/python:2.7
+      
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - dependencies-{{ checksum "./hyde/hyde.py" }}
+
+      - run:
+          name: install dependencies
+          command: |
+            python -m venv venv
+            . venv/bin/activate
+            make ./hyde/hyde.py
+
+      - save_cache:
+          paths:
+            - ./venv
+          key: dependencies-{{ checksum "./hyde/hyde.py" }}
+        
+      # make static files!
+      - run:
+          name: generate website
+          command: |
+            . venv/bin/activate
+            make build
+            make static
+
+      - setup-remote-docker
+
+      - run:
+        name: build docker container
+        command: |
+          docker build -t privacypatterns/website:$CIRCLE_BRANCH
+          docker login -u $DOCKER_USER -p $DOCKER_PASS
+          docker push privacypatterns/website:$CIRCLE_BRANCH
