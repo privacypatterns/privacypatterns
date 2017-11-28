@@ -26,7 +26,8 @@ The underlying issues are discussed in more detail below.
 #### An All or Nothing Mindset
 Controllers are tempted to see consent as all-encompassing, see held personal data as data available for use, and the lack of that data as a barrier to service. This mindset reduces adoption of the offering and may introduce a lack of trust.
 
-#### The Temptation to Track or Share by Default
+#### The Temptation to Share by Default
+<!-- Note, long headings (~40char) will make text and ToC overlap -->
 User information is frequently acquired before users are given the opportunity to decide whether to share. An example of this is in cookie policies, where the whole site is loaded before the user is shown the policy. From this loading, metadata is often generated even if the user chooses to leave the site.
 
 This problem is also present when users register for or acquire a service, as unnecessary information is often requested as part of the process.  In the case of account registration users are often provided with inappropriate default settings. They are typically sent additional offers by default as well. The negative implications of these defaults are also not necessarily reversible, as the Internet is notorious for its inability to forget.
@@ -35,8 +36,6 @@ This problem is also present when users register for or acquire a service, as un
 Services tend to collect a surplus of information, especially in contexts where monitoring is integral to the system, such as in productivity tracking. This unnecessary level of detail results in negative experience factors for the tracked individuals (for e.g. increased levels of anxiety) which in a work environment may affect their actual productiveness.
 
 #### Forces/Concerns
-<!-- Implications in this problem which affect the appropriateness of a solution, and are affected by this pattern.-->
-<!-- Forces should be highly visible for easy reference, where less obvious a dedicated section is recommended.-->
 - Controllers want their system to be applicable to as many potential users as possible, but do not want this to heavily inflate costs or jeopardise profits
 - Users want to be able to use a system anonymously, or with as little leakage of their personal information as needed to perform functionality
 - Controllers do not want users to be capable of malicious activity without consequence
