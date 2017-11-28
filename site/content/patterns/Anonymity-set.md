@@ -73,7 +73,7 @@ to the laboratory. The PHI's consists of the patients' name, birth
 date, sex, zip code and diagnostics record. The clinic releases the
 datasets without the name of the patients, to protect their privacy. A
 malicious worker at the laboratory for research wants to make use of
-these informations and recovers the names of the patients. The worker
+this information and recovers the names of the patients. The worker
 goes to the city council of a certain area to get a voter list from
 them. The two lists are matched for age, sex and location. The worker
 finds the name and address information from the voter registration
@@ -83,8 +83,8 @@ data and the health information from the patient health data.
 <!-- Pointers to various applications of the pattern.-->
 
 Anonymity sets are in use in various routing obfuscation mechanisms
-like Onion Routing. Hordes is a multicast based protocol, that makes
-use of multicast routing like point-to-multipoint de- livery, so that
+like Onion Routing. Hordes is a multicast-based protocol that makes
+use of multicast routing like point-to-multipoint delivery, so that
 anonymity is provided. Mix Zone is a location-aware application that
 anonymizes user identity by limiting the positions where users can be
 located.

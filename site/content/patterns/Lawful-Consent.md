@@ -28,8 +28,6 @@ Concerned controllers aim to promote trust in any number of ways, potentially in
 An controller aims to maximise the value of their services by gathering as much sharing and participation as possible, potentially seeing user consent as a barrier to functionality and efficiency. They may inadvertently subvert notions of consent by unnecessarily bundling together desirable services with needs for personal information, or downplaying the significance of the data involved. They undermine self-determination at the risk of losing trust from their users, and attracting legal investigations which may rule their practices unlawful.
 
 #### Forces/Concerns
-<!-- Implications in this problem which affect the appropriateness of a solution, and are affected by this pattern.-->
-<!-- Forces should be highly visible for easy reference, where less obvious a dedicated section is recommended.-->
 - Controllers want to encourage participation, and thus may be less concerned with investigating or revealing tradeoffs
 - Controllers may be tempted to bundle various services under a single broad consent request, pressuring users into agreements they might not otherwise accept
 - Users often want to make use of new and exciting features, and therefore easily overlook downplayed privacy risks
@@ -98,7 +96,7 @@ Allowing informed and specific consent prevents controllers from soliciting misp
 ### [Related Patterns]
 <!-- Supporting and conflicting patterns-->
 
-[Lawful Consent](Lawful-Consent) is a compound pattern of various other consent-based patterns. Therefore it _may use_ a combination of [Informed Consent for Web-based Transactions](Informed-Consent-for-Web-based-Transactions), [Obtaining Explicit Consent](Obtaining-Explicit-Consent), and [Sign an Agreement to Solve Lack of Trust on the Use of Private Data Context](Sign-an-Agreement-to-Solve-Lack-of-Trust-on-the-Use-of-Private-Data-Context) (or simply, Contractual Consent). 
+[Lawful Consent](Lawful-Consent) is a compound pattern of various other consent-based patterns. Therefore it _may use_ a combination of [Informed Consent for Web-based Transactions](Informed-Consent-for-Web-based-Transactions), [Obtaining Explicit Consent](Obtaining-Explicit-Consent), and [Sign an Agreement to Solve Lack of Trust on the Use of Private Data Context](Sign-an-Agreement-to-Solve-Lack-of-Trust-on-the-Use-of-Private-Data-Context) (or simply, Contractual Consent).
 
 Since it contains crucial elements from each of its constituents, with the potential for additional focus based on context, this compound pattern is useful for every pattern that needs to consider user consent. As such, the list of patterns which _must use_ this pattern is extensive and listed here non-exhaustively. Within patterns for Control they include:
 
