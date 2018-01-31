@@ -20,7 +20,8 @@ This project is a collaboration of:
 * Christoph Boesch, Frank Kargl, Henning Kopp and Patrick Mosby, [Ulm University](https://www.uni-ulm.de)
 * Daniel Le Métayer, [Inria](https://www.inria.fr)
 * Olha Drozd, [Vienna University of Economics and Business](https://www.wu.ac.at)
-* José M. del Álamo, Yod Samuel Martín and Julio C. Caiza, [Universidad Politécnica de Madrid](http://www.upm.es)
+* José M. del Álamo and Yod Samuel Martín, [Universidad Politécnica de Madrid](http://www.upm.es)
+* Julio C. Caiza, [Escuela Politécnica Nacional](http://www.epn.edu.ec) and [Universidad Politécnica de Madrid](http://www.upm.es)
 * Mohit Gupta, [Clever](http://www.clever.com)
 * Nick Doty, [UC Berkeley School of Information](https://www.ischool.berkeley.edu/)
 
