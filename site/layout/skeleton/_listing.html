@@ -13,9 +13,19 @@
 <aside id="sidebar">
 	<h2>Categories</h2>
   <ul id="cats">
-    {% for category in categories %}
+    {% used = list() %}
+    {% for strategy in (s for s in categories if s.meta.type == "strategy") %}
+      used.append(strategy.name)
+      <ul>{% include "skeleton/_strategy.html" %}</ul>
+      {% for tactic in (t for t in categories if t.name in strategy.tactics) %}
+        used.append(tactic.name)
+        <li>{% include "skeleton/_tactic.html" %}</li>
+      {% endfor %}
+    {% endfor %}
+    {% for category in (c for c in categories if c.name not in used) %}
       <li>{% include "skeleton/_category.html" %}</li>
     {% endfor %}
+    {% del used[:] %}
   </ul>
 </aside>
 {% endblock %}
