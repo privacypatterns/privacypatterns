@@ -22,6 +22,7 @@
   
   <ul id="patterns_listing">
   {% for post in posts %}
+  {% if post.status != "stub" %}
 		<li>
 		  <a href="{{post.url}}">
 			  <h3>
@@ -35,6 +36,7 @@
 				{%endif%}
 			</a>
 		</li>
+  {% endif %}
   {% endfor %}
   </ul>
 {% endblock %}

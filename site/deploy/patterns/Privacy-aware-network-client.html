@@ -9,8 +9,7 @@
 		Privacy-Aware Network Client - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="privacy-aware-network-client">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -140,6 +148,26 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
 <a href="/categories/privacy-policy" class="privacy-policy">privacy-policy</a>
            &bull; 
@@ -179,7 +207,41 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -273,7 +335,25 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -367,7 +447,59 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -444,7 +576,137 @@
         
           
 <a href="/categories/inform" class="inform">inform</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
+<a href="/categories/explain" class="explain">explain</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -472,19 +734,32 @@
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#problem">Problem</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#goals">Goals</a></li>
-<li><a href="#motivating-example">Motivating&nbsp;Example</a></li>
+<li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a></li>
-<li><a href="#constraints-and-consequences">Constraints and&nbsp;Consequences</a></li>
-<li><a href="#known-uses">Known&nbsp;Uses</a></li>
+<li><a href="#consequences">Consequences</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+</ul>
+</li>
 </ul>
 </div>
+<!--### [Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
 <h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
 <p>A privacy policy which is hard to understand is in an automated way
 converted into a more easy to read&nbsp;format.</p>
+<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
+<p>This pattern is limited to the web browsing&nbsp;domain.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>Many websites have privacy policies which are hard to understand for
 the general&nbsp;audience.</p>
 <p>Many people enter websites with different intentions like shopping,
@@ -492,22 +767,29 @@ research, etc. At the same time those responsible collect, use and
 release information about a user by explaining it through statements
 called privacy policies. These privacy policies are not easy to read
 and to&nbsp;understand.</p>
-<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<p>This pattern is limited to the web browsing&nbsp;domain.</p>
-<h2 id="goals"><a class="toclink" href="#goals">Goals</a></h2>
-<p>Expand the awareness of the user towards privacy policies of a&nbsp;website.</p>
-<h2 id="motivating-example"><a class="toclink" href="#motivating-example">Motivating&nbsp;Example</a></h2>
-<p>Alice uses several web services but is not aware of the their privacy
-policies. Even when she reads the policies, she is still not aware of
-the actual implications of the legal description. In the absence of
-other solutions, she does not read the policies and does not
-understand the&nbsp;ramifications.</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
 <p>The problem can be solved by designing and implementing a privacy
 proxy that can parse and interpret policies. Afterwards it translates
 the policies into a human-readable format to present them in a
 user-friendly&nbsp;way.</p>
-<h2 id="constraints-and-consequences"><a class="toclink" href="#constraints-and-consequences">Constraints and&nbsp;Consequences</a></h2>
+<!--goals-->
+
+<p>Expand the awareness of the user towards privacy policies of a&nbsp;website.</p>
+<!--### [Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--### [Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--constraints and consequences-->
+
 <p>The user's awareness of the privacy policy rises so that more informed
 decisions can be made. The proxy is able to automatically detect
 changes of the privacy policy. A separate secure connection is needed
@@ -517,13 +799,46 @@ in the client. An attack on this could lead the user to decisions
 which he would otherwise not do. If there are any breaches of
 privacy it can be blamed on the client if he did use a
 privacy-aware client for a particular&nbsp;access.</p>
-<h2 id="known-uses"><a class="toclink" href="#known-uses">Known&nbsp;Uses</a></h2>
+<!--### [Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<p>Alice uses several web services but is not aware of the their privacy
+policies. Even when she reads the policies, she is still not aware of
+the actual implications of the legal description. In the absence of
+other solutions, she does not read the policies and does not
+understand the&nbsp;ramifications.</p>
+<h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
+<!-- Pointers to various applications of the pattern.-->
+
 <p>JRC P3P Proxy Version 2.0 is a P3P user agent acting like an
 intermediary. Depending on the specified privacy preferences of a
 user, it controls the access to web servers. Another known P3P user
 agent is AT&amp;T Privacy Bird. Privacy Bird is a tool warning users if
 privacy policies of visited websites are not matching with their
-invidual privacy&nbsp;preferences.</p>
+individual privacy&nbsp;preferences.</p>
+<!--## See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--### [Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--### [Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--## General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--## Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	
@@ -577,6 +892,7 @@ invidual privacy&nbsp;preferences.</p>
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

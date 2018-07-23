@@ -1,16 +1,17 @@
-commit 28a2fc022425541cd0a9369f074fe7c6bc70e56b
+commit e18f0eed663711c0dd30b8f39f372f3f34e3dbd4
+Merge: 2f0fc1e 8c2c431
 Author: Nick Doty <npdoty@ischool.berkeley.edu>
 
-    remove npdoty email address, and fix github links/capitalization
+    Merge pull request #80 from olhadrozd/master
 
-commit 2416de5ee07551bb759a35ebfa8cf4802c64df14
-Merge: befcb13 f2518d4
-Author: mohit <mohit.ed@ischool.berkeley.edu>
+commit 2f0fc1ede3c7db2cee04b5c5278b33c7ae6d9676
+Merge: 3611229 dd5c53c
+Author: Nick Doty <npdoty@ischool.berkeley.edu>
 
-    Merge pull request #69 from privacypatterns/publish-date-changelog
+    Merge pull request #83 from HecticSeptic/patch-3
 
-commit f2518d4ae951193ed348eff31d9c4ed94af13b02
-Author: Mohit Gupta <mohit.ed@ischool.berkeley.edu>
+commit dd5c53c1028d3877aca5150c8c06b5ecedc2df58
+Author: HecticSeptic <nand@null.net>
 
-    add commit logs and change log
+    Add attribution to updated About.md
 ===================

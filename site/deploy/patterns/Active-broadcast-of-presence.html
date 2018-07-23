@@ -9,8 +9,7 @@
 		Active broadcast of presence - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="active-broadcast-of-presence">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -128,6 +136,26 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
 <a href="/categories/location" class="location">location</a>
            &bull; 
@@ -157,6 +185,144 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/mobile" class="mobile">mobile</a>
+           &bull; 
         
       
         
@@ -273,6 +439,38 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
       
         
@@ -346,9 +544,41 @@
         
       
         
+      
+        
+      
+        
+      
+        
           
-<a href="/categories/mobile" class="mobile">mobile</a>
+<a href="/categories/update" class="update">update</a>
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -377,32 +607,96 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#intent">Intent</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a><ul>
-<li><a href="#examples">Examples</a><ul>
-<li><a href="#foursquare-check-in-model">Foursquare check-in&nbsp;model</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="#problem">Problem</a><ul>
 <li><a href="#forcesconcerns">Forces/Concerns</a></li>
 </ul>
+</li>
+<li><a href="#solution">Solution</a><ul>
+<li><a href="#structure">[Structure]</a></li>
+<li><a href="#implementation">[Implementation]</a></li>
+</ul>
+</li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#related-patterns">[Related&nbsp;Patterns]</a></li>
+<li><a href="#sources">[Sources]</a></li>
+</ul>
+</li>
+</ul>
 </div>
-<h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
-<p>Enable sharing of location or presence data where the user controls the timing and&nbsp;context.</p>
-<p>Supports <a href="User-control">user control</a> and <a href="Appropriateness">appropriateness</a>.</p>
+<!--### [Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<p>When a user wants to share or broadcast location or other presence data that is contextually relevant and a full stream of data may be either noisy or&nbsp;intrusive.</p>
+<!-- The situations in which the pattern may apply.-->
+
+<p>Controllers provide an interface for acquiring information about the user. When one such user wants to share or broadcast their information, such as location or other presence data, that user may want to constrain the information. In this way, they may wish to prioritize data that is contextually relevant, or avoid a full stream of data which may be either noisy or intrusive. The controller wants the user to be able to provide this data at will, to maximize the applicability of their services. However, they do not want the user to regret providing too much data, nor to bother the user with constant&nbsp;requests.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
-<p>How can a system broadcast a user's presence or location information to a social network without revealing sensitive locations or location histories or overwhelming recipients with noisy&nbsp;data?</p>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
+<p>A service aims to acquire or broadcast a user's real-time data, particularly presence or location information, to a platform (e.g. social network). They wish to do so without revealing sensitive data (e.g. private locations, histories, or health information) nor overwhelming recipients with noisy data or users with constant&nbsp;requests.</p>
+<h4 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h4>
+<ul>
+<li>The controller wants to use the user's current data to provide more relevant information to the users of their service, but without violating the user's&nbsp;privacy.</li>
+<li>The user wants to participate in the service and provide useful information, but not all information, as they consider some aspects more sensitive than&nbsp;others.</li>
+<li>Users who intend to use the service do not want to have the service flooded with irrelevant&nbsp;data.</li>
+</ul>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
-<p>While sharing access controls may allow constant access, only <em>broadcast</em> presence information at the active choice of the&nbsp;user. </p>
-<h3 id="examples"><a class="toclink" href="#examples">Examples</a></h3>
-<h4 id="foursquare-check-in-model"><a class="toclink" href="#foursquare-check-in-model">Foursquare check-in&nbsp;model</a></h4>
-<h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
-<p>Always requiring active decision-making can burden the user with&nbsp;choices.</p>
+<!-- A concise description of how the pattern addresses the problem.-->
+
+<p>Allow the user to actively choose when to share information, whether to <em>broadcast</em> it, and when not to. Assume that sharing settings do not apply holistically to all situations and seek clarification when in&nbsp;doubt.</p>
+<h3 id="structure"><a class="toclink" href="#structure">[Structure]</a></h3>
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<p>The service may present distinct contexts in which to honor explicit settings, but in absence of this context assume that further consent is required. The user may choose not be be asked again, but must make this decision&nbsp;explicit.</p>
+<h3 id="implementation"><a class="toclink" href="#implementation">[Implementation]</a></h3>
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<p>In addition to privacy settings with appropriate defaults, allow the user the option to be asked again, every time the context&nbsp;changes.</p>
+<p>By default, users should actively choose to broadcast rather than the service deciding based on general settings which may not apply to the present context. Various contexts may be provided distinct&nbsp;settings.</p>
+<p>In these situations users need only be reminded prior to setting the values themselves. After this, they may choose to be notified about broadcasting, but not about sharing with the service itself. In this way, the user may decide&nbsp;later.</p>
+<!--## Consequences-->
+
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--### [Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<ul>
+<li>Foursquare check-in&nbsp;model</li>
+</ul>
+<!--### [Known Uses]-->
+
+<!-- Pointers to various applications of the pattern.-->
+
+<!--## See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<h3 id="related-patterns"><a class="toclink" href="#related-patterns">[Related&nbsp;Patterns]</a></h3>
+<!-- Supporting and conflicting patterns-->
+
+<p><a href="Active-broadcast-of-presence">Active broadcast of presence</a> <em>complements</em> <a href="Reasonable-Level-of-Control">Reasonable Level of Control</a>, <a href="Masquerade">Masquerade</a>, and <a href="Private-link">Private link</a>. With <a href="Reasonable-Level-of-Control">Reasonable Level of Control</a>, it can consider a larger audience with granular sharing choices. With <a href="Masquerade">Masquerade</a>, it may make the audience more specific. Finally, with <a href="Private-link">Private link</a>, the specific audience may be determined by whom is provided with the link. As such, it may not be as&nbsp;private.</p>
+<p>Like many patterns which affect user data, this pattern <em>must use</em> <a href="Lawful-Consent">Lawful Consent</a>.</p>
+<h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
+<!-- References to the original source of the pattern.-->
+
+<p>Based&nbsp;on:</p>
+<p>Chung, E. S., Hong, J. I., Lin, J., Prabaker, M. K., Landay, J. a., <span class="amp">&amp;</span> Liu, A. L. (2004). Development and Evaluation of Emerging Design Patterns for Ubiquitous Computing. DIS ’04 Proceedings of the 5th Conference on Designing Interactive Systems: Processes, Practices, Methods, and Techniques, 233–242.&nbsp;http://doi.org/10.1145/1013115.1013148</p>
+<p>Bier, C., <span class="amp">&amp;</span> Krempel, E. (2012). Common Privacy Patterns in Video Surveillance and Smart Energy. In ICCCT-2012 (pp. 610–615). Karlsruhe, Germany:&nbsp;IEEE.</p>
+<p>Doty, N., Gupta, M., <span class="amp">&amp;</span> Zych, J. (n.d.). PrivacyPatterns.org. Retrieved February 26, 2015, from&nbsp;http://privacypatterns.org/</p>
+<!--## General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--## Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	
@@ -456,6 +750,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

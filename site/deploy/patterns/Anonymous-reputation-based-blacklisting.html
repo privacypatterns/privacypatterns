@@ -9,8 +9,7 @@
 		Anonymous Reputation-based Blacklisting - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="anonymous-reputation-based-blacklisting">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -136,9 +144,41 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
 <a href="/categories/separate" class="separate">separate</a>
            &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -204,9 +244,167 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
 <a href="/categories/hide" class="hide">hide</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
+<a href="/categories/restrict" class="restrict">restrict</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -284,40 +482,93 @@
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#problem">Problem</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#goals">Goals</a></li>
-<li><a href="#motivating-example">Motivating&nbsp;Example</a></li>
+<li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a></li>
-<li><a href="#constraints-and-consequences">Constraints And&nbsp;Consequences</a></li>
-<li><a href="#known-uses">Known&nbsp;Uses</a></li>
+<li><a href="#consequences">Consequences</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+</ul>
+</li>
 </ul>
 </div>
+<!--### [Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
 <h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
 <p>Get rid of troublemakers without even knowing who they&nbsp;are.</p>
+<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
+<p>A service provider provides a service to users who access anonymously, and who may make bad use of the&nbsp;service.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>Anonymity is a desirable property from the perspective of privacy. However, anonymity may foster misbehaviour, as users lack any fear of&nbsp;retribution.</p>
 <p>A service provider can assign a reputation score to its users, based on their interactions with the service. Those who misbehave earn a bad reputation, and they are eventually added to a black list and banned from using the service anymore. However, these scoring systems traditionally require the user identity to be disclosed and linked to their reputation score, hence they conflict with anonymity. This has made, for instance, Wikipedia administrators to take the decision to ban edition requests coming from the TOR network, , as they cannot properly identify users who&nbsp;misbehave.</p>
 <p>A Trusted Third Party (TTP) might be introduced in between the user and the service provider. The TTP can receive reputation scores from the service provider so as to enforce reputation-based access policies, while keeping the identity hidden from the service provider. However, this would require the user to trust the TTP not to be a whistle-blower&nbsp;indeed.</p>
 <p>How can we make users accountable for their actions while keeping them&nbsp;anonymous?</p>
-<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<p>A service provider provides a service to users who access anonymously, and who may make bad use of the&nbsp;service.</p>
-<h2 id="goals"><a class="toclink" href="#goals">Goals</a></h2>
-<p>A service provider wants to prevent users who misbehave from accessing the service anymore, without gaining access to their&nbsp;identity.</p>
-<h2 id="motivating-example"><a class="toclink" href="#motivating-example">Motivating&nbsp;Example</a></h2>
-<p>A wiki allows any visitor to modify its contents, even without having been authenticated. Some malicious visitors may vandalize the contents. This fact is signalled by the wiki administrators. If a visitor coming from the same IP address keeps vandalizing the site, they will earn a bad reputation, and their IP will be banned from modifying the contents anymore. However, users accessing through a Tor anonymity network proxy cannot be identified from their IPs, and thus their reputation cannot be&nbsp;tracked.</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
 <p>First, the service provider provides their users with credentials for anonymous&nbsp;authentication.</p>
 <p>Then, every time an authenticated user holds a session at the service, the service provider assigns and records a reputation value for that session, depending on the user behaviour during the session. Note that these reputation values can only be linked to a specific session, but not to a specific user (as they have authenticated&nbsp;anonymously).</p>
 <p>When the user comes back and starts a new session at the service, the service provider challenges the user to prove in zero-knowledge that he is not linked to any of the offending sessions (those that have a negative reputation associated). Zero-knowledge proofs allow the user to prove this, without revealing their identity to the service provider. Different, alternative proofs have been proposed, e.g. prove that the user is not linked to any of the sessions in a set of session IDs, prove that the last K sessions of the user have good reputation,&nbsp;etc.</p>
 <p>In practice, more complex blacklisting rules can be applied as well. For instance, several reputation scores can be assigned to the same session, each regarding different facets of the user behaviour. Then, the blacklisting thresholds may take the form of a Boolean combination or a lineal combination over individual session and facet reputation&nbsp;values.</p>
-<h2 id="constraints-and-consequences"><a class="toclink" href="#constraints-and-consequences">Constraints And&nbsp;Consequences</a></h2>
-<p>Different implementations may only be practical for services with a reduce number of users, require intense computations, limit the scope of the reputation to a constrained timeframe, be vulnerable to Sybil attacks, etc. Nonetheless, protocols are being improved to overcome these and other issues. See the cited sources below for the specific&nbsp;discussion.</p>
-<h2 id="known-uses"><a class="toclink" href="#known-uses">Known&nbsp;Uses</a></h2>
+<!--goals-->
+
+<p>A service provider wants to prevent users who misbehave from accessing the service anymore, without gaining access to their&nbsp;identity.</p>
+<!--### [Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--### [Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--constraints and consequences-->
+
+<p>Different implementations may only be practical for services with a reduce number of users, require intense computations, limit the scope of the reputation to a constrained time frame, be vulnerable to Sybil attacks, etc. Nonetheless, protocols are being improved to overcome these and other issues. See the cited sources below for the specific&nbsp;discussion.</p>
+<!--### [Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<p>A wiki allows any visitor to modify its contents, even without having been authenticated. Some malicious visitors may vandalize the contents. This fact is signalled by the wiki administrators. If a visitor coming from the same IP address keeps vandalizing the site, they will earn a bad reputation, and their IP will be banned from modifying the contents anymore. However, users accessing through a Tor anonymity network proxy cannot be identified from their IPs, and thus their reputation cannot be&nbsp;tracked.</p>
+<h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
+<!-- Pointers to various applications of the pattern.-->
+
 <ul>
 <li>Au, M. H., Kapadia, A., <span class="amp">&amp;</span> Susilo, W. (2012). BLACR: TTP-free blacklistable anonymous credentials with&nbsp;reputation.</li>
 <li>Au, M. H., <span class="amp">&amp;</span> Kapadia, A. (2012, October). PERM: Practical reputation-based blacklisting without TTPs. In Proceedings of the 2012 ACM conference on Computer and communications security (pp. 929-940).&nbsp;ACM.</li>
 </ul>
+<!--## See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--### [Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--### [Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--## General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--## Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	
@@ -371,6 +622,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

@@ -18,7 +18,7 @@ sync: ./patterns
 	@echo "Cloning content from $(SOURCE_PATTERNS_REPO)"
 	@[ -d ./patterns ] || git clone $(SOURCE_PATTERNS_REPO)
 
-./site/content/patterns: ./patterns
+./site/content/patterns: ./patterns ./site/content/patterns/index.html ./site/layout/*
 	@echo "Generating static files"
 	@python markdown_to_hyde.py -s ./patterns -d ./site/content/
 
@@ -30,6 +30,7 @@ sync: ./patterns
 
 ./site/deploy: ./hyde/hyde.py $(shell find ./site/content/patterns)
 	@python ./hyde/hyde.py -g -s ./site
+	@python html_to_search_content.py -s ./site/deploy -d ./site/deploy/media/js/tipuesearch
 
 ./site/deploy/changes: ./site/deploy
 	@git log --pretty=short -n3 > $@

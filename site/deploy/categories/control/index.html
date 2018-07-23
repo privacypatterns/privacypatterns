@@ -9,8 +9,7 @@
 		categories - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="categories">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -94,6 +102,103 @@
   
   <ul id="patterns_listing">
   
+  
+		<li>
+		  <a href="/patterns/Informed-Consent-for-Web-based-Transactions">
+			  <h3>
+		  		
+						Informed Consent for Web-based Transactions
+					
+				</h3>
+
+				
+					<p>This pattern describes how controllers can inform users whenever they intend to collect or otherwise use a user&#39;s personal data.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Masquerade">
+			  <h3>
+		  		
+						Masquerade
+					
+				</h3>
+
+				
+					<p>Let users filter out some or all personal information they would otherwise provide to a service.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Incentivized-Participation">
+			  <h3>
+		  		
+						Incentivized Participation
+					
+				</h3>
+
+				
+					<p>Users are more willing to contribute valuable input when they can do so without leaking personal data, or perceive an equal or greater exchange in value either monetarily or socially.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Outsourcing-[with-consent]">
+			  <h3>
+		  		
+						Outsourcing [with consent]
+					
+				</h3>
+
+				
+					<p>“The controller has to obtain additional specific, informed, explicit, and freely given consent before outsourcing data processing to a third party.“</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Discouraging-blanket-strategies">
+			  <h3>
+		  		
+						Discouraging blanket strategies
+					
+				</h3>
+
+				
+					<p>Give users the possibility to define a privacy level from a range of options each time they share content.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Buddy-List">
+			  <h3>
+		  		
+						Buddy List
+					
+				</h3>
+
+				
+					<p>By default, isolate users to a selection of social connections in a user-defined circle of trust. Allow them to expand this circle or create new ones based on the existing members.</p>
+				
+			</a>
+		</li>
+  
+  
+  
 		<li>
 		  <a href="/patterns/Data-breach-notification-pattern">
 			  <h3>
@@ -108,6 +213,8 @@
 			</a>
 		</li>
   
+  
+  
 		<li>
 		  <a href="/patterns/Private-link">
 			  <h3>
@@ -117,8 +224,44 @@
 				</h3>
 
 				
+					<p>Enable sharing and re-sharing without wide public visibility or cumbersome authenticated access control.</p>
+				
 			</a>
 		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Reasonable-Level-of-Control">
+			  <h3>
+		  		
+						Reasonable Level of Control
+					
+				</h3>
+
+				
+					<p>Let users share selectively (push) and make available (pull) specific information to predefined groups or individuals.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Enable-Disable-Functions">
+			  <h3>
+		  		
+						Enable/Disable Functions
+					
+				</h3>
+
+				
+					<p>Allow users to decide granularly what functions they consent to before the function is used.</p>
+				
+			</a>
+		</li>
+  
+  
   
 		<li>
 		  <a href="/patterns/Unusual-activities">
@@ -134,6 +277,72 @@
 			</a>
 		</li>
   
+  
+  
+		<li>
+		  <a href="/patterns/Support-Selective-Disclosure">
+			  <h3>
+		  		
+						[Support] Selective Disclosure
+					
+				</h3>
+
+				
+					<p>Many services (or products) require the collection of a fixed, often large, amount of personal data before users can use them. Many users, instead, want to freely choose what information they share. This pattern recommends that services Support Selective Disclosure, tailoring functionality to work with the level of data the user feels comfortable sharing.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Negotiation-of-Privacy-Policy">
+			  <h3>
+		  		
+						Negotiation of Privacy Policy
+					
+				</h3>
+
+				
+					<p>Over time, build user preferences from a privacy-preserving default semi-automatically, through opt-in/opt-out, semantics, and informed solicitations.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Sign-an-Agreement-to-Solve-Lack-of-Trust-on-the-Use-of-Private-Data-Context">
+			  <h3>
+		  		
+						Sign an Agreement to Solve Lack of Trust on the Use of Private Data Context
+					
+				</h3>
+
+				
+					<p>Services of a controller may require users to sign contracts that stipulate their obligations and processing purposes for which users must consent to use the service. This ensures that users can trust the controller as it is bound to the contract it signs.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Pay-Back">
+			  <h3>
+		  		
+						Pay Back
+					
+				</h3>
+
+				
+					<p>Give users some benefits in exchange for providing information or content.</p>
+				
+			</a>
+		</li>
+  
+  
+  
 		<li>
 		  <a href="/patterns/Encryption-user-managed-keys">
 			  <h3>
@@ -147,6 +356,24 @@
 				
 			</a>
 		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Obtaining-Explicit-Consent">
+			  <h3>
+		  		
+						Obtaining Explicit Consent
+					
+				</h3>
+
+				
+					<p>Controllers require consent to be given willingly and specifically when in any way processing the personal data of their users.</p>
+				
+			</a>
+		</li>
+  
+  
   
 		<li>
 		  <a href="/patterns/Policy-matching-display">
@@ -162,6 +389,24 @@
 			</a>
 		</li>
   
+  
+  
+		<li>
+		  <a href="/patterns/Lawful-Consent">
+			  <h3>
+		  		
+						Lawful Consent
+					
+				</h3>
+
+				
+					<p>A crucial element in privacy protection is ensuring that all sensitive processing is preceded by the acquisition of freely given, informed, specific, and explicit consent.</p>
+				
+			</a>
+		</li>
+  
+  
+  
 		<li>
 		  <a href="/patterns/Privacy-color-coding">
 			  <h3>
@@ -176,6 +421,40 @@
 			</a>
 		</li>
   
+  
+  
+		<li>
+		  <a href="/patterns/Decoupling-[content]-and-location-information-visibility">
+			  <h3>
+		  		
+						Decoupling [content] and location information visibility
+					
+				</h3>
+
+				
+					<p>Allow users to retroactively configure privacy for location information with respect to the content&#39;s contextual privacy requirements.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Single-Point-of-Contact">
+			  <h3>
+		  		
+						Single Point of Contact
+					
+				</h3>
+
+				
+					<p>The Single Point of Contact is a security authority who protects the privacy and security of sensitive data stored online by validating the authority of requests and ensuring secure communication channels.</p>
+				
+			</a>
+		</li>
+  
+  
+  
 		<li>
 		  <a href="/patterns/Active-broadcast-of-presence">
 			  <h3>
@@ -185,10 +464,12 @@
 				</h3>
 
 				
-					<p>Users may choose actively when they want to share presence information, to increase both the relevance of, and control over, sharing.</p>
+					<p>Users may actively choose to automatically provide updates when they want to share presence information, to increase both the relevance of, and control over, their sharing.</p>
 				
 			</a>
 		</li>
+  
+  
   
 		<li>
 		  <a href="/patterns/Personal-data-store">
@@ -203,6 +484,39 @@
 				
 			</a>
 		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Selective-Access-Control">
+			  <h3>
+		  		
+						Selective access control
+					
+				</h3>
+
+				
+					<p>Allow users to specify who may access the content they generate, both during and after submission.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Reciprocity">
+			  <h3>
+		  		
+						Reciprocity
+					
+				</h3>
+
+				
+					<p>Let users benefit according to the contributions they make.</p>
+				
+			</a>
+		</li>
+  
   
   </ul>
 
@@ -234,6 +548,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

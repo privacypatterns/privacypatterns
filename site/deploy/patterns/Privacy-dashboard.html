@@ -9,8 +9,7 @@
 		Privacy dashboard - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="privacy-dashboard">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -164,6 +172,34 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
 <a href="/categories/transparency" class="transparency">transparency</a>
            &bull; 
@@ -179,7 +215,29 @@
       
         
       
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -273,7 +331,41 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -318,7 +410,271 @@
         
           
 <a href="/categories/location" class="location">location</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
+<a href="/categories/inform" class="inform">inform</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/provide" class="provide">provide</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -377,40 +733,91 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#intent">Intent</a></li>
+<li><a href="#summary">Summary</a></li>
 <li><a href="#context">Context</a></li>
 <li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a><ul>
-<li><a href="#examples">Examples</a><ul>
-<li><a href="#google-privacy-dashboard">Google Privacy&nbsp;Dashboard</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#forcesconcerns">Forces/Concerns</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#examples">Examples</a></li>
 <li><a href="#see-also">See&nbsp;Also</a></li>
 </ul>
 </div>
-<h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
+<!--### [Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
+<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
+<p>An informational privacy dashboard can provide collected summaries of the collected or processed personal data for a particular&nbsp;user.</p>
+<!--intent-->
+
 <p>Help users see an overview of the personal information collected about them, particularly when the data or services in question are&nbsp;numerous.</p>
 <p>Supports <a href="Access">Access</a>, <a href="Transparency-and-feedback">Transparency and feedback</a>.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
 <p>When your service collects, aggregates or processes personal information from users, particularly information that changes over time, is collected or aggregated in ways that might be unexpected, invisible or easily forgotten, or where users have options for access, correction and&nbsp;deletion.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>How can a service succinctly and effectively communicate the kind and extent of potentially disparate data that has been collected or aggregated by a service? Users may not remember or realize what data a particular service or company has collected, and thus can't be confident that a service isn't collecting too much data. Users who aren't regularly and consistently made aware of what data a service has collected may be surprised or upset when they hear about the service's data collection practices in some other context. Without visibility into the actual data collected, users may not fully understand the abstract description of what types of data are collected; simultaneously, users may easily be overwhelmed by access to raw data without a good understanding of what that data&nbsp;means.</p>
+<!--forces/concerns-->
+
+<p>As in other access mechanisms, showing a user's data back to them can create new privacy problems. Implementers should be careful not to provide access to sensitive data on the dashboard to people other than the subject. For example, showing the search history associated with a particular cookie to any user browsing with that cookie can reveal the browsing history of one family member to another that uses the same computer. Also, associating all usage information with a particular account or identity (in order to show a complete dashboard) may encourage designers to associate data that would otherwise not be attached to the user account at all. Designers should balance the access value against the potential advantages of <a href="Deidentification">Deidentification</a>.</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
 <p>An informational privacy dashboard can provide collected summaries of the collected or processed personal data for a particular user. While access to raw data may be useful for some purposes, a dashboard provides a summary or highlight of important personal data. Seek to make the data meaningful to the user with examples, visualizations and&nbsp;statistics.</p>
 <p>Where users have choices for deletion or correction of stored data, a dashboard view of collected data is an appropriate place for these controls (which users may be inspired to use on realizing the extent of their collected&nbsp;data).</p>
 <p>In short, a dashboard answers the common user question "what do you know about me?" and does so in a way that the user can understand and take appropriate action if&nbsp;necessary.</p>
-<h3 id="examples"><a class="toclink" href="#examples">Examples</a></h3>
-<h4 id="google-privacy-dashboard"><a class="toclink" href="#google-privacy-dashboard">Google Privacy&nbsp;Dashboard</a></h4>
+<!--### [Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--### [Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<!--## Consequences-->
+
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--### [Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<ul>
+<li><em>Google Privacy&nbsp;Dashboard</em></li>
+</ul>
 <p><img alt="Google Dashboard Latitude" src="/media/images/Google_Dashboard_Latitude.png" /></p>
 <p>The <a href="https://google.com/dashboard">Google Dashboard</a> shows a summary of the content stored and/or shared by many (but not all) of Google's services (Latitude, Google's location sharing service, is shown above). For each service, a summary (with counts) of each type of data is listed, and in some cases an example of the most recent such item is described. An icon signifies which pieces of data are public. Links are also provided in two categories: to actions that can be taken to change or delete data, and to privacy policy / help&nbsp;pages.</p>
 <p><a href="http://www.google.com/support/accounts/bin/answer.py?answer#162744">Google Accounts: About the&nbsp;Dashboard</a></p>
-<h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
-<p>As in other access mechanisms, showing a user's data back to them can create new privacy problems. Implementers should be careful not to provide access to sensitive data on the dashboard to people other than the subject. For example, showing the search history associated with a particular cookie to any user browsing with that cookie can reveal the browsing history of one family member to another that uses the same computer. Also, associating all usage information with a particular account or identity (in order to show a complete dashboard) may encourage designers to associate data that would otherwise not be attached to the user account at all. Designers should balance the access value against the potential advantages of <a href="Deidentification">Deidentification</a>.</p>
+<!--### [Known Uses]-->
+
+<!-- Pointers to various applications of the pattern.-->
+
 <h2 id="see-also"><a class="toclink" href="#see-also">See&nbsp;Also</a></h2>
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
 <p>Dashboards are a widely-used pattern in other data-intensive activities for providing a summary of key or actionable metrics. See: <em>external references needed&nbsp;here</em></p>
+<!--### [Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--### [Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--## General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--## Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	
@@ -464,6 +871,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

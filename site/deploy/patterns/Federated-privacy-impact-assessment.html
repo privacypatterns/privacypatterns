@@ -9,8 +9,7 @@
 		Federated Privacy Impact Assessment - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="federated-privacy-impact-assessment">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -156,6 +164,32 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
 <a href="/categories/risk-management" class="risk-management">risk-management</a>
            &bull; 
@@ -179,7 +213,43 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -270,7 +340,261 @@
         
           
 <a href="/categories/procedure" class="procedure">procedure</a>
+           &bull; 
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
+<a href="/categories/enforce" class="enforce">enforce</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/create" class="create">create</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
     
@@ -284,19 +608,33 @@
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#problem">Problem</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#goals">Goals</a></li>
-<li><a href="#motivating-example">Motivating&nbsp;Example</a></li>
+<li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a></li>
-<li><a href="#constraints-and-consequences">Constraints And&nbsp;Consequences</a></li>
-<li><a href="#known-uses">Known&nbsp;Uses</a></li>
+<li><a href="#consequences">Consequences</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+</ul>
+</li>
 </ul>
 </div>
+<!--### [Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
 <h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
 <p>The impact of personal information in a federation is more than the
 impact in the&nbsp;federated</p>
+<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
+<p>Identity Management scenarios (that is, when the roles of the Identity
+Provider and the Service Provider are&nbsp;separated).</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>Identity Management solutions were introduced to decouple the
 functions related to authentication, authorization, and management of
 user attributes, on the one hand, and service provision on the other
@@ -308,13 +646,38 @@ allowing service providers to offer their services without knowing the
 identity of their users). However, the complexity of data flows and
 the possibility of collusion between different parties entail new
 risks and threats regarding personal&nbsp;data.</p>
-<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<p>Identity Management scenarios (that is, when the roles of the Identity
-Provider and the Service Provider are&nbsp;separated).</p>
-<h2 id="goals"><a class="toclink" href="#goals">Goals</a></h2>
+<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
+<p>A Privacy Impact Assessment is conducted by all the members of the
+federation, both individually and in conjunction, so as to define
+shared privacy policies, prove they are met, and demonstrate the
+suitability of the architecture, in the benefit of all the&nbsp;members.</p>
+<!--goals-->
+
 <p>Deal with privacy risks associated from the federation of different
 parties in an Identity Management&nbsp;solution.</p>
-<h2 id="motivating-example"><a class="toclink" href="#motivating-example">Motivating&nbsp;Example</a></h2>
+<!--### [Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--### [Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--constraints and consequences-->
+
+<p>The consequences depend on the results of the privacy-impact&nbsp;analysis.</p>
+<!--### [Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
 <p>An Identity Provider issues pseudonyms to authenticate users at
 third-party Service Providers, which can in turn check the
 authenticity of these pseudonyms at the Identity Provider, without
@@ -322,17 +685,31 @@ getting to know the real user identity. However, the Identity Provider
 knows all the services requested by the users, which discloses
 personal information to the Identity Provider and allows it to profile
 the&nbsp;users.</p>
-<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
-<p>A Privacy Impact Assessment is conducted by all the members of the
-federation, both individually and in conjunction, so as to define
-shared privacy policies, prove they are met, and demonstrate the
-suitability of the architecture, in the benefit of all the&nbsp;members.</p>
-<h2 id="constraints-and-consequences"><a class="toclink" href="#constraints-and-consequences">Constraints And&nbsp;Consequences</a></h2>
-<p>The consequences depend on the results of the privacy-impact&nbsp;analysis.</p>
-<h2 id="known-uses"><a class="toclink" href="#known-uses">Known&nbsp;Uses</a></h2>
+<h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
+<!-- Pointers to various applications of the pattern.-->
+
 <p>The New Federated Privacy Impact Assessment (F-PIA). Building Privacy
 and Trust-enabled Federation. Information and Privacy Commissioner of
 Ontario <span class="amp">&amp;</span> Liberty Alliance Project, January&nbsp;2009</p>
+<!--## See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--### [Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--### [Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--## General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--## Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	
@@ -386,6 +763,7 @@ Ontario <span class="amp">&amp;</span> Liberty Alliance Project, January&nbsp;20
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

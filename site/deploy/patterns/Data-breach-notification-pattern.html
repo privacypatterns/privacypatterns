@@ -9,8 +9,7 @@
 		Data Breach Notification Pattern - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="data-breach-notification-pattern">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -90,7 +98,291 @@
         
           
 <a href="/categories/control" class="control">control</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
+<a href="/categories/inform" class="inform">inform</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/notify" class="notify">notify</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -190,32 +482,85 @@
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#problem">Problem</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#goals">Goals</a></li>
-<li><a href="#motivating-example">Motivating&nbsp;Example</a></li>
+<li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a></li>
-<li><a href="#constraints-and-consequences">Constraints And&nbsp;Consequences</a></li>
-<li><a href="#known-uses">Known&nbsp;Uses</a></li>
+<li><a href="#consequences">Consequences</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+</ul>
+</li>
 </ul>
 </div>
+<!--### [Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
 <h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
 <p>This pattern assures that a certain minimum data breach notification delay is not&nbsp;exceeded.</p>
-<h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
-<p>In case a data breach has occured, i.e. Personally Identifiable Information (PII) has leaked, the data owner must be notified. The notification process in turn may not work correctly, so it has to be&nbsp;monitored.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
 <p>This pattern is applicable in any environment where PII is stored and that allows monitoring of specific&nbsp;events.</p>
-<h2 id="goals"><a class="toclink" href="#goals">Goals</a></h2>
-<p>The pattern goal is to constantly ensure a minimum delay of notification, should a data breach have occured, and in case a notification exceeds the allowed delay, to indicate this by appropriate&nbsp;means.</p>
-<h2 id="motivating-example"><a class="toclink" href="#motivating-example">Motivating&nbsp;Example</a></h2>
-<p>Assume a company Comp stores all employees' data with a storage service Store. There is a contractual agreement between Comp and Store that each data leakage is reported within one hour. Now Bob, an employee of Store and not authorized to read Comp's data, succeeds in circumventing Store's access control mechanisms and reads Store's data. This represents a data breach of which Comp has to be notified within an&nbsp;hour.</p>
+<h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
+<p>In case a data breach has occurred, i.e. Personally Identifiable Information (PII) has leaked, the data owner must be notified. The notification process in turn may not work correctly, so it has to be&nbsp;monitored.</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
-<p>A monitoring system logs access to clients' PII along with a timestamp. A notification process continuously verifies that only authorized access is listed in this log file, and in case of unauthorized access notifies the data owner and logs the notification action in the log file, again accompanied by a timestamp. A notification monitoring process finally continously checks that t_n - t_l &lt;= max_np (t_n denoting the time of notification, t_l the time of data leakage, max_np the maximally allowed period of notification). In case t_n - t_l &gt; max_np it alerts the PII Incident&nbsp;Manager.</p>
+<!-- A concise description of how the pattern addresses the problem.-->
+
+<p>A monitoring system logs access to clients' PII along with a time-stamp. A notification process continuously verifies that only authorized access is listed in this log file, and in case of unauthorized access notifies the data owner and logs the notification action in the log file, again accompanied by a time-stamp. A notification monitoring process finally continuously checks that t_n - t_l &lt;= max_np (t_n denoting the time of notification, t_l the time of data leakage, max_np the maximally allowed period of notification). In case t_n - t_l &gt; max_np it alerts the PII Incident&nbsp;Manager.</p>
 <p>A formal model can be found <a href="http://sit.sit.fraunhofer.de/smv/pattern-models/Data-Breach-Notification-pattern-model.pdf">here</a>.</p>
-<h2 id="constraints-and-consequences"><a class="toclink" href="#constraints-and-consequences">Constraints And&nbsp;Consequences</a></h2>
+<!--goals-->
+
+<p>The pattern goal is to constantly ensure a minimum delay of notification, should a data breach have occurred, and in case a notification exceeds the allowed delay, to indicate this by appropriate&nbsp;means.</p>
+<!--### [Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--### [Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--constraints and consequences-->
+
 <p>In order to use the pattern, the personal data processor must have in place an access control mechanism and a monitoring mechanism that allows to monitor every PII access. The pattern cannot ensure that a PII Incident Manager will take adequate actions, hence this process has to be established and controlled by other&nbsp;means.</p>
-<h2 id="known-uses"><a class="toclink" href="#known-uses">Known&nbsp;Uses</a></h2>
+<!--### [Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<p>Assume a company Comp stores all employees' data with a storage service Store. There is a contractual agreement between Comp and Store that each data leakage is reported within one hour. Now Bob, an employee of Store and not authorized to read Comp's data, succeeds in circumventing Store's access control mechanisms and reads Store's data. This represents a data breach of which Comp has to be notified within an&nbsp;hour.</p>
+<h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
+<!-- Pointers to various applications of the pattern.-->
+
 <p>This pattern is based on the privacy principle "Accountability" specified in ISO/IEC 29100 that is also used in Annex A of ISO/IEC 27018. More specifically, it addresses A.9.1 Notification of a data breach involving Personally Identifiable Information (PII). Uses of the pattern as a concrete instantiation of A.9.1 are not&nbsp;known.</p>
+<!--## See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--### [Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--### [Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--## General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--## Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	
@@ -269,6 +614,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

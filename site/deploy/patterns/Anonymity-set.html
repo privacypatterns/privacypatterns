@@ -9,8 +9,7 @@
 		Anonymity Set - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="anonymity-set">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -86,6 +94,14 @@
 <div id="content">
   <p id="cats">
     Categories: 
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -179,7 +195,93 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -243,37 +345,9 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
+      
+        
       
         
       
@@ -367,7 +441,99 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -431,36 +597,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
       
         
@@ -514,19 +650,51 @@
         
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
           
-<a href="/categories/aggregate" class="aggregate">aggregate</a>
+<a href="/categories/mix" class="mix">mix</a>
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -566,30 +734,72 @@
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#problem">Problem</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#goals">Goals</a></li>
-<li><a href="#motivating-example">Motivating&nbsp;Example</a></li>
+<li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a></li>
-<li><a href="#constraints-and-consequences">Constraints and&nbsp;Consequences</a></li>
-<li><a href="#known-uses">Known&nbsp;Uses</a></li>
+<li><a href="#consequences">Consequences</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+</ul>
+</li>
 </ul>
 </div>
+<!--### [Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
 <h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
 <p>This pattern aggregates multiple entities into a set, such that they
 cannot be distinguished&nbsp;anymore.</p>
-<h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
-<p>In a system with different users we have the problem that we can often
-distinguish between them. This enables location tracking, analyzing
-the behaviour of the users or other privacy-infringing&nbsp;practices.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
 <p>This pattern is applicable in a messaging scenario, where an attacker
 can track routing information. Another possible scenario would be the
 storage of personal information in a&nbsp;database.</p>
-<h2 id="goals"><a class="toclink" href="#goals">Goals</a></h2>
+<h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
+<p>In a system with different users we have the problem that we can often
+distinguish between them. This enables location tracking, analyzing
+the behaviour of the users or other privacy-infringing&nbsp;practices.</p>
+<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
+<p>There are multiple ways to apply this pattern. One possibility is, to
+strip away any distinguishing features from the entities. If we do not
+have enough entities, such that the anonymity set would be too small,
+then we could even insert fake&nbsp;identities.</p>
+<!--goals-->
+
 <p>The goal of this pattern is to aggregate different entities into a
 set, such that distinguishing between them becomes&nbsp;infeasible.</p>
-<h2 id="motivating-example"><a class="toclink" href="#motivating-example">Motivating&nbsp;Example</a></h2>
+<!--### [Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--### [Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--constraints and consequences-->
+
+<p>One factor to keep in mind is that this pattern is useless if there
+are not many entities, such that the set of probable suspects is too
+small. What "too small" means depends on the exact scenario. Another
+factor is a possible loss of&nbsp;functionality.</p>
+<!--### [Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
 <p>Assuming that there are two companies, one is a treatment clinic for
 cancer and the other one a laboratory for research. The Clinic
 releases its Protected Health Information (PHI) about cancer victims
@@ -597,27 +807,38 @@ to the laboratory. The PHI's consists of the patients' name, birth
 date, sex, zip code and diagnostics record. The clinic releases the
 datasets without the name of the patients, to protect their privacy. A
 malicious worker at the laboratory for research wants to make use of
-these informations and recovers the names of the patients. The worker
+this information and recovers the names of the patients. The worker
 goes to the city council of a certain area to get a voter list from
 them. The two lists are matched for age, sex and location. The worker
 finds the name and address information from the voter registration
 data and the health information from the patient health&nbsp;data.</p>
-<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
-<p>There are multiple ways to apply this pattern. One possibility is, to
-strip away any distinguishing features from the entities. If we do not
-have enough entities, such that the anonymity set would be too small,
-then we could even insert fake&nbsp;identities.</p>
-<h2 id="constraints-and-consequences"><a class="toclink" href="#constraints-and-consequences">Constraints and&nbsp;Consequences</a></h2>
-<p>One factor to keep in mind is that this pattern is useless if there
-are not many entities, such that the set of probable suspects is too
-small. What "too small" means depends on the exact scenario. Another
-factor is a possible loss of&nbsp;functionality.</p>
-<h2 id="known-uses"><a class="toclink" href="#known-uses">Known&nbsp;Uses</a></h2>
+<h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
+<!-- Pointers to various applications of the pattern.-->
+
 <p>Anonymity sets are in use in various routing obfuscation mechanisms
-like Onion Routing. Hordes is a multicast based protocol, that makes
-use of multicast routing like point-to-multipoint de- livery, so that
+like Onion Routing. Hordes is a multicast-based protocol that makes
+use of multicast routing like point-to-multipoint delivery, so that
 anonymity is provided. Mix Zone is a location-aware application that
 anonymizes user identity by limiting the positions where users can be&nbsp;located.</p>
+<!--## See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--### [Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--### [Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--## General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--## Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	
@@ -671,6 +892,7 @@ anonymizes user identity by limiting the positions where users can be&nbsp;locat
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

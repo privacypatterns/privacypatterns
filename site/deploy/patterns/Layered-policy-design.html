@@ -9,8 +9,7 @@
 		Layered Policy Design - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="layered-policy-design">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -160,9 +168,167 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
 <a href="/categories/inform" class="inform">inform</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
+<a href="/categories/explain" class="explain">explain</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -189,37 +355,94 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#problem">Problem</a></li>
+<li><a href="#summary">Summary</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#goals">Goals</a></li>
-<li><a href="#motivating-example">Motivating&nbsp;Example</a></li>
+<li><a href="#problem">Problem</a></li>
 <li><a href="#solution">Solution</a></li>
-<li><a href="#constraints-and-consequences">Constraints And&nbsp;Consequences</a></li>
-<li><a href="#known-uses">Known&nbsp;Uses</a></li>
+<li><a href="#consequences">Consequences</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <p>Split privacy policies into nested, successively refined versions. Leave the legalese to the&nbsp;lawyers.</p>
+<!--### [Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
+<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
+<p>Split privacy policies into nested, successively refined
+    versions. Leave the legalese to the&nbsp;lawyers.</p>
+<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
+<p>A data controller offers detailed, legal explanations of their privacy and data protection&nbsp;policies.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>Privacy policies may be difficult to understand and hard to read. What was initially conceived as an instrument to inform users is now almost useless, as they have become riddled with legalese and all sort of extraneous details. As a consequence, users do not read the privacy policies, for being long and&nbsp;cumbersome.</p>
 <p>However, privacy policies are legally binding documents, which makes it difficult to get just rid of these legal&nbsp;aspects.</p>
-<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<p>A data controller offers detailed, legal explanations of their privacy and data protection&nbsp;policies.</p>
-<h2 id="goals"><a class="toclink" href="#goals">Goals</a></h2>
-<p>Make users really understand what they can expect about their personal data from a data controller (in terms of which data is managed, for which purposes,&nbsp;etc.)</p>
-<h2 id="motivating-example"><a class="toclink" href="#motivating-example">Motivating&nbsp;Example</a></h2>
-<p>See examples at Terms of Service Didn't Read. The average user would take 76 work days to read the privacy policies they encounter each&nbsp;year</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
 <p>A short notice may provide a summary of the practices that deal with personal data, highlighting those which may not be evident to the data subject. Then, a longer policy may provide specific information, split into sections, detailing any uses of personal data. And finally, the whole legal text of the privacy policy can be&nbsp;specified.</p>
-<h2 id="constraints-and-consequences"><a class="toclink" href="#constraints-and-consequences">Constraints And&nbsp;Consequences</a></h2>
+<!--goals-->
+
+<p>Make users really understand what they can expect about their personal data from a data controller (in terms of which data is managed, for which purposes,&nbsp;etc.)</p>
+<!--### [Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--### [Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--constraints and consequences-->
+
 <p>The use of this pattern fosters simplicity, transparency and&nbsp;choice.</p>
 <p>However, two versions of the privacy policies coexist, which may introduce potential contradictions; in particular, the data controller must ensure that updates are performed in parallel and&nbsp;coherently.</p>
-<h2 id="known-uses"><a class="toclink" href="#known-uses">Known&nbsp;Uses</a></h2>
+<!--### [Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<p>See examples at Terms of Service Didn't Read. The average user would take 76 work days to read the privacy policies they encounter each&nbsp;year</p>
+<h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
+<!-- Pointers to various applications of the pattern.-->
+
 <ul>
 <li>An early example of layered privacy policy by TRUSTe and its mobile version, which are discussed in Pinnick, T. Layered Policy Design. TRUSTe Blog,&nbsp;2011.</li>
 <li>There are several sites that use this pattern nowadays, albeit not always with that name. One example is Banksia Villages, which provides a Simplified Privacy Policy as well as an Extended&nbsp;one.</li>
 <li>It is recommended by British Information's Commissioner Office in its Privacy Notices Code of Practice&nbsp;(p.55)</li>
 <li>This concept is quite similar to the Creative Commons license layers in the field of copyright&nbsp;management.</li>
 </ul>
+<!--## See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--### [Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--### [Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--## General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--## Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	
@@ -273,6 +496,7 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 

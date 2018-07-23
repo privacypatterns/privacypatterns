@@ -9,8 +9,7 @@
 		Asynchronous notice - Privacy Patterns
 		
 	</title>
-  <meta name="description" content="Privacy patterns in software design">
-  <meta name="author" content="Nick Doty and Mohit Gupta">
+  <meta name="description" content="Privacy design patterns for software engineering">
   <link rel="shortcut icon" href="/media/images/favicon.ico">
   
 	
@@ -25,6 +24,14 @@
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
 	<body id="asynchronous-notice">
     <div id="container">
@@ -37,7 +44,8 @@
   <ul>
     <li><a href="/">Home</a> &bull; </li>
     <li><a href="/about/">About</a> &bull; </li>
-    <li><a href="/patterns/">Patterns</a></li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
   </ul>
 </nav>
 
@@ -86,6 +94,26 @@
 <div id="content">
   <p id="cats">
     Categories: 
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -179,7 +207,37 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -273,7 +331,49 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -348,7 +448,263 @@
         
           
 <a href="/categories/mobile" class="mobile">mobile</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
+<a href="/categories/inform" class="inform">inform</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/notify" class="notify">notify</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -377,29 +733,35 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#intent">Intent</a></li>
+<li><a href="#summary">Summary</a></li>
 <li><a href="#context">Context</a></li>
 <li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a><ul>
-<li><a href="#examples">Examples</a><ul>
-<li><a href="#google-latitude-reminder-email">Google Latitude reminder&nbsp;email</a></li>
-<li><a href="#fire-eagle-my-alerts">Fire Eagle My&nbsp;Alerts</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#forcesconcerns">Forces/Concerns</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#examples">Examples</a></li>
 </ul>
 </div>
-<h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
+<!--### [Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
+<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
+<p>How can a service effectively provide notice to a user who gave permission once but whose information is accessed repeatedly (perhaps even continuously) over a long period of time? Proactively notify the user after the time of consent that information is being tracked, stored or&nbsp;re-distributed.</p>
+<!--intent-->
+
 <p>Support notice of ongoing location&nbsp;tracking.</p>
 <p>Supports <a href="Notice">Notice</a>, <a href="User-control">User Control</a>, <a href="Transparency-feedback">Transparency and&nbsp;feedback</a></p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
 <p>Tracking a person's location over time in an invisible fashion, with or
 without prior explicit consent. (Particularly useful for background tracking,
 tracking through devices with limited or no screen space, or tracking
 repeatedly over long periods of time. For devices with sufficient screen space or other notification affordances, see also <a href="Ambient-notice">ambient notice</a>.)</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>How can a service effectively provide notice to a user who gave permission
 once but whose information is accessed repeatedly (perhaps even continuously)
 over a long period of time? If a user forgets that they gave access (or who
@@ -409,50 +771,8 @@ attacker or have been provided by another user of a shared device -- if
 synchronous notice is only provided at the time of consent, a user may
 inadvertently distribute personal information over a long period of time after
 having lost control of their device only&nbsp;momentarily.</p>
-<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
-<p>Proactively notify the user after the time of consent that information is
-being tracked, stored or re-distributed. This asynchronous notice could be
-achieved through an email, text message, on-screen notice or even through non-
-digital means (by telephone or postal mail, say). The message should inform
-the user about the ongoing practice, including background context (since the
-user may well have forgotten) about the service and any opportunities for
-<a href="Access">access</a> and <a href="User-control">control</a>.</p>
-<p>Asynchronous notices may also include a summary of the data recently collected
-(since the last notice, say) in order to provide clarity (and reminders) to
-the user about the extent of collection. See also, [Privacy dashboard]
-(Privacy-dashboard) and <a href="Access">Access</a>.</p>
-<p>By ensuring that users aren't surprised, asynchronous notice may increase
-trust in the service and comfort with continued disclosure of&nbsp;information.</p>
-<h3 id="examples"><a class="toclink" href="#examples">Examples</a></h3>
-<h4 id="google-latitude-reminder-email"><a class="toclink" href="#google-latitude-reminder-email">Google Latitude reminder&nbsp;email</a></h4>
-<p>Google Latitude users can configure a reminder email (see below) when their
-location is being shared with any application, including internal applications
-like the Location History&nbsp;service.</p>
-<hr />
-<pre><code> This is a reminder that you are sharing your Latitude location with the following application(s):
+<!--forces/concerns-->
 
-
-
- Google Location History 
- You may disable these applications at any time by going to &lt;https://www.google.com/latitude/apps?hl=en]&gt;
-
- **Do more with Latitude**
- Go to &lt;https://www.google.com/latitude/apps&gt; on your computer and try the following:
-
-
-
- Google Location History lets you store your history and see a dashboard of interesting information such as frequently visited places and recent trips. 
- Google Talk Location Status lets you post your location in your chat status. 
- Google Public Location Badge lets you publish your location on your blog or site.
-
- You are receiving this reminder once a week. To change your reminder settings, go to: 
- &lt;https://www.google.com/latitude/apps?hl=en&amp;tab=privacyreminders&gt;
-</code></pre>
-<hr />
-<h4 id="fire-eagle-my-alerts"><a class="toclink" href="#fire-eagle-my-alerts">Fire Eagle My&nbsp;Alerts</a></h4>
-<p><img alt="Fire Eagle My Alerts configuration by npdoty, on Flickr" src="http://farm6.static.flickr.com/5001/5642647032_e74e815f6a.jpg" /><br />
-<a href="http://www.flickr.com/photos/npdoty/5642647032]">Fire Eagle My Alerts configuration by npdoty, on&nbsp;Flickr</a></p>
-<h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
 <p>Providing an asynchronous notice requires a reliable mechanism to contact the
 user (a verified email address or telephone number, for example). Care should
 be taken to ensure that the mechanism can actually reach the person using the
@@ -468,6 +788,84 @@ the&nbsp;notice.</p>
 practice altogether. Take measures to avoid unnecessary notices and some level
 of configuration for frequency of notices. This must be balanced against the
 concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
+<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
+<p>Proactively notify the user after the time of consent that information is
+being tracked, stored or re-distributed. This asynchronous notice could be
+achieved through an email, text message, on-screen notice or even through non-
+digital means (by telephone or postal mail, say). The message should inform
+the user about the ongoing practice, including background context (since the
+user may well have forgotten) about the service and any opportunities for
+<a href="Access">access</a> and <a href="User-control">control</a>.</p>
+<p>Asynchronous notices may also include a summary of the data recently collected
+(since the last notice, say) in order to provide clarity (and reminders) to
+the user about the extent of collection. See also, [Privacy dashboard]
+(Privacy-dashboard) and <a href="Access">Access</a>.</p>
+<p>By ensuring that users aren't surprised, asynchronous notice may increase
+trust in the service and comfort with continued disclosure of&nbsp;information.</p>
+<!--### [Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--### [Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<!--## Consequences-->
+
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--### [Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<ol>
+<li><em>Google Latitude reminder&nbsp;email</em></li>
+</ol>
+<p>Google Latitude users can configure a reminder email (see below) when their
+   location is being shared with any application, including internal applications
+   like the Location History&nbsp;service.</p>
+<p><hr>This is a reminder that you are sharing your Latitude location with the following&nbsp;application(s):</p>
+<p><strong>Google Location History</strong><br />
+   You may disable these applications at any time by going to <a href="https://www.google.com/latitude/apps?hl=en]">https://www.google.com/latitude/apps?hl=en]</a></p>
+<p><strong>Do more with Latitude</strong><br />
+   Go to <a href="https://www.google.com/latitude/apps">https://www.google.com/latitude/apps</a> on your computer and try the&nbsp;following:</p>
+<p>Google Location History lets you store your history and see a dashboard of interesting information such as frequently visited places and recent trips. 
+   Google Talk Location Status lets you post your location in your chat status. 
+   Google Public Location Badge lets you publish your location on your blog or&nbsp;site. </p>
+<p>You are receiving this reminder once a week. To change your reminder settings, go to: <a href="https://www.google.com/latitude/apps?hl=en&amp;tab=privacyreminders">https://www.google.com/latitude/apps?hl=en&amp;tab=privacyreminders</a><hr></p>
+<ol>
+<li><em>Fire Eagle My&nbsp;Alerts</em></li>
+</ol>
+<p><img alt="Fire Eagle My Alerts configuration by npdoty, on Flickr" src="http://farm6.static.flickr.com/5001/5642647032_e74e815f6a.jpg" /><br />
+<a href="http://www.flickr.com/photos/npdoty/5642647032]">Fire Eagle My Alerts configuration by npdoty, on&nbsp;Flickr</a></p>
+<!--### [Known Uses]-->
+
+<!-- Pointers to various applications of the pattern.-->
+
+<!--## See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--### [Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--### [Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--## General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--## Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	
@@ -521,6 +919,7 @@ concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
+
 	</body>
 </html>
 
