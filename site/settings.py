@@ -104,48 +104,81 @@ SITE_PRE_PROCESSORS = {
                         "select","exclude","strip","destroy",
                     },
                 },
+                "select":{'type':"tactic",},
+                "exclude":{'type':"tactic",},
+                "strip":{'type':"tactic",},
+                "destroy":{'type':"tactic",},
+
                 'abstract': {
                     'type': "strategy",
                     'tactics': {
                         "summarize","group",
                     },
                 },
+                "summarize":{'type':"tactic",},
+                "group":{'type':"tactic",},
+
                 'separate': {
                     'type': "strategy",
                     'tactics': {
                         "distribute","isolate",
                     },
                 },
+                "distribute":{'type':"tactic",},
+                "isolate":{'type':"tactic",},
+
                 'hide': {
                     'type': "strategy",
                     'tactics': {
                         "restrict","mix","obfuscate","dissociate",
                     },
                 },
+                "restrict":{'type':"tactic",},
+                "mix":{'type':"tactic",},
+                "obfuscate":{'type':"tactic",},
+                "dissociate":{'type':"tactic",},
+
                 'inform': {
                     'type': "strategy",
                     'tactics': {
                         "provide","notify","explain",
                     },
                 },
+                "provide":{'type':"tactic",},
+                "notify":{'type':"tactic",},
+                "explain":{'type':"tactic",},
+
                 'control': {
                     'type': "strategy",
                     'tactics': {
                         "consent","choose","update","retract",
                     },
                 },
+                "consent":{'type':"tactic",},
+                "choose":{'type':"tactic",},
+                "update":{'type':"tactic",},
+                "retract":{'type':"tactic",},
+
                 'enforce': {
                     'type': "strategy",
                     'tactics': {
                         "create","maintain","uphold",
                     },
                 },
+                "create":{'type':"tactic",},
+                "maintain":{'type':"tactic",},
+                "uphold":{'type':"tactic",},
+
                 'demonstrate': {
                     'type': "strategy",
                     'tactics': {
                         "audit","log","report",
                     },
                 },
+                "audit":{'type':"tactic",},
+                "log":{'type':"tactic",},
+                "report":{'type':"tactic",},
+
             },
         }
     }

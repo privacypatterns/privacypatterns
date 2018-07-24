@@ -218,6 +218,12 @@ aside h2 {
 }
 
 /* Categories list is on the patterns listing page */
+#cats li a {
+ background-size: 10px;
+ margin-left: 4px;
+ padding-left: 31px
+}
+
 ul#cats {
   list-style: none;
   margin: 0;
@@ -226,7 +232,7 @@ ul#cats {
 }
 
 ul#cats li {
-  line-height: 1.6em;
+  line-height: 10px;
   margin: .25em 0;
   text-transform: capitalize;
 }
@@ -333,7 +339,7 @@ td > a > img { /* Make sure that linked images in a cell do not make the cell bi
 	font-variant: small-caps;
 	background-size: 10px;
 	padding-left: 33px;
-	margin-left: 6px;
+	margin-left: 3px;
 	text-transform: none;
 	margin-bottom: 0.5em;
 }
