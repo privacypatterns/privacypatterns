@@ -96,7 +96,57 @@ SITE_PRE_PROCESSORS = {
             'template': '_category.html',
             'archiving': True,
             'listing_template': 'skeleton/_listing.html',
-            'output_folder': 'categories'
+            'output_folder': 'categories',
+            'meta': {
+                'minimize': {
+                    'type': "strategy",
+                    'tactics': {
+                        "select","exclude","strip","destroy",
+                    },
+                },
+                'abstract': {
+                    'type': "strategy",
+                    'tactics': {
+                        "summarize","group",
+                    },
+                },
+                'separate': {
+                    'type': "strategy",
+                    'tactics': {
+                        "distribute","isolate",
+                    },
+                },
+                'hide': {
+                    'type': "strategy",
+                    'tactics': {
+                        "restrict","mix","obfuscate","dissociate",
+                    },
+                },
+                'inform': {
+                    'type': "strategy",
+                    'tactics': {
+                        "provide","notify","explain",
+                    },
+                },
+                'control': {
+                    'type': "strategy",
+                    'tactics': {
+                        "consent","choose","update","retract",
+                    },
+                },
+                'enforce': {
+                    'type': "strategy",
+                    'tactics': {
+                        "create","maintain","uphold",
+                    },
+                },
+                'demonstrate': {
+                    'type': "strategy",
+                    'tactics': {
+                        "audit","log","report",
+                    },
+                },
+            },
         }
     }
 }
