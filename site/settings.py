@@ -96,7 +96,90 @@ SITE_PRE_PROCESSORS = {
             'template': '_category.html',
             'archiving': True,
             'listing_template': 'skeleton/_listing.html',
-            'output_folder': 'categories'
+            'output_folder': 'categories',
+            'meta': {
+                'minimize': {
+                    'type': "strategy",
+                    'tactics': {
+                        "select","exclude","strip","destroy",
+                    },
+                },
+                "select":{'type':"tactic", 'color': "#D5E8D4",},
+                "exclude":{'type':"tactic", 'color': "#E4FFD4",},
+                "strip":{'type':"tactic", 'color': "#E3FFAB",},
+                "destroy":{'type':"tactic", 'color': "#C8FFBD",},
+
+                'abstract': {
+                    'type': "strategy",
+                    'tactics': {
+                        "summarize","group",
+                    },
+                },
+                "group":{'type':"tactic", 'color': "#C9F0E0",},
+                "summarize":{'type':"tactic", 'color': "#B8FFEA",},
+
+                'separate': {
+                    'type': "strategy",
+                    'tactics': {
+                        "distribute","isolate",
+                    },
+                },
+                "isolate":{'type':"tactic", 'color': "#E6FFE9",},
+                "distribute":{'type':"tactic", 'color': "#BDFFC6",},
+
+                'hide': {
+                    'type': "strategy",
+                    'tactics': {
+                        "restrict","mix","obfuscate","dissociate",
+                    },
+                },
+                "restrict":{'type':"tactic", 'color': "#FFF0D6",},
+                "dissociate":{'type':"tactic", 'color': "#FFD5CC",},
+                "obfuscate":{'type':"tactic", 'color': "#FFD89E",},
+                "mix":{'type':"tactic", 'color': "#FFD1DC",},
+
+                'inform': {
+                    'type': "strategy",
+                    'tactics': {
+                        "provide","notify","explain",
+                    },
+                },
+                "provide":{'type':"tactic", 'color': "#D1EDFF",},
+                "notify":{'type':"tactic", 'color': "#EDF5FF",},
+                "explain":{'type':"tactic", 'color': "#C7DBFF",},
+
+                'control': {
+                    'type': "strategy",
+                    'tactics': {
+                        "consent","choose","update","retract",
+                    },
+                },
+                "consent":{'type':"tactic", 'color': "#FDFFF5",},
+                "choose":{'type':"tactic", 'color': "#FFFFFF",},
+                "update":{'type':"tactic", 'color': "#FFFFCC",},
+                "retract":{'type':"tactic", 'color': "#FFFBEB",},
+
+                'enforce': {
+                    'type': "strategy",
+                    'tactics': {
+                        "create","maintain","uphold",
+                    },
+                },
+                "create":{'type':"tactic", 'color': "#FDF5FF",},
+                "maintain":{'type':"tactic", 'color': "#F6E8FF",},
+                "uphold":{'type':"tactic", 'color': "#E4D2F5",},
+
+                'demonstrate': {
+                    'type': "strategy",
+                    'tactics': {
+                        "audit","log","report",
+                    },
+                },
+                "audit":{'type':"tactic", 'color': "#B3F2FF",},
+                "log":{'type':"tactic", 'color': "#CAF0EC",},
+                "report":{'type':"tactic", 'color': "#D9FFFB",},
+
+            },
         }
     }
 }

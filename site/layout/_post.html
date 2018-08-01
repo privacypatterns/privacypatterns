@@ -1,5 +1,88 @@
 {% extends "skeleton/_body.html" %}
 
+{% block extra_css %}
+     <script type="text/javascript" charset="utf-8">
+      var inputData = [
+      {% with page as post %}
+        {% with post.name_without_extension|remove_date_prefix|unslugify as default_title %}
+		 [
+          "{{ post.title|default_if_none:default_title }}",
+          "{{ post.url }}",
+            {% autoescape off %} {
+              {% if post.use != None %}
+                "use":[{%for i in post.use.split%}["/patterns/{{i}}",
+                  {%for j in node.pages%}
+                   {%if i in j.url and j.title != None%}
+                     "{{j.title}}", {{j.categories}},
+                {%endif%}{%endfor%}],{%endfor%}],
+              {% endif %}
+              {% if post.com != None %}
+                "com":[{%for i in post.com.split%}["/patterns/{{i}}",
+                  {%for j in node.pages%}
+                   {%if i in j.url and j.title != None%}
+                     "{{j.title}}", {{j.categories}},
+                {%endif%}{%endfor%}],{%endfor%}],
+              {% endif %}
+              {% if post.ref != None %}
+                "ref":[{%for i in post.ref.split%}["/patterns/{{i}}",
+                  {%for j in node.pages%}
+                   {%if i in j.url and j.title != None%}
+                     "{{j.title}}", {{j.categories}},
+                {%endif%}{%endfor%}],{%endfor%}],
+              {% endif %}
+              {% if post.lds != None %}
+                "lds":[{%for i in post.lds.split%}["/patterns/{{i}}",
+                  {%for j in node.pages%}
+                   {%if i in j.url and j.title != None%}
+                     "{{j.title}}", {{j.categories}},
+                {%endif%}{%endfor%}],{%endfor%}],
+              {% endif %}
+              {% if post.sim != None %}
+                "sim":[{%for i in post.sim.split%}["/patterns/{{i}}",
+                  {%for j in node.pages%}
+                   {%if i in j.url and j.title != None%}
+                     "{{j.title}}", {{j.categories}},
+                {%endif%}{%endfor%}],{%endfor%}],
+              {% endif %}
+              {% if post.alt != None %}
+                "alt":[{%for i in post.alt.split%}["/patterns/{{i}}",
+                  {%for j in node.pages%}
+                   {%if i in j.url and j.title != None%}
+                     "{{j.title}}", {{j.categories}},
+                {%endif%}{%endfor%}],{%endfor%}],
+              {% endif %}
+              {% if post.req != None %}
+                "req":[{%for i in post.req.split%}["/patterns/{{i}}",
+                  {%for j in node.pages%}
+                   {%if i in j.url and j.title != None%}
+                     "{{j.title}}", {{j.categories}},
+                {%endif%}{%endfor%}],{%endfor%}],
+              {% endif %}
+              {% if post.ext != None %}
+                "ext":[{%for i in post.ext.split%}["/patterns/{{i}}",
+                  {%for j in node.pages%}
+                   {%if i in j.url and j.title != None%}
+                     "{{j.title}}", {{j.categories}},
+                {%endif%}{%endfor%}],{%endfor%}],
+              {% endif %}},
+            {{post.categories}},
+            {% endautoescape %}
+         ],
+		{% endwith %}
+      {% endwith %}
+      ], catColors = {
+      {% for c in categories %}
+       {% ifchanged c.name %}
+        {% if c.type != None %}
+         "{{c.name}}":"{{c.color}}",
+        {% endif %}
+       {% endifchanged %}
+      {% endfor %}};
+     </script>
+     <script src="{{site.url}}/media/js/raphael/raphael" type="text/javascript" charset="utf-8"></script>
+     <script src="{{site.url}}/media/js/raphael/graffle.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
 {% block content_body %}
 
 <div id="content">
@@ -18,6 +101,9 @@
 			{{page.title|default_if_none:default_title }}
 		{%endwith%}
 	</h1>
+
+    <div id="holder"></div>
+
 	{% filter typogrify %}
 
 	{% markdown %}

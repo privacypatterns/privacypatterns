@@ -59,7 +59,7 @@ button, input, select, textarea { margin: 0; }
 
 /*
  * End of html5boilerplate CSS; start of privacypatterns CSS
- * 
+ *
  * Modular scale:
  * Lora, 14px * 1.618
  * http://modularscale.com/scale/?px1=14&px2=&ra1=1.618&ra2=0
@@ -99,7 +99,7 @@ body {
   .toc {
     float: none !important;
     position: inherit !important;
-  }	
+  }
   img {
     max-width: 100%;
   }
@@ -216,8 +216,27 @@ aside {
 aside h2 {
   font-size: 22px;
 }
+/* Raphael Pattern Relationships */
+#holder {
+    height: 50px;
+    top: 0;
+    width: 100%;
+}
+#copy {
+    bottom: 0;
+    font-size: .7em;
+    position: absolute;
+    right: 1em;
+    text-align: right;
+}
 
 /* Categories list is on the patterns listing page */
+#cats li a {
+ background-size: 10px;
+ margin-left: 4px;
+ padding-left: 31px
+}
+
 ul#cats {
   list-style: none;
   margin: 0;
@@ -226,7 +245,7 @@ ul#cats {
 }
 
 ul#cats li {
-  line-height: 1.6em;
+  line-height: 10px;
   margin: .25em 0;
   text-transform: capitalize;
 }
@@ -328,12 +347,47 @@ td > a > img { /* Make sure that linked images in a cell do not make the cell bi
   max-width: 100%;
 }
 
+/* Add styling for collapsible categories */
+#cats ul li a {
+	font-variant: small-caps;
+	background-size: 10px;
+	padding-left: 33px;
+	margin-left: 3px;
+	text-transform: none;
+	margin-bottom: 0.5em;
+}
+#cats ul li {
+	display: none;
+}
+#cats ul input:checked ~ li {
+	display: block;
+}
+#cats ul label::before {
+	content: '+';
+	margin-left: -12px;
+}
+#cats ul input:checked ~ label::before {
+	content: '-';
+	margin-left: -9px;
+}
+#cats ul label a {
+	font-variant: small-caps;
+  display: inline-block;
+	margin-bottom: 0.5em;
+}
+#cats ul input[type='checkbox'] {
+	display: none;
+}
+#cats ul {
+	margin-bottom: initial;
+}
+
 .category { text-transform: capitalize; }
 
 /* Categories list on individual pattern pages */
 p#cats a { /* same as non p, prevents colored margins */
-  background-size: 24px; 
-  padding-top: 0.5em; 
+  background-size: 24px;
+  padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
 p#cats, p#cats a, p#cats a:visited {
@@ -465,7 +519,7 @@ footer a {
   color: #444;
 }
 
-/* 
+/*
  * Homepage specific styles
  */
 #index #content { width: 60%; }

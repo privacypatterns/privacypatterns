@@ -11,10 +11,25 @@
 </div>
 
 <aside id="sidebar">
-	<h2>Categories</h2>
   <ul id="cats">
+	<h2>Categories</h2>
+    {% for strategy in categories %}
+     {% if strategy.type == "strategy" %}
+      <ul>{% include "skeleton/_strategy.html" %}
+      {% for tactic in categories %}
+       {% if tactic.name in strategy.tactics %}
+        <li>{% include "skeleton/_tactic.html" %}</li>
+       {% endif %}
+      {% endfor %}
+      </ul>
+     {% endif %}
+    {% endfor %}
+    <br/>
+	<h2>Miscellaneous</h2>
     {% for category in categories %}
+     {% if not category.type %}
       <li>{% include "skeleton/_category.html" %}</li>
+     {% endif %}
     {% endfor %}
   </ul>
 </aside>
