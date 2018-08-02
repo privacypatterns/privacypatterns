@@ -18,7 +18,16 @@ window.onload = function () {
         hoverDown = function() {down(this, true);},
         draggerDown = function() {down(this);},
         hoverUp = function() {up(this);},
-        draggerUp = function() {}, // handled by hover up
+        draggerUp = function() {
+            if(!dragging && this.type == "text"){
+                location.href =
+                // While we can use the below with Hyde, it isnt needed
+                    //"{{site.url}}" +
+                    this.data('url') + ".html";
+            }
+            isClicked = false;
+            dragging = false;
+        },
         down = function (a, hover = false) {
             // Don't do anything if we only lost focus
             if (isClicked) return;
@@ -67,16 +76,6 @@ window.onload = function () {
             // Stop showing connections
             showConnections(
                 a.data('text').data('relationships'), false);
-        },
-        mouseUp = function () {
-            if(!dragging && this.type == "text"){
-                location.href =
-                // While we can use the below with Hyde, it isnt needed
-                    //"{{site.url}}" +
-                    this.data('url') + ".html";
-            }
-            isClicked = false;
-            dragging = false;
         },
         // Optional ellipses for relationship type shorthands
         relations = [];
@@ -287,10 +286,6 @@ window.onload = function () {
         text.data('shape').hover(hoverDown, hoverUp);
         text.hover(hoverDown, hoverUp);
         text.toFront();
-        // Determine when mouseUp occurs so that we can
-        // prevent unintentional extra hovers/dragUp
-        text.mouseup(mouseUp);
-        text.data('shape').mouseup(mouseUp);
     }
     // Dragger function sets ox and oy based on shape type
     // Access shape x and y by ox and oy, accounts for ellipse
