@@ -56,4 +56,16 @@ Development Instructions
 Updating privacypatterns.org
 ----------------------------
 
-For now the process for this is maintained by [@mohit](https://github.com/mohit). Please create a PR with your changes and the site will be deployed after the review.
+## Creating a PR
+
+1. After running `make build` and `make static` as described above push to a new branch and create a PR on this repository.
+
+2. Following a review you can merge the PR which will start a automated docker build. You can check details on [Docker Hub](https://hub.docker.com/r/privacypatterns/website/builds/)
+
+3. Once the build is complete, the website should be available on next.privacypatterns.org in the next 5-10 minutes.
+
+## Pushing to https://privacypatterns.org (public patterns)
+
+For now the process for this is maintained by [@mohit](https://github.com/mohit) and [@npdoty](https://github.com/npdoty). Please ping them email or github to push master to the main site.
+
+
