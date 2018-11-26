@@ -402,15 +402,15 @@
         
       
         
-      
-        
-      
-        
-      
-        
           
 <a href="/categories/location" class="location">location</a>
            &bull; 
+        
+      
+        
+      
+        
+      
         
       
         
@@ -733,68 +733,94 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#summary">Summary</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#examples">Examples</a></li>
-<li><a href="#see-also">See&nbsp;Also</a></li>
+<li><a href="#problem">Problem</a><ul>
+<li><a href="#forces-and-concerns">Forces and&nbsp;Concerns</a></li>
+</ul>
+</li>
+<li><a href="#solution">Solution</a><ul>
+<li><a href="#structure">[Structure]</a></li>
+<li><a href="#implementation">[Implementation]</a></li>
+</ul>
+</li>
+<li><a href="#consequences">Consequences</a><ul>
+<li><a href="#constraints">[Constraints]</a></li>
+</ul>
+</li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#google-privacy-dashboard">Google Privacy&nbsp;Dashboard</a></li>
+</ul>
+</li>
+<li><a href="#see-also">See Also</a><ul>
+<li><a href="#related-patterns">[Related&nbsp;Patterns]</a></li>
+<li><a href="#sources">[Sources]</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <!--### [Also Known As]-->
 
 <!-- All other names the pattern is known by.-->
 
-<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
-<!-- One short paragraph summarising the pattern.-->
-
-<p>An informational privacy dashboard can provide collected summaries of the collected or processed personal data for a particular&nbsp;user.</p>
-<!--intent-->
-
-<p>Help users see an overview of the personal information collected about them, particularly when the data or services in question are&nbsp;numerous.</p>
-<p>Supports <a href="Access">Access</a>, <a href="Transparency-and-feedback">Transparency and feedback</a>.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<!-- The situations in which the pattern may apply.-->
-
-<p>When your service collects, aggregates or processes personal information from users, particularly information that changes over time, is collected or aggregated in ways that might be unexpected, invisible or easily forgotten, or where users have options for access, correction and&nbsp;deletion.</p>
+<p><!-- The situations in which the pattern may apply.-->
+<!-- Aspects which constrain the solution, but are not modified by it. They affect the impact of different forces.--></p>
+<p>A service (or product) which processes personal data of users may make that data accessible to them. This is often the case whether conforming to laws about self-determination and notice, or merely wanting to provide an additional privacy consideration for the sake of users. The controller concerned wants to open up about the data they have processed, and to improve the ease of use for configuring privacy&nbsp;settings.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
-<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+<p><!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+<!-- Should be context-free, leading with a concise problem statement.--></p>
+<p>A system should succinctly and effectively communicate the kind and extent of potentially disparate data that has been&nbsp;processed.</p>
+<p><em>Users may not remember or realize what data a particular service or company has collected, and thus can't be confident that a service isn't collecting too much data. Users who aren't regularly and consistently made aware of what data a service has collected may be surprised or upset when they hear about the service's data collection practices in some other context. Without visibility into the actual data collected, users may not fully understand the abstract description of what types of data are collected; simultaneously, users may easily be overwhelmed by access to raw data without a good understanding of what that data&nbsp;means.</em></p>
+<h4 id="forces-and-concerns"><a class="toclink" href="#forces-and-concerns">Forces and&nbsp;Concerns</a></h4>
+<p><!-- Implications in this problem which affect the appropriateness of a solution, and are affected by this pattern.-->
+<!-- Forces should be highly visible for easy reference, where less obvious a dedicated section is recommended.--></p>
+<ul>
+<li>Controllers want to provide users with sufficient information to determine how it is used, and to prevent regrettable sharing&nbsp;decisions</li>
+<li>Controllers want to prevent both over and under-sharing, so as to provide users with the best experience&nbsp;possible</li>
+<li>Users often do not realize the privacy risks in providing their personal&nbsp;data</li>
+<li>Users do not want to be subjected to too many or overly detailed notifications, as they will quickly make a habit of overlooking&nbsp;them</li>
+</ul>
+<!--#### Indications-->
 
-<p>How can a service succinctly and effectively communicate the kind and extent of potentially disparate data that has been collected or aggregated by a service? Users may not remember or realize what data a particular service or company has collected, and thus can't be confident that a service isn't collecting too much data. Users who aren't regularly and consistently made aware of what data a service has collected may be surprised or upset when they hear about the service's data collection practices in some other context. Without visibility into the actual data collected, users may not fully understand the abstract description of what types of data are collected; simultaneously, users may easily be overwhelmed by access to raw data without a good understanding of what that data&nbsp;means.</p>
-<!--forces/concerns-->
+<!-- Symptoms that may indicate the existence of this problem, if otherwise unclear.-->
 
-<p>As in other access mechanisms, showing a user's data back to them can create new privacy problems. Implementers should be careful not to provide access to sensitive data on the dashboard to people other than the subject. For example, showing the search history associated with a particular cookie to any user browsing with that cookie can reveal the browsing history of one family member to another that uses the same computer. Also, associating all usage information with a particular account or identity (in order to show a complete dashboard) may encourage designers to associate data that would otherwise not be attached to the user account at all. Designers should balance the access value against the potential advantages of <a href="Deidentification">Deidentification</a>.</p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
 <!-- A concise description of how the pattern addresses the problem.-->
 
-<p>An informational privacy dashboard can provide collected summaries of the collected or processed personal data for a particular user. While access to raw data may be useful for some purposes, a dashboard provides a summary or highlight of important personal data. Seek to make the data meaningful to the user with examples, visualizations and&nbsp;statistics.</p>
-<p>Where users have choices for deletion or correction of stored data, a dashboard view of collected data is an appropriate place for these controls (which users may be inspired to use on realizing the extent of their collected&nbsp;data).</p>
-<p>In short, a dashboard answers the common user question "what do you know about me?" and does so in a way that the user can understand and take appropriate action if&nbsp;necessary.</p>
-<!--### [Structure]-->
+<p>Provide successive summaries of collected or otherwise processed personal data for a particular user, representing this data in a meaningful way. This can be through demonstrative examples, predictive models, visualizations, or&nbsp;statistics.</p>
+<p><em>Where users have choices for deletion or correction of stored data, a dashboard view of collected data is an appropriate place for these controls (which users may be inspired to use on realizing the extent of their collected&nbsp;data).</em></p>
+<!--#### Rationale-->
 
+<!-- Where useful or otherwise unclear, justification for the solution's appropriateness in this pattern's context.-->
+
+<h3 id="structure"><a class="toclink" href="#structure">[Structure]</a></h3>
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--### [Implementation]-->
-
+<p>A variation of the privacy dashboard, Privacy Mirrors, focuses on history, feedback, awareness, accountability, and&nbsp;change.</p>
+<h3 id="implementation"><a class="toclink" href="#implementation">[Implementation]</a></h3>
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
-<!--## Consequences-->
-
+<p><em>Implementing this pattern is a matter of providing logging, reporting, and other informational access and notifications on user-selected/filtered, appropriately defaulted, relevant usage&nbsp;data.</em></p>
+<p>Aspects which the controller wishes to inform their users about may include the collection and aggregation of their data, particularly personal data which:
+- <em>changes over time</em>,
+- <em>is [processed] in ways that might be unexpected</em>,
+- is <em>invisible or easily forgotten</em>, or
+- is subject to <em>correction and deletion</em> by&nbsp;users.</p>
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
-<!--### [Constraints]-->
-
+<h3 id="constraints"><a class="toclink" href="#constraints">[Constraints]</a></h3>
 <!-- limitations as a consequence of applying the pattern.-->
 
+<p><em>As in other access mechanisms, showing a user's data back to them can create new privacy problems. Implementers should be careful not to provide access to sensitive data on the dashboard to people other than the [user]. For example, showing the search history associated with a particular cookie to any user browsing with that cookie can reveal the browsing history of one family member to another that uses the same&nbsp;computer.</em></p>
+<p><em>Also, associating all usage information with a particular account or identity (in order to show a complete dashboard) may encourage designers to associate data that would otherwise not be attached to the user account at all. Designers should balance the access value against the potential [considerations within] <a href="Deidentification">Deidentification</a>.</em></p>
 <h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
 <!--Motivational example to see how the pattern is applied.-->
 
-<ul>
-<li><em>Google Privacy&nbsp;Dashboard</em></li>
-</ul>
+<h4 id="google-privacy-dashboard"><a class="toclink" href="#google-privacy-dashboard">Google Privacy&nbsp;Dashboard</a></h4>
 <p><img alt="Google Dashboard Latitude" src="/media/images/Google_Dashboard_Latitude.png" /></p>
-<p>The <a href="https://google.com/dashboard">Google Dashboard</a> shows a summary of the content stored and/or shared by many (but not all) of Google's services (Latitude, Google's location sharing service, is shown above). For each service, a summary (with counts) of each type of data is listed, and in some cases an example of the most recent such item is described. An icon signifies which pieces of data are public. Links are also provided in two categories: to actions that can be taken to change or delete data, and to privacy policy / help&nbsp;pages.</p>
-<p><a href="http://www.google.com/support/accounts/bin/answer.py?answer#162744">Google Accounts: About the&nbsp;Dashboard</a></p>
+<p><em>The <a href="https://google.com/dashboard">Google Dashboard</a> shows a summary of the content stored and/or shared by many (but not all) of Google's services (Latitude, Google's location sharing service, is shown above). For each service, a summary (with counts) of each type of data is listed, and in some cases an example of the most recent such item is described. An icon signifies which pieces of data are public. Links are also provided in two categories: to actions that can be taken to change or delete data, and to privacy policy / help&nbsp;pages.</em></p>
+<p><em><a href="http://www.google.com/support/accounts/bin/answer.py?answer#162744">Google Accounts: About the&nbsp;Dashboard</a></em></p>
 <!--### [Known Uses]-->
 
 <!-- Pointers to various applications of the pattern.-->
@@ -802,15 +828,27 @@
 <h2 id="see-also"><a class="toclink" href="#see-also">See&nbsp;Also</a></h2>
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<p>Dashboards are a widely-used pattern in other data-intensive activities for providing a summary of key or actionable metrics. See: <em>external references needed&nbsp;here</em></p>
-<!--### [Related Patterns]-->
-
+<p><em>Dashboards are a widely-used pattern in other data-intensive activities for providing a summary of key or actionable&nbsp;metrics.</em></p>
+<h3 id="related-patterns"><a class="toclink" href="#related-patterns">[Related&nbsp;Patterns]</a></h3>
 <!-- Supporting and conflicting patterns-->
 
-<!--### [Sources]-->
-
+<p>This pattern <em>complements</em> <a href="Awareness-Feed">Awareness Feed</a>. As this pattern provides collective summaries of processed data, and <a href="Awareness-Feed">Awareness Feed</a> keeps users informed of such data, as well as what can be derived, they can work together. In doing so, users are better equipped to take actions which are in line with their personal privacy&nbsp;preferences.</p>
+<p>This patter is <em>similar to</em> <a href="Privacy-Mirrors">Privacy Mirrors</a>. They have overlapping contexts, describe overlapping problems, and have solutions which have similar elements within&nbsp;them.</p>
+<p>This pattern <em>uses</em> <a href="Appropriate-Privacy-Feedback">Appropriate Privacy Feedback</a>, as it empowers users to act on detail they have been drawn attention&nbsp;to.</p>
+<h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
 <!-- References to the original source of the pattern.-->
 
+<p>N. Doty <span class="amp">&amp;</span> M. Gupta, (2003). “Privacy Design Patterns and Anti-Patterns Patterns Misapplied and Unintended Consequences,”&nbsp;1--5.</p>
+<p>D. H. Nguyen and E. D. Mynatt, (2002). “Privacy Mirrors : Understanding and Shaping Socio-technical Ubiquitous Computing Systems', pp.&nbsp;1--18.</p>
+<p>S. Romanosky, A. Acquisti, J. Hong, L. F. Cranor, and B. Friedman, (2006). “Privacy patterns for online interactions,” Proceedings of the 2006 conference on Pattern languages of programs - PLoP ’06, p.&nbsp;1.</p>
+<p>C. Bier <span class="amp">&amp;</span> E. Krempel, (2012). “Common Privacy Patterns in Video Surveillance and Smart Energy,” In ICCCT-2012 (pp. 610--615). Karlsruhe, Germany:&nbsp;IEEE.</p>
+<p>E. S. Chung et al., (2004). “Development and Evaluation of Emerging Design Patterns for Ubiquitous Computing,” DIS '04 Proceedings of the 5th conference on Designing interactive systems: processes, practices, methods, and techniques, pp.&nbsp;233--242.</p>
+<!-- References Chung et al. with additional detail -->
+
+<p>H. Baraki et al., (2014). “Towards Interdisciplinary Design Patterns for Ubiquitous Computing Applications,” Kassel,&nbsp;Germany.</p>
+<!-- Analogy citing original, Section 3.3.5 -->
+
+<p>G. Iachello and J. Hong, (2007). “End-User Privacy in Human-Computer Interaction,” Foundations and Trends in Human-Computer Interaction, vol. 1, no. 1, pp.&nbsp;1--137.</p>
 <!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->

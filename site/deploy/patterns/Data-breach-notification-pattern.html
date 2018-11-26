@@ -96,132 +96,6 @@
     Categories: 
       
         
-          
-<a href="/categories/control" class="control">control</a>
-           &bull; 
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-      
-        
       
         
       
@@ -366,11 +240,11 @@
         
       
         
+      
+        
           
 <a href="/categories/notify" class="notify">notify</a>
           
-        
-      
         
       
         
@@ -481,13 +355,20 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#summary">Summary</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a></li>
+<li><a href="#problem">Problem</a><ul>
+<li><a href="#forces-and-concerns">Forces and&nbsp;Concerns</a></li>
+</ul>
+</li>
+<li><a href="#solution">Solution</a><ul>
+<li><a href="#implementation">[Implementation]</a></li>
+</ul>
+</li>
 <li><a href="#consequences">Consequences</a></li>
 <li><a href="#examples">Examples</a><ul>
 <li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+<li><a href="#related-patterns">[Related&nbsp;Patterns]</a></li>
+<li><a href="#sources">[Sources]</a></li>
 </ul>
 </li>
 </ul>
@@ -496,40 +377,43 @@
 
 <!-- All other names the pattern is known by.-->
 
-<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
-<!-- One short paragraph summarising the pattern.-->
-
-<p>This pattern assures that a certain minimum data breach notification delay is not&nbsp;exceeded.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<!-- The situations in which the pattern may apply.-->
-
-<p>This pattern is applicable in any environment where PII is stored and that allows monitoring of specific&nbsp;events.</p>
+<p><!-- The situations in which the pattern may apply.-->
+<!-- Aspects which constrain the solution, but are not modified by it. They affect the impact of different forces.--></p>
+<p>Controllers of services (or products) provided to users collect mass amounts of data, a lot of it personal, to improve the quality and user experience of that service. This is all to be done under the informed consent of the user, who should properly understand the risks involved for their data. One such risk is that of unauthorized access, modification, removal, or sharing of data. If such a data breach occurs, notification is required. Any controller within (or providing services or products within) the EU must notify the supervisory authority of their main establishment or representative. This must occur within 72 hours unless justified. Notifying users is dependent on whether they are sufficiently&nbsp;affected.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
-<p>In case a data breach has occurred, i.e. Personally Identifiable Information (PII) has leaked, the data owner must be notified. The notification process in turn may not work correctly, so it has to be&nbsp;monitored.</p>
+<p>When data breaches occur, numerous risks become apparent for multiple parties, these parties need to be notified and the risks need to be mitigated. Subsequent instances should be prevented through lessons&nbsp;learned.</p>
+<h4 id="forces-and-concerns"><a class="toclink" href="#forces-and-concerns">Forces and&nbsp;Concerns</a></h4>
+<p><!-- Implications in this problem which affect the appropriateness of a solution, and are affected by this pattern.-->
+<!-- Forces should be highly visible for easy reference, where less obvious a dedicated section is recommended.--></p>
+<ul>
+<li>Users want to know if anything has happened to compromise their data, their security, or their&nbsp;privacy</li>
+<li>Users want the controller to mitigate the risks before and after a breach to the best of their&nbsp;ability</li>
+<li>Controllers want to prevent risks from materializing and place measures against breaches happening in&nbsp;future</li>
+<li>Controllers also want to prevent users from suffering consequences from the breach, or from ignorance of the&nbsp;breach</li>
+</ul>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
 <!-- A concise description of how the pattern addresses the problem.-->
 
-<p>A monitoring system logs access to clients' PII along with a time-stamp. A notification process continuously verifies that only authorized access is listed in this log file, and in case of unauthorized access notifies the data owner and logs the notification action in the log file, again accompanied by a time-stamp. A notification monitoring process finally continuously checks that t_n - t_l &lt;= max_np (t_n denoting the time of notification, t_l the time of data leakage, max_np the maximally allowed period of notification). In case t_n - t_l &gt; max_np it alerts the PII Incident&nbsp;Manager.</p>
-<p>A formal model can be found <a href="http://sit.sit.fraunhofer.de/smv/pattern-models/Data-Breach-Notification-pattern-model.pdf">here</a>.</p>
-<!--goals-->
-
-<p>The pattern goal is to constantly ensure a minimum delay of notification, should a data breach have occurred, and in case a notification exceeds the allowed delay, to indicate this by appropriate&nbsp;means.</p>
+<p>Detect and react to data breaches quickly, notifying the supervisory authority of details, particularly risk mitigation, in order to establish whether users must also be informed. Properly handling these events will strengthen user trust rather than weaken&nbsp;it.</p>
 <!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--### [Implementation]-->
-
+<h3 id="implementation"><a class="toclink" href="#implementation">[Implementation]</a></h3>
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
+<p><em>A monitoring system logs access to [personal data] along with a time-stamp. A notification process continuously verifies that only authorized access is listed in this log file, and in case of unauthorized access notifies the data owner and logs the notification action in the log file, again accompanied by a time-stamp. A notification monitoring process finally continuously checks that t_n - t_l &lt;= max_np (t_n denoting the time of notification, t_l the time of data leakage, max_np the maximally allowed period of notification). In case t_n - t_l &gt; max_np it alerts the [associated] Incident Manager. A formal model can be found <a href="http://sit.sit.fraunhofer.de/smv/pattern-models/Data-Breach-Notification-pattern-model.pdf">here</a>.</em></p>
+<p>In the event of a breach, the controller should first notify the supervisory authority within 72 hours of it's discovery, and no later without sufficient justification. The processor of personal data, where not also the controller, should notify the controller&nbsp;immediately.</p>
+<p>Notification to the authority should include the nature and extent of the personal data affected, the contact for follow up, likely consequences, and the measures proposed or taken to mitigate the breach's effects. If absolutely necessary these details can be provided as they become available. Any breaches should also be documented for future&nbsp;review.</p>
+<p>Where users are affected in a manner which risks their personal rights and freedoms, they shall also be informed of at least the contact, consequences, and measures to be taken, without undue delay. This is not the case if disproportionate effort would be needed, the data remains protected, or the risk is already sufficiently mitigated. The supervisory authority shall assist in determining whether informing users is&nbsp;necessary.</p>
+<p>Note that associations or other representative bodies may prepare codes of conduct for data breach notifications. These notifications may also be affected by binding corporate rules, or guidelines, recommendations, and best practices from the board, to promote&nbsp;consistency.</p>
 <h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
-<!--constraints and consequences-->
-
-<p>In order to use the pattern, the personal data processor must have in place an access control mechanism and a monitoring mechanism that allows to monitor every PII access. The pattern cannot ensure that a PII Incident Manager will take adequate actions, hence this process has to be established and controlled by other&nbsp;means.</p>
+<p><em>In order to [detect the breach], the [controller] must have in place an access control mechanism and a monitoring mechanism [for personal data]. The pattern cannot ensure that [the relevant] Incident Manager will take adequate actions, hence this process has to be established and controlled by other&nbsp;means.</em></p>
 <!--### [Constraints]-->
 
 <!-- limitations as a consequence of applying the pattern.-->
@@ -537,23 +421,23 @@
 <h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
 <!--Motivational example to see how the pattern is applied.-->
 
-<p>Assume a company Comp stores all employees' data with a storage service Store. There is a contractual agreement between Comp and Store that each data leakage is reported within one hour. Now Bob, an employee of Store and not authorized to read Comp's data, succeeds in circumventing Store's access control mechanisms and reads Store's data. This represents a data breach of which Comp has to be notified within an&nbsp;hour.</p>
+<p><em>Assume a [company] stores all employees' data [through a controller's service]. There is a contractual agreement between [them] that each data leakage is reported within one hour. Now Bob, an employee of [the controller] and not authorized to read [the company's] data, succeeds in circumventing [the] access control mechanisms and reads [personal] data. This represents a data breach of which [the company] has to be notified within an&nbsp;hour.</em></p>
 <h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
 <!-- Pointers to various applications of the pattern.-->
 
-<p>This pattern is based on the privacy principle "Accountability" specified in ISO/IEC 29100 that is also used in Annex A of ISO/IEC 27018. More specifically, it addresses A.9.1 Notification of a data breach involving Personally Identifiable Information (PII). Uses of the pattern as a concrete instantiation of A.9.1 are not&nbsp;known.</p>
+<p><em>This pattern is based on the privacy principle "Accountability" specified in <a href="https://www.iso.org/standard/45123.html">ISO/IEC 29100</a> that is also used in Annex A of <a href="https://www.iso.org/standard/61498.html">ISO/IEC 27018</a>. More specifically, it addresses A.9.1 Notification of a data breach involving Personally Identifiable Information (PII). Uses of the pattern as a concrete instantiation of A.9.1 are not&nbsp;known.</em></p>
 <!--## See Also-->
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--### [Related Patterns]-->
-
+<h3 id="related-patterns"><a class="toclink" href="#related-patterns">[Related&nbsp;Patterns]</a></h3>
 <!-- Supporting and conflicting patterns-->
 
-<!--### [Sources]-->
-
+<p>This pattern <em>complements</em> <a href="Unusual-activities">Unusual Activities</a>. These patterns work in an overlapping context. While this pattern focuses on informing and reacting when a data breach has occurred, <a href="Unusual-activities">Unusual Activities</a> focuses on detecting and dealing with unauthorized access. The patterns can work together to handle unauthorized access to personal&nbsp;data.</p>
+<h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
 <!-- References to the original source of the pattern.-->
 
+<p>“privacypatterns.eu - collecting patterns for better privacy,” privacypatterns.eu, 2017. [Online]. Available: https://privacypatterns.eu/. [Accessed:&nbsp;20-Oct-2015].</p>
 <!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->

@@ -96,132 +96,6 @@
     Categories: 
       
         
-          
-<a href="/categories/control" class="control">control</a>
-           &bull; 
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-      
-        
       
         
       
@@ -481,57 +355,72 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#summary">Summary</a></li>
+<li><a href="#also-known-as">[Also Known&nbsp;As]</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a></li>
+<li><a href="#problem">Problem</a><ul>
+<li><a href="#forces-and-concerns">Forces and&nbsp;Concerns</a></li>
+</ul>
+</li>
+<li><a href="#solution">Solution</a><ul>
+<li><a href="#implementation">[Implementation]</a></li>
+</ul>
+</li>
 <li><a href="#consequences">Consequences</a><ul>
+<li><a href="#constraints">[Constraints]</a></li>
 <li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+<li><a href="#related-patterns">[Related&nbsp;Patterns]</a></li>
+<li><a href="#sources">[Sources]</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<!--### [Also Known As]-->
-
+<h3 id="also-known-as"><a class="toclink" href="#also-known-as">[Also Known&nbsp;As]</a></h3>
 <!-- All other names the pattern is known by.-->
 
-<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
-<!-- One short paragraph summarising the pattern.-->
-
-<p>Give one careful thought to your privacy needs, then be always able to swiftly apply what you&nbsp;decided.</p>
+<p>Personalized Policy Matching&nbsp;Display</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<!-- The situations in which the pattern may apply.-->
-
-<p>A user wants to start using a new service, which lets the user configure several privacy-related parameters. The user often does the same with new, different service&nbsp;providers.</p>
+<p><!-- The situations in which the pattern may apply.-->
+<!-- Aspects which constrain the solution, but are not modified by it. They affect the impact of different forces.--></p>
+<p>Controllers have policies written in a manner appropriate for legal evaluation, as it is the legal compliance which warrants them in the first place. Users tend to not be able to comprehend such language, and do not typically care to spend the time and effort required to parse it. However, much of the content in these policies is consistent throughout the services they&nbsp;use.</p>
+<p>Users value using a service (or product) without having to go through repetitive and verbose policy detail. However, these users must still understand the policies which apply to them in order to not be blindsided. Controllers need to avoid this as keeping users happy is integral to a sustainable business&nbsp;model.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
-<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
-
-<p>Users may get overwhelmed by the burden of deciding on privacy aspects each and every time they enrol in a new service. This may make them err on their decisions regarding&nbsp;privacy.</p>
+<p><!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+<!-- Should be context-free, leading with a concise problem statement.--></p>
+<p>Users may get overwhelmed by the complexity of policies impacting privacy when using a service, compromising the validity of their informed&nbsp;consent.</p>
+<h4 id="forces-and-concerns"><a class="toclink" href="#forces-and-concerns">Forces and&nbsp;Concerns</a></h4>
+<p><!-- Implications in this problem which affect the appropriateness of a solution, and are affected by this pattern.-->
+<!-- Forces should be highly visible for easy reference, where less obvious a dedicated section is recommended.--></p>
+<ul>
+<li>Users do not want to have to read privacy policies, but do want to know about relevant and important distinctions from their personal&nbsp;preferences</li>
+<li>Controllers need to have policies which are tailored to legal compliance, but also need users to understand risks and&nbsp;responsibilities</li>
+<li>Users may not like the default values chosen by controllers for application settings, even if those defaults are privacy&nbsp;friendly</li>
+<li>Controllers would like users to use a service immediately, with as little in the way and as little potentially discouraging as&nbsp;possible</li>
+</ul>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
 <!-- A concise description of how the pattern addresses the problem.-->
 
-<p>Before contracting a service, the service provider retrieves the user preferences (exposed by their user agent, or at a well-known URI), and presents the user a comparison between their preferences and the privacy policies applied by default by the service operator, which in turn automatically adapts any configurable values to the user’s declared&nbsp;preferences.</p>
-<!--goals-->
+<p>Retrieve user policy preferences and use these to highlight contradictions with the privacy policy. Where possible, configure application settings to the values which best adhere to these&nbsp;preferences.</p>
+<!--#### Rationale-->
 
-<p>Allow users to provide a consistent privacy-related behaviour, while reducing their cognitive workload every time they enrol in a new&nbsp;service.</p>
-<!--### [Structure]-->
+<!-- Where useful or otherwise unclear, justification for the solution's appropriateness in this pattern's context.-->
+
+<!---### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--### [Implementation]-->
-
+<h3 id="implementation"><a class="toclink" href="#implementation">[Implementation]</a></h3>
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
+<p>User policy preferences may be collected and managed by a controller, <em>exposed by their user agent, or at a well-known URI</em>. They may be highlighted through an overlay of elements or handled in-line where context plays an important role. In either case these notifications should not encourage users to apply settings which do not match their preferences in order to remove&nbsp;them.</p>
+<p>On the other hand, if the notification is not noticeable, the user may overlook an important policy distinction. Notifications which are persistent or ubiquitous may quickly desensitize users, and should also be used with&nbsp;care.</p>
 <h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
-<!--constraints and consequences-->
-
-<p>This pattern requires sharing a machine-readable format to express and exchange definitions of privacy policies between the user agent and the service providers. Several such formats exist, yet they are not always supported by either user agents or by service providers. Besides, not all the privacy policy nuances can be expressed in existing privacy policy&nbsp;languages.</p>
-<!--### [Constraints]-->
-
+<p>Allows users to provide a consistent privacy threshold while reducing cognitive workload as they use&nbsp;services.</p>
+<h3 id="constraints"><a class="toclink" href="#constraints">[Constraints]</a></h3>
 <!-- limitations as a consequence of applying the pattern.-->
 
+<p>Expressing and comparing the policies requires a consistent machine-readable format. There however numerous approaches to this. The <a href="Platform-for-Privacy-Preferences">Platform for Privacy Preferences</a> pattern addresses this through eXtensible Markup&nbsp;Language.</p>
 <!--## Examples-->
 
 <!--Motivational example to see how the pattern is applied.-->
@@ -550,14 +439,20 @@
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--### [Related Patterns]-->
-
+<h3 id="related-patterns"><a class="toclink" href="#related-patterns">[Related&nbsp;Patterns]</a></h3>
 <!-- Supporting and conflicting patterns-->
 
-<!--### [Sources]-->
-
+<p>This pattern <em>may use</em> <a href="Privacy-Policy-Display">Privacy Policy Display</a>. While the display aims to show policy information this pattern may highlight privacy preference mismatches therein, providing more valuable information for the&nbsp;user.</p>
+<p>It may also be <em>used</em> by <a href="Platform-for-Privacy-Preferences">Platform for Privacy Preferences</a>. It is a fundamental part of the implementation of the latter, which adds useful improvements and overlaps this pattern's context and&nbsp;problem.</p>
+<p>This pattern <em>complements</em> <a href="Trust-Evaluation-of-Services-Sides">Trust Evaluation of Services Sides</a>, <a href="Dynamic-Privacy-Policy-Display">Dynamic Privacy Policy Display</a>.</p>
+<p>Between this pattern and <a href="Trust-Evaluation-of-Services-Sides">Trust Evaluation of Services Sides</a>, both patterns may work together to provide the user with information toward building trust in a controller. This will be based on both preferences matching and means for demonstrating&nbsp;trustworthiness.</p>
+<p>With <a href="Dynamic-Privacy-Policy-Display">Dynamic Privacy Policy Display</a>, however, these patterns may provide mismatches within or through the standardization and&nbsp;'tooltips'.</p>
+<p>Implicitly, through <a href="Trust-Evaluation-of-Services-Sides">Trust Evaluation of Services Sides</a>, this pattern also complements the visual cue patterns. This includes <a href="Icons-for-Privacy-Policies">Icons for Privacy Policies</a>, <a href="Appropriate-Privacy-Icons">Appropriate Privacy Icons</a>, and <a href="Privacy-color-coding">Privacy Color Coding</a>.</p>
+<h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
 <!-- References to the original source of the pattern.-->
 
+<p>S. Fischer-Hübner, C. Köffel, J.-S. Pettersson, P. Wolkerstorfer, C. Graf, L. E. Holtz, U. König, H. Hedbom, and B. Kellermann, “HCI Pattern Collection - Version 2,”&nbsp;2010.</p>
+<p>C. Graf, P. Wolkerstorfer, A. Geven, and M. Tscheligi, “A Pattern Collection for Privacy Enhancing Technology,” The Second International Conferences of Pervasive Patterns and Applications (Patterns 2010), vol. 2, no. 1, pp. 72–77,&nbsp;2010.</p>
 <!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->

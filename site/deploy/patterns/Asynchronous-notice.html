@@ -150,15 +150,15 @@
         
       
         
-      
-        
-      
-        
-      
-        
           
 <a href="/categories/location" class="location">location</a>
            &bull; 
+        
+      
+        
+      
+        
+      
         
       
         
@@ -426,29 +426,29 @@
         
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
           
 <a href="/categories/mobile" class="mobile">mobile</a>
            &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -618,11 +618,11 @@
         
       
         
+      
+        
           
 <a href="/categories/notify" class="notify">notify</a>
           
-        
-      
         
       
         
@@ -733,85 +733,62 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#summary">Summary</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#examples">Examples</a></li>
+<li><a href="#problem">Problem</a><ul>
+<li><a href="#forces-and-concerns">Forces and&nbsp;Concerns</a></li>
+</ul>
+</li>
+<li><a href="#solution">Solution</a><ul>
+<li><a href="#implementation">[Implementation]</a></li>
+</ul>
+</li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#related-patterns">[Related&nbsp;Patterns]</a></li>
+<li><a href="#sources">[Sources]</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <!--### [Also Known As]-->
 
 <!-- All other names the pattern is known by.-->
 
-<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
-<!-- One short paragraph summarising the pattern.-->
-
-<p>How can a service effectively provide notice to a user who gave permission once but whose information is accessed repeatedly (perhaps even continuously) over a long period of time? Proactively notify the user after the time of consent that information is being tracked, stored or&nbsp;re-distributed.</p>
-<!--intent-->
-
-<p>Support notice of ongoing location&nbsp;tracking.</p>
-<p>Supports <a href="Notice">Notice</a>, <a href="User-control">User Control</a>, <a href="Transparency-feedback">Transparency and&nbsp;feedback</a></p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<!-- The situations in which the pattern may apply.-->
-
-<p>Tracking a person's location over time in an invisible fashion, with or
-without prior explicit consent. (Particularly useful for background tracking,
-tracking through devices with limited or no screen space, or tracking
-repeatedly over long periods of time. For devices with sufficient screen space or other notification affordances, see also <a href="Ambient-notice">ambient notice</a>.)</p>
+<p><!-- The situations in which the pattern may apply.-->
+<!-- Aspects which constrain the solution, but are not modified by it. They affect the impact of different forces.--></p>
+<p>Many sensor related or other recurring forms of data collection are important for improving service (or product) quality, but occur in a manner which is not apparent to the user. Even where the user is informed of such processing, the nature of that processing may cause it to occur within contexts the user would not consent to. Users are also subject to forgetfulness. The controller processing this information therefore seeks to ensure that consent is retained. Some interfaces necessitate more restrictive use of screen real estate, however, and as such can not accommodate extensive information or persistent&nbsp;elements.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
-<p>How can a service effectively provide notice to a user who gave permission
-once but whose information is accessed repeatedly (perhaps even continuously)
-over a long period of time? If a user forgets that they gave access (or who
-has access) they may later be surprised or upset by the continued flow of
-personal information. Also, initial consent may have been forged by an
-attacker or have been provided by another user of a shared device -- if
-synchronous notice is only provided at the time of consent, a user may
-inadvertently distribute personal information over a long period of time after
-having lost control of their device only&nbsp;momentarily.</p>
-<!--forces/concerns-->
+<p>Users being tracked and monitored may not consent to processing they had previously consented to, as the context surrounding that processing is subject to&nbsp;change.</p>
+<p><em>Also, initial consent may have been forged by an attacker or have been provided by another user of a shared device -- if synchronous notice is only provided at the time of consent, a user may inadvertently distribute personal information over a long period of time after having lost control of their device only&nbsp;momentarily.</em></p>
+<h4 id="forces-and-concerns"><a class="toclink" href="#forces-and-concerns">Forces and&nbsp;Concerns</a></h4>
+<p><!-- Implications in this problem which affect the appropriateness of a solution, and are affected by this pattern.-->
+<!-- Forces should be highly visible for easy reference, where less obvious a dedicated section is recommended.--></p>
+<ul>
+<li>Users may change their minds or forget about consent they have&nbsp;given</li>
+<li>Users may not realize the processing they consented to is currently in effect, potentially allowing collection of information they would not want&nbsp;collected</li>
+<li>Controllers do not want to collect data for which consent is uncertain, where users may feel violated or otherwise let&nbsp;down</li>
+<li>Controllers cannot remind users of their consent all the&nbsp;time</li>
+</ul>
+<!--concerns-->
 
-<p>Providing an asynchronous notice requires a reliable mechanism to contact the
-user (a verified email address or telephone number, for example). Care should
-be taken to ensure that the mechanism can actually reach the person using the
-device being tracked. (For example, notifying the owner of the billing credit
-card may not help the spouse whose location is being surreptitiously&nbsp;tracked.)</p>
-<p>In contrast to the common privacy practice of providing consistent and
-reliable systems, you may wish to provide <em>random</em> asynchronous notice. If
-there is a concern that a malicious user may have opted-in the user without
-their knowledge, a notice that is sent once a week at the same time each week
-may allow the attacker to borrow the device at the appointed time and clear
-the&nbsp;notice.</p>
-<p>Many repeated notices may annoy users and eventually inure them to the
-practice altogether. Take measures to avoid unnecessary notices and some level
-of configuration for frequency of notices. This must be balanced against the
-concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
+<p><em>Providing an asynchronous notice requires a reliable mechanism to contact the user (a verified email address or telephone number, for example). Care should be taken to ensure that the mechanism can actually reach the person using the device being tracked. (For example, notifying the owner of the billing credit card may not help the spouse whose location is being surreptitiously&nbsp;tracked.)</em></p>
+<p><em>In contrast to the common privacy practice of providing consistent and reliable systems, you may wish to provide <strong>random</strong> asynchronous notice. If there is a concern that a malicious user may have opted-in the user without their knowledge, a notice that is sent once a week at the same time each week may allow the attacker to borrow the device at the appointed time and clear the&nbsp;notice.</em></p>
+<p><em>Many repeated notices may annoy users and eventually inure them to the practice altogether. Take measures to avoid unnecessary notices and some level of configuration for frequency of notices. This must be balanced against the concerns of an attacker's opting the user in without their&nbsp;knowledge.</em></p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
 <!-- A concise description of how the pattern addresses the problem.-->
 
-<p>Proactively notify the user after the time of consent that information is
-being tracked, stored or re-distributed. This asynchronous notice could be
-achieved through an email, text message, on-screen notice or even through non-
-digital means (by telephone or postal mail, say). The message should inform
-the user about the ongoing practice, including background context (since the
-user may well have forgotten) about the service and any opportunities for
-<a href="Access">access</a> and <a href="User-control">control</a>.</p>
-<p>Asynchronous notices may also include a summary of the data recently collected
-(since the last notice, say) in order to provide clarity (and reminders) to
-the user about the extent of collection. See also, [Privacy dashboard]
-(Privacy-dashboard) and <a href="Access">Access</a>.</p>
-<p>By ensuring that users aren't surprised, asynchronous notice may increase
-trust in the service and comfort with continued disclosure of&nbsp;information.</p>
+<p>Whenever there is a context switch, sufficient duration, or random spot check, provide users with a simple reminder that they have consented to specific processing. The triggers and means for contacting the user may be chosen by the user themselves, who should be able to review and if necessary retract their&nbsp;consent.</p>
 <!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--### [Implementation]-->
-
+<h3 id="implementation"><a class="toclink" href="#implementation">[Implementation]</a></h3>
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
+<p>Implementation depends on the medium chosen for conveying the notification, and also on the service facilitating collection. For mediums with less space, shorter messages should be provided, but even in more traditionally long-winded options such as email, brevity should be favored. The user should be able to obtain more information by a linking mechanism, also dependent on the medium. The most important information to provide is the fact that they have consented to specific data for specified purposes, and that a context change, spot check, or specified duration has triggered the reminder. Context changes are most notable, as these are most likely to affect the consent. Note that changes to purposes and means instead require new consent, not merely&nbsp;notification.</p>
+<p><em>Asynchronous notices may also include a summary of the data recently collected (since the last notice, say) in order to provide clarity (and reminders) to the user about the extent of collection. By ensuring that users aren't surprised, asynchronous notice may increase trust in the service and comfort with continued disclosure of&nbsp;information.</em></p>
 <!--## Consequences-->
 
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
@@ -824,25 +801,23 @@ trust in the service and comfort with continued disclosure of&nbsp;information.<
 <!--Motivational example to see how the pattern is applied.-->
 
 <ol>
-<li><em>Google Latitude reminder&nbsp;email</em></li>
+<li><em><strong>Google Latitude reminder&nbsp;email</strong></em></li>
 </ol>
-<p>Google Latitude users can configure a reminder email (see below) when their
-   location is being shared with any application, including internal applications
-   like the Location History&nbsp;service.</p>
+<p><em>Google Latitude users can configure a reminder email (see below) when their location is being shared with any application, including internal applications like the Location History&nbsp;service.</em></p>
 <p><hr>This is a reminder that you are sharing your Latitude location with the following&nbsp;application(s):</p>
-<p><strong>Google Location History</strong><br />
+<p><strong>Google Location History</strong>
    You may disable these applications at any time by going to <a href="https://www.google.com/latitude/apps?hl=en]">https://www.google.com/latitude/apps?hl=en]</a></p>
-<p><strong>Do more with Latitude</strong><br />
+<p><strong>Do more with Latitude</strong>
    Go to <a href="https://www.google.com/latitude/apps">https://www.google.com/latitude/apps</a> on your computer and try the&nbsp;following:</p>
-<p>Google Location History lets you store your history and see a dashboard of interesting information such as frequently visited places and recent trips. 
-   Google Talk Location Status lets you post your location in your chat status. 
-   Google Public Location Badge lets you publish your location on your blog or&nbsp;site. </p>
+<p>Google Location History lets you store your history and see a dashboard of interesting information such as frequently visited places and recent trips.
+   Google Talk Location Status lets you post your location in your chat status.
+   Google Public Location Badge lets you publish your location on your blog or&nbsp;site.</p>
 <p>You are receiving this reminder once a week. To change your reminder settings, go to: <a href="https://www.google.com/latitude/apps?hl=en&amp;tab=privacyreminders">https://www.google.com/latitude/apps?hl=en&amp;tab=privacyreminders</a><hr></p>
 <ol>
-<li><em>Fire Eagle My&nbsp;Alerts</em></li>
+<li><em><strong>Fire Eagle My&nbsp;Alerts</strong></em></li>
 </ol>
-<p><img alt="Fire Eagle My Alerts configuration by npdoty, on Flickr" src="http://farm6.static.flickr.com/5001/5642647032_e74e815f6a.jpg" /><br />
-<a href="http://www.flickr.com/photos/npdoty/5642647032]">Fire Eagle My Alerts configuration by npdoty, on&nbsp;Flickr</a></p>
+<p><img alt="Fire Eagle My Alerts configuration by npdoty, on Flickr" src="http://farm6.static.flickr.com/5001/5642647032_e74e815f6a.jpg" />
+   <a href="http://www.flickr.com/photos/npdoty/5642647032]">Fire Eagle My Alerts configuration by npdoty, on&nbsp;Flickr</a></p>
 <!--### [Known Uses]-->
 
 <!-- Pointers to various applications of the pattern.-->
@@ -851,14 +826,19 @@ trust in the service and comfort with continued disclosure of&nbsp;information.<
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--### [Related Patterns]-->
-
+<h3 id="related-patterns"><a class="toclink" href="#related-patterns">[Related&nbsp;Patterns]</a></h3>
 <!-- Supporting and conflicting patterns-->
 
-<!--### [Sources]-->
-
+<p>This pattern <em>refines</em> <a href="Preventing-Mistakes-or-Reducing-Their-Impact">Preventing Mistakes or Reducing Their Impact</a>. As it provides notice of noteworthy processing when in context, a user is prevented from mistakenly producing data. As the notification is obtrusive, they are given every chance to cease doing so before it has an impact. As an implicit relationship through <a href="Preventing-Mistakes-or-Reducing-Their-Impact">Preventing Mistakes or Reducing Their Impact</a>, this pattern also <em>complements</em> <a href="Impactful-Information-and-Feedback">Impactful Information and Feedback</a>.</p>
+<p>This pattern is an <em>alternative</em> to <a href="Ambient-notice">Ambient Notice</a>. While this pattern provides contextually justified notice whenever necessary, the Ambient variant does so persistently and without contextual justification. Unlike this pattern, <a href="Ambient-notice">Ambient Notice</a> is&nbsp;unobtrusive.</p>
+<p>This pattern <em>complements</em> <a href="Single-Point-of-Contact">Single Point of Contact</a>. A SPoC is an authority which validates requests and ensures secure and private communication, a usage of data which can be contextually displayed to remind the user of its&nbsp;(de)activation.</p>
+<h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
 <!-- References to the original source of the pattern.-->
 
+<p>N. Doty, M. Gupta, and J. Zych, “privacypatterns.org - Privacy Patterns,” privacypatterns.org, 2017. [Online]. Available: http://privacypatterns.org/. [Accessed:&nbsp;26-Feb-2015].</p>
+<p>C. Bier and E. Krempel, “Common Privacy Patterns in Video Surveillance and Smart Energy,” in ICCCT-2012, 2012, pp.&nbsp;610–615.</p>
+<p>E. S. Chung, J. I. Hong, J. Lin, M. K. Prabaker, J. a. Landay, and A. L. Liu, “Development and Evaluation of Emerging Design Patterns for Ubiquitous Computing,” DIS ’04 Proceedings of the 5th conference on Designing interactive systems: processes, practices, methods, and techniques, pp. 233–242,&nbsp;2004.</p>
+<p>J. Siljee, “Privacy transparency patterns,” in EuroPLoP ’15, 2015, pp.&nbsp;1–11.</p>
 <!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->
