@@ -1,17 +1,16 @@
-commit e18f0eed663711c0dd30b8f39f372f3f34e3dbd4
-Merge: 2f0fc1e 8c2c431
+commit 8a8c18085974ac87f8be9acb49875adc33728b48
+Author: mohit <mohit.gupta@clever.com>
+
+    update readme
+
+commit 4daa5a22f8adcc4a2a952aba6a358f9aa8c76782
+Merge: ccae430 71fb8a4
 Author: Nick Doty <npdoty@ischool.berkeley.edu>
 
-    Merge pull request #80 from olhadrozd/master
+    Merge pull request #94 from npdoty/master
 
-commit 2f0fc1ede3c7db2cee04b5c5278b33c7ae6d9676
-Merge: 3611229 dd5c53c
+commit 71fb8a4379094a774358b719fb108c223a296362
 Author: Nick Doty <npdoty@ischool.berkeley.edu>
 
-    Merge pull request #83 from HecticSeptic/patch-3
-
-commit dd5c53c1028d3877aca5150c8c06b5ecedc2df58
-Author: HecticSeptic <nand@null.net>
-
-    Add attribution to updated About.md
+    update credit per @juliocaizan
 ===================

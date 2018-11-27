@@ -52,12 +52,13 @@ In these situations users need only be reminded prior to setting the values them
 ## Examples
 <!--Motivational example to see how the pattern is applied.-->
 
-- Foursquare check-in model
 
-<!--### [Known Uses]-->
+
+### [Known Uses]
 <!-- Pointers to various applications of the pattern.-->
 
-
+- Foursquare check-in model prior to Pilgrim
+- Google services
 
 <!--## See Also-->
 <!-- Any pointers to relevant information, not contained in the subfields below.-->

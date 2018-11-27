@@ -254,11 +254,11 @@
         
       
         
+      
+        
           
 <a href="/categories/visualize" class="visualize">visualize</a>
            &bull; 
-        
-      
         
       
         
@@ -469,132 +469,6 @@
           
 <a href="/categories/user-interface" class="user-interface">user-interface</a>
            &bull; 
-        
-      
-    
-      
-        
-          
-<a href="/categories/control" class="control">control</a>
-           &bull; 
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
         
       
     
@@ -859,13 +733,20 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#summary">Summary</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a></li>
+<li><a href="#problem">Problem</a><ul>
+<li><a href="#forces-and-concerns">Forces and&nbsp;Concerns</a></li>
+</ul>
+</li>
+<li><a href="#solution">Solution</a><ul>
+<li><a href="#implementation">[Implementation]</a></li>
+</ul>
+</li>
 <li><a href="#consequences">Consequences</a></li>
 <li><a href="#examples">Examples</a><ul>
 <li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+<li><a href="#related-patterns">[Related&nbsp;Patterns]</a></li>
+<li><a href="#sources">[Sources]</a></li>
 </ul>
 </li>
 </ul>
@@ -874,63 +755,41 @@
 
 <!-- All other names the pattern is known by.-->
 
-<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
-<!-- One short paragraph summarising the pattern.-->
-
-<p>In a social networking site a user gets direct visual cues which
-privacy settings apply on which shared&nbsp;elements.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<!-- The situations in which the pattern may apply.-->
-
-<p>The pattern can be used in applications where users share and publish
-personal data and contents, but can control their visibility using
-privacy settings. This includes but is not limited to social
-networking&nbsp;sites.</p>
+<p><!-- The situations in which the pattern may apply.-->
+<!-- Aspects which constrain the solution, but are not modified by it. They affect the impact of different forces.--></p>
+<p>The numerous policies and settings around privacy for each service (or product) used by a user would be quite complex and time consuming if such a user endeavored to investigate them. Policies are written for legal compliance and settings are often configured for best experience rather than privacy. Even in the instances where privacy friendly defaults are used, they may cripple the usability of the system, or otherwise disable desirable features. Some settings can also be difficult to consider due to overly brief and vague&nbsp;descriptions.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
-<p>Privacy settings and the actual effect of these settings on shared
-content and data is often not obvious for the user. Not having the
-active settings constantly in mind might lead to non-optimal privacy
-experiences when the perceived privacy settings differ from the actual&nbsp;settings.</p>
+<p>Users do not investigate policies and preferences due to the effort required, and cannot inherently comprehend the consequences of settings otherwise. The poor understanding of these can lead to undesirable&nbsp;disclosures.</p>
+<h4 id="forces-and-concerns"><a class="toclink" href="#forces-and-concerns">Forces and&nbsp;Concerns</a></h4>
+<p><!-- Implications in this problem which affect the appropriateness of a solution, and are affected by this pattern.-->
+<!-- Forces should be highly visible for easy reference, where less obvious a dedicated section is recommended.--></p>
+<ul>
+<li>Users want to be able to quickly investigate how much or little information they can comfortably provide while still enjoying the&nbsp;service</li>
+<li>Users want to be guided as to what preferences achieve better&nbsp;privacy</li>
+<li>Controllers want users to configure preferences in ways they actually intend, therefore not processing data without informed&nbsp;consent</li>
+<li>Controllers also want users to understand the limits of the settings through understanding the&nbsp;policies</li>
+</ul>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
 <!-- A concise description of how the pattern addresses the problem.-->
 
-<p>The results of privacy settings such as visibility are divided into
-different levels. A distinct color is assigned to each of these
-levels. Every time the user is performing an action where privacy
-settings come into play, the color is used as an indication of the
-privacy settings currently in effect. The choice of colors should take
-into account prevalent color meanings, like usage of the color red for
-warning situations. If privacy settings cannot be grouped into
-distinct levels, a gradient between different colors could also be&nbsp;used.</p>
-<!--goals-->
-
-<p>Users receive direct visual cues on the consequences of their privacy
-settings currently in effect. In order to be more clear about their
-privacy&nbsp;settings.</p>
+<p>Present the user with standardized color visual cues to help guide them in selecting privacy friendly settings, and in understanding the policies around those&nbsp;settings.</p>
 <!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--### [Implementation]-->
-
+<h3 id="implementation"><a class="toclink" href="#implementation">[Implementation]</a></h3>
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
+<p><em>The results of privacy settings such as visibility are divided into different levels. A distinct color is assigned to each of these levels. Every time the user is performing an action where privacy settings come into play, the color is used as an indication of the privacy settings currently in effect. The choice of colors should take into account prevalent color meanings, like usage of the color red for warning situations. If privacy settings cannot be grouped into distinct levels, a gradient between different colors could also be&nbsp;used.</em></p>
+<p>The same treatment may be applied to policies, or explanations of settings. User rights and affordances may be presented differently from what the controller may do with their data. Aspects which could be perceived to have the greatest impact on privacy should stand out most. Explanations of who has responsibility or accountability, contact details, etc. can also be given a distinct color. Finally purposes and means for processing should be clearly&nbsp;visible.</p>
 <h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
-<!--constraints and consequences-->
-
-<p>Users will directly see the outcome of their privacy settings. The
-danger of unwanted actions is decreased, as users will permanently
-receive visual cues. On the other hand a reduction of complex settings
-to a few colors may lead to an oversimplification which would render
-the whole pattern useless. Visual cues must be integrated into the
-site design but must still be placed prominently enough to be
-noticeable. Cultural aspects for the different meanings of colors
-should be taken into account. The same color may not be recognized as
-a warning label in different&nbsp;cultures.</p>
+<p><em>Users receive direct visual cues on the consequences of their privacy settings currently in effect. In order to be more clear about their privacy&nbsp;settings.</em></p>
+<p><em>The danger of unwanted actions is decreased, as users will [regularly perceive] visual cues. On the other hand a reduction of complex settings to a few colors may lead to an oversimplification which would render the whole pattern useless. Visual cues must be integrated into the [service] design but must still be placed prominently enough to be noticeable. Cultural aspects for the different meanings of colors should be taken into account. The same color may not be recognized as a warning label in different&nbsp;cultures.</em></p>
 <!--### [Constraints]-->
 
 <!-- limitations as a consequence of applying the pattern.-->
@@ -938,35 +797,27 @@ a warning label in different&nbsp;cultures.</p>
 <h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
 <!--Motivational example to see how the pattern is applied.-->
 
-<p>Alice uses a social network and shares personal stories only with her
-friends while she shares mundane content publicly. Hence she always
-has to change the privacy settings of her posts in order to adjust the
-visibility of the posts. One day she forgets to change the setting and
-does not realize that she actually shared a precarious story with her&nbsp;boss.</p>
+<p><em>Alice uses a social network and shares personal stories only with her friends while she shares mundane content publicly. Hence she always has to change the privacy settings of her posts in order to adjust the visibility of the posts. One day she forgets to change the setting and does not realize that she actually shared a precarious story with her&nbsp;boss.</em></p>
 <h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
 <!-- Pointers to various applications of the pattern.-->
 
-<p>A color coding similar to traffic lights is implemented in many modern
-web browsers for HTTPS connections. A green background indicates a
-valid certificate while a red background and a warning label shows
-that there are problems when validating a certificate. <a href="http://www.daniel-puscher.de/fpw/">Facebook
-Privacy Watcher</a> enhances the
-Facebook website by color-coding shared content and indicating its
-visibility. Posts with green background are public, yellow indicates
-visibility for friends only and red content is only visible to the
-user. Blue background is used for custom audiences such as&nbsp;groups.</p>
+<p><em>A color coding similar to traffic lights is implemented in many modern web browsers for HTTPS connections. A green background indicates a valid certificate while a red background and a warning label shows that there are problems when validating a certificate. <a href="http://www.daniel-puscher.de/fpw/">Facebook Privacy Watcher</a> enhances the Facebook website by color-coding shared content and indicating its visibility. Posts with green background are public, yellow indicates visibility for friends only and red content is only visible to the user. Blue background is used for custom audiences such as&nbsp;groups.</em></p>
 <!--## See Also-->
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--### [Related Patterns]-->
-
+<h3 id="related-patterns"><a class="toclink" href="#related-patterns">[Related&nbsp;Patterns]</a></h3>
 <!-- Supporting and conflicting patterns-->
 
-<!--### [Sources]-->
-
+<p>This pattern <em>complements</em> <a href="Impactful-Information-and-Feedback">Impactful Information and Feedback</a>, <a href="Informed-Secure-Passwords">Informed Secure Passwords</a>, <a href="Layered-policy-design">Layered Policy Design</a>, <a href="Privacy-Aware-Wording">Privacy Aware Wording</a>, <a href="Privacy-aware-network-client">Privacy-Aware Network Client</a>, <a href="Awareness-Feed">Awareness Feed</a>, and <a href="Icons-for-Privacy-Policies">Icons for Privacy Policies</a>. It also implicitly <em>complements</em> <a href="Trust-Evaluation-of-Services-Sides">Trust Evaluation of Services Sides</a> through <a href="Awareness-Feed">Awareness Feed</a>.</p>
+<p>As a visual cue, this pattern aids in providing <a href="Impactful-Information-and-Feedback">Impactful Information and Feedback</a> by augmenting it with quickly interpreted information. These visual cues additionally help towards <a href="Informed-Secure-Passwords">Informed Secure Passwords</a>, as they may indicate password strength and&nbsp;policy.</p>
+<p>Visual cues like this pattern also aid in providing accessible policies, and thus <em>complement</em> <a href="Layered-policy-design">Layered Policy Design</a>, <a href="Privacy-Aware-Wording">Privacy Aware Wording</a>, and <a href="Privacy-aware-network-client">Privacy-Aware Network Client</a>.</p>
+<p>Like many patterns which inform users, elements of <a href="Awareness-Feed">Awareness Feed</a> and its methods for establishing awareness also go well with visual cues like this pattern. It also implicitly aids <a href="Trust-Evaluation-of-Services-Sides">Trust Evaluation of Services Sides</a>, which provides visual representation to highlight trust levels to the&nbsp;user.</p>
+<p>Like this pattern, <a href="Icons-for-Privacy-Policies">Icons for Privacy Policies</a> provides its own way to tackle an overlapping and quite similar problem. This features the understanding of the privacy policy in both cases, as well as privacy settings in this pattern. These patterns may work together to integrate a solution illustrating with both color and&nbsp;imagery.</p>
+<h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
 <!-- References to the original source of the pattern.-->
 
+<p>Christoph Boesch, Frank Kargl, Henning Kopp, and Patrick Mosby, “privacypatterns.eu - collecting patterns for better privacy,” 2017. [Online]. Available: https://privacypatterns.eu/. [Accessed:&nbsp;18-Jul-2017].</p>
 <!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->

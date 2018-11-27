@@ -1,0 +1,505 @@
+
+
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>
+		
+		Dynamic Privacy Policy Display - Privacy Patterns
+		
+	</title>
+  <meta name="description" content="Privacy design patterns for software engineering">
+  <link rel="shortcut icon" href="/media/images/favicon.ico">
+  
+	
+  <!-- CSS: implied media="all" -->
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
+  <link href="http://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/media/css/main.css?v=2">
+	
+	
+	
+	<!--[if lt IE 9]>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+    <link rel="stylesheet" href="/media/css/tipuesearch/tipuesearch.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/media/js/tipuesearch/tipuesearch.min.js"></script>
+
+</head>
+	<body id="dynamic-privacy-policy-display">
+    <div id="container">
+
+			<header>
+  <div id="logo"><a href="/" title="Home">privacy<span class="highlight">patterns</span>.org</a></div>
+  
+  
+<nav>
+  <ul>
+    <li><a href="/">Home</a> &bull; </li>
+    <li><a href="/about/">About</a> &bull; </li>
+    <li><a href="/patterns/">Patterns</a> &bull; </li>
+    <li><a href="/search/">Search</a></li>
+  </ul>
+</nav>
+
+  
+</header>
+  
+<!-- 
+
+
+
+<ul class="breadcrumbs">
+	
+		<li>
+			<a href="/">Privacy Patterns</a>
+
+			
+				
+				<span class="separator">&gt;</span>
+				
+			
+		</li>
+	
+		<li>
+			<a href="/patterns">Patterns</a>
+
+			
+		</li>
+	
+</ul>
+    
+
+
+
+
+ -->
+
+
+      <div id="main" role="main">
+			  
+
+
+
+
+
+
+<div id="content">
+  <p id="cats">
+    Categories: 
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/inform" class="inform">inform</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/notify" class="notify">notify</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  </p>
+  <h1>
+		
+			Dynamic Privacy Policy Display
+		
+	</h1>
+	
+
+	<div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#context">Context</a></li>
+<li><a href="#problem">Problem</a><ul>
+<li><a href="#forces-and-concerns">Forces and&nbsp;Concerns</a></li>
+</ul>
+</li>
+<li><a href="#solution">Solution</a><ul>
+<li><a href="#implementation">[Implementation]</a></li>
+</ul>
+</li>
+<li><a href="#consequences">Consequences</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+<li><a href="#related-patterns">[Related&nbsp;Patterns]</a></li>
+<li><a href="#sources">[Sources]</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<!--### [Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
+<h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<p><!-- The situations in which the pattern may apply.-->
+<!-- Aspects which constrain the solution, but are not modified by it. They affect the impact of different forces.--></p>
+<p>Controllers are mandated by various laws and regulations to ensure that users, their data subjects, are adequately informed before requesting consent. Failing this, the consent loses legitimacy and the controller may face repercussions. However, the main mechanism for supplying this information resides with privacy policies, which must also conform to legislative norms. The language this necessitates is long and complex, which jeopardizes the chances of users understanding it. This information can be summarized, and otherwise reworded to make the content more accessible to users, though typically the length of such summaries are still quite&nbsp;long.</p>
+<h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
+<p>Not all contexts are suitable for extensive privacy policy information, yet users often still need to be able to obtain additional data without breaking those&nbsp;contexts.</p>
+<h4 id="forces-and-concerns"><a class="toclink" href="#forces-and-concerns">Forces and&nbsp;Concerns</a></h4>
+<p><!-- Implications in this problem which affect the appropriateness of a solution, and are affected by this pattern.-->
+<!-- Forces should be highly visible for easy reference, where less obvious a dedicated section is recommended.--></p>
+<ul>
+<li>Controllers need informed consent for collection, sometimes with limited screen space available, yet users do not typically read privacy policies on their&nbsp;own</li>
+<li>Users do not want to spend time and effort reading through privacy&nbsp;policies</li>
+<li>Controllers want users to actually use their service (or product), but users will not do so if the cost of doing so entails disproportionate&nbsp;effort</li>
+<li>Users want to be able to get to using the service quickly, without needing to visit multiple policy&nbsp;pages</li>
+</ul>
+<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
+<p>Provide the user with additional relevant policy information on hover or tap, by way of 'tooltips', to best inform them given contextual limitations. In a mobile setting these tooltips may unobtrusively become available to tap when the relevant control is most in focus (i.e. selected, centered, or occupies most of the&nbsp;screen).</p>
+<p>This information may highlight the nature and potential consequences of the disclosure, and should be displayed&nbsp;consistently.</p>
+<!--### [Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<h3 id="implementation"><a class="toclink" href="#implementation">[Implementation]</a></h3>
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<p><em>The information should be provided to the user where it is needed. Therefore the tooltip should appear on demand (i.e., need of information). This could be for example in a login dialog as soon as the user navigates the mouse into the concerning part of the interface. The tooltip should then be made visible to the user and contain all necessary information for making an informed&nbsp;decision.</em></p>
+<h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<p><em>By displaying the relevant [information pertaining to] privacy policies whenever they apply to what the user is currently doing or about to do, the user's awareness of what will happen with the information they're about to share is&nbsp;increased.</em></p>
+<p>However, users may also happen to not trigger the tooltip, especially when using a mobile device. As such it is important that they are aware of its existence, and its importance, given the current&nbsp;context.</p>
+<!--### [Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<p>When a user needs to login and is given numerous options, with limited space provided, each option can have an assigned tooltip. These can appear on hover, tap, or scroll, where necessary appearing with less opacity until the user taps the tooltip itself. It can also lead to further detail through '(see more)' in a recognizable blue underlined hyperlink format. To encourage use of this a variant may either scroll through detail or show a visible scroll bar. Not needing the user to leave the application or webpage will require less effort on their&nbsp;part.</p>
+<h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
+<!-- Pointers to various applications of the pattern.-->
+
+<p>The PrimeLife HCI Pattern Collection (V2) features a prototype using tooltips to convey policy information on&nbsp;hover. </p>
+<!--## See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<h3 id="related-patterns"><a class="toclink" href="#related-patterns">[Related&nbsp;Patterns]</a></h3>
+<!-- Supporting and conflicting patterns-->
+
+<p>This pattern <em>complements</em> <a href="Policy-matching-display">Policy Matching Display</a> and <a href="Platform-for-Privacy-Preferences">Platform for Privacy Preferences</a>. In both cases the solutions are different, but share the same&nbsp;context.</p>
+<p>With <a href="Policy-matching-display">Policy Matching Display</a>, this pattern may add mismatches between preferences and the standardized policies to 'tooltips' therein. Against the <a href="Platform-for-Privacy-Preferences">Platform for Privacy Preferences</a> pattern, however, they may work together to show the user how the privacy policy compares to user&nbsp;preferences.</p>
+<p>This pattern <em>may use</em> <a href="Privacy-Policy-Display">Privacy Policy Display</a>. While this pattern adds additional elements to the solution presented by <a href="Privacy-Policy-Display">Privacy Policy Display</a>, it is a <em>uses</em> relationship rather than <em>extends</em>, as both patterns approach different&nbsp;problems.</p>
+<h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
+<!-- References to the original source of the pattern.-->
+
+<p>S. Fischer-Hübner, C. Köffel, J.-S. Pettersson, P. Wolkerstorfer, C. Graf, L. E. Holtz, U. König, H. Hedbom, and B. Kellermann, “HCI Pattern Collection - Version 2,”&nbsp;2010.</p>
+<p>C. Graf, P. Wolkerstorfer, A. Geven, and M. Tscheligi, “A Pattern Collection for Privacy Enhancing Technology,” The Second International Conferences of Pervasive Patterns and Applications (Patterns 2010), vol. 2, no. 1, pp. 72–77,&nbsp;2010.</p>
+<!--## General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--## Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
+
+	
+	
+  <p id="comments_link">
+    Corrections or additions? <a href="https://github.com/privacypatterns/patterns/blob/master/patterns/Dynamic-Privacy-Policy-Display.md" target="_blank">Contribute on GitHub.</a>
+  </p>
+  
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'privacypatterns';
+      // var disqus_developer = 1; // Remove this when going live
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+
+
+
+      </div>
+			<footer>
+	<p>
+		<a rel="license" class="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		Privacy patterns are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution license</a>.
+	<br>Contribute on <a href="https://github.com/privacypatterns">GitHub</a>. Read our <a href="/about/policy" title="Privacy Policy">privacy and contribution policy</a>.
+	</p>
+	<p class="berkeley">UC Berkeley <img id="iman" src="/media/images/I_School_logo_i.png" height="30px" /> School of Information</p> 
+</footer>
+
+
+		</div>
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary --
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+    <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+    
+  	
+  	
+    -->
+    <script>
+      var _gaq=[['_setAccount','UA-24350461-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+
+	</body>
+</html>
+

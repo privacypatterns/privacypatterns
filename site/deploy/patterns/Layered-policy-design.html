@@ -355,58 +355,63 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#summary">Summary</a></li>
+<li><a href="#also-known-as">[Also Known&nbsp;As]</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a></li>
+<li><a href="#problem">Problem</a><ul>
+<li><a href="#forces-and-concerns">Forces and&nbsp;Concerns</a></li>
+</ul>
+</li>
+<li><a href="#solution">Solution</a><ul>
+<li><a href="#implementation">[Implementation]</a></li>
+</ul>
+</li>
 <li><a href="#consequences">Consequences</a></li>
 <li><a href="#examples">Examples</a><ul>
 <li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+<li><a href="#related-patterns">[Related&nbsp;Patterns]</a></li>
+<li><a href="#sources">[Sources]</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<p>Split privacy policies into nested, successively refined versions. Leave the legalese to the&nbsp;lawyers.</p>
-<!--### [Also Known As]-->
-
+<h3 id="also-known-as"><a class="toclink" href="#also-known-as">[Also Known&nbsp;As]</a></h3>
 <!-- All other names the pattern is known by.-->
 
-<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
-<!-- One short paragraph summarising the pattern.-->
-
-<p>Split privacy policies into nested, successively refined
-    versions. Leave the legalese to the&nbsp;lawyers.</p>
+<p>Layered Privacy Policies / Multi-Layered&nbsp;Notices</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<!-- The situations in which the pattern may apply.-->
-
-<p>A data controller offers detailed, legal explanations of their privacy and data protection&nbsp;policies.</p>
+<p><!-- The situations in which the pattern may apply.-->
+<!-- Aspects which constrain the solution, but are not modified by it. They affect the impact of different forces.--></p>
+<p>As the law in various parts of the world requires a number of considerations, policies tend to be long, complex documents which are difficult to understand. The same holds true for privacy, which supplies its own legislative concerns, particularly regarding data protection. The [data] controller in these instances, provides users (data subjects) with services (or products) to which privacy policies apply. These suffer the same detail rich and superfluous content pitfalls as other policies, though are legally required to be available to users in a manner which is both understandable and&nbsp;complete.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
-<p>Privacy policies may be difficult to understand and hard to read. What was initially conceived as an instrument to inform users is now almost useless, as they have become riddled with legalese and all sort of extraneous details. As a consequence, users do not read the privacy policies, for being long and&nbsp;cumbersome.</p>
-<p>However, privacy policies are legally binding documents, which makes it difficult to get just rid of these legal&nbsp;aspects.</p>
+<p>The controller needs to balance comprehension and comprehensiveness in their privacy policies in order to ensure that users choose to inform themselves. If they do not, then processing their information is&nbsp;unlawful.</p>
+<h4 id="forces-and-concerns"><a class="toclink" href="#forces-and-concerns">Forces and&nbsp;Concerns</a></h4>
+<p><!-- Implications in this problem which affect the appropriateness of a solution, and are affected by this pattern.-->
+<!-- Forces should be highly visible for easy reference, where less obvious a dedicated section is recommended.--></p>
+<ul>
+<li>Users do not want to read complex and long policies, and most will simply not read them unless they are very&nbsp;concise</li>
+<li>Users still want to understand any important distinctions which might cause them risks they would rather not&nbsp;take</li>
+<li>Controllers want to comply with legal requirements to avoid punitive measures as well as bad&nbsp;publicity</li>
+<li>Controllers also want users to know what they are signing up for when using a service, without being unpleasantly&nbsp;surprised</li>
+</ul>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
 <!-- A concise description of how the pattern addresses the problem.-->
 
-<p>A short notice may provide a summary of the practices that deal with personal data, highlighting those which may not be evident to the data subject. Then, a longer policy may provide specific information, split into sections, detailing any uses of personal data. And finally, the whole legal text of the privacy policy can be&nbsp;specified.</p>
-<!--goals-->
-
-<p>Make users really understand what they can expect about their personal data from a data controller (in terms of which data is managed, for which purposes,&nbsp;etc.)</p>
+<p>Extract the most crucial aspects of the privacy policy, which users are most likely to read, to the foreground. Nest successive detail levels within these components so that users can quickly find information that is relevant to&nbsp;them.</p>
 <!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--### [Implementation]-->
-
+<h3 id="implementation"><a class="toclink" href="#implementation">[Implementation]</a></h3>
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
+<p><em>A short notice may provide a summary of the practices that deal with personal data, highlighting those which may not be evident to the data subject. Then, a longer policy may provide specific information, split into sections, detailing any uses of personal data. And finally, the whole legal text of the privacy policy can be&nbsp;specified.</em></p>
 <h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 
-<!--constraints and consequences-->
-
-<p>The use of this pattern fosters simplicity, transparency and&nbsp;choice.</p>
-<p>However, two versions of the privacy policies coexist, which may introduce potential contradictions; in particular, the data controller must ensure that updates are performed in parallel and&nbsp;coherently.</p>
+<p><em>[Helps users] understand what they can expect about their personal data from a data controller (in terms of which data is managed, for which purposes, etc.)</em> Also <em>fosters simplicity, transparency and&nbsp;choice.</em></p>
+<p><em>However, [multiple] versions of the privacy policies [need to] coexist, which may introduce potential contradictions; in particular, the data controller must ensure that updates are performed in parallel and&nbsp;coherently.</em></p>
 <!--### [Constraints]-->
 
 <!-- limitations as a consequence of applying the pattern.-->
@@ -414,28 +419,35 @@
 <h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
 <!--Motivational example to see how the pattern is applied.-->
 
-<p>See examples at Terms of Service Didn't Read. The average user would take 76 work days to read the privacy policies they encounter each&nbsp;year</p>
+<p><em>See examples at <a href="https://tosdr.org/">Terms of Service Didn't Read</a>. The average user would take <a href="http://www.theatlantic.com/technology/archive/2012/03/reading-the-privacy-policies-you-encounter-in-a-year-would-take-76-work-days/253851/">76 work days to read the privacy policies they encounter each year</a></em>.</p>
 <h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
 <!-- Pointers to various applications of the pattern.-->
 
 <ul>
-<li>An early example of layered privacy policy by TRUSTe and its mobile version, which are discussed in Pinnick, T. Layered Policy Design. TRUSTe Blog,&nbsp;2011.</li>
-<li>There are several sites that use this pattern nowadays, albeit not always with that name. One example is Banksia Villages, which provides a Simplified Privacy Policy as well as an Extended&nbsp;one.</li>
-<li>It is recommended by British Information's Commissioner Office in its Privacy Notices Code of Practice&nbsp;(p.55)</li>
-<li>This concept is quite similar to the Creative Commons license layers in the field of copyright&nbsp;management.</li>
+<li><em>An early <a href="http://www.truste.com/labs/layered-notice/short-notice/example-policy_SN.html">example of layered privacy policy by TRUSTe</a> and its mobile version, which are discussed in <a href="http://www.truste.com/blog/2011/05/20/layered-policy-and-short-notice-design/">Pinnick, T. Layered Policy Design</a>. TRUSTe Blog,&nbsp;2011.</em></li>
+<li><em>There are several sites that use this pattern nowadays, albeit not always with that name. One example is Banksia Villages, which provides a <a href="http://www.banksiavillage.com.au/simplified-privacy-policy/">Simplified Privacy Policy</a> as well as an <a href="http://www.banksiavillage.com.au/privacy-statement/">Extended</a>&nbsp;one.</em></li>
+<li><em>It is recommended by British Information's Commissioner Office in its <a href="https://ico.org.uk/media/for-organisations/documents/1610/privacy_notices_cop.pdf">Privacy Notices Code of Practice</a>&nbsp;(p.55)</em></li>
+<li><em>This concept is quite similar to the <a href="http://creativecommons.org/licenses/">Creative Commons license layers</a> in the field of copyright&nbsp;management.</em></li>
 </ul>
 <!--## See Also-->
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--### [Related Patterns]-->
-
+<h3 id="related-patterns"><a class="toclink" href="#related-patterns">[Related&nbsp;Patterns]</a></h3>
 <!-- Supporting and conflicting patterns-->
 
-<!--### [Sources]-->
-
+<p>This pattern <em>complements</em> <a href="Awareness-Feed">Awareness Feed</a>, <a href="Appropriate-Privacy-Icons">Appropriate Privacy Icons</a>, <a href="Icons-for-Privacy-Policies">Icons for Privacy Policies</a>, <a href="Privacy-Labels">Privacy Labels</a>, <a href="Privacy-color-coding">Privacy Color Coding</a>, <a href="Abridged-Terms-and-Conditions">Abridged Terms and Conditions</a>, <a href="Privacy-Aware-Wording">Privacy Aware Wording</a>, and <a href="Privacy-Policy-Display">Privacy Policy Display</a>.</p>
+<p>Like many patterns which inform users, elements of <a href="Awareness-Feed">Awareness Feed</a> (like <a href="Impactful-Information-and-Feedback">Impactful Information and Feedback</a>) and its methods for establishing awareness go well with accessible policy aspects like this&nbsp;pattern.</p>
+<p>Interpretations of privacy policies and their expression in easily understood summaries could be improved with <a href="Appropriate-Privacy-Icons">Appropriate Privacy Icons</a>, <a href="Icons-for-Privacy-Policies">Icons for Privacy Policies</a>, and <a href="Privacy-color-coding">Privacy Color Coding</a>. This makes for a more accessible solution with visual&nbsp;cues.</p>
+<p>Accessible policies like these go well with <a href="Abridged-Terms-and-Conditions">Abridged Terms and Conditions</a>, as they <em>complement</em> its need for policy&nbsp;summarization.</p>
+<p>Additionally, where this pattern extracts the most crucial aspects of the privacy policies into layers, these layers could be written following <a href="Privacy-Aware-Wording">Privacy Aware Wording</a>. This improves the accessibility of the layered privacy policy. Similarly, <a href="Privacy-Policy-Display">Privacy Policy Display</a> benefits from both of these, in this pattern particularly from its multi-layered&nbsp;approach.</p>
+<p>Implicit complementary relationships to this pattern include <a href="Dynamic-Privacy-Policy-Display">Dynamic Privacy Policy Display</a> and <a href="Policy-matching-display">Policy Matching Display</a>. Both of these exist through their use of <a href="Privacy-Policy-Display">Privacy Policy Display</a>.</p>
+<h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
 <!-- References to the original source of the pattern.-->
 
+<p>Pinnick, T. Layered Policy Design. TRUSTe Blog,&nbsp;2011.</p>
+<p>Christoph Boesch, Frank Kargl, Henning Kopp, and Patrick Mosby, “privacypatterns.eu - collecting patterns for better privacy,” 2017. [Online]. Available: https://privacypatterns.eu/#/?limit=6&amp;offset=0. [Accessed:&nbsp;18-Jul-2017].</p>
+<p>Multi-Layered Notices Explained, White Paper, The Center for Information Policy Leadership, Hunton <span class="amp">&amp;</span> Williams,&nbsp;http://mddb.apec.org/documents/2005/ECSG/DPM1/05_ecsg_dpm1_003.pdf</p>
 <!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->

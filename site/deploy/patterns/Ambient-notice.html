@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>
 		
-		Ambient notice - Privacy Patterns
+		Ambient Notice - Privacy Patterns
 		
 	</title>
   <meta name="description" content="Privacy design patterns for software engineering">
@@ -94,132 +94,6 @@
 <div id="content">
   <p id="cats">
     Categories: 
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          
-<a href="/categories/location" class="location">location</a>
-           &bull; 
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
       
         
       
@@ -426,29 +300,29 @@
         
       
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
           
 <a href="/categories/mobile" class="mobile">mobile</a>
            &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -744,11 +618,11 @@
         
       
         
+      
+        
           
 <a href="/categories/notify" class="notify">notify</a>
           
-        
-      
         
       
         
@@ -853,55 +727,66 @@
   </p>
   <h1>
 		
-			Ambient notice
+			Ambient Notice
 		
 	</h1>
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#summary">Summary</a></li>
+<li><a href="#also-known-as">[Also Known&nbsp;As]</a></li>
 <li><a href="#context">Context</a></li>
-<li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#examples">Examples</a></li>
+<li><a href="#problem">Problem</a><ul>
+<li><a href="#forces-and-concerns">Forces and&nbsp;Concerns</a></li>
+</ul>
+</li>
+<li><a href="#solution">Solution</a><ul>
+<li><a href="#implementation">[Implementation]</a></li>
+</ul>
+</li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#known-uses">[Known&nbsp;Uses]</a></li>
+<li><a href="#related-patterns">[Related&nbsp;Patterns]</a></li>
+<li><a href="#sources">[Sources]</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<!--### [Also Known As]-->
-
+<h3 id="also-known-as"><a class="toclink" href="#also-known-as">[Also Known&nbsp;As]</a></h3>
 <!-- All other names the pattern is known by.-->
 
-<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
-<!-- One short paragraph summarising the pattern.-->
-
-<p>Provide an ambient notice (unobtrusive, non-modal) when location is being accessed to increase awareness of ongoing&nbsp;tracking.</p>
-<!--intent-->
-
-<p>Provide unobtrusive, ongoing notice of real-time location&nbsp;tracking.</p>
-<p>Supports <a href="Notice">notice</a>, <a href="Transparency-and-feedback">transparency</a> and <a href="User-control">user control</a>.</p>
+<p>Instant User Interface for Information (about PII) / Talking Collector / On the Spot&nbsp;Information</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
-<!-- The situations in which the pattern may apply.-->
-
-<p>When a service is tracking a user's location in an ongoing fashion, or accessing the user's location on each repeated use of a service. (See also, <a href="Asynchronous-notice">asynchronous notice</a>.)</p>
+<p><!-- The situations in which the pattern may apply.-->
+<!-- Aspects which constrain the solution, but are not modified by it. They affect the impact of different forces.--></p>
+<p>Modern sensor systems process massive quantities of data, performing complex and silent operations which users typically overlook. The tracking of user information is used to improve the quality of these services (or products), and typically users wish to benefit from this. This is particularly evident in consumption, location, and physical activity tracking. While these users do not want to be exposed to extensive and otherwise intimidating details, this processing must be done under the user's informed and explicit consent. Once the consent for it has been obtained,  processing may occur regularly or in real-time. While users are to be informed of this, in-progress readings still happen in a manner which is streamlined and not inherently noticeable. Users are also capable of forgetting some time after consent was&nbsp;given.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
-<p>How can a service effectively provide notice to a user that location tracking is continuing, or happening again, without being as obtrusive as a repeated modal dialog? A user may not realize that an application given permission to access location is doing so continuously or repeatedly, or may not remember that explicit permissions given in the past allow a service to access data again later. In some cases, past explicit permission may not have been provided by the current user of the device (but instead by a spouse, parent or even an ex-spouse or stalker who temporarily had control of the device or the account). If notice is provided only at the time of consent, a user may inadvertently distribute personal information over a long period of time after having lost control of their device only&nbsp;momentarily.</p>
-<!--forces/concerns-->
-
-<p>A tray full of ambient notices may annoy or confuse users and inure them to ongoing practices. Take measures to avoid unnecessary notice. This must be balanced against the
-concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
+<p>Users are frequently unaware of the sensors currently tracking them. It is important that they understand that their personal data is being further collected in order for their informed consent to remain valid. This should be unobtrusive, however, so as to avoid notification fatigue or&nbsp;desensitization.</p>
+<p><em>A user may not realize that an application given permission to access [sensor data] is doing so continuously or repeatedly, or may not remember that explicit permissions given in the past allow a service to access data again later. In some cases, past explicit permission may not have been provided by the current user of the device (but instead by a spouse, parent or even an ex-spouse or stalker who temporarily had control of the device or the account). If notice is provided only at the time of consent, a user may inadvertently distribute personal information over a long period of time after having lost control of their device only&nbsp;momentarily.</em></p>
+<h4 id="forces-and-concerns"><a class="toclink" href="#forces-and-concerns">Forces and&nbsp;Concerns</a></h4>
+<p><!-- Implications in this problem which affect the appropriateness of a solution, and are affected by this pattern.-->
+<!-- Forces should be highly visible for easy reference, where less obvious a dedicated section is recommended.--></p>
+<ul>
+<li>Users are capable of forgetting or reconsidering their consent, affecting the legitimacy of any processing under&nbsp;it</li>
+<li>Users may overlook processing which is not made apparent to them, allowing sensors to record data they would not&nbsp;otherwise</li>
+<li>Controllers aim to ensure that consent is retained, they want to avoid collecting data against the user's&nbsp;wishes</li>
+<li>Controllers want to prevent users from inadvertently sharing personal data which they regret being&nbsp;processed</li>
+</ul>
+<p><em>A tray full of ambient notices may annoy or confuse users and inure them to ongoing practices. Take measures to avoid unnecessary notice. This must be balanced against the
+concerns of an attacker's opting the user in without their&nbsp;knowledge.</em></p>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
 <!-- A concise description of how the pattern addresses the problem.-->
 
-<p>Provide an <em>ambient</em> notice &mdash; unobtrusive, non-modal, but available at a glance or from a simple action &mdash; when location data is being accessed. The notice should provide opportunities for interaction: to learn more about the use of data or to revoke&nbsp;permissions.</p>
+<p>Provide an unobtrusive but clearly visible notification while sensors are in use, without interrupting the flow of user activity. This notification should be interactive in order to prevent, delay, or further explain the data&nbsp;collection.</p>
 <!--### [Structure]-->
 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-<!--### [Implementation]-->
-
+<h3 id="implementation"><a class="toclink" href="#implementation">[Implementation]</a></h3>
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
+<p><em>The best place to provide transparency is the place where data is collected. The sensor is the first component noticed of a complex system, because the user is directly confronted with the sensor during collection. Hence, provided information in this place is easier to access by the user. Because of that, sensors should be equipped with a user interface for instant check of the collected data. Such an interface can consist of a simple display or message box. In more complex environments, optical codes and links can refer the user to more elaborated information&nbsp;sources.</em></p>
 <!--## Consequences-->
 
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
@@ -914,29 +799,33 @@ concerns of an attacker's opting the user in without their&nbsp;knowledge.</p>
 <!--Motivational example to see how the pattern is applied.-->
 
 <ul>
-<li><em>Location services icons: Mac OS X, Google Chrome, et&nbsp;al.</em></li>
+<li><em><strong>Location services icons: Mac OS X, Google Chrome, et&nbsp;al.</strong></em></li>
 </ul>
 <p><img alt="Lion Location Icon" src="/media/images/lion_location_icon.png" /></p>
-<p>Mac OS X Lion adds an ambient location services icon (a compass arrow) which appears in the task bar momentarily when an application is accessing the device's&nbsp;location.</p>
+<p><em>Mac OS X Lion adds an ambient location services icon (a compass arrow) which appears in the task bar momentarily when an application is accessing the device's&nbsp;location.</em></p>
 <p><img alt="Chrome Location Icon" src="/media/images/chrome_location_icon.png" /></p>
-<p>Chrome adds a cross-hair icon to the location bar when a web site accesses the device location via the W3C Geolocation API. Clicking on the icon provides potential actions: clearing the saved consent for this site and accessing&nbsp;settings.</p>
-<p><em>Similar examples exist in at least Android, iOS and&nbsp;Win7.</em></p>
-<!--### [Known Uses]-->
-
+<p><em>Chrome adds a cross-hair icon to the location bar when a web site accesses the device location via the W3C Geolocation API. Clicking on the icon provides potential actions: clearing the saved consent for this site and accessing&nbsp;settings.</em></p>
+<p><em>Similar examples exist in at least Android, iOS and&nbsp;Windows.</em></p>
+<h3 id="known-uses"><a class="toclink" href="#known-uses">[Known&nbsp;Uses]</a></h3>
 <!-- Pointers to various applications of the pattern.-->
 
+<p><em>QR-code based information access, smart meter&nbsp;display</em></p>
 <!--## See Also-->
 
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
 
-<!--### [Related Patterns]-->
-
+<h3 id="related-patterns"><a class="toclink" href="#related-patterns">[Related&nbsp;Patterns]</a></h3>
 <!-- Supporting and conflicting patterns-->
 
-<!--### [Sources]-->
-
+<p>This pattern is an <em>alternative</em> to <a href="Asynchronous-notice">Asynchronous Notice</a>. While this pattern aims at non-intrusive and ongoing notification, the Asynchronous variant focuses on obtrusive and unavoidable notifications. As such it must be used more&nbsp;sparingly.</p>
+<p>This pattern <em>complements</em> <a href="Informed-Implicit-Consent">Informed Implicit Consent</a> and <a href="Single-Point-of-Contact">Single Point of Contact</a>(SPoC). Implicit consent is shown by the Ambient Notice, reminding the user of the system's assumption that their consent has not been retracted. A SPoC is an authority which validates requests and ensures secure and private communication, a usage of data which can be persistently displayed to remind the user of its&nbsp;(de)activation.</p>
+<p>This pattern <em>refines</em> <a href="Preventing-Mistakes-or-Reducing-Their-Impact">Preventing Mistakes or Reducing Their Impact</a>. As it provides ongoing notice of data collection, a user is prevented from mistakenly producing data, or better has a good chance to cease doing so before having an impact. As an implicit relationship through <a href="Preventing-Mistakes-or-Reducing-Their-Impact">Preventing Mistakes or Reducing Their Impact</a>, this pattern also <em>complements</em> <a href="Impactful-Information-and-Feedback">Impactful Information and Feedback</a>. However, in order to do so, the implementation must allow for a potentially indefinite delay, as the notification will not be&nbsp;modal.</p>
+<h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
 <!-- References to the original source of the pattern.-->
 
+<p>N. Doty, M. Gupta, and J. Zych, “privacypatterns.org - Privacy Patterns,” privacypatterns.org, 2017. [Online]. Available: http://privacypatterns.org/. [Accessed:&nbsp;26-Feb-2015].</p>
+<p>C. Bier and E. Krempel, “Common Privacy Patterns in Video Surveillance and Smart Energy,” in ICCCT-2012, 2012, pp.&nbsp;610–615.</p>
+<p>J. Siljee, “Privacy transparency patterns,” in EuroPLoP ’15, 2015, pp.&nbsp;1–11.</p>
 <!--## General Comments-->
 
 <!-- Separate discussion on the pattern.-->
