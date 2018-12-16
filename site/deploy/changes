@@ -1,16 +1,16 @@
-commit 8a8c18085974ac87f8be9acb49875adc33728b48
-Author: mohit <mohit.gupta@clever.com>
-
-    update readme
-
-commit 4daa5a22f8adcc4a2a952aba6a358f9aa8c76782
-Merge: ccae430 71fb8a4
+commit 5c89873be0fb653957bf7efd841dad347ca87df8
 Author: Nick Doty <npdoty@ischool.berkeley.edu>
 
-    Merge pull request #94 from npdoty/master
+    remove category directories that were capitalized, and a couple of lingering deployed patterns that were all lower case
 
-commit 71fb8a4379094a774358b719fb108c223a296362
+commit 5068e7c75a2f206e53264e9a04220358a59d6c36
+Merge: 8a8c180 6940d9d
 Author: Nick Doty <npdoty@ischool.berkeley.edu>
 
-    update credit per @juliocaizan
+    Merge pull request #102 from privacypatterns/render-patterns-29
+
+commit 6940d9dd0d5a500c45d6a428e80b098c524c4a86
+Author: Nick Doty <npdoty@ischool.berkeley.edu>
+
+    rendered version of privacypatterns/patterns PR#29
 ===================
