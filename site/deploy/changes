@@ -1,16 +1,17 @@
+commit 94971ca7bb08bca6e13857fd75a6980b87a170ca
+Merge: 5c89873 496bf3d
+Author: Nick Doty <npdoty@ischool.berkeley.edu>
+
+    Merge branch 'p4pnl-collapsiblecats' for collapsible categories in sidebar
+
+commit 496bf3d262a5b60d92eb3f84588b5e01c620ea65
+Merge: 5c89873 1fbedbf
+Author: Nick Doty <npdoty@ischool.berkeley.edu>
+
+    Merge branch 'collapsiblecats' of git://github.com/p4pnl/privacypatterns into p4pnl-collapsiblecats
+
 commit 5c89873be0fb653957bf7efd841dad347ca87df8
 Author: Nick Doty <npdoty@ischool.berkeley.edu>
 
     remove category directories that were capitalized, and a couple of lingering deployed patterns that were all lower case
-
-commit 5068e7c75a2f206e53264e9a04220358a59d6c36
-Merge: 8a8c180 6940d9d
-Author: Nick Doty <npdoty@ischool.berkeley.edu>
-
-    Merge pull request #102 from privacypatterns/render-patterns-29
-
-commit 6940d9dd0d5a500c45d6a428e80b098c524c4a86
-Author: Nick Doty <npdoty@ischool.berkeley.edu>
-
-    rendered version of privacypatterns/patterns PR#29
 ===================
