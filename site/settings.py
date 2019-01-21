@@ -14,7 +14,7 @@ BACKUPS_DIR = here('backups')
 BACKUP = False
 
 SITE_ROOT = "/"
-SITE_WWW_URL = "http://www.privacypatterns.org"
+SITE_WWW_URL = "privacypatterns.org"
 SITE_NAME = "Privacy Patterns"
 SITE_AUTHOR = "Nick Doty and Mohit Gupta"
 
