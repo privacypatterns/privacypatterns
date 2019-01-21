@@ -22,7 +22,7 @@ window.onload = function () {
             if(!dragging && this.type == "text"){
                 location.href =
                 // While we can use the below with Hyde, it isnt needed
-                    "{{site.url}}" + "/" +
+                //    "{{site.url}}" + "/" +
                     this.data('url') + ".html";
             }
             isClicked = false;
