@@ -216,6 +216,19 @@ aside {
 aside h2 {
   font-size: 22px;
 }
+/* Raphael Pattern Relationships */
+#holder {
+    height: 50px;
+    top: 0;
+    width: 100%;
+}
+#copy {
+    bottom: 0;
+    font-size: .7em;
+    position: absolute;
+    right: 1em;
+    text-align: right;
+}
 
 /* Categories list is on the patterns listing page */
 #cats li a {

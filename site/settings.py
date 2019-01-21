@@ -104,10 +104,10 @@ SITE_PRE_PROCESSORS = {
                         "select","exclude","strip","destroy",
                     },
                 },
-                "select":{'type':"tactic",},
-                "exclude":{'type':"tactic",},
-                "strip":{'type':"tactic",},
-                "destroy":{'type':"tactic",},
+                "select":{'type':"tactic", 'color': "#D5E8D4",},
+                "exclude":{'type':"tactic", 'color': "#E4FFD4",},
+                "strip":{'type':"tactic", 'color': "#E3FFAB",},
+                "destroy":{'type':"tactic", 'color': "#C8FFBD",},
 
                 'abstract': {
                     'type': "strategy",
@@ -115,8 +115,8 @@ SITE_PRE_PROCESSORS = {
                         "summarize","group",
                     },
                 },
-                "summarize":{'type':"tactic",},
-                "group":{'type':"tactic",},
+                "group":{'type':"tactic", 'color': "#C9F0E0",},
+                "summarize":{'type':"tactic", 'color': "#B8FFEA",},
 
                 'separate': {
                     'type': "strategy",
@@ -124,8 +124,8 @@ SITE_PRE_PROCESSORS = {
                         "distribute","isolate",
                     },
                 },
-                "distribute":{'type':"tactic",},
-                "isolate":{'type':"tactic",},
+                "isolate":{'type':"tactic", 'color': "#E6FFE9",},
+                "distribute":{'type':"tactic", 'color': "#BDFFC6",},
 
                 'hide': {
                     'type': "strategy",
@@ -133,10 +133,10 @@ SITE_PRE_PROCESSORS = {
                         "restrict","mix","obfuscate","dissociate",
                     },
                 },
-                "restrict":{'type':"tactic",},
-                "mix":{'type':"tactic",},
-                "obfuscate":{'type':"tactic",},
-                "dissociate":{'type':"tactic",},
+                "restrict":{'type':"tactic", 'color': "#FFF0D6",},
+                "dissociate":{'type':"tactic", 'color': "#FFD5CC",},
+                "obfuscate":{'type':"tactic", 'color': "#FFD89E",},
+                "mix":{'type':"tactic", 'color': "#FFD1DC",},
 
                 'inform': {
                     'type': "strategy",
@@ -144,9 +144,9 @@ SITE_PRE_PROCESSORS = {
                         "provide","notify","explain",
                     },
                 },
-                "provide":{'type':"tactic",},
-                "notify":{'type':"tactic",},
-                "explain":{'type':"tactic",},
+                "provide":{'type':"tactic", 'color': "#D1EDFF",},
+                "notify":{'type':"tactic", 'color': "#EDF5FF",},
+                "explain":{'type':"tactic", 'color': "#C7DBFF",},
 
                 'control': {
                     'type': "strategy",
@@ -154,10 +154,10 @@ SITE_PRE_PROCESSORS = {
                         "consent","choose","update","retract",
                     },
                 },
-                "consent":{'type':"tactic",},
-                "choose":{'type':"tactic",},
-                "update":{'type':"tactic",},
-                "retract":{'type':"tactic",},
+                "consent":{'type':"tactic", 'color': "#FDFFF5",},
+                "choose":{'type':"tactic", 'color': "#FFFFFF",},
+                "update":{'type':"tactic", 'color': "#FFFFCC",},
+                "retract":{'type':"tactic", 'color': "#FFFBEB",},
 
                 'enforce': {
                     'type': "strategy",
@@ -165,9 +165,9 @@ SITE_PRE_PROCESSORS = {
                         "create","maintain","uphold",
                     },
                 },
-                "create":{'type':"tactic",},
-                "maintain":{'type':"tactic",},
-                "uphold":{'type':"tactic",},
+                "create":{'type':"tactic", 'color': "#FDF5FF",},
+                "maintain":{'type':"tactic", 'color': "#F6E8FF",},
+                "uphold":{'type':"tactic", 'color': "#E4D2F5",},
 
                 'demonstrate': {
                     'type': "strategy",
@@ -175,9 +175,9 @@ SITE_PRE_PROCESSORS = {
                         "audit","log","report",
                     },
                 },
-                "audit":{'type':"tactic",},
-                "log":{'type':"tactic",},
-                "report":{'type':"tactic",},
+                "audit":{'type':"tactic", 'color': "#B3F2FF",},
+                "log":{'type':"tactic", 'color': "#CAF0EC",},
+                "report":{'type':"tactic", 'color': "#D9FFFB",},
 
             },
         }

@@ -1,5 +1,64 @@
 {% extends "skeleton/_body.html" %}
 
+{% block extra_css %}
+  {% for c in categories %}
+   {% if c.name == category %}
+    {% ifchanged c.type %}
+     <script type="text/javascript" charset="utf-8">
+      var inputData = [
+      {% for post in posts %}
+       {% if post.status != "stub" %}
+        {% with post.name_without_extension|remove_date_prefix|unslugify as default_title %}
+         [
+          "{{ post.title|default_if_none:default_title }}",
+          "{{ post.url }}",
+            {% autoescape off %} {
+              {% if post.use != None %}
+                "use":[{%for i in post.use.split%}"{{i}}",{%endfor%}],
+              {% endif %}
+              {% if post.com != None %}
+                "com":[{%for i in post.com.split%}"{{i}}",{%endfor%}],
+              {% endif %}
+              {% if post.ref != None %}
+                "ref":[{%for i in post.ref.split%}"{{i}}",{%endfor%}],
+              {% endif %}
+              {% if post.lds != None %}
+                "lds":[{%for i in post.lds.split%}"{{i}}",{%endfor%}],
+              {% endif %}
+              {% if post.sim != None %}
+                "sim":[{%for i in post.sim.split%}"{{i}}",{%endfor%}],
+              {% endif %}
+              {% if post.alt != None %}
+                "alt":[{%for i in post.alt.split%}"{{i}}",{%endfor%}],
+              {% endif %}
+              {% if post.req != None %}
+                "req":[{%for i in post.req.split%}"{{i}}",{%endfor%}],
+              {% endif %}
+              {% if post.ext != None %}
+                "ext":[{%for i in post.ext.split%}"{{i}}",{%endfor%}],
+              {% endif %}},
+            {{post.categories}},
+            {% endautoescape %}
+         ],
+        {% endwith %}
+       {% endif %}
+      {% endfor %}
+      ], catColors = {
+      {% for c in categories %}
+       {% ifchanged c.name %}
+        {% if c.type != None %}
+         "{{c.name}}":"{{c.color}}",
+        {% endif %}
+       {% endifchanged %}
+      {% endfor %}};
+     </script>
+     <script src="{{site.url}}/media/js/raphael/raphael" type="text/javascript" charset="utf-8"></script>
+     <script src="{{site.url}}/media/js/raphael/graffle.js" type="text/javascript" charset="utf-8"></script>
+    {% endifchanged %}
+   {% endif %}
+  {% endfor %}
+{% endblock %}
+
 {%hyde
     listing: true
 %}
@@ -8,8 +67,8 @@
 {% endblock %}
 
 {% block content_body %}
-<h1><a href="/patterns" title="Patterns">Patterns</a> &mdash; <span class="category">{{ category }}</span></h1>
-  
+<h1><a href="{{site.url}}/patterns" title="Patterns">Patterns</a> &mdash; <span class="category">{{ category }}</span></h1>
+
   <div class="definition">
     {% with category|slugify as cat %}
       {% with "principles/"|add:cat|add:".md" as cat_def_url %}
@@ -19,7 +78,9 @@
       {% endwith %}
     {% endwith %}
   </div>
-  
+
+  <div id="holder"></div>
+
   <ul id="patterns_listing">
   {% for post in posts %}
   {% if post.status != "stub" %}
