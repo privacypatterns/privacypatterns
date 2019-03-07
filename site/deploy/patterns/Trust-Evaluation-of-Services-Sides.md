@@ -46,6 +46,7 @@ _[Trust] in a service provider can be established by monitoring and enforcing in
 _[Also,] reputation metrics based on other users' [ratings] can influence user trust. Reputation systems, [for instance] in eBay, can however often be manipulated by reputation forging or poisoning. Besides, the calculated reputation values are often based on subjective ratings by non-experts, [through which privacy-friendliness may be difficult to judge]._
 
 _A trust evaluation function should in particular follow the following design principles:_
+
 - _Use a multi-layered structure for displaying evaluation results._
 - _Make clear who is evaluated_
 - _Inform the user without unnecessary warnings._

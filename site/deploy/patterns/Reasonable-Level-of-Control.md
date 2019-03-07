@@ -79,17 +79,19 @@ This pattern is _refined_ by [Selective Access Control](Selective-Access-Control
 
 As with most patterns in privacy, data protection, or self-determination, [Reasonable Level of Control](Reasonable-Level-of-Control) _must use_ use [Lawful Consent](Lawful-Consent). It also _may use_ [Masquerade](Masquerade), which allows the user to set their identifiability.  This pattern may include that functionality inside its own solution.
 
-[Reasonable Level of Control](Reasonable-Level-of-Control) may be used by [Support Selective Disclosure](Support-Selective-Disclosure) as one of the compound pattern's constituent patterns. It is also complemented by [Discouraging blanket strategies](Discouraging-blanket-strategies), [Private link](Private-link), and [Active broadcast of presence](Active-broadcast-of-presence). 
+[Reasonable Level of Control](Reasonable-Level-of-Control) may be used by [Support Selective Disclosure](Support-Selective-Disclosure) as one of the compound pattern's constituent patterns. It is also complemented by [Discouraging blanket strategies](Discouraging-blanket-strategies), [Private link](Private-link), and [Active broadcast of presence](Active-broadcast-of-presence).
 
 The first pattern in these complementary relationships defines methods which allow users to share their information (selectively and granularly). These methods could be complemented where considering a range of options as in this pattern. The second, [Private link](Private-link), focuses on private sharing with anonymous users, while [Reasonable Level of Control](Reasonable-Level-of-Control) focuses on granularity. They can work together to cover all possible audiences. The third complementary pattern, [Active broadcast of presence](Active-broadcast-of-presence), aims to define the audience for posts through rules, through which it could complement this pattern considering its relationship to [Selective Access Control](Selective-Access-Control) as a generalization.
 
 Due to the strong importance of notified and informed users in this pattern, the following patterns also complement this pattern:
+
 - [Ambient](Ambient-Notice)/[Asynchronous Notice](Asynchronous-Notice),
 - [Preventing mistakes or reducing their impact](Preventing-mistakes-or-reducing-their impact),
 - [Awareness Feed](Awareness-Feed) (and components), and
 - [Privacy Dashboard](Privacy-Dashboard) (and components).
 
 As per original source, this pattern should ideally use the following:
+
 - _Reasonable level of control should [use] [APPROPRIATE PRIVACY FEEDBACK](Appropriate-Privacy-Feedback) (C5) to give users a greater understanding of what data is being collected about them._
 - _Systems should also have [LIMITED DATA RETENTION](Time-limited-personal-data-keeping) (C12), so that personal information is stored only for long as it is needed. Limited retention is also one of the [FAIR INFORMATION PRACTICES](Fair-Information-Practices) (C1)._
 - _Lastly, control is only useful if there is a [PRIVACY-SENSITIVE ARCHITECTURE](Privacy-Sensitive-Architectures) (C6) backing it up, ensuring that users really do have control and that eavesdroppers are shut out._
@@ -101,7 +103,7 @@ As per original source, this pattern should ideally use the following:
 Based on:
 
 - E. S. Chung, J. I. Hong, J. Lin, M. K. Prabaker, J. a. Landay, and A. L. Liu, “Development and Evaluation of Emerging Design Patterns for Ubiquitous Computing,” DIS ’04 Proceedings of the 5th conference on Designing interactive systems: processes, practices, methods, and techniques, pp. 233–242, 2004.
-  - The full catalog of the patterns by Chung et al. is in https://www.cs.cmu.edu/~jasonh/projects/ubicomp-design-patterns/ubicomp_patterns.pdf
+    - The full catalog of the patterns by Chung et al. is in https://www.cs.cmu.edu/~jasonh/projects/ubicomp-design-patterns/ubicomp_patterns.pdf
 - S. Romanosky, A. Acquisti, J. Hong, L. F. Cranor, and B. Friedman, “Privacy patterns for online interactions,” Proceedings of the 2006 conference on Pattern languages of programs - PLoP ’06, p. 1, 2006.
 - H. Baraki et al., Towards Interdisciplinary Design Patterns for Ubiquitous Computing Applications. Kassel, Germany, 2014.
 - G. Iachello and J. Hong, “End-User Privacy in Human-Computer Interaction,” Foundations and Trends in Human-Computer Interaction, vol. 1, no. 1, pp. 1–137, 2007.

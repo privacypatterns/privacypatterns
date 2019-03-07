@@ -36,6 +36,7 @@ Provide a privacy preserving proxy which securely parses and interprets the priv
 _Figure 1 [of the paper] shows a class diagram for the relationships between the user, the server, and the proxy. Each server can publish many policies and each user can be made aware of many policies at a time through the proxy._
 
 _In Figure 2 [of the paper], a user wishes to access some information or interact with files on the server, which publishes its privacy Policy. The access occurs in the following sequence:_
+
 - _The User interacts with the Server through a network Client._
 - _The Client consults the Proxy for privacy policies._
 - _The Proxy discovers the correct Policy (or Policies) made available by the Server, for the information or files in question._

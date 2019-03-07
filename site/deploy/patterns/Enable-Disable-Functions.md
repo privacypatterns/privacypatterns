@@ -18,9 +18,9 @@ Not all users desire or benefit from all functionality.
 _Consider users living in an Ambient Assisted Living environment: these users are surrounded by various sensors such as video cameras, motion sensors or electrical current sensors that are used to monitor the actual situation of a person. Another example are the acceleration sensors included in smartphones. A [service (or product)] can recommend places of interest to the user by considering the gathered [data]. With regard to these examples it becomes obvious that [services] often unobtrusively collect highly critical and personal context data of users._
 
 #### Forces/Concerns
-– Informational self-determination: _The pattern considers a user's basic right of informational self-determination. This is due to the fact that a user is able to explicitly agree or disagree to a certain function depending on the context data needed by the function. Therefore, the user has direct control of the context data collection process. This satisfies the principles of necessity, transparency, giving consent and responsibility. They are part of the user's right of informational self-determination and are described in detail in [Kuner] and [Hornung & Schnabel]._
-– Trust: _The pattern increases a user's trust in the [service] by offering the possibility to prevent the collection and inference of certain personal context data. Hence, [users] can be sure that personal data that is critical to [them] is not gathered, stored or further processed by third parties._
-– Transparency: _The pattern provides transparency to the user by giving an overview, which function needs which personal context data of a user to work properly. For this reason a user is aware of the context data that is gathered..._
+- Informational self-determination: _The pattern considers a user's basic right of informational self-determination. This is due to the fact that a user is able to explicitly agree or disagree to a certain function depending on the context data needed by the function. Therefore, the user has direct control of the context data collection process. This satisfies the principles of necessity, transparency, giving consent and responsibility. They are part of the user's right of informational self-determination and are described in detail in [Kuner] and [Hornung & Schnabel]._
+- Trust: _The pattern increases a user's trust in the [service] by offering the possibility to prevent the collection and inference of certain personal context data. Hence, [users] can be sure that personal data that is critical to [them] is not gathered, stored or further processed by third parties._
+- Transparency: _The pattern provides transparency to the user by giving an overview, which function needs which personal context data of a user to work properly. For this reason a user is aware of the context data that is gathered..._
 
 ## Solution
 <!-- A concise description of how the pattern addresses the problem.-->
@@ -72,8 +72,8 @@ _Meet-U provides several functions that make use of localization mechanisms and 
 
 Like many patterns, despite providing the user with enhanced choice, it is important to ensure that user decisions are informed, made without being pushed, and are understood explicitly. As such, this pattern _must use_ [Lawful Consent](Lawful-Consent) as means to this end.
 
-– Configurability: The application shall enable users to activate or deactivate functions. (See [Reasonable Level of Control](Reasonable Level of Control)).
-– Agreement to Functionality: The application shall ask for users' consent regarding the functionality before use. The application should enable users to alter their consent regarding the functionality. (See [Lawful Consent](Lawful-Consent)).
+- Configurability: The application shall enable users to activate or deactivate functions. (See [Reasonable Level of Control](Reasonable Level of Control)).
+- Agreement to Functionality: The application shall ask for users' consent regarding the functionality before use. The application should enable users to alter their consent regarding the functionality. (See [Lawful Consent](Lawful-Consent)).
 
 ### [Sources]
 <!-- References to the original source of the pattern.-->

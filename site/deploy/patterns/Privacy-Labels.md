@@ -33,7 +33,7 @@ Present the user with an standardized privacy 'nutritional' label to quickly sum
 ### [Structure]
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
-_Putting a box around the label identifies the boundaries of the information, and, importantly, defines the areas that are “regulated” or should be trusted. This is a common issue when the label is placed in close proximity to other information, but may not be as significant an issue online. _
+_Putting a box around the label identifies the boundaries of the information, and, importantly, defines the areas that are “regulated” or should be trusted. This is a common issue when the label is placed in close proximity to other information, but may not be as significant an issue online._
 
 _Using bold rules to separate sets of information gives the reader an easy roadmap through the label and clearly designates sections that can be grouped by similarity_
 
@@ -49,6 +49,7 @@ _The tabular format can be filled in automatically if a site uses [[Platform  fo
 [![Privacy Label Example](/media/images/Privacy-Label.png)](https://cups.cs.cmu.edu/privacylabel-05-2009/current/1.php)
 
 Privacy Labels use four colored squares to help convey information quickly:
+
 - Dark Red Square: _we *will* collect and use your information in this way_
 - 'opt out' Red Square: _by default, we *will* collect and use your information in this way unless you tell us not to by opting out_
 - Light Blue Square: _we *will not* collect and use your information in this way_

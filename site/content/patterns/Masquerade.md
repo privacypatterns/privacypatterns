@@ -86,6 +86,7 @@ It also _may use_ [Buddy List](Buddy-List), as when one is deciding to whom thei
 Additionally, [Masquerade](Masquerade) _leads to_ [Reciprocity](Reciprocity). The application of this pattern creates a potential avenue for abuse or misuse by users who choose to remain anonymous. In order to prevent this, users may be given reciprocal capabilities according to their identifiability level.
 
 As per Schümmer et al. (2004), it also is complemented by:
+
 - Don’t Disturb;
 - Gaze Over the Shoulder (dark-pattern);
 - [Reciprocity](Reciprocity)

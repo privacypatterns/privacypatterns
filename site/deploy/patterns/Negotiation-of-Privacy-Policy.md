@@ -72,6 +72,7 @@ This pattern is used by [Support Selective Disclosure](Support-Selective-Disclos
 It is _similar to_ [Enable/Disable Functions](Enable/Disable-Functions), where users may switch between functionalities which affect their privacy. This solution is quite similar to opting in or out of those features. Specifically a similar problem is addressed from non-functional as opposed to functional perspectives.
 
 This pattern _must use_ [Lawful Consent](Lawful-Consent) in order to be implemented correctly. Additionally, due to the same need for notified and informed users in this pattern, the following patterns also complement this pattern:
+
 - [Ambient](Ambient-Notice)/[Asynchronous Notice](Asynchronous-Notice),
 - [Preventing mistakes or reducing their impact](Preventing-mistakes-or-reducing-their impact),
 - [Awareness Feed](Awareness-Feed) (and components), and

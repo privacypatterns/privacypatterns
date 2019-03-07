@@ -40,7 +40,7 @@ _A table that shows the overview. The overview could show:_
 − _Which consent the user has given for specific data_
 − _To which parties the data is disclosed_
 − _Who has seen the data_
-− _Whether the data can be hidden _
+− _Whether the data can be hidden_
 − _Whether the data can be removed_
 − _How long the data is stored_
 − _How datasets are combined to create richer (privacy sensitive) information. Note that this may violate local laws and regulations_

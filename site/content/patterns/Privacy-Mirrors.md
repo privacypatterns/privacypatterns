@@ -37,6 +37,7 @@ This pattern encourages methods, mechanisms, and interfaces which reflect the hi
 ### [Structure]
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 Privacy Mirrors focus on 5 characteristics:
+
 - history, of data flows;
 - feedback, regarding the state of their physical, social, and technical environment;
 - awareness, enabled by the feedback;
@@ -59,6 +60,7 @@ In feedback, how should different senses be addressed, to what level, where shou
 This concept includes the user's knowledge about how they feature in the system, how others feature with regards to the user's personal data, as well as what capabilities and constraints entities are given. The level of information and notification to convey depends on the user, as some will want more detail than others - meeting this balance will make the user more comfortable with their involvement.
 
 This awareness can be divided amongst the three domains:
+
 - Social: Notable usage patterns on access, being able to correlate this with others and encourage better decisions.
 - Technical: Understanding the limitations of the system, and the capabilities if used correctly, to use the system more effectively. Users should understand the flow, state, and history of their personal data in the system.
 - Physical: Having regard for the repercussions of their physical state, including location, being perceivable by the system.
@@ -91,9 +93,11 @@ These correlations may also be stored in a secure way, so that they cannot be vi
 ## Consequences
 <!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
 Advantages:
+
 - Users are less likely to portray a negative usage pattern if they are aware of the correlation of their actions to it. This results in a more positive user experience once adjustments have been made. In some cases, this can increase productivity, and or efficiency in using the system.
 
 Disadvantages:
+
 - Initial discovery of the way they appear from the outside may lead users to retreat into themselves and disclose little to no information, cease using the system, and or call for their usage to be erased. This can be mitigated by slowly introducing users to the system without immediately providing intricate usage history.
 - Even if introduced slowly, users may be dissatisfied with their usage pattern as it appears to the system (and any authorised backend users). These correlations should ideally be difficult (or impossible) to retrieve if not by the user in question.
 

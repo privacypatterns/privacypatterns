@@ -68,6 +68,7 @@ By applying this pattern the controller prevents location access by default, and
 
 ## Examples
 <!--Motivational example to see how the pattern is applied.-->
+
 - Flickr (basic implementation)
 - Twitter (basic implementation)
 - Facebook (basic implementation)

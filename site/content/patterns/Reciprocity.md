@@ -60,9 +60,10 @@ It is important that any use of user data is done so under the explicit and prop
 
 ## Examples
 <!--Motivational example to see how the pattern is applied.-->
+
 - Reddit
-  - Gold: those who never 'gild' are set apart from those that do, as this fact is made clear within a profile.
-  - Upvotes: while individual votes are not publicized, the votes received as part of contributing are.
+    - Gold: those who never 'gild' are set apart from those that do, as this fact is made clear within a profile.
+    - Upvotes: while individual votes are not publicized, the votes received as part of contributing are.
 - Facebook Friends; LinkedIn Contacts; etc.: these relationships are one-to-one, to have a contact is to be a contact.
 - TUKAN;
 - Buddy Lists in Instant Messaging systems;
@@ -86,6 +87,7 @@ This pattern may be used by [Incentivized Participation](Incentivized-Participat
 [Reciprocity](Reciprocity) may also complement [Buddy List](Buddy-List), as often these lists are reciprocal. It _must use_ [Lawful Consent](Lawful-Consent), however, as motivating users to provide personal information should be done only along with informed, explicit, and freely-given (uncoerced) consent.
 
 As per Schümmer (2004), it is also complemented by the following patterns which are invasive by design, but introduce useful notions:
+
 - Show the Expert (dark pattern), showing contributions prominently;
 - Who’s Listening (dark pattern), feedback by subscribers.
 

@@ -14,12 +14,326 @@
   
 	
   <!-- CSS: implied media="all" -->
-  <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
-  <link href="http://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
-  <link href="http://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
+  <link href="https://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/media/css/main.css?v=2">
 	
-	
+     <script type="text/javascript" charset="utf-8">
+      var inputData = [
+      
+        
+		 [
+          "Use of dummies",
+          "/patterns/Use-of-dummies",
+             {
+              
+              
+              
+              
+              
+              
+              
+              },
+            ['hide', 'obfuscate'],
+            
+         ],
+		
+      
+      ], catColors = {
+      
+       
+        
+         "control":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "consent":"#FDFFF5",
+        
+       
+      
+       
+        
+         "abstract":"",
+        
+       
+      
+       
+        
+         "strip":"#E3FFAB",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "group":"#C9F0E0",
+        
+       
+      
+       
+        
+         "restrict":"#FFF0D6",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "notify":"#EDF5FF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "exclude":"#E4FFD4",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "create":"#FDF5FF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "uphold":"#E4D2F5",
+        
+       
+      
+       
+        
+         "provide":"#D1EDFF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "explain":"#C7DBFF",
+        
+       
+      
+       
+        
+         "isolate":"#E6FFE9",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "mix":"#FFD1DC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "retract":"#FFFBEB",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "choose":"#FFFFFF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "separate":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "update":"#FFFFCC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "hide":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "dissociate":"#FFD5CC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "minimize":"",
+        
+       
+      
+       
+        
+         "inform":"",
+        
+       
+      
+       
+        
+         "obfuscate":"#FFD89E",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "enforce":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      };
+     </script>
+     <script src="/media/js/raphael/raphael" type="text/javascript" charset="utf-8"></script>
+     <script src="/media/js/raphael/graffle.js" type="text/javascript" charset="utf-8"></script>
+
 	
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,8 +365,8 @@
 
   
 </header>
-  
-<!-- 
+
+<!--
 
 
 
@@ -352,6 +666,9 @@
 			Use of dummies
 		
 	</h1>
+
+    <div id="holder"></div>
+
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
@@ -488,11 +805,11 @@ hide her real&nbsp;preferences).</p>
       </div>
 			<footer>
 	<p>
-		<a rel="license" class="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<a rel="license" class="license" href="https://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
 		Privacy patterns are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution license</a>.
 	<br>Contribute on <a href="https://github.com/privacypatterns">GitHub</a>. Read our <a href="/about/policy" title="Privacy Policy">privacy and contribution policy</a>.
 	</p>
-	<p class="berkeley">UC Berkeley <img id="iman" src="/media/images/I_School_logo_i.png" height="30px" /> School of Information</p> 
+	<p class="berkeley">UC Berkeley <img id="iman" src="/media/images/I_School_logo_i.png" height="30px" /> School of Information</p>
 </footer>
 
 

@@ -14,12 +14,326 @@
   
 	
   <!-- CSS: implied media="all" -->
-  <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
-  <link href="http://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
-  <link href="http://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
+  <link href="https://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/media/css/main.css?v=2">
 	
-	
+     <script type="text/javascript" charset="utf-8">
+      var inputData = [
+      
+        
+		 [
+          "Decoupling [content] and location information visibility",
+          "/patterns/Decoupling-[content]-and-location-information-visibility",
+             {
+              
+              
+              
+              
+              
+              
+              
+              },
+            ['control', 'retract'],
+            
+         ],
+		
+      
+      ], catColors = {
+      
+       
+        
+         "control":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "consent":"#FDFFF5",
+        
+       
+      
+       
+        
+         "abstract":"",
+        
+       
+      
+       
+        
+         "strip":"#E3FFAB",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "group":"#C9F0E0",
+        
+       
+      
+       
+        
+         "restrict":"#FFF0D6",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "notify":"#EDF5FF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "exclude":"#E4FFD4",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "create":"#FDF5FF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "uphold":"#E4D2F5",
+        
+       
+      
+       
+        
+         "provide":"#D1EDFF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "explain":"#C7DBFF",
+        
+       
+      
+       
+        
+         "isolate":"#E6FFE9",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "mix":"#FFD1DC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "retract":"#FFFBEB",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "choose":"#FFFFFF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "separate":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "update":"#FFFFCC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "hide":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "dissociate":"#FFD5CC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "minimize":"",
+        
+       
+      
+       
+        
+         "inform":"",
+        
+       
+      
+       
+        
+         "obfuscate":"#FFD89E",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "enforce":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      };
+     </script>
+     <script src="/media/js/raphael/raphael" type="text/javascript" charset="utf-8"></script>
+     <script src="/media/js/raphael/graffle.js" type="text/javascript" charset="utf-8"></script>
+
 	
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,8 +365,8 @@
 
   
 </header>
-  
-<!-- 
+
+<!--
 
 
 
@@ -352,6 +666,9 @@
 			Decoupling [content] and location information visibility
 		
 	</h1>
+
+    <div id="holder"></div>
+
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
@@ -438,10 +755,13 @@ Users often share content in socially oriented services on the Internet. The app
 
 <p>By applying this pattern the controller prevents location access by default, and thus risks a low location sharing rate. This is due to the tendency of users to leave settings in the default state. However, depending on the effort, the controller may encourage positive public image, and raise adoption&nbsp;overall.</p>
 <h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
-<p><!--Motivational example to see how the pattern is applied.-->
-- Flickr (basic implementation)
-- Twitter (basic implementation)
-- Facebook (basic&nbsp;implementation)</p>
+<!--Motivational example to see how the pattern is applied.-->
+
+<ul>
+<li>Flickr (basic&nbsp;implementation)</li>
+<li>Twitter (basic&nbsp;implementation)</li>
+<li>Facebook (basic&nbsp;implementation)</li>
+</ul>
 <!--### [Known Uses]-->
 
 <!-- Pointers to various applications of the pattern.-->
@@ -502,11 +822,11 @@ This could allow location information sharing with specific unauthenticated indi
       </div>
 			<footer>
 	<p>
-		<a rel="license" class="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<a rel="license" class="license" href="https://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
 		Privacy patterns are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution license</a>.
 	<br>Contribute on <a href="https://github.com/privacypatterns">GitHub</a>. Read our <a href="/about/policy" title="Privacy Policy">privacy and contribution policy</a>.
 	</p>
-	<p class="berkeley">UC Berkeley <img id="iman" src="/media/images/I_School_logo_i.png" height="30px" /> School of Information</p> 
+	<p class="berkeley">UC Berkeley <img id="iman" src="/media/images/I_School_logo_i.png" height="30px" /> School of Information</p>
 </footer>
 
 
