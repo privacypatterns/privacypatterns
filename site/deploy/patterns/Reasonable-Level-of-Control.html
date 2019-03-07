@@ -14,12 +14,326 @@
   
 	
   <!-- CSS: implied media="all" -->
-  <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
-  <link href="http://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
-  <link href="http://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
+  <link href="https://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/media/css/main.css?v=2">
 	
-	
+     <script type="text/javascript" charset="utf-8">
+      var inputData = [
+      
+        
+		 [
+          "Reasonable Level of Control",
+          "/patterns/Reasonable-Level-of-Control",
+             {
+              
+              
+              
+              
+              
+              
+              
+              },
+            ['control', 'update'],
+            
+         ],
+		
+      
+      ], catColors = {
+      
+       
+        
+         "control":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "consent":"#FDFFF5",
+        
+       
+      
+       
+        
+         "abstract":"",
+        
+       
+      
+       
+        
+         "strip":"#E3FFAB",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "group":"#C9F0E0",
+        
+       
+      
+       
+        
+         "restrict":"#FFF0D6",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "notify":"#EDF5FF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "exclude":"#E4FFD4",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "create":"#FDF5FF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "uphold":"#E4D2F5",
+        
+       
+      
+       
+        
+         "provide":"#D1EDFF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "explain":"#C7DBFF",
+        
+       
+      
+       
+        
+         "isolate":"#E6FFE9",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "mix":"#FFD1DC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "retract":"#FFFBEB",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "choose":"#FFFFFF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "separate":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "update":"#FFFFCC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "hide":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "dissociate":"#FFD5CC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "minimize":"",
+        
+       
+      
+       
+        
+         "inform":"",
+        
+       
+      
+       
+        
+         "obfuscate":"#FFD89E",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "enforce":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      };
+     </script>
+     <script src="/media/js/raphael/raphael" type="text/javascript" charset="utf-8"></script>
+     <script src="/media/js/raphael/graffle.js" type="text/javascript" charset="utf-8"></script>
+
 	
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,8 +365,8 @@
 
   
 </header>
-  
-<!-- 
+
+<!--
 
 
 
@@ -352,6 +666,9 @@
 			Reasonable Level of Control
 		
 	</h1>
+
+    <div id="holder"></div>
+
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
@@ -435,24 +752,30 @@ When users are pushing their information to a service, design the user interface
 
 <p>This pattern is <em>refined</em> by <a href="Selective-Access-Control">Selective Access Control</a> for socially oriented services, <a href="Negotiation-of-Privacy-Policy">Negotiation of Privacy Policy</a>, and by <a href="Decoupling-[content]-and-location-information-visibility">Decoupling [content] and location information visibility</a>. The <a href="Negotiation-of-Privacy-Policy">Negotiation of Privacy Policy</a> pattern talks about methods which allow users to share their information (selectively and granularly) while this pattern provides these kinds of features at the beginning of the service's use. <a href="Decoupling-[content]-and-location-information-visibility">Decoupling [content] and location information visibility</a> provides a means of control for attaching location to content. It is compliant with this pattern's solution in a more specific&nbsp;scenario.</p>
 <p>As with most patterns in privacy, data protection, or self-determination, <a href="Reasonable-Level-of-Control">Reasonable Level of Control</a> <em>must use</em> use <a href="Lawful-Consent">Lawful Consent</a>. It also <em>may use</em> <a href="Masquerade">Masquerade</a>, which allows the user to set their identifiability.  This pattern may include that functionality inside its own&nbsp;solution.</p>
-<p><a href="Reasonable-Level-of-Control">Reasonable Level of Control</a> may be used by <a href="Support-Selective-Disclosure">Support Selective Disclosure</a> as one of the compound pattern's constituent patterns. It is also complemented by <a href="Discouraging-blanket-strategies">Discouraging blanket strategies</a>, <a href="Private-link">Private link</a>, and <a href="Active-broadcast-of-presence">Active broadcast of presence</a>. </p>
+<p><a href="Reasonable-Level-of-Control">Reasonable Level of Control</a> may be used by <a href="Support-Selective-Disclosure">Support Selective Disclosure</a> as one of the compound pattern's constituent patterns. It is also complemented by <a href="Discouraging-blanket-strategies">Discouraging blanket strategies</a>, <a href="Private-link">Private link</a>, and <a href="Active-broadcast-of-presence">Active broadcast of presence</a>.</p>
 <p>The first pattern in these complementary relationships defines methods which allow users to share their information (selectively and granularly). These methods could be complemented where considering a range of options as in this pattern. The second, <a href="Private-link">Private link</a>, focuses on private sharing with anonymous users, while <a href="Reasonable-Level-of-Control">Reasonable Level of Control</a> focuses on granularity. They can work together to cover all possible audiences. The third complementary pattern, <a href="Active-broadcast-of-presence">Active broadcast of presence</a>, aims to define the audience for posts through rules, through which it could complement this pattern considering its relationship to <a href="Selective-Access-Control">Selective Access Control</a> as a&nbsp;generalization.</p>
-<p>Due to the strong importance of notified and informed users in this pattern, the following patterns also complement this pattern:
-- <a href="Ambient-Notice">Ambient</a>/<a href="Asynchronous-Notice">Asynchronous Notice</a>,
-- <a href="Preventing-mistakes-or-reducing-their impact">Preventing mistakes or reducing their impact</a>,
-- <a href="Awareness-Feed">Awareness Feed</a> (and components), and
-- <a href="Privacy-Dashboard">Privacy Dashboard</a> (and&nbsp;components).</p>
-<p>As per original source, this pattern should ideally use the following:
-- <em>Reasonable level of control should [use] <a href="Appropriate-Privacy-Feedback">APPROPRIATE PRIVACY FEEDBACK</a> (C5) to give users a greater understanding of what data is being collected about them.</em>
-- <em>Systems should also have <a href="Time-limited-personal-data-keeping">LIMITED DATA RETENTION</a> (C12), so that personal information is stored only for long as it is needed. Limited retention is also one of the <a href="Fair-Information-Practices">FAIR INFORMATION PRACTICES</a> (C1).</em>
-- <em>Lastly, control is only useful if there is a <a href="Privacy-Sensitive-Architectures">PRIVACY-SENSITIVE ARCHITECTURE</a> (C6) backing it up, ensuring that users really do have control and that eavesdroppers are shut&nbsp;out.</em></p>
+<p>Due to the strong importance of notified and informed users in this pattern, the following patterns also complement this&nbsp;pattern:</p>
+<ul>
+<li><a href="Ambient-Notice">Ambient</a>/<a href="Asynchronous-Notice">Asynchronous Notice</a>,</li>
+<li><a href="Preventing-mistakes-or-reducing-their impact">Preventing mistakes or reducing their impact</a>,</li>
+<li><a href="Awareness-Feed">Awareness Feed</a> (and components),&nbsp;and</li>
+<li><a href="Privacy-Dashboard">Privacy Dashboard</a> (and&nbsp;components).</li>
+</ul>
+<p>As per original source, this pattern should ideally use the&nbsp;following:</p>
+<ul>
+<li><em>Reasonable level of control should [use] <a href="Appropriate-Privacy-Feedback">APPROPRIATE PRIVACY FEEDBACK</a> (C5) to give users a greater understanding of what data is being collected about&nbsp;them.</em></li>
+<li><em>Systems should also have <a href="Time-limited-personal-data-keeping">LIMITED DATA RETENTION</a> (C12), so that personal information is stored only for long as it is needed. Limited retention is also one of the <a href="Fair-Information-Practices">FAIR INFORMATION PRACTICES</a>&nbsp;(C1).</em></li>
+<li><em>Lastly, control is only useful if there is a <a href="Privacy-Sensitive-Architectures">PRIVACY-SENSITIVE ARCHITECTURE</a> (C6) backing it up, ensuring that users really do have control and that eavesdroppers are shut&nbsp;out.</em></li>
+</ul>
 <h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
 <!-- References to the original source of the pattern.-->
 
 <p>Based&nbsp;on:</p>
 <ul>
-<li>E. S. Chung, J. I. Hong, J. Lin, M. K. Prabaker, J. a. Landay, and A. L. Liu, “Development and Evaluation of Emerging Design Patterns for Ubiquitous Computing,” DIS ’04 Proceedings of the 5th conference on Designing interactive systems: processes, practices, methods, and techniques, pp. 233–242,&nbsp;2004.</li>
+<li>E. S. Chung, J. I. Hong, J. Lin, M. K. Prabaker, J. a. Landay, and A. L. Liu, “Development and Evaluation of Emerging Design Patterns for Ubiquitous Computing,” DIS ’04 Proceedings of the 5th conference on Designing interactive systems: processes, practices, methods, and techniques, pp. 233–242, 2004.<ul>
 <li>The full catalog of the patterns by Chung et al. is in&nbsp;https://www.cs.cmu.edu/~jasonh/projects/ubicomp-design-patterns/ubicomp_patterns.pdf</li>
+</ul>
+</li>
 <li>S. Romanosky, A. Acquisti, J. Hong, L. F. Cranor, and B. Friedman, “Privacy patterns for online interactions,” Proceedings of the 2006 conference on Pattern languages of programs - PLoP ’06, p. 1,&nbsp;2006.</li>
 <li>H. Baraki et al., Towards Interdisciplinary Design Patterns for Ubiquitous Computing Applications. Kassel, Germany,&nbsp;2014.</li>
 <li>G. Iachello and J. Hong, “End-User Privacy in Human-Computer Interaction,” Foundations and Trends in Human-Computer Interaction, vol. 1, no. 1, pp. 1–137,&nbsp;2007.</li>
@@ -494,11 +817,11 @@ When users are pushing their information to a service, design the user interface
       </div>
 			<footer>
 	<p>
-		<a rel="license" class="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<a rel="license" class="license" href="https://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
 		Privacy patterns are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution license</a>.
 	<br>Contribute on <a href="https://github.com/privacypatterns">GitHub</a>. Read our <a href="/about/policy" title="Privacy Policy">privacy and contribution policy</a>.
 	</p>
-	<p class="berkeley">UC Berkeley <img id="iman" src="/media/images/I_School_logo_i.png" height="30px" /> School of Information</p> 
+	<p class="berkeley">UC Berkeley <img id="iman" src="/media/images/I_School_logo_i.png" height="30px" /> School of Information</p>
 </footer>
 
 

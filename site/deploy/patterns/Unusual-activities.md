@@ -55,15 +55,15 @@ _By running native code, the application can [consensually] collect some [device
 _In case of a suspicious [activity], multi-factor authentication may be a way to let the legitimate user in. The service can request [further authentication], such as:_
 
 - _A software token_
-  _Examples include Google Authenticator which runs on mobile phones and implements RFC6238 TOTP security tokens._
+    - _Examples include Google Authenticator which runs on mobile phones and implements RFC6238 TOTP security tokens._
 - _A hardware token (disconnected)_
-  _Examples include a token issued by a bank which displays digits, which is similar to a software token._
+    - _Examples include a token issued by a bank which displays digits, which is similar to a software token._
 - _A hardware token (connected)_
-  _The token may exchange a longer secondary password than the previous one, which means it's safer._
+    - _The token may exchange a longer secondary password than the previous one, which means it's safer._
 - _Personal data like date of birth, [or civil identification]._
-  _Obviously not a good choice here because it cannot be changed._
+    - _Obviously not a good choice here because it cannot be changed._
 - _An one-time password (OTP) sent to the registered E-mail address / mobile phone_
-  _Depending [on] the type of the service, [the user may use] the same password for the E-mail address, or [may lose their mobile phone]._
+    - _Depending [on] the type of the service, [the user may use] the same password for the E-mail address, or [may lose their mobile phone]._
 
 _Using multi-factor authentication only in case of suspicious [activity] is more convenient [than] using it all the time, but is less secure._
 
@@ -92,20 +92,13 @@ _If the fallback multi-factor authentication only happens occasionally to the le
 <!--Motivational example to see how the pattern is applied.-->
 
 1. _Gmail_
-
-   _Gmail displays information about other sessions (if any) in the footer, linking to a page named "Activity on this account" which lists other sessions and recent activities to the Gmail account. The user has the option to sign out other sessions._
-
-   _In case of annoying false positives, the user may choose to disable the alert for unusual activity. The disable takes about a week, "to make sure the bad guys aren't the ones who turned off your alerts."_
-
+    - _Gmail displays information about other sessions (if any) in the footer, linking to a page named "Activity on this account" which lists other sessions and recent activities to the Gmail account. The user has the option to sign out other sessions._
+    - _In case of annoying false positives, the user may choose to disable the alert for unusual activity. The disable takes about a week, "to make sure the bad guys aren't the ones who turned off your alerts."_
 2. _Facebook_
-
-   _When Facebook detects an unusual sign-in, it shows 'social authentication' that displays a few pictures of the user's friends and asks the user to name the person in those photos._
-
+    - _When Facebook detects an unusual sign-in, it shows 'social authentication' that displays a few pictures of the user's friends and asks the user to name the person in those photos._
 3. _Dropbox_
-
-   _The 'Security' tab of the 'Settings' of the Dropbox website displays all web browser sessions logged in to the account, and enables the user to log out one or more of them. The name of the browser, operating system, and the IP address and corresponding country are displayed to help the user make a choice._
-
-   _It also displays all devices that are linked to the account, and allows the user to unlink one or more of them._
+    - _The 'Security' tab of the 'Settings' of the Dropbox website displays all web browser sessions logged in to the account, and enables the user to log out one or more of them. The name of the browser, operating system, and the IP address and corresponding country are displayed to help the user make a choice._
+    - _It also displays all devices that are linked to the account, and allows the user to unlink one or more of them._
 
 <!--### [Known Uses]-->
 <!-- Pointers to various applications of the pattern.-->

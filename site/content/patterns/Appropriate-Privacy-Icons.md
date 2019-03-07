@@ -41,6 +41,7 @@ While these icons should be able to stand alone, it is still important that a us
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 When selecting appropriate icons for conveying information, take the following into account:
+
 - primarily prevent misunderstanding,
 - use icons users are familiar with,
 - do not reassign meaning to familiar icons, and

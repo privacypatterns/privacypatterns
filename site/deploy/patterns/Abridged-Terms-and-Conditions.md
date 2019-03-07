@@ -66,9 +66,9 @@ _Due to the fact that the [Terms and Conditions] of an application are condensed
 ### [Known Uses]
 <!-- Pointers to various applications of the pattern.-->
 
-– _Support-U: An example of an abridged TAC is given in fig. 3. The figure shows the results of the abridged TAC pattern used for the Support-U application._
-– _Connect-U: The user has to sign a license agreement of the size of one page in A4 format. On this page the agreement about the data usage is described in clear detail._
-– _Meet-U: The key points of TAC that affect the user’s privacy the most, are displayed on one screen. Hence, the gathering and processing of data are addressed and summarized briefly. The long version of the TAC is linked. The user has to agree on that before continuing with the application._
+- _Support-U: An example of an abridged TAC is given in fig. 3. The figure shows the results of the abridged TAC pattern used for the Support-U application._
+- _Connect-U: The user has to sign a license agreement of the size of one page in A4 format. On this page the agreement about the data usage is described in clear detail._
+- _Meet-U: The key points of TAC that affect the user’s privacy the most, are displayed on one screen. Hence, the gathering and processing of data are addressed and summarized briefly. The long version of the TAC is linked. The user has to agree on that before continuing with the application._
 
 ## See Also
 <!-- Any pointers to relevant information, not contained in the subfields below.-->
@@ -83,6 +83,7 @@ This pattern _complements_ [Privacy Aware Wording](Privacy-Aware-Wording), [Laye
 The relationships this pattern has to these accessible policies patterns stem from its inherent compatibility with policy standardization, summarization, separation into layers and re-wording. Abridging a policy may support these aspects, or even entail them, though this pattern focuses on a specific kind of policy document. Were this pattern to have a broader context, it could even be considered an accessible policies pattern itself.
 
 This pattern is also _complemented by_ the following:
+
 - _Explanation of Processes: The application shall inform users on demand about processes._
 - _Extras on Demand: ”Show the most important content up front, but hide the rest. Let the user reach it via a single, simple gesture.”_ (Tidwell, 2005)
 

@@ -14,12 +14,326 @@
   
 	
   <!-- CSS: implied media="all" -->
-  <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
-  <link href="http://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
-  <link href="http://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
+  <link href="https://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/media/css/main.css?v=2">
 	
-	
+     <script type="text/javascript" charset="utf-8">
+      var inputData = [
+      
+        
+		 [
+          "Single Point of Contact",
+          "/patterns/Single-Point-of-Contact",
+             {
+              
+              
+              
+              
+              
+              
+              
+              },
+            ['control', 'choose'],
+            
+         ],
+		
+      
+      ], catColors = {
+      
+       
+        
+         "control":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "consent":"#FDFFF5",
+        
+       
+      
+       
+        
+         "abstract":"",
+        
+       
+      
+       
+        
+         "strip":"#E3FFAB",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "group":"#C9F0E0",
+        
+       
+      
+       
+        
+         "restrict":"#FFF0D6",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "notify":"#EDF5FF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "exclude":"#E4FFD4",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "create":"#FDF5FF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "uphold":"#E4D2F5",
+        
+       
+      
+       
+        
+         "provide":"#D1EDFF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "explain":"#C7DBFF",
+        
+       
+      
+       
+        
+         "isolate":"#E6FFE9",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "mix":"#FFD1DC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "retract":"#FFFBEB",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "choose":"#FFFFFF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "separate":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "update":"#FFFFCC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "hide":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "dissociate":"#FFD5CC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "minimize":"",
+        
+       
+      
+       
+        
+         "inform":"",
+        
+       
+      
+       
+        
+         "obfuscate":"#FFD89E",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "enforce":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      };
+     </script>
+     <script src="/media/js/raphael/raphael" type="text/javascript" charset="utf-8"></script>
+     <script src="/media/js/raphael/graffle.js" type="text/javascript" charset="utf-8"></script>
+
 	
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,8 +365,8 @@
 
   
 </header>
-  
-<!-- 
+
+<!--
 
 
 
@@ -352,6 +666,9 @@
 			Single Point of Contact
 		
 	</h1>
+
+    <div id="holder"></div>
+
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
@@ -385,11 +702,13 @@
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
-<p>Effective distributed storage services require specialized privacy management. The deficiencies of traditional means may be expressed through the following:
-- traditional security mechanisms are platform dependent;
-- typically they are difficult to federate or distribute;
-- compliance with protocol can be cumbersome; and
-- as such they are often&nbsp;inflexible.</p>
+<p>Effective distributed storage services require specialized privacy management. The deficiencies of traditional means may be expressed through the&nbsp;following:</p>
+<ul>
+<li>traditional security mechanisms are platform&nbsp;dependent;</li>
+<li>typically they are difficult to federate or&nbsp;distribute;</li>
+<li>compliance with protocol can be cumbersome;&nbsp;and</li>
+<li>as such they are often&nbsp;inflexible.</li>
+</ul>
 <h4 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h4>
 <ul>
 <li>Controllers wish to protect the sensitive or otherwise personal data they are charged&nbsp;with</li>
@@ -413,12 +732,14 @@
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 
 <p>A SPoC is able to issue security tokens as a Security Token Service (STS), authenticate local domain users as an Identity Provider, certify attributes as an Attribute Provider, and accept external claims as a Relying Party. When in a Circle of Trust, the SPoC can also translate the claims of other SPoCs as a Resource&nbsp;STS.</p>
-<p>SPoCs' implementation of e-consent features the following levels, based on Coiera et al. (2004):
-- general consent [with or without specific exclusions];
-- general denial [with or without specific consents];
-- service authorisation;
-- service subscription; and
--&nbsp;investigation.</p>
+<p>SPoCs' implementation of e-consent features the following levels, based on Coiera et al.&nbsp;(2004):</p>
+<ul>
+<li>general consent [with or without specific&nbsp;exclusions];</li>
+<li>general denial [with or without specific&nbsp;consents];</li>
+<li>service&nbsp;authorisation;</li>
+<li>service subscription;&nbsp;and</li>
+<li>investigation.</li>
+</ul>
 <p>As with Pruski's (2010) e-CRL, SPoCs' e-consent also considers <em>specific grantees, operations, purposes and period of validity</em>.</p>
 <p>For more information see Fan et al.&nbsp;(2012).</p>
 <h2 id="consequences"><a class="toclink" href="#consequences">Consequences</a></h2>
@@ -446,13 +767,20 @@
 
 <p>This pattern <em>must use</em> <a href="Lawful-Consent">Lawful Consent</a>, as it features an expressive e-consent language which aims to provide sufficient means to acquire permission for processing that is&nbsp;valid.</p>
 <h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
-<p><!-- References to the original source of the pattern.-->
-- Fan, L., Buchanan, W. J., Lo, O., Thuemmler, C., Lawson, A., Uthmani, O., Ekonomou, E., <span class="amp">&amp;</span> Khedim, A. S. (2012). SPoC: Protecting Patient Privacy for e-Health Services in the Cloud. Retrieved from http://researchrepository.napier.ac.uk/4992/
-  - D. Baier, V. Bertocci, K. Brown, E. Pace, and M. Woloski, A Guide to Claims-based Identity and Access Control, Patterns <span class="amp">&amp;</span> Practices. ISBN: 9780735640597, Microsoft Corp., Jan. 2010.
-  - E. Coiera and R. Clarke, “e-Consent: the Design and Implementation of Consumer Consent Mechanism in an Electronic Environment,” JAMIA, vol. 11, no. 2, pp. 129–140, 2004.
-  - C. Pruski, “e-CRL: A Rule-Based Language for Expressing Patient Electronic Consent,” in Proc. of eTELEMED. IEEE, 2010, pp.&nbsp;141–146.</p>
+<!-- References to the original source of the pattern.-->
+
 <ul>
-<li>C. Bier and E. Krempel, “Common Privacy Patterns in Video Surveillance and Smart Energy,” in ICCCT-2012, 2012, pp.&nbsp;610–615.</li>
+<li>
+<p>Fan, L., Buchanan, W. J., Lo, O., Thuemmler, C., Lawson, A., Uthmani, O., Ekonomou, E., <span class="amp">&amp;</span> Khedim, A. S. (2012). SPoC: Protecting Patient Privacy for e-Health Services in the Cloud. Retrieved from&nbsp;http://researchrepository.napier.ac.uk/4992/</p>
+<ul>
+<li>D. Baier, V. Bertocci, K. Brown, E. Pace, and M. Woloski, A Guide to Claims-based Identity and Access Control, Patterns <span class="amp">&amp;</span> Practices. ISBN: 9780735640597, Microsoft Corp., Jan.&nbsp;2010.</li>
+<li>E. Coiera and R. Clarke, “e-Consent: the Design and Implementation of Consumer Consent Mechanism in an Electronic Environment,” JAMIA, vol. 11, no. 2, pp. 129–140,&nbsp;2004.</li>
+<li>C. Pruski, “e-CRL: A Rule-Based Language for Expressing Patient Electronic Consent,” in Proc. of eTELEMED. IEEE, 2010, pp.&nbsp;141–146.</li>
+</ul>
+</li>
+<li>
+<p>C. Bier and E. Krempel, “Common Privacy Patterns in Video Surveillance and Smart Energy,” in ICCCT-2012, 2012, pp.&nbsp;610–615.</p>
+</li>
 </ul>
 <!--## General Comments-->
 
@@ -491,11 +819,11 @@
       </div>
 			<footer>
 	<p>
-		<a rel="license" class="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<a rel="license" class="license" href="https://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
 		Privacy patterns are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution license</a>.
 	<br>Contribute on <a href="https://github.com/privacypatterns">GitHub</a>. Read our <a href="/about/policy" title="Privacy Policy">privacy and contribution policy</a>.
 	</p>
-	<p class="berkeley">UC Berkeley <img id="iman" src="/media/images/I_School_logo_i.png" height="30px" /> School of Information</p> 
+	<p class="berkeley">UC Berkeley <img id="iman" src="/media/images/I_School_logo_i.png" height="30px" /> School of Information</p>
 </footer>
 
 

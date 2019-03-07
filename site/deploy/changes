@@ -1,17 +1,16 @@
-commit 94971ca7bb08bca6e13857fd75a6980b87a170ca
-Merge: 5c89873 496bf3d
+commit b4d2b042ff67a859653c8de9304200d1eaee43f3
+Merge: 0fb98c9 b6cc02d
 Author: Nick Doty <npdoty@ischool.berkeley.edu>
 
-    Merge branch 'p4pnl-collapsiblecats' for collapsible categories in sidebar
+    Merge pull request #103 from p4pnl/patch-5
 
-commit 496bf3d262a5b60d92eb3f84588b5e01c620ea65
-Merge: 5c89873 1fbedbf
-Author: Nick Doty <npdoty@ischool.berkeley.edu>
+commit b6cc02d105f16dab1945bc6d4dc81a141cc70d8b
+Author: Mike <nand@null.net>
 
-    Merge branch 'collapsiblecats' of git://github.com/p4pnl/privacypatterns into p4pnl-collapsiblecats
+    Change Misc. to Tags
 
-commit 5c89873be0fb653957bf7efd841dad347ca87df8
-Author: Nick Doty <npdoty@ischool.berkeley.edu>
+commit 74ca07b91fda224b8ca7af9b0802b0bb7de92b06
+Author: Mike <nand@null.net>
 
-    remove category directories that were capitalized, and a couple of lingering deployed patterns that were all lower case
+    Add https for CC. Remove site.url from graffle
 ===================

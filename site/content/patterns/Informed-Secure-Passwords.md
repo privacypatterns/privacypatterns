@@ -34,6 +34,7 @@ Provide users with assistance in understanding and maintaining strong passwords 
 <!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
 
 Assistance is typically provided in the following ways:
+
 - _Passive mechanisms (e.g. help button)_
 - _Static mechanisms (e.g. pop-ups)_
 - _Dynamic mechanisms (e.g. dynamically adjusting message) [the] method that is most noticed by the users and therefore also most helpful_

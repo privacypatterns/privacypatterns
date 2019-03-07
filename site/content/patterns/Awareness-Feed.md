@@ -57,6 +57,7 @@ Warn users about potential consequences before collecting or otherwise processin
 This information should be provided before the point where privacy risks could materialize. If there is some delay before further processing after collection, the user has some time to review the risks. Until the user accepts them however, that further processing should not take place.
 
 This pattern is a compound pattern, one in which multiple patterns work together to address a broader problem. It combines the following patterns:
+
 - [Impactful Information and Feedback](Impactful-Information-and-Feedback);
 - [Increasing Awareness of Information Aggregation](Increasing-Awareness-of-Information-Aggregation);
 - [Privacy Awareness Panel](Privacy-Awareness-Panel);
@@ -126,7 +127,7 @@ Full adoption of this pattern is not yet commonplace, yet there exist examples o
 
 Users must be assured of the controller's dedication to transparency and openness, which will be enabled by the consistent presentation of that relevant information, along with other forms of [Building Trust and Credibility](Building-Trust-and-Credibility). As in [Preventing Mistakes or Reducing Their Impact](Preventing-Mistakes-or-Reducing-Their-Impact), both users and controllers themselves need to be aware of the potential for certain services to leak unwarranted personal information. Where the value of the service is nonetheless still high, even after efforts made to reduce leakage risks, users need to be informed enough to choose for themselves exactly what they share (see [Lawful Consent](Lawful-Consent) and [Selective Disclosure](Selective-Disclosure)).
 
-This approach may be partnered with accessible policies, including [Privacy Aware Wording](Privacy-Aware-Wording), [Layered Policy Design](Layered-policy-design), and [Privacy Aware Network Client](Privacy-aware-network-client). It may also benefit from visual cues, like [Icons for Privacy Policies](Icons-for-Privacy-Policies), [Privacy Icons](Privacy-Icons) in general, [Privacy Labels](Privacy-Labels), or [Privacy Color Coding](Privacy-color-coding), which aid in alluding to those policies.
+This approach may be partnered with accessible policies, including [Privacy Aware Wording](Privacy-Aware-Wording), [Layered Policy Design](Layered-policy-design), and [Privacy Aware Network Client](Privacy-aware-network-client). It may also benefit from visual cues, like [Icons for Privacy Policies](Icons-for-Privacy-Policies), [Appropriate Privacy Icons](Appropriate-Privacy-Icons) in general, [Privacy Labels](Privacy-Labels), or [Privacy Color Coding](Privacy-color-coding), which aid in alluding to those policies.
 
 This compound pattern benefits from also using [Task-based Processing](Task-based-Processing), where personal data is separated according to purpose. In this case, only use data for which any necessary consent has been granted, and which is within the scope of the personally enabled purposes. This precludes the application of unattended process changes which would induce new consequences.
 
@@ -139,6 +140,7 @@ This pattern and its components also work well with visual cues like [Appropriat
 As this pattern seeks to inform users of policies in addition to notifying them of important information, it benefits from the application of accessible policies. Patterns which therefore _complement_ this pattern include [Privacy Aware Wording](Privacy-Aware-Wording), [Layered Policy Design](Layered-policy-design), and [Privacy-Aware Network Client](Privacy-aware-network-client).
 
 This pattern is a compound pattern, one which builds off of its component patterns. These include:
+
 - [Impactful Information and Feedback](Impactful-Information-and-Feedback);
 - [Increasing Awareness of Information Aggregation](Increasing-Awareness-of-Information-Aggregation);
 - [Privacy Awareness Panel](Privacy-Awareness-Panel);

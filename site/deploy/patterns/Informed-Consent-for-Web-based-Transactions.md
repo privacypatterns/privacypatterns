@@ -39,6 +39,7 @@ _To the extent possible given the limits imposed by web technology, provide the 
 ### [Implementation]
 <!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
 Human Computer Interaction concepts expressed in the work of Fischer-Hübner et al. (2010) allow implementing this pattern in various ways:
+
 - _Just-In-Time-Click-Through Agreements (JITCTAs), i.e. click-trough agreements that instead of providing a large list of service terms confirm the user's understanding or consent on an "as-needed basis”._ The information shown in JITCTAs includes what data is requested, the controller’s identity and the purpose of processing.
 - _Selection via cascading context menus, where users have to choose more consciously the menu options of data to be released._ This option is intended for simple data request forms with not many fields to be filled.
 - _Drag-and-Drop Agreements (DADAs), which also requires user to make more conscious drag and drop actions for consenting to data disclosures._ The user has to choose an icon that represents some kind of personal data and drag and drop it to an icon representing the controller.

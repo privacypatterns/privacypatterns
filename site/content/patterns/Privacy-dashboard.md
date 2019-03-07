@@ -52,6 +52,7 @@ A variation of the privacy dashboard, Privacy Mirrors, focuses on history, feedb
 _Implementing this pattern is a matter of providing logging, reporting, and other informational access and notifications on user-selected/filtered, appropriately defaulted, relevant usage data._
 
 Aspects which the controller wishes to inform their users about may include the collection and aggregation of their data, particularly personal data which:
+
 - _changes over time_,
 - _is [processed] in ways that might be unexpected_,
 - is _invisible or easily forgotten_, or

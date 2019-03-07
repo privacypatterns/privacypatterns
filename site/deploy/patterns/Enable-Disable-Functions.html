@@ -14,12 +14,326 @@
   
 	
   <!-- CSS: implied media="all" -->
-  <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
-  <link href="http://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
-  <link href="http://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:regular&v1" rel="stylesheet" type="text/css" >
+  <link href="https://fonts.googleapis.com/css?family=News+Cycle&subset=latin&v2" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/media/css/main.css?v=2">
 	
-	
+     <script type="text/javascript" charset="utf-8">
+      var inputData = [
+      
+        
+		 [
+          "Enable/Disable Functions",
+          "/patterns/Enable-Disable-Functions",
+             {
+              
+              
+              
+              
+              
+              
+              
+              },
+            ['control', 'update'],
+            
+         ],
+		
+      
+      ], catColors = {
+      
+       
+        
+         "control":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "consent":"#FDFFF5",
+        
+       
+      
+       
+        
+         "abstract":"",
+        
+       
+      
+       
+        
+         "strip":"#E3FFAB",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "group":"#C9F0E0",
+        
+       
+      
+       
+        
+         "restrict":"#FFF0D6",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "notify":"#EDF5FF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "exclude":"#E4FFD4",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "create":"#FDF5FF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "uphold":"#E4D2F5",
+        
+       
+      
+       
+        
+         "provide":"#D1EDFF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "explain":"#C7DBFF",
+        
+       
+      
+       
+        
+         "isolate":"#E6FFE9",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "mix":"#FFD1DC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "retract":"#FFFBEB",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "choose":"#FFFFFF",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "separate":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "update":"#FFFFCC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "hide":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "dissociate":"#FFD5CC",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "minimize":"",
+        
+       
+      
+       
+        
+         "inform":"",
+        
+       
+      
+       
+        
+         "obfuscate":"#FFD89E",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      
+       
+        
+         "enforce":"",
+        
+       
+      
+       
+        
+       
+      
+       
+        
+       
+      };
+     </script>
+     <script src="/media/js/raphael/raphael" type="text/javascript" charset="utf-8"></script>
+     <script src="/media/js/raphael/graffle.js" type="text/javascript" charset="utf-8"></script>
+
 	
 	<!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,8 +365,8 @@
 
   
 </header>
-  
-<!-- 
+
+<!--
 
 
 
@@ -352,6 +666,9 @@
 			Enable/Disable Functions
 		
 	</h1>
+
+    <div id="holder"></div>
+
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
@@ -391,9 +708,11 @@
 <p>Not all users desire or benefit from all&nbsp;functionality.</p>
 <p><em>Consider users living in an Ambient Assisted Living environment: these users are surrounded by various sensors such as video cameras, motion sensors or electrical current sensors that are used to monitor the actual situation of a person. Another example are the acceleration sensors included in smartphones. A [service (or product)] can recommend places of interest to the user by considering the gathered [data]. With regard to these examples it becomes obvious that [services] often unobtrusively collect highly critical and personal context data of&nbsp;users.</em></p>
 <h4 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h4>
-<p>– Informational self-determination: <em>The pattern considers a user's basic right of informational self-determination. This is due to the fact that a user is able to explicitly agree or disagree to a certain function depending on the context data needed by the function. Therefore, the user has direct control of the context data collection process. This satisfies the principles of necessity, transparency, giving consent and responsibility. They are part of the user's right of informational self-determination and are described in detail in [Kuner] and [Hornung <span class="amp">&amp;</span> Schnabel].</em>
-– Trust: <em>The pattern increases a user's trust in the [service] by offering the possibility to prevent the collection and inference of certain personal context data. Hence, [users] can be sure that personal data that is critical to [them] is not gathered, stored or further processed by third parties.</em>
-– Transparency: <em>The pattern provides transparency to the user by giving an overview, which function needs which personal context data of a user to work properly. For this reason a user is aware of the context data that is&nbsp;gathered...</em></p>
+<ul>
+<li>Informational self-determination: <em>The pattern considers a user's basic right of informational self-determination. This is due to the fact that a user is able to explicitly agree or disagree to a certain function depending on the context data needed by the function. Therefore, the user has direct control of the context data collection process. This satisfies the principles of necessity, transparency, giving consent and responsibility. They are part of the user's right of informational self-determination and are described in detail in [Kuner] and [Hornung <span class="amp">&amp;</span>&nbsp;Schnabel].</em></li>
+<li>Trust: <em>The pattern increases a user's trust in the [service] by offering the possibility to prevent the collection and inference of certain personal context data. Hence, [users] can be sure that personal data that is critical to [them] is not gathered, stored or further processed by third&nbsp;parties.</em></li>
+<li>Transparency: <em>The pattern provides transparency to the user by giving an overview, which function needs which personal context data of a user to work properly. For this reason a user is aware of the context data that is&nbsp;gathered...</em></li>
+</ul>
 <h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
 <!-- A concise description of how the pattern addresses the problem.-->
 
@@ -434,8 +753,10 @@
 
 <p><a href="Enable/Disable-Functions">Enable/Disable Functions</a> is <em>similar to</em> <a href="Negotiation-of-Privacy-Policy">Negotiation of Privacy Policy</a>. Choosing between activated or deactivated privacy settings and functionalities is in-line with negotiating a policy which reflects these choices, but from a more functional&nbsp;perspective.</p>
 <p>Like many patterns, despite providing the user with enhanced choice, it is important to ensure that user decisions are informed, made without being pushed, and are understood explicitly. As such, this pattern <em>must use</em> <a href="Lawful-Consent">Lawful Consent</a> as means to this&nbsp;end.</p>
-<p>– Configurability: The application shall enable users to activate or deactivate functions. (See <a href="Reasonable Level of Control">Reasonable Level of Control</a>).
-– Agreement to Functionality: The application shall ask for users' consent regarding the functionality before use. The application should enable users to alter their consent regarding the functionality. (See <a href="Lawful-Consent">Lawful Consent</a>).</p>
+<ul>
+<li>Configurability: The application shall enable users to activate or deactivate functions. (See <a href="Reasonable Level of Control">Reasonable Level of Control</a>).</li>
+<li>Agreement to Functionality: The application shall ask for users' consent regarding the functionality before use. The application should enable users to alter their consent regarding the functionality. (See <a href="Lawful-Consent">Lawful Consent</a>).</li>
+</ul>
 <h3 id="sources"><a class="toclink" href="#sources">[Sources]</a></h3>
 <!-- References to the original source of the pattern.-->
 
@@ -481,11 +802,11 @@ G. Hornung and C. Schnabel, “Data protection in germany: The population cen- s
       </div>
 			<footer>
 	<p>
-		<a rel="license" class="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<a rel="license" class="license" href="https://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
 		Privacy patterns are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution license</a>.
 	<br>Contribute on <a href="https://github.com/privacypatterns">GitHub</a>. Read our <a href="/about/policy" title="Privacy Policy">privacy and contribution policy</a>.
 	</p>
-	<p class="berkeley">UC Berkeley <img id="iman" src="/media/images/I_School_logo_i.png" height="30px" /> School of Information</p> 
+	<p class="berkeley">UC Berkeley <img id="iman" src="/media/images/I_School_logo_i.png" height="30px" /> School of Information</p>
 </footer>
 
 

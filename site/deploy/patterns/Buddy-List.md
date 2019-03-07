@@ -92,6 +92,7 @@ This pattern allows users to monitor one another in a variety of ways, such as t
 
 #### Idioms
 <!-- Insufficient to stand alone as patterns-->
+
 - User Gallery (all users) / User List (online/active users);
 - Who’s Listening (Buddy Lists the user appears in);
 

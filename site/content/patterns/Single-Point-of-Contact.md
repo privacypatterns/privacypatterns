@@ -14,6 +14,7 @@ Many controllers make use of a storage platform (i.e. 'cloud' facilities), such 
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
 
 Effective distributed storage services require specialized privacy management. The deficiencies of traditional means may be expressed through the following:
+
 - traditional security mechanisms are platform dependent;
 - typically they are difficult to federate or distribute;
 - compliance with protocol can be cumbersome; and
@@ -49,6 +50,7 @@ The SPoC features a *Domain Ontology* for providing vocabulary towards claims an
 A SPoC is able to issue security tokens as a Security Token Service (STS), authenticate local domain users as an Identity Provider, certify attributes as an Attribute Provider, and accept external claims as a Relying Party. When in a Circle of Trust, the SPoC can also translate the claims of other SPoCs as a Resource STS.
 
 SPoCs' implementation of e-consent features the following levels, based on Coiera et al. (2004):
+
 - general consent [with or without specific exclusions];
 - general denial [with or without specific consents];
 - service authorisation;
@@ -91,10 +93,11 @@ This pattern _must use_ [Lawful Consent](Lawful-Consent), as it features an expr
 
 ### [Sources]
 <!-- References to the original source of the pattern.-->
+
 - Fan, L., Buchanan, W. J., Lo, O., Thuemmler, C., Lawson, A., Uthmani, O., Ekonomou, E., & Khedim, A. S. (2012). SPoC: Protecting Patient Privacy for e-Health Services in the Cloud. Retrieved from http://researchrepository.napier.ac.uk/4992/
-  - D. Baier, V. Bertocci, K. Brown, E. Pace, and M. Woloski, A Guide to Claims-based Identity and Access Control, Patterns & Practices. ISBN: 9780735640597, Microsoft Corp., Jan. 2010.
-  - E. Coiera and R. Clarke, “e-Consent: the Design and Implementation of Consumer Consent Mechanism in an Electronic Environment,” JAMIA, vol. 11, no. 2, pp. 129–140, 2004.
-  - C. Pruski, “e-CRL: A Rule-Based Language for Expressing Patient Electronic Consent,” in Proc. of eTELEMED. IEEE, 2010, pp. 141–146.
+    - D. Baier, V. Bertocci, K. Brown, E. Pace, and M. Woloski, A Guide to Claims-based Identity and Access Control, Patterns & Practices. ISBN: 9780735640597, Microsoft Corp., Jan. 2010.
+    - E. Coiera and R. Clarke, “e-Consent: the Design and Implementation of Consumer Consent Mechanism in an Electronic Environment,” JAMIA, vol. 11, no. 2, pp. 129–140, 2004.
+    - C. Pruski, “e-CRL: A Rule-Based Language for Expressing Patient Electronic Consent,” in Proc. of eTELEMED. IEEE, 2010, pp. 141–146.
 
 - C. Bier and E. Krempel, “Common Privacy Patterns in Video Surveillance and Smart Energy,” in ICCCT-2012, 2012, pp. 610–615.
 
