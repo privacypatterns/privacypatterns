@@ -1,16 +1,17 @@
+commit 01ab52ba8bdd9f30c5411ed03bc33e93eae0f49d
+Merge: b4d2b04 a931142
+Author: Nick Doty <npdoty@ischool.berkeley.edu>
+
+    Merge pull request #104 from npdoty/render-p4pnl-5
+
+commit a931142bd4d25efb9a3ca0ddfa8dc1328aa69d6a
+Author: Nick Doty <npdoty@ischool.berkeley.edu>
+
+    render changes with latest pattern relations PR and latest patterns contents
+
 commit b4d2b042ff67a859653c8de9304200d1eaee43f3
 Merge: 0fb98c9 b6cc02d
 Author: Nick Doty <npdoty@ischool.berkeley.edu>
 
     Merge pull request #103 from p4pnl/patch-5
-
-commit b6cc02d105f16dab1945bc6d4dc81a141cc70d8b
-Author: Mike <nand@null.net>
-
-    Change Misc. to Tags
-
-commit 74ca07b91fda224b8ca7af9b0802b0bb7de92b06
-Author: Mike <nand@null.net>
-
-    Add https for CC. Remove site.url from graffle
 ===================

@@ -10,7 +10,7 @@ Privacy Options in Social Networks
 ## Context
 <!-- The situations in which the pattern may apply.-->
 
-Users enjoy social reaction when posting content in socially oriented services on the Internet. Though sometimes the reactions are not as ideal. Some content is inappropriate for some audiences, and some users would rather keep some content mostly private. While users are capable of sharing content privately, perhaps through [Private Link](Private-Link), they may wish to have better control over whom they share with in their service of choice. The controller providing this service may too want its users to share more specifically.
+Users enjoy social reaction when posting content in socially oriented services on the Internet. Though sometimes the reactions are not as ideal. Some content is inappropriate for some audiences, and some users would rather keep some content mostly private. While users are capable of sharing content privately, perhaps through [Private Link](Private-link), they may wish to have better control over whom they share with in their service of choice. The controller providing this service may too want its users to share more specifically.
 
 ## Problem
 <!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
@@ -74,7 +74,7 @@ These rules could be defined based on users, groups of users, or based on contex
 [Selective Access Control](Selective-Access-Control)
  is complemented by [Private link](Private-link), which focuses on private sharing with anonymous users while this pattern defines the audience for a contribution. It is a part of the [Support Selective Disclosure](Support-Selective-Disclosure) compound pattern, and thus may be used by it.
 
-This pattern _refines_ [Reasonable Level of Control](Reasonable-Level-of-Control) in a socially oriented service context. It _complements_ both [Discouraging Blanket Strategies](Discouraging-Blanket-Strategies) (more flexible privacy setting management) and [Decoupling [content] and location information visibility](Decoupling-[content]-and-location-information-visibility) (selectively providing location access).
+This pattern _refines_ [Reasonable Level of Control](Reasonable-Level-of-Control) in a socially oriented service context. It _complements_ both [Discouraging Blanket Strategies](Discouraging-blanket-strategies) (more flexible privacy setting management) and [Decoupling [content] and location information visibility](Decoupling-[content]-and-location-information-visibility) (selectively providing location access).
 
 Despite focusing on the choices within access control, decisions which users make should still be informed, and explicit, with the consent involved uncoerced. Therefore, this pattern also _must use_ [Lawful Consent](Lawful-Consent).
 

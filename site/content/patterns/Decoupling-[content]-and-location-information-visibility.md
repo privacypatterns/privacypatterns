@@ -38,7 +38,7 @@ Give users an interface or control to configure an access policy regarding the p
 
 A basic solution could feature an interface or control for selecting the allowed users from all the types of users of the socially oriented service (e.g. built-in or user-defined groups, individuals, or anonymous users). This control could apply to individual content, or to multiple selections, or groups.
 
-Prior to this grant of additional consent the content itself, or versions containing location, might only be available by unpublished [Private Link](Private-Link). The protection of the content itself is however not the focus of this pattern.
+Prior to this grant of additional consent the content itself, or versions containing location, might only be available by unpublished [Private Link](Private-link). The protection of the content itself is however not the focus of this pattern.
 
 If a user chooses, certain individuals or groups may have default access to the attached location information. Default access like this, however, invalidates the following approach.
 
@@ -86,12 +86,12 @@ By applying this pattern the controller prevents location access by default, and
 ### [Related Patterns]
 <!-- Supporting and conflicting patterns-->
 
-This pattern is one of various foundations for [Support Selective Disclosure](Support-Selective-Disclosure), and thus may be used by it. This pattern _must use_ [Lawful Consent](Lawful-Consent) however, as information is recorded by default and only interacted with afterward. This requires the users true and informed approval. 
+This pattern is one of various foundations for [Support Selective Disclosure](Support-Selective-Disclosure), and thus may be used by it. This pattern _must use_ [Lawful Consent](Lawful-Consent) however, as information is recorded by default and only interacted with afterward. This requires the users true and informed approval.
 
-Decoupling [content] and location information visibility may be complemented by the use of a [Private Link](Private-Link).
+Decoupling [content] and location information visibility may be complemented by the use of a [Private Link](Private-link).
 This could allow location information sharing with specific unauthenticated individuals, retaining the ability to decide later.
 
-The pattern _complements_ [Discouraging Blanket Strategies](Discouraging-Blanket-Strategies), which considers having a different privacy level for any content posted while this pattern mentions the privacy level for the location of that content. 
+The pattern _complements_ [Discouraging Blanket Strategies](Discouraging-blanket-strategies), which considers having a different privacy level for any content posted while this pattern mentions the privacy level for the location of that content.
 
 It also _complements_ [Negotiation of Privacy Policy](Negotiation-of-Privacy-Policy). The latter defines privacy settings at the beginning. This pattern however gives the chance to change privacy settings every time content is being shared.
 

@@ -52,6 +52,10 @@
           "/patterns/Discouraging-blanket-strategies",
              {
               
+                "use":["Buddy-List","Lawful-Consent","Private-link",],
+              
+              
+                "com":["Selective-Access-Control","Decoupling-[content]-and-location-information-visibility","Negotiation-of-Privacy-Policy","Reasonable-Level-of-Control","Masquerade",],
               
               
               
@@ -72,6 +76,10 @@
           "/patterns/Reciprocity",
              {
               
+                "use":["Lawful-Consent",],
+              
+              
+                "com":["Pay-Back","Buddy-List",],
               
               
               
@@ -92,6 +100,8 @@
           "/patterns/Incentivized-Participation",
              {
               
+                "use":["Reciprocity","Pay-Back","Lawful-Consent",],
+              
               
               
               
@@ -111,6 +121,8 @@
           "Outsourcing [with consent]",
           "/patterns/Outsourcing-[with-consent]",
              {
+              
+                "use":["Lawful-Consent",],
               
               
               
@@ -156,6 +168,8 @@
               
               
               
+                "sim":["Obtaining-Explicit-Consent",],
+              
               
               
               },
@@ -172,6 +186,8 @@
           "/patterns/Single-Point-of-Contact",
              {
               
+                "use":["Lawful-Consent",],
+              
               
               
               
@@ -179,7 +195,7 @@
               
               
               },
-            ['control', 'choose'],
+            ['control', 'consent', 'choose'],
             
          ],
         
@@ -192,9 +208,15 @@
           "/patterns/Enable-Disable-Functions",
              {
               
+                "use":["Lawful-Consent","Private-link",],
+              
+              
+                "com":["Masquerade",],
               
               
               
+              
+                "sim":["Negotiation-of-Privacy-Policy",],
               
               
               
@@ -216,6 +238,8 @@
               
               
               
+                "sim":["Sign-an-Agreement-to-Solve-Lack-of-Trust-on-the-Use-of-Private-Data-Context",],
+              
               
               
               },
@@ -232,7 +256,13 @@
           "/patterns/Decoupling-[content]-and-location-information-visibility",
              {
               
+                "use":["Buddy-List","Lawful-Consent",],
               
+              
+                "com":["Negotiation-of-Privacy-Policy","Private-link","Selective-Access-Control","Discouraging-blanket-strategies","Masquerade",],
+              
+              
+                "ref":["Reasonable-Level-of-Control",],
               
               
               
@@ -252,7 +282,13 @@
           "/patterns/Selective-Access-Control",
              {
               
+                "use":["Lawful-Consent",],
               
+              
+                "com":["Decoupling-[content]-and-location-information-visibility","Discouraging-blanket-strategies","Private-link","Masquerade",],
+              
+              
+                "ref":["Reasonable-Level-of-Control",],
               
               
               
@@ -272,6 +308,10 @@
           "/patterns/Pay-Back",
              {
               
+                "use":["Lawful-Consent",],
+              
+              
+                "com":["Reciprocity",],
               
               
               
@@ -292,9 +332,17 @@
           "/patterns/Negotiation-of-Privacy-Policy",
              {
               
+                "use":["Lawful-Consent","Private-link",],
+              
+              
+                "com":["Discouraging-blanket-strategies","Decoupling-[content]-and-location-information-visibility","Masquerade",],
+              
+              
+                "ref":["Reasonable-Level-of-Control",],
               
               
               
+                "sim":["Enable-Disable-Functions",],
               
               
               
@@ -312,6 +360,10 @@
           "/patterns/Reasonable-Level-of-Control",
              {
               
+                "use":["Masquerade","Lawful-Consent",],
+              
+              
+                "com":["Private-link","Active-broadcast-of-presence","Discouraging-blanket-strategies",],
               
               
               
@@ -332,8 +384,14 @@
           "/patterns/Masquerade",
              {
               
+                "use":["Buddy-List",],
               
               
+                "com":["Support-Selective-Disclosure","Active-broadcast-of-presence","Private-link",],
+              
+              
+              
+                "lds":["Reciprocity",],
               
               
               
@@ -352,6 +410,10 @@
           "/patterns/Buddy-List",
              {
               
+                "use":["Lawful-Consent","Private-link",],
+              
+              
+                "com":["Reciprocity","Masquerade",],
               
               
               
@@ -371,6 +433,8 @@
           "Lawful Consent",
           "/patterns/Lawful-Consent",
              {
+              
+                "use":["Informed-Consent-for-Web-based-Transactions","Obtaining-Explicit-Consent","Sign-an-Agreement-to-Solve-Lack-of-Trust-on-the-Use-of-Private-Data-Context",],
               
               
               
@@ -394,6 +458,8 @@
               
               
               
+                "ref":["Obtaining-Explicit-Consent",],
+              
               
               
               
@@ -412,6 +478,10 @@
           "/patterns/Support-Selective-Disclosure",
              {
               
+                "use":["Reasonable-Level-of-Control","Negotiation-of-Privacy-Policy","Decoupling-[content]-and-location-information-visibility","Selective-Access-Control","Enable-Disable-Functions","Buddy-List","Discouraging-blanket-strategies","Lawful-Consent","Private-link",],
+              
+              
+                "com":["Masquerade",],
               
               
               
@@ -432,6 +502,10 @@
           "/patterns/Private-link",
              {
               
+                "use":["Lawful-Consent",],
+              
+              
+                "com":["Reasonable-Level-of-Control","Decoupling-[content]-and-location-information-visibility","Selective-Access-Control","Active-broadcast-of-presence","Masquerade",],
               
               
               
@@ -452,6 +526,10 @@
           "/patterns/Active-broadcast-of-presence",
              {
               
+                "use":["Lawful-Consent",],
+              
+              
+                "com":["Reasonable-Level-of-Control","Private-link","Masquerade",],
               
               
               

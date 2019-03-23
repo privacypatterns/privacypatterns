@@ -38,6 +38,8 @@
           "/patterns/Incentivized-Participation",
              {
               
+                "use":["Reciprocity","Pay-Back","Lawful-Consent",],
+              
               
               
               
@@ -57,6 +59,8 @@
           "Outsourcing [with consent]",
           "/patterns/Outsourcing-[with-consent]",
              {
+              
+                "use":["Lawful-Consent",],
               
               
               
@@ -82,10 +86,34 @@
               
               
               
+                "sim":["Obtaining-Explicit-Consent",],
+              
               
               
               },
             ['control', 'consent'],
+            
+         ],
+        
+       
+      
+       
+        
+         [
+          "Single Point of Contact",
+          "/patterns/Single-Point-of-Contact",
+             {
+              
+                "use":["Lawful-Consent",],
+              
+              
+              
+              
+              
+              
+              
+              },
+            ['control', 'consent', 'choose'],
             
          ],
         
@@ -102,6 +130,8 @@
               
               
               
+                "sim":["Sign-an-Agreement-to-Solve-Lack-of-Trust-on-the-Use-of-Private-Data-Context",],
+              
               
               
               },
@@ -117,6 +147,8 @@
           "Lawful Consent",
           "/patterns/Lawful-Consent",
              {
+              
+                "use":["Informed-Consent-for-Web-based-Transactions","Obtaining-Explicit-Consent","Sign-an-Agreement-to-Solve-Lack-of-Trust-on-the-Use-of-Private-Data-Context",],
               
               
               
@@ -139,6 +171,8 @@
              {
               
               
+              
+                "ref":["Obtaining-Explicit-Consent",],
               
               
               
@@ -687,6 +721,22 @@
 
 				
 					<p>Services of a controller may require users to sign contracts that stipulate their obligations and processing purposes for which users must consent to use the service. This ensures that users can trust the controller as it is bound to the contract it signs.</p>
+				
+			</a>
+		</li>
+  
+  
+  
+		<li>
+		  <a href="/patterns/Single-Point-of-Contact">
+			  <h3>
+		  		
+						Single Point of Contact
+					
+				</h3>
+
+				
+					<p>The Single Point of Contact is a security authority who protects the privacy and security of sensitive data stored online by validating the authority of requests and ensuring secure communication channels.</p>
 				
 			</a>
 		</li>

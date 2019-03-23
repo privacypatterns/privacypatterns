@@ -76,7 +76,7 @@ Users do not however want to consent to all purposes necessarily since they migh
 
 Thus pattern may be used by [Lawful Consent](Lawful-Consent), as it is one of the patterns featured within it as a compound pattern.
 
-[Obtaining Explicit Consent](Obtaining-Explicit-Consent) is _similar to_ [Sign an Agreement to Solve Lack of Trust on the Use of Private Data Context](Sign-an-Agreement-to-Solve-Lack-of-Trust-on-the-Use-of-Private-Data-Context). This Contractual Consent merely focuses on the need for non-repudiation more so than [Obtaining Explicit Consent](Obtaining-Explicit-Consent). Their perspectives are different while their overall solution is more or less the same. 
+[Obtaining Explicit Consent](Obtaining-Explicit-Consent) is _similar to_ [Sign an Agreement to Solve Lack of Trust on the Use of Private Data Context](Sign-an-Agreement-to-Solve-Lack-of-Trust-on-the-Use-of-Private-Data-Context). This Contractual Consent merely focuses on the need for non-repudiation more so than [Obtaining Explicit Consent](Obtaining-Explicit-Consent). Their perspectives are different while their overall solution is more or less the same.
 
 It also is refined by [Informed Consent for Web-based Transactions](Informed-Consent for-Web-based-Transactions). It is a refinement of, and is used by, [Lawful Consent](Lawful-Consent). In both cases the controller aims to inform users prior to obtaining their consent, though in the other pattern's case it is applied specifically for Web-based transactions.
 

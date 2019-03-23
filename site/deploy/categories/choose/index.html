@@ -92,6 +92,10 @@
           "/patterns/Discouraging-blanket-strategies",
              {
               
+                "use":["Buddy-List","Lawful-Consent","Private-link",],
+              
+              
+                "com":["Selective-Access-Control","Decoupling-[content]-and-location-information-visibility","Negotiation-of-Privacy-Policy","Reasonable-Level-of-Control","Masquerade",],
               
               
               
@@ -111,6 +115,8 @@
           "Incentivized Participation",
           "/patterns/Incentivized-Participation",
              {
+              
+                "use":["Reciprocity","Pay-Back","Lawful-Consent",],
               
               
               
@@ -132,6 +138,8 @@
           "/patterns/Single-Point-of-Contact",
              {
               
+                "use":["Lawful-Consent",],
+              
               
               
               
@@ -139,7 +147,7 @@
               
               
               },
-            ['control', 'choose'],
+            ['control', 'consent', 'choose'],
             
          ],
         
@@ -152,7 +160,13 @@
           "/patterns/Selective-Access-Control",
              {
               
+                "use":["Lawful-Consent",],
               
+              
+                "com":["Decoupling-[content]-and-location-information-visibility","Discouraging-blanket-strategies","Private-link","Masquerade",],
+              
+              
+                "ref":["Reasonable-Level-of-Control",],
               
               
               
@@ -172,6 +186,10 @@
           "/patterns/Pay-Back",
              {
               
+                "use":["Lawful-Consent",],
+              
+              
+                "com":["Reciprocity",],
               
               
               
@@ -192,9 +210,17 @@
           "/patterns/Negotiation-of-Privacy-Policy",
              {
               
+                "use":["Lawful-Consent","Private-link",],
+              
+              
+                "com":["Discouraging-blanket-strategies","Decoupling-[content]-and-location-information-visibility","Masquerade",],
+              
+              
+                "ref":["Reasonable-Level-of-Control",],
               
               
               
+                "sim":["Enable-Disable-Functions",],
               
               
               
@@ -212,6 +238,10 @@
           "/patterns/Buddy-List",
              {
               
+                "use":["Lawful-Consent","Private-link",],
+              
+              
+                "com":["Reciprocity","Masquerade",],
               
               
               
@@ -232,6 +262,10 @@
           "/patterns/Support-Selective-Disclosure",
              {
               
+                "use":["Reasonable-Level-of-Control","Negotiation-of-Privacy-Policy","Decoupling-[content]-and-location-information-visibility","Selective-Access-Control","Enable-Disable-Functions","Buddy-List","Discouraging-blanket-strategies","Lawful-Consent","Private-link",],
+              
+              
+                "com":["Masquerade",],
               
               
               
@@ -252,6 +286,10 @@
           "/patterns/Private-link",
              {
               
+                "use":["Lawful-Consent",],
+              
+              
+                "com":["Reasonable-Level-of-Control","Decoupling-[content]-and-location-information-visibility","Selective-Access-Control","Active-broadcast-of-presence","Masquerade",],
               
               
               

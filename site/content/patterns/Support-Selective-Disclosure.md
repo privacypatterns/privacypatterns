@@ -126,7 +126,7 @@ This pattern may be complemented by [Masquerade](Masquerade), as together they m
 - [Decoupling [content] and location information visibility](Decoupling-[content]-and-location-information-visibility);
 - [Reasonable Level of Control](Reasonable-Level-of-Control);
 - [Selective Access Control](Selective-Access-Control); and
-- [Enable/Disable Functions](Enable/Disable-Functions).
+- [Enable/Disable Functions](Enable-Disable-Functions).
 
 It also _may use_ [Private link](Private-link) as a means to provide anonymous functionality in a resource sharing context.
 
