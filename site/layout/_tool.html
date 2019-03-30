@@ -1,0 +1,18 @@
+{% extends "skeleton/_body.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{site.url}}/media/css/tool/forces.css" type="text/css">
+<script src="{{site.url}}/media/js/tool/forces.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+{% block content_body %}
+
+<div id="forces">
+    <p>This tool allows practitioners to filter 'forces' from the <a href="https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:32016R0679">European General Data Protection Regulation</a>. Through forces, we explain aspects which affect the design of a compliant solution. Taking note of these forces does not guarantee compliance, but streamlines it. We categorize these GDPR Forces as follows:</p>
+    <ul><li>- Whether you can process personal data <span class="inlinecat">Grounds</span>;</li><li>- How you should go about it <span class="inlinecat">Special and General Obligations, Rights, and Principles</span>; as well as</li> <li>- Further explanation <span class="inlinecat">Considerations</span>.</li></ul>
+    <p>The tool provides a wizard and overview of the answers you choose within it. In the filtered and collapsible list this generates, you can further filter (only) or expand the results (all) with categories. Only showing forces in selected categories helps to highlight notable forces, but hides less notable forces which still apply. You can also hide a force, or a group of forces, by clicking the 'x' to the right of them. Changing the report restores hidden forces. <button class="showall showhideall" onclick="restoreHidden()">Restore Hidden Forces</button></p>
+
+    <div id="questions"></div>
+</div>
+
+{% endblock %}
