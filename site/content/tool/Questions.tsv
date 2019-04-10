@@ -1,0 +1,26 @@
+Question / Answer	Parent Question / Answer	Attribute (show a force if it has any of these ", " delimited)	Further Detail
+forces from these categories:			
+Processing Grounds	forces from these categories:	Grounds	
+Special Obligations	forces from these categories:	Special Obligations	
+General Obligations	forces from these categories:	General Obligations	
+User Rights	forces from these categories:	User Rights	
+Data Protection Principles	forces from these categories:	Principles	
+Considerations	forces from these categories:	Considerations	
+Processing Grounds:	forces from these categories:		On what basis might you aim to process the personal data of users? Would their consent be legally or contractually required, or will you ask them for it and demonstrate that they agreed? Otherwise, is it of important public interest, or perhaps vital to the user's wellbeing? If still not the case, is there a legitimate interest for it in your context which you can prove is more important than their interests?
+Other Legitimate Interest We Can Prove	Processing Grounds:	Legitimate Interest, Vital Interest	
+We process for Public Interest	Processing Grounds:	Public Interest, Vital Interest	
+We rely on Consent	Processing Grounds:	Consent	
+We have a Legal/Contractual Obligation	Processing Grounds:	Legal Obligation, Contract	
+Special contexts:	forces from these categories:		Are there special circumstances surrounding the processing such as operating or transferring outside the EU (third country), perhaps in a country without adequate personal data protection? Other important processing distinctions are obtaining data elsewhere than the user in question, as well as profiling users and other types of automated decision making. Children also have additional protection.
+We operate or transfer data outside the EU	Special contexts:	Third Country, Adequacy Decision, Main Establishment	
+We profile or otherwise automate decisions on users	Special contexts:	Automated Processing, Profiling	
+We process the data of minors	Special contexts:	Minors	
+We obtain personal data from other sources	Special contexts:	Obtained Data	
+Industry specifics:	forces from these categories:		Does your industry have approved Codes of Conduct for you to follow in this context, or certification to help demonstrate compliance? There are also derogations for those subject to professional or statutory secrecy.
+We are sworn to secrecy	Industry specifics:	Secrecy	
+We have Codes of Conduct	Industry specifics:	Codes of Conduct	
+We have Certification	Industry specifics:	Certification	
+Controller specifics:	forces from these categories:		Does the controller, the one who determines the purposes and means for processing, have any special circumstances? There are additional concerns when dealing with multiple controllers or authorities, and some derogations for small to medium enterprises.
+We fall in scope of multiple authorities	Controller specifics:	Cooperation	
+We have under 250 employees	Controller specifics:	SMEs	
+We are part of multiple controllers or undertakings	Controller specifics:	Joint	

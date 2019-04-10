@@ -1,0 +1,275 @@
+.header, .category, .force {
+    display: none;
+}
+
+.hidden {
+   display: none!important;
+}
+
+li b {
+    font-weight: bold;
+}
+
+button.answer {
+    display: inline-block;
+}
+li.force a.strategy{
+    font-variant: small-caps;
+}
+li.force a.pattern{
+    font-family: Lucida sans typewriter;
+    font-size: 0.8em;
+}
+li.force a:visited {
+    color: #2d8489;
+}
+li.force a {
+    color: #2daeb2;
+}
+li.force a:hover {
+    color: #2ad0d5;
+}
+.prebreak {
+    text-align: justify;
+}
+button {
+    line-height: 0.75em;
+    color: rgb(130, 131, 131);
+    border-radius: 11px;
+    border: 1px none rgb(130, 131, 131);
+    padding: 3px 5px 3px 5px;
+    margin: 0px 2px;
+    background-color: white;
+    border: solid #cbcbcb 1px;
+}
+li .answer.active {
+    color: teal;
+    background-color: #d7f9ff;
+    border: 2px solid #68c3c366;
+}
+li .answer, span.inlinecat {
+    margin: 3px 0px 0px 10px;
+    border: 2px solid #8f9e9e66;
+    font-size: 10px;
+    padding: 2px 4px 3px 4px;
+    background-color: #d7f9ff66;
+    vertical-align: top;
+}
+span.inlinecat{
+    margin: 0;
+    padding: 0 4px 0 4px;
+    border-radius: 11px;
+    border-top: none;
+    border-bottom: none;
+    vertical-align: unset;
+    color: rgb(130, 131, 131);
+    background-color: #ecfff4;
+}
+.wizard
+{
+    margin: 10px 5px 0 5px;
+}
+.filter > .wizard {
+    display: none;
+}
+.showwizard {
+    display: none;
+}
+.filter > .showwizard {
+    display: block;
+}
+button.answer:hover, button#inexclusive:hover, button.wizard:hover, button.prebreak:hover, button.showall:hover {
+    background-color: #d7f9ff;
+    color: black;
+}
+li.force .break {
+    float: right;
+    background-color: #d7f9ff66;
+    margin: 0 0 0 10px;
+    border: 1px solid #d7f9ff66;
+    font-size: 13px;
+    padding: 0px 4px 4px 4px;
+    color: teal;
+}
+li.force .break:hover {
+    background-color: #d7f9ff;
+    color: black;
+}
+button.break:hover{
+    background-color: #d7f9ff80;
+    border-color: teal;
+    color: black;
+    border-style: solid;
+}
+.break {
+    cursor: default;
+    border-radius: 20px;
+    margin: 0 0 0 3px;
+    padding: 1px 3px 3px 3px;
+    line-height: 0.8em;
+    vertical-align: top;
+    font-size: 0.5em;
+}
+span.category {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+/* Make 'show' buttons stand out */
+#questions > ul > li > button.answer {
+    background-color: rgb(236, 255, 244);
+}
+/* Make 'show' buttons stand out */
+#questions > ul > li > button.answer:hover {
+    background-color: #d7ffed;
+    color: black;
+}
+/* Make 'show' buttons stand out */
+#questions > ul > li > button.active {
+    color: #00803c;
+    background-color: #d7ffed;
+    border: 2px solid #68c39866;
+}
+#inexclusive {
+    margin-left: 0;
+    margin-right: 3px;
+}
+.showhideall {
+    position: relative;
+    float: right;
+}
+#forces span.patternToggle.hide + span {
+    display: none;
+}
+#forces li.force:hover > span.patternToggle {
+    /*display: inline-block;*/
+}
+#forces li.force > span.patternToggle:hover {
+    background-color: #d7f9ff;
+    color: black;
+    border-color: teal;
+}
+#forces li.force > span.patternToggle {
+    position: relative;
+    font-size: 0.7em;
+    cursor: default;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    border: #d7f9ff66 solid 1px;
+    border-radius: 13px;
+    padding: 1px 5px 1px 5px;
+    background-color: #d7f9ff66;
+    color: teal;
+}
+#questions .help {
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+#forces li.force > span.postbreak {
+    font-size: 0.8em;
+    bottom: -5px;
+    position: relative;
+    float: right;
+}
+#forces span.patterns {
+    font-size: 0.8em;
+    display: block;
+    line-height: 1.2em;
+}
+#forces li.force.hide, #questions button.hide{
+    display: none;
+}
+#questions .hide, #questions .question.wizard > .prebreak, #questions .detail, #questions .help {
+    display: none;
+}
+#questions .question.wizard > .detail{
+    margin: 10px 0 10px 0;
+    display: block;
+}
+#questions .question.wizard > .help {
+    display: block;
+}
+#questions button.showallfilters, #questions button.showwizard {
+    float: right;
+    margin: 10px 20px;
+}
+#forces li.force {
+    margin: 3px 0 3px 0;
+    border-radius: 13px;
+    border: 2px solid gray;
+    padding: 4px 4px 4px 4px;
+    background-color: #f2fcff;
+    /*text-align: justify;*/
+}
+#forces > ul {
+    padding: 0px !important;
+}
+#forces ul {
+    list-style: none; /*disclosure-open !important;*/
+    white-space: pre-line;
+    padding-left: 10px;
+    padding-left: 2vw;
+}
+#forces input {
+    display: none;
+}
+#forces input:checked:not(:disabled) ~ ul {
+    display: block;
+}
+#forces input ~ ul {
+    display: none;
+}
+#forces input:disabled + label {
+    cursor: default;
+    opacity: .6;
+}
+#forces input + label, #forces label::before {
+    /*background: url("m.png") no-repeat;*/
+}
+#forces input + label, #forces a, #forces label::before {
+    display: inline-block;
+}
+#forces input + label {
+    padding-left: 20px;
+}
+/* Use actual plus/minus instead
+#forces input + label {
+    background: url("p.png") no-repeat;
+    background-position-y: 4px;
+}
+#forces input:checked + label {
+    background: url("m.png") no-repeat;
+    background-position-y: 4px;
+}*/
+#forces input + label::before {
+    content: '+';
+    margin-left: -20px;
+    width: 15px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+#forces input:checked + label::before {
+    content: '-';
+}
+#forces input + label:hover {
+    /*filter: opacity(0.8);*/
+    background-color: #efefef;
+    border-radius: 3px;
+}
+#questions ul {
+    padding-left: 0;
+}
+#questions {
+    background-color: #f4f9ff;
+    border-radius: 13px;
+}
+#questions > ul > li > ul {
+    background-color: aliceblue;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+}
+#questions > ul {
+    list-style: none;
+    padding-left: 15px;
+}
